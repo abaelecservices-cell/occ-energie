@@ -1083,6 +1083,8 @@ function bindNetFinder(viewer) {
     const keys = n && n.keys ? [String(n.keys)] :
       b ? D.nodes.filter(x => x.board === b.id && x.keys).slice(0, 8).map(x => short(x) + ' : ' + x.keys) : [];
     const title = b && !n ? b.name : n ? n.label : id;
+    const related = D.issues.filter(i => issueActive(i) && (i.ents || []).some(e => e === id || (b && e === b.id))).slice(0, 4);
+    const warning = related.length ? '<div class="banner danger" style="margin-top:8px">⚠️<div><b>Ecarts documentaires lies au repere :</b><br>' + related.map(i => '<a href="#" data-open="issue:' + esc(i.id) + '">' + esc(i.title) + '</a>').join('<br>') + '</div></div>' : '';
     const keyTxt = keys.length ? keys.map(x => '<div class="small">' + esc(x) + '</div>').join('') :
       '<span class="muted">Aucune cle associee a cette selection dans les donnees.</span>';
     detail.innerHTML = '<div class="card glass" style="padding:10px 12px">' +
@@ -1090,6 +1092,7 @@ function bindNetFinder(viewer) {
       '<div class="small" style="margin-top:7px"><b>Localisation documentaire :</b> ' + esc(loc) +
       (b && b.loc_conf && b.loc_conf !== 'confirme' ? ' (a confirmer)' : '') + '</div>' +
       '<div class="small" style="margin-top:5px"><b>Cles / reperes documentes :</b></div>' + keyTxt +
+      warning +
       '<div class="row" style="margin-top:8px"><button class="btn" type="button" data-open="' + esc(id) + '">Ouvrir la fiche</button>' +
       '<button class="btn ghost" type="button" data-go="#/plans">Ouvrir les plans de localisation</button></div>' +
       '<p class="small muted" style="margin:7px 0 0">Les cles et localisations proviennent des documents et ne constituent ni un relevé terrain ni une autorisation de manoeuvre.</p></div>';
