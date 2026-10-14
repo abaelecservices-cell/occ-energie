@@ -46,6 +46,28 @@ def main():
     assert all(row["Confiance localisation"] in (
         "confirme", "probable", "a_verifier", "inconnu") for row in real)
     assert all(row["Priorite"] in ("P1", "P2", "P3", "Aucune") for row in real)
+    # Les formulaires terrain pre-remplissent seulement les reperes deja documentes.
+    from tempfile import TemporaryDirectory
+    import csv
+    with TemporaryDirectory() as d:
+        from audit_parcours import write_report
+        write_report(fixture(), d)
+        out = Path(d)
+        names = ["FACADES_MANQUANTES_RELEVE_TERRAIN.csv",
+                 "CASES_A_IDENTIFIER_TERRAIN.csv",
+                 "CHECKLIST_TOUR_TERRAIN.md"]
+        assert all((out / name).exists() for name in names)
+        with (out / names[0]).open(encoding="utf-8-sig", newline="") as h:
+            boards_to_visit = list(csv.DictReader(h, delimiter=";"))
+        assert len(boards_to_visit) == 2, "Les deux tableaux sans facade sont attendus"
+        assert all(not r["Batiment a relever"] for r in boards_to_visit)
+        assert all(r["Statut de verification"] == "A RELEVER" for r in boards_to_visit)
+        with (out / names[1]).open(encoding="utf-8-sig", newline="") as h:
+            cases_to_visit = list(csv.DictReader(h, delimiter=";"))
+        assert len(cases_to_visit) == 2
+        assert all(not r["Case relevee"] and not r["Etiquette lue exactement"]
+                   for r in cases_to_visit)
+
     print(f"Tests complétude OK : {len(real)} départs")
 
 
