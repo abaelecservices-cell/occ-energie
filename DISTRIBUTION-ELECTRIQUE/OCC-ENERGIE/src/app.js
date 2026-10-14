@@ -1101,7 +1101,6 @@ function netFinderPanel() {
     '<input id="net-find" class="f" type="search" autocomplete="off" style="width:100%;max-width:650px" ' +
     'placeholder="TR 1A, cellule, repere, TGBT, TS7..." aria-label="Rechercher un equipement sur le schema">' +
     '<div id="net-hits" class="list" style="margin-top:6px" role="listbox"></div>' +
-    '<div id="net-doc" style="margin-top:8px" role="status" aria-live="polite"></div>' +
     '</section>';
 }
 function bindNetFinder(viewer) {
@@ -1134,6 +1133,10 @@ function bindNetFinder(viewer) {
   function selectId(id) {
     NET_FINDER.selected = id;
     NET_FINDER.query = field.value.trim();
+    const selectedBanner = $('#net-focus-status');
+    if (selectedBanner) selectedBanner.textContent = '⚡ Départ ou équipement sélectionné : ' +
+      (NODE[id] ? NODE[id].label : BOARD[id] ? BOARD[id].name : id) +
+      ' — conducteur amont en halo. Ouverture de la façade sur clic uniquement.';
     if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
     const target = BOARD[id] ? id : netFocus(id);
     if (!target || !viewer.focusOn(target))
@@ -1158,6 +1161,12 @@ function bindNetFinder(viewer) {
     const item = e.target.closest('[data-net-id]');
     if (item) selectId(item.dataset.netId);
   };
+  detail.addEventListener('click', e => {
+    if (e.target.closest('#net-fit-path')) {
+      e.preventDefault();
+      if (!viewer.focusOnTrace()) toast('Aucun segment graphique individualisé pour ce parcours.');
+    }
+  });
   field.addEventListener('input', renderHits);
   field.addEventListener('keydown', e => {
     if (e.key !== 'Enter') return;
@@ -1177,13 +1186,7 @@ function bindNetFinder(viewer) {
     }
   });
   renderHits();
-  if (NET_FINDER.selected) {
-    infoFor(NET_FINDER.selected);
-    const zoom = $('#net-fit-path');
-    if (zoom) zoom.onclick = () => {
-      if (!viewer.focusOnTrace()) toast('Aucun segment graphique disponible pour ce parcours.');
-    };
-  }
+  if (NET_FINDER.selected) infoFor(NET_FINDER.selected);
 }
 
 function vNet(focus) {
@@ -1195,7 +1198,13 @@ function vNet(focus) {
   <div class="seg glass" style="margin-bottom:10px"><button id="v1" class="${NETVIEW === 'full' ? 'on' : ''}">Schéma complet : 20 kV → transfos → TGBT → tableaux</button><button id="v2" class="${NETVIEW === 'uni' ? 'on' : ''}">Ordre physique des cellules HTA (unifilaire)</button></div>
   <p class="small muted" style="margin:0 0 8px">${NETVIEW === 'full' ? 'Schéma de principe : le demi-jeu de barres 20 kV gauche (cellules TR xA) est dessiné au-dessus du droit (cellules TR xB) ; au croisement d’un trait vertical et du jeu de barres droit, il n’y a pas de liaison. En mode simulation, touchez un disjoncteur, une arrivée ou un couplage.' : 'Cellules dans l’ordre de l’unifilaire R112529 rév. H.'}</p>
   ${netFinderPanel()}
+  <div id="net-focus-status" class="net-focus-status" role="status" aria-live="polite">${focus || NET_FINDER.selected
+    ? '⚡ Départ ou équipement sélectionné : ' + esc(NODE[focus || NET_FINDER.selected]?.label ||
+      BOARD[focus || NET_FINDER.selected]?.name || focus || NET_FINDER.selected) +
+      ' — conducteur amont en halo. Façade sur clic uniquement.'
+    : 'Recherchez un départ : son chemin électrique s’affichera d’abord en halo sur ce schéma.'}</div>
   <div id="hta"></div>
+  <div id="net-doc" role="region" aria-label="Informations sur le départ sélectionné" style="margin-top:12px"></div>
   <h2>Tableaux secondaires</h2><div class="grid">${D.boards.filter(b => b.kind !== 'TGBT' && b.kind !== 'HTA').map(b => { const hs = b.halves.filter(h => NODE[h.id]); return `<div class="li glass" style="border-radius:16px" data-go="#/b/${b.id}">${hs.map(h => `<span class="dot ${isLive(h.id) ? 'on' : 'off'}"></span>`).join('')}<div class="grow"><b>${esc(b.name)}</b><div class="src">${hs.map(h => esc(h.label.replace(b.name, '').replace(/^ — /, '') || 'JdB') + ' : ' + (isLive(h.id) ? 'alimenté' : 'non alimenté')).join(' · ')}</div></div></div>`; }).join('')}</div>
   ${footer()}`;
   const handler = id => { const n = NODE[id]; if (SIMMODE && n && (SW.has(n.t) || n.t === 'src')) { if (setSw(id, !isClosed(id))) { toast(`${short(n)} : ${isClosed(id) ? 'fermé' : 'ouvert'} (simulation)`); rerender(); } } else openEntity(id); };
