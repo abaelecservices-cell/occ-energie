@@ -351,10 +351,26 @@ function bindSearch() {
   clr.onclick = () => { inp.value = ''; render(); inp.focus(); };
   document.addEventListener('click', e => { if (!e.target.closest('#searchwrap')) box.classList.remove('open'); });
 }
+function openOnUnifilaire(id, query = '') {
+  if (!NODE[id] && !BOARD[id]) return false;
+  // Une recherche ouvre uniquement le schéma. Façade et implantation sur clic explicite.
+  closeSheet();
+  NET_FINDER.selected = id;
+  NET_FINDER.query = query || (NODE[id] ? NODE[id].label : BOARD[id].name);
+  NETVIEW = 'full';
+  const destination = '#/reseau/' + encodeURIComponent(id);
+  if (location.hash === destination) route(false);
+  else location.hash = destination;
+  return true;
+}
 function pick(r) {
-  if (!r) return; $('#results').classList.remove('open'); $('#search').blur();
-  if (r.kind === 'board') { location.hash = '#/b/' + r.id; return; }
-  openEntity(r.kind === 'node' ? r.id : r.kind + ':' + r.id);
+  if (!r) return;
+  $('#results').classList.remove('open'); $('#search').blur();
+  if (r.kind === 'node' || r.kind === 'board') {
+    openOnUnifilaire(r.id, $('#search').value.trim());
+    return;
+  }
+  openEntity(r.kind + ':' + r.id);
 }
 
 /* --------------------------------------------------------------- fiche */
@@ -547,8 +563,24 @@ function mountViewer(host, svg, { onClick, focus, legend, native } = {}) {
     else zoomAt(b.dataset.z === 'in' ? 1.4 : 1 / 1.4, r.left + r.width / 2, r.top + r.height / 2); });
   const focusOn = id => { const g = el.querySelector(`[data-id="${CSS.escape(id)}"]`); if (!g) return false; $$('.flash', el).forEach(x => x.classList.remove('flash')); g.classList.add('flash');
     const bb = g.getBBox(); const w = Math.max(bb.width * 3.2, init.w / 6), h = Math.max(bb.height * 3.2, init.h / 6); v = { x: bb.x + bb.width / 2 - w / 2, y: bb.y + bb.height / 2 - h / 2, w, h }; apply(); return true; };
+  // Cadrage de tous les segments deja representes et surlignes, sans inventer de cables.
+  const focusOnTrace = () => {
+    const segments = [...el.querySelectorAll('.trace-wire, .trace-node')];
+    if (!segments.length) return false;
+    const bounds = segments.map(g => {
+      try { return g.getBBox(); } catch (e) { return null; }
+    }).filter(b => b && Number.isFinite(b.x) && b.width >= 0 && b.height >= 0);
+    if (!bounds.length) return false;
+    const x0 = Math.min(...bounds.map(b => b.x)), y0 = Math.min(...bounds.map(b => b.y));
+    const x1 = Math.max(...bounds.map(b => b.x + b.width));
+    const y1 = Math.max(...bounds.map(b => b.y + b.height));
+    const w = Math.min(init.w, Math.max(init.w / 7, (x1 - x0) * 1.16));
+    const h = Math.min(init.h, Math.max(init.h / 7, (y1 - y0) * 1.16));
+    v = { x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - h / 2, w, h };
+    apply(); return true;
+  };
   if (focus) requestAnimationFrame(() => focusOn(focus));
-  return { focusOn, reset: () => { v = { ...init }; apply(); } };
+  return { focusOn, focusOnTrace, reset: () => { v = { ...init }; apply(); } };
 }
 
 /* ======================================================================= façades vectorielles */
@@ -1101,15 +1133,15 @@ function bindNetFinder(viewer) {
   }
   function selectId(id) {
     NET_FINDER.selected = id;
-    if (NETVIEW !== 'full' && NODE[id] && NODE[id].t === 'dep') { NETVIEW = 'full'; rerender(); return; }
-    const target = NETVIEW === 'full' ? (BOARD[id] ? id : netFocus(id)) :
-      (NODE[id] ? focusTarget(id) : null);
-    if (!target || !viewer.focusOn(target)) {
-      if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
-      toast('Selection documentee : cet equipement n est pas dessine directement sur le schema.');
-    }
+    NET_FINDER.query = field.value.trim();
+    if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
+    const target = BOARD[id] ? id : netFocus(id);
+    if (!target || !viewer.focusOn(target))
+      toast('Repère présent dans le modèle : seul son réseau amont est dessiné sur ce synoptique.');
     infoFor(id);
     parcoursHighlight(id);
+    results.innerHTML = '';
+    field.setAttribute('aria-activedescendant', '');
   }
   function renderHits() {
     NET_FINDER.query = field.value;
@@ -1128,17 +1160,34 @@ function bindNetFinder(viewer) {
   };
   field.addEventListener('input', renderHits);
   field.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      const first = results.querySelector('[data-net-id]');
-      if (first) { e.preventDefault(); selectId(first.dataset.netId); }
+    if (e.key !== 'Enter') return;
+    const candidates = [...results.querySelectorAll('[data-net-id]')];
+    if (!candidates.length) return;
+    e.preventDefault();
+    const q = norm(field.value);
+    const exact = candidates.filter(el => {
+      const n = NODE[el.dataset.netId], b = BOARD[el.dataset.netId];
+      return norm(el.dataset.netId) === q || (n && norm(n.label) === q) ||
+        (b && norm(b.name) === q);
+    });
+    if (exact.length === 1) selectId(exact[0].dataset.netId);
+    else if (candidates.length === 1) selectId(candidates[0].dataset.netId);
+    else {
+      detail.innerHTML = '<div class="banner info" role="status">Plusieurs équipements correspondent à cette recherche. Sélectionnez le bon départ dans la liste avant d’afficher son chemin.</div>';
     }
   });
   renderHits();
-  if (NET_FINDER.selected) infoFor(NET_FINDER.selected);
+  if (NET_FINDER.selected) {
+    infoFor(NET_FINDER.selected);
+    const zoom = $('#net-fit-path');
+    if (zoom) zoom.onclick = () => {
+      if (!viewer.focusOnTrace()) toast('Aucun segment graphique disponible pour ce parcours.');
+    };
+  }
 }
 
 function vNet(focus) {
-  if (focus && NODE[focus] && NODE[focus].t === 'dep') NETVIEW = 'full';
+  if (focus && (NODE[focus] || BOARD[focus])) NETVIEW = 'full';
   VIEW().innerHTML = `<h1>Réseau HTA / BT</h1><p class="sub">Topologie selon l’unifilaire 20 kV (R112529 rév. H) et le classeur de distribution. Touchez un élément pour sa fiche.</p>
   ${simBanner()}
   <div class="row" style="margin:12px 0"><div class="seg glass"><button id="m0" class="${SIMMODE ? '' : 'on'}">Consultation</button><button id="m1" class="${SIMMODE ? 'on' : ''}">Mode simulation</button></div>
@@ -1151,7 +1200,10 @@ function vNet(focus) {
   ${footer()}`;
   const handler = id => { const n = NODE[id]; if (SIMMODE && n && (SW.has(n.t) || n.t === 'src')) { if (setSw(id, !isClosed(id))) { toast(`${short(n)} : ${isClosed(id) ? 'fermé' : 'ouvert'} (simulation)`); rerender(); } } else openEntity(id); };
   const selectedFocus = focus || NET_FINDER.selected;
-  if (focus && NODE[focus]) NET_FINDER.selected = focus;
+  if (focus && (NODE[focus] || BOARD[focus])) {
+    NET_FINDER.selected = focus;
+    if (!NET_FINDER.query) NET_FINDER.query = NODE[focus] ? NODE[focus].label : BOARD[focus].name;
+  }
   const viewer = mountViewer($('#hta'), NETVIEW === 'full' ? fullNetSVG() : htaSVG(), { onClick: handler,
     focus: selectedFocus ? (NETVIEW === 'full' ? (BOARD[selectedFocus] ? selectedFocus : netFocus(selectedFocus)) : (NODE[selectedFocus] ? focusTarget(selectedFocus) : null)) : null,
     legend: '<span style="color:#12b76a">━ alimenté</span><span style="color:#e5484d">━ non alimenté</span><span>□ appareil ouvert · ■ fermé</span>' });
