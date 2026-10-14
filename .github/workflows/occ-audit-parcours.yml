@@ -1,0 +1,34 @@
+name: OCC Energie - Audit localisation et facades
+
+on:
+  push:
+    branches:
+      - main
+      - codex/fiabilite-parcours-inverse-2026-10-14
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifier la logique de completude
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_audit_parcours.py
+      - name: Produire le registre Excel et la synthese
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/audit_parcours.py
+      - name: Conserver les rapports
+        uses: actions/upload-artifact@v4
+        with:
+          name: occ-energie-departs-a-completer
+          path: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/artifacts/audit-parcours/*
+          if-no-files-found: error
+          retention-days: 30
