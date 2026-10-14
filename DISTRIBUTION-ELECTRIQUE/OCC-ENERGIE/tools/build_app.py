@@ -17,7 +17,7 @@ def scrub(o):
     return o
 data = scrub(data)
 data = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-js = rd('src/app.js').replace('/*PLANS*/', rd('src/plans.js').replace('/*PLANSVG*/', rd('src/plansvg.js')) + '\n' + rd('src/net.js') + '\n' + rd('src/manoeuvres.js') + '\n' + rd('src/fiche.js') + '\n' + rd('src/courant.js') + '\n' + rd('src/arbre.js'))
+js = rd('src/app.js').replace('/*PLANS*/', rd('src/plans.js').replace('/*PLANSVG*/', rd('src/plansvg.js')) + '\n' + rd('src/net.js') + '\n' + rd('src/manoeuvres.js') + '\n' + rd('src/fiche.js') + '\n' + rd('src/courant.js') + '\n' + rd('src/arbre.js') + '\n' + rd('src/parcours.js'))
 html = html.replace('/*CSS*/', rd('src/style.css')).replace('/*DATA*/', data).replace('/*JS*/', js)
 out = os.path.join(R, 'OCC_ENERGIE.html')
 open(out, 'w', encoding='utf-8').write(html)

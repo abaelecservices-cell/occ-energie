@@ -170,7 +170,7 @@ function attachHTML(p) {
     ${groups.map(g => `<details class="card glass tree" style="margin-bottom:8px" open><summary><b>${esc(BOARD[g.bid].name)}</b> <span class="small muted">alimente ${g.kids.length} armoire${g.kids.length > 1 ? 's' : ''}</span></summary>
       <div class="tkids" style="margin-top:6px">${g.kids.map(k => arbreBoard(k.board, 3, inPlan.concat(g.bid), tVia(k))).join('')}</div></details>`).join('')}`;
 }
-function vPlans(pid, focus) {
+function vPlans(pid, focus, selected) {
   if (pid === 'PLAN_SS1G' || pid === 'PLAN_SS1D') pid = 'PLAN_SS1';
   if (!pid || pid === 'PLAN_PDL') {
     VIEW().innerHTML = `<h1 style="margin-top:14px">Plans d’implantation</h1>
@@ -190,6 +190,7 @@ function vPlans(pid, focus) {
   ${src ? `<div class="crumbs" style="margin:0 0 10px"><a data-go="#/plans/${src.tab}">${esc(PLAN_TABS.find(t => t[0] === src.tab)[1])}</a>${src.chain.map(bid => `<i>›</i><a data-go="#/b/${bid}">${esc(BOARD[bid].name)}</a>`).join('')}<i>›</i><a>${esc(p.title)}</a></div>` : ''}
   <div class="row" style="margin-bottom:8px"><div class="seg glass"><button id="lk1" class="${PLAN_LINKS ? 'on' : ''}">Liaisons 20 kV → transfos → TGBT</button><button id="lk0" class="${PLAN_LINKS ? '' : 'on'}">Implantation seule</button></div></div>
   <div class="row small" style="margin-bottom:10px;gap:16px"><span><b style="color:#7c5cff">━▸</b> 20 kV : tableau 20 kV → transformateur</span><span><b style="color:#12b76a">┈▸</b> BT : transformateur → TGBT → tableaux</span><span><b style="color:#e5484d">┈</b> coupé (simulation)</span></div>
+  ${parcoursPlanActions(focus, selected)}
   <div id="pv"></div>
   ${top ? attachHTML(p) : ''}
   <details class="card glass" style="margin-top:14px"><summary><b>Équipements du plan et remarques</b></summary>
