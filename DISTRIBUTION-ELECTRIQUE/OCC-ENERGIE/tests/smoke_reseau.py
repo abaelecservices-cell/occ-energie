@@ -59,17 +59,7 @@ with sync_playwright() as playwright:
     page.goto(APP.as_uri() + "#/reseau/" + cible, wait_until="load")
     page.locator('#net-path[data-path-target="' + cible + '"]').wait_for(timeout=15000)
     assert page.locator("#net-path .trace-step").count() >= 5, "Chemin amont incomplet"
-    diagnostic = page.evaluate("""(id) => {
-      const p=parcoursPath(id);
-      const svg=document.querySelector('#hta svg');
-      const ws=[...svg.querySelectorAll('[data-wire-id]')];
-      const ns=[...svg.querySelectorAll('.trace-node')];
-      return {mode:NETVIEW, chain:p&&p.chain, wireCount:ws.length,
-        wireExamples:ws.slice(0,10).map(x=>x.dataset.wireId),
-        shownNodeIds:ns.slice(0,10).map(x=>x.dataset.id),
-        traceWire:svg.querySelectorAll('.trace-wire').length};
-    }""", cible)
-    print("DIAGNOSTIC TRACE :", diagnostic, flush=True)
+    assert page.evaluate('NETVIEW') == 'full', 'La selection d un depart doit ouvrir le schema complet'
     assert page.locator('#hta svg .trace-wire').count() > 0, "Aucune liaison du schema mise en lumiere"
 
     page.locator('#net-doc [data-go="#/site/' + cible + '"]').click()
