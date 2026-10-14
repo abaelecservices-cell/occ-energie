@@ -76,5 +76,9 @@ jobs:
           print("Taille :", fichier.stat().st_size, "octets")
           PY
 
+      - name: Verifier la coherence electrique
+        run: |
+          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_coherence_electrique.py
+
       - name: Bilan
         run: echo "Controles de base OCC Energie termines"
