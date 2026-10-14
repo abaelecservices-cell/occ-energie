@@ -73,7 +73,7 @@ with sync_playwright() as playwright:
 
     page.locator("#plan-to-facade").click()
     page.locator("#facade-target").wait_for(timeout=15000)
-    assert page.locator("#fv svg g.flash").count() > 0, "Pas de halo sur le depart"
+    page.locator("#fv svg g.flash").wait_for(timeout=15000)  # focus pose au prochain frame navigateur
     assert "Case" in page.locator("#facade-target").inner_text(), "Repere de case absent"
     page.screenshot(path=str(ARTIFACTS / "parcours-site-facade.png"), full_page=True)
 
