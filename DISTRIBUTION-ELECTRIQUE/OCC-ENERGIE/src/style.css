@@ -253,3 +253,19 @@ input.f.big{font-size:17px;padding:14px 16px;border-radius:16px}
   .mosign{display:block}.mosteps input:checked~.txt{opacity:1;text-decoration:none}
   .mosteps label{background:#fff;border:1px solid #bbb;font-size:13px;padding:7px 10px}.mosteps .num{background:#0a9f5a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .mostop,.mostatus{-webkit-print-color-adjust:exact;print-color-adjust:exact}.crumbs{display:none}}
+
+
+/* Parcours guidé : le tracé visible suit uniquement les segments du modèle dessinés.
+   Orange pointillé = preuve documentaire insuffisante. Aucun câble n'est inventé. */
+.trace-summary{margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--glass-strong)}
+.trace-steps{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.trace-step{border:1px solid #13a565;background:rgba(18,183,106,.10);color:var(--ink);padding:6px 9px;border-radius:9px;cursor:pointer;font:inherit;font-size:12px;font-weight:700}
+.trace-step.trace-doubt{border-color:#df9230;background:rgba(240,162,32,.10);border-style:dashed}
+.trace-arrow{font-weight:800;color:var(--ink-3)}
+#hta svg .trace-wire{stroke:#ffe04b!important;stroke-width:7!important;filter:drop-shadow(0 0 4px rgba(255,210,63,.75))}
+#hta svg .trace-wire.trace-doubt{stroke:#f59e0b!important;stroke-dasharray:8 5!important}
+#hta svg .trace-node .hl{stroke:#ffe04b;stroke-width:5;opacity:1;filter:drop-shadow(0 0 6px rgba(255,210,63,.65))}
+#hta svg .trace-node.trace-doubt .hl{stroke:#f59e0b;stroke-dasharray:8 5}
+#site-map .viewer{height: min(75vh,780px)}
+#site-map svg .zone.flash .zout{stroke:#ffe04b;stroke-width:5;filter:drop-shadow(0 0 3px #ffd23f)}
+#site-map svg .zone.flash .zlab{opacity:1}
