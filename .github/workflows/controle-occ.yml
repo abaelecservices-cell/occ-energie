@@ -50,5 +50,31 @@ jobs:
           test -s DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json
           test -s DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
 
+      - name: Reconstruire OCC Energie
+        run: |
+          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py
+
+      - name: Verifier le HTML reconstruit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          root = Path("DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE")
+          fichier = root / "OCC_ENERGIE.html"
+
+          assert fichier.is_file(), "HTML absent"
+
+          html = fichier.read_text(encoding="utf-8")
+
+          assert html.startswith("<!doctype html>"), "HTML invalide"
+          assert "window.OCC_DATA=" in html, "Donnees absentes"
+
+          for marqueur in ("/*CSS*/", "/*DATA*/", "/*JS*/"):
+              assert marqueur not in html, f"Assemblage incomplet : {marqueur}"
+
+          print("Reconstruction OCC Energie : OK")
+          print("Taille :", fichier.stat().st_size, "octets")
+          PY
+
       - name: Bilan
         run: echo "Controles de base OCC Energie termines"
