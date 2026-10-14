@@ -66,10 +66,10 @@ txt += ['', '## Documents attendus', '',
         '2. Captures Google Earth (vue aérienne et positions des tableaux secondaires).',
         '3. Cotes des salles et des armoires (télémètre).',
         '4. Procédures de changement de source et de consignation validées (TGBT 1, 2, 4 à 9, TS 9, couplages HTA V500 / SS2 / 6 kV).',
-        '5. Transcription du document « Verrouillage DJ TR3B » (scanné).',
+        '5. Réglages des relais des cellules encore marquées « xx » sur l’unifilaire (TR Hydrogène, Varivolt, boosting 6 kV, TR 9B) : les schémas DM1 Varivolt de 2023 décrivent la cellule, pas les seuils du relais.',
         '6. Confirmation de l’attribution TR 1A / TR 2A ↔ TGBT 1 / TGBT 2.',
         '7. Confirmation de l’alimentation du TS 12 (TGBT 2 et/ou TGBT 3) et du TS 17 / TS 9 (TGBT 9 ou TR 2B).',
-        '8. Plaques signalétiques des transformateurs TR2/TR3 (2000 ou 2500 kVA).']
+        '8. Plaques de TR 2A et TR 2B, et correspondance des n° de série France Transfo 1466597 / 1466588 avec TR 3A / TR 3B (les deux PV de janvier 2025 confirment des Trihal 2000 kVA, pas l’identité de chaque cuve).']
 w('3_INCERTITUDES_ET_MANQUES.md', '\n'.join(txt))
 
 # 4. Photos à reprendre

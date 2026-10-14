@@ -150,9 +150,15 @@ Documents : Tableau 6kv.pdf p1-p13; schema unifilaire 20 KV derniere version.pdf
 
 ### [BASSE] TR 3B : DGPT2 (unifilaire) ou sec Trihal (dossier 2025) ?
 
-L’unifilaire R112529 rév. H indique une protection DGPT2 (transformateur immergé) pour le TR 3B. Le dossier du TGBT 3 (12/2024) et le dossier constructeur 2025 décrivent des transformateurs secs Trihal avec sondes et relais de température (alarme, déclenchement, ventilateurs). Le transformateur a probablement été remplacé : la fiche suit le dossier récent. Seuils d’un dessin ≠ réglages actuels.
+L’unifilaire R112529 rév. H indique une protection DGPT2 (transformateur immergé) pour le TR 3B. Le dossier du TGBT 3 (12/2024) et le dossier constructeur 2025 décrivent des transformateurs secs Trihal avec sondes PT100 et relais NT935 (ventilateur 1 à 130 °C, alarme à 140 °C, déclenchement à 150 °C sur le schéma de câblage). Le transformateur a probablement été remplacé : la fiche suit le dossier récent. Ces seuils sont ceux du dessin, pas une relève sur le relais.
 
 Documents : schema unifilaire 20 KV derniere version.pdf; p1 - Copie.zip › 12_TGBT N°3 › CX7810_C TQC.PDF
+
+### [BASSE] Varivolt : TC câblé en 200/5 (schéma 2023) ou en 100/5 (unifilaire) ?
+
+Les schémas Schneider des cellules DM1-A départ Varivolt (S000119797, dessins 697408-000 zone 1 et 697409-000 zone 2, 27/03/2023) portent « câblé sur grand rapport » sur les TC 3 × ARM3/N2F 200-100/5 A : le grand rapport est 200/5. L’unifilaire R112529 retient 100/5 (valeur soulignée). Le relais et ses réglages I> ne figurent pas sur ces schémas. À relever sur le relais.
+
+Documents : p1 - Copie (2).zip › schema DM1 départ varivolt zone 1.pdf; p1 - Copie (2).zip › schema DM1 départ varivolt zone 2.pdf; schema unifilaire 20 KV derniere version.pdf
 
 ### [BASSE] TGBT 9 : contrôleur d’isolement à identifier
 
@@ -203,7 +209,7 @@ Documents : 26013 nameplate.pdf; schema unifilaire 20 KV derniere version.pdf
 2. Captures Google Earth (vue aérienne et positions des tableaux secondaires).
 3. Cotes des salles et des armoires (télémètre).
 4. Procédures de changement de source et de consignation validées (TGBT 1, 2, 4 à 9, TS 9, couplages HTA V500 / SS2 / 6 kV).
-5. Transcription du document « Verrouillage DJ TR3B » (scanné).
+5. Réglages des relais des cellules encore marquées « xx » sur l’unifilaire (TR Hydrogène, Varivolt, boosting 6 kV, TR 9B) : les schémas DM1 Varivolt de 2023 décrivent la cellule, pas les seuils du relais.
 6. Confirmation de l’attribution TR 1A / TR 2A ↔ TGBT 1 / TGBT 2.
 7. Confirmation de l’alimentation du TS 12 (TGBT 2 et/ou TGBT 3) et du TS 17 / TS 9 (TGBT 9 ou TR 2B).
-8. Plaques signalétiques des transformateurs TR2/TR3 (2000 ou 2500 kVA).
+8. Plaques de TR 2A et TR 2B, et correspondance des n° de série France Transfo 1466597 / 1466588 avec TR 3A / TR 3B (les deux PV de janvier 2025 confirment des Trihal 2000 kVA, pas l’identité de chaque cuve).

@@ -11,15 +11,17 @@ Critères vérifiables (pas de pourcentage global). ✓ fait · ~ partiel/probab
 | SS1 — côté droit | Tableau 6 kV — Four 2 (Sous-station 1 côté droit) | ✓ | 6 | ✓ | ✓ | ✓ | ✓ |
 | SS1 — côté droit | Tableau Gorge (Four 2) | ✗ | ✗ | ✗ | — | ✓ | ✓ |
 | SS1 — côté gauche | Armoire 110 V — instrument ampèremètre | ✗ | ✗ | ✓ | — | ~ | ✓ |
+| SS1 — côté gauche | Armoire ventilateurs hélicoïdes Helipac | ✗ | 10 | ✓ | — | ✓ | ✓ |
 | SS1 — côté gauche | Batteries condensateurs TGBT 7A / 7B | ✓ | ✗ | ✓ | — | ✓ | ✓ |
 | SS1 — côté gauche | Batteries condensateurs TGBT 9A / 9B | ✓ | ✗ | ✓ | — | ✓ | ✓ |
+| SS1 — côté gauche | Coffret ventilation local Boosting 1 | ✗ | 4 | ✓ | — | ~ | ✓ |
+| SS1 — côté gauche | Coffret ventilation local Boosting F2 | ✓ | 4 | ✓ | — | ~ | ✓ |
 | SS1 — côté gauche | Gradathyr — Tableau Gorge (OM 221) | ✗ | 3 | ✓ | — | ✓ | ✓ |
 | SS1 — côté gauche | TGBT 7 | ✓ | 10 | ✓ | ✓ | ✓ | ✓ |
 | SS1 — côté gauche | TGBT 8 | ✓ | 6 | ✓ | ✗ | ~ | ✓ |
-| SS1 — côté gauche | TGBT 9 | ✓ | 12 | ✓ | ✓ | ✓ | ✓ |
+| SS1 — côté gauche | TGBT 9 | ✓ | 13 | ✓ | ✓ | ✓ | ✓ |
 | SS1 — côté gauche | Tableau 20 kV — TR 7, TR 9, Boosting (Sous-station 1) | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |
 | SS1 — côté gauche | Varivolt 1 et 2 | ✗ | ✗ | ✗ | — | ✓ | ✓ |
-| SS1 — côté gauche | Ventilation Four | ✗ | ✗ | ✗ | — | ~ | ✓ |
 | Sous-station 2 | Alimentation ondulée — Onduleur 1 | ✓ | 4 | ✓ | — | ✓ | ✓ |
 | Sous-station 2 | Alimentation ondulée — Onduleur 2 | ✓ | 4 | ✓ | — | ✓ | ✓ |
 | Sous-station 2 | Armoire éclairage sous-station | ✓ | ✗ | ✓ | — | ✓ | ✓ |
@@ -67,5 +69,5 @@ Critères vérifiables (pas de pourcentage global). ✓ fait · ~ partiel/probab
 | Non localisé | Tableau Étuves 7-8-9 | ✓ | ✗ | ✗ | — | ✗ | ✗ |
 | Non localisé | Éclairage Ensimage labo central 9M04 | ✓ | 31 | ✗ | — | ✗ | ✗ |
 
-Façades vectorielles reconstruites : TGBT 4, TGBT 2, TGBT 3, TS 9 — Chaufferie, Tableau 20 kV CNR / EDF — TR 1 à 6 (Sous-station 2), Tableau 20 kV — TR 7, TR 9, Boosting (Sous-station 1), Poste de livraison 20 kV CNR / EDF, Tableau 6 kV — Four 2 (Sous-station 1 côté droit), TGBT 1, TGBT 5, TGBT 6, TGBT 7, TGBT 9, TS 2 — Étuves, TS 44 — Auxiliaires Four 1, TS 12 — Emballage / Roving, TS 7 — Four 1, TS 17 — Chaufferie, Batteries condensateurs TR1A / TR1B, Batterie condensateurs TR2A, Batterie condensateurs TR2B, Batteries condensateurs TGBT 3, Batteries condensateurs TR4A / TR4B, Batterie condensateurs TR5A, Batterie condensateurs 5B, Batterie condensateurs 6A, Batterie condensateurs 6B, Batteries condensateurs TGBT 7A / 7B, Batteries condensateurs TGBT 9A / 9B, Alimentation ondulée — Onduleur 1, Alimentation ondulée — Onduleur 2, Onduleur 1 (Sous-station 1), Onduleur 2 (Sous-station 2), TS 46A, TS 46B, Bâtiment Bronzini, Gradathyr — Tableau Gorge (OM 221), Armoire 110 V — instrument ampèremètre, Armoire éclairage sous-station, Tableau OM 27, Décarbonatation, Coffret 24 V / 230 V TR7B, TGBT 8.
-Départs indexés : 484 · Lignes Excel non rattachées : 0.
+Façades vectorielles reconstruites : TGBT 4, TGBT 2, TGBT 3, TS 9 — Chaufferie, Tableau 20 kV CNR / EDF — TR 1 à 6 (Sous-station 2), Tableau 20 kV — TR 7, TR 9, Boosting (Sous-station 1), Poste de livraison 20 kV CNR / EDF, Tableau 6 kV — Four 2 (Sous-station 1 côté droit), TGBT 1, TGBT 5, TGBT 6, TGBT 7, TGBT 9, TS 2 — Étuves, TS 44 — Auxiliaires Four 1, TS 12 — Emballage / Roving, TS 7 — Four 1, TS 17 — Chaufferie, Batteries condensateurs TR1A / TR1B, Batterie condensateurs TR2A, Batterie condensateurs TR2B, Batteries condensateurs TGBT 3, Batteries condensateurs TR4A / TR4B, Batterie condensateurs TR5A, Batterie condensateurs 5B, Batterie condensateurs 6A, Batterie condensateurs 6B, Batteries condensateurs TGBT 7A / 7B, Batteries condensateurs TGBT 9A / 9B, Alimentation ondulée — Onduleur 1, Alimentation ondulée — Onduleur 2, Onduleur 1 (Sous-station 1), Onduleur 2 (Sous-station 2), TS 46A, TS 46B, Bâtiment Bronzini, Gradathyr — Tableau Gorge (OM 221), Armoire 110 V — instrument ampèremètre, Armoire éclairage sous-station, Tableau OM 27, Décarbonatation, Coffret 24 V / 230 V TR7B, Coffret ventilation local Boosting F2, Coffret ventilation local Boosting 1, Armoire ventilateurs hélicoïdes Helipac, TGBT 8.
+Départs indexés : 503 · Lignes Excel non rattachées : 0.
