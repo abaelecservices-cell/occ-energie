@@ -1185,8 +1185,10 @@ function bindNetFinder(viewer) {
       detail.innerHTML = '<div class="banner info" role="status">Plusieurs équipements correspondent à cette recherche. Sélectionnez le bon départ dans la liste avant d’afficher son chemin.</div>';
     }
   });
-  renderHits();
-  if (NET_FINDER.selected) infoFor(NET_FINDER.selected);
+  if (NET_FINDER.selected) {
+    results.innerHTML = ''; // la sélection est faite : l'unifilaire reste visible en premier
+    infoFor(NET_FINDER.selected);
+  } else renderHits();
 }
 
 function vNet(focus) {
