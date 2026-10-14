@@ -37,7 +37,7 @@ Contrôle fait sur les **photos d’origine à pleine résolution**, complété 
 |---|---|---|
 | Gorge Four 2 | Gorge .pdf p1, p3–p6, p9, p10, p15 | **Trop sombres**. Éclairer la façade (les armoires grises à grilles et à poignée rotative). |
 | Varivolt 1 et 2 | Varivolt1 et 2 .pdf p1, p2 | **Floues** |
-| Ventilation Four | Ventilation FOUR.pdf p1, p4, p6 | **Floues** ; p2 et p6 trop sombres |
+| Ventilation Four | Ventilation FOUR.pdf p3 (coffret de droite seulement) | Plaques du haut trop petites : numéro de départ non lu. Les pages 1, 4 et 5 (Helipac) et le coffret Boosting F2 sont lisibles. |
 | Pompes eau glacée 7PM65 / 7PM03 | Pompe eau glace … .pdf p3 (p1, p2 peu nettes) | **Floue** |
 
 ## 3. Photos à refaire — façade faite mais incomplète
@@ -90,7 +90,7 @@ Demander par repère et par détail, pas toutes les photos à nouveau :
 | TGBT 9 | source du secours « Gorge Four 2 » (A3-72S) et logique du commutateur N/S | aucune liaison saisie sans cela |
 | TGBT 7 | case exacte « compresseur 7K122 » (A2-16 ou A2-18) ; repère 7K123 / centrale 55 ; plaque « compresseur air B2 18 » | rapprochements à confirmer |
 | Onduleur 2 | plaque de l’onduleur (100 ou 120 kVA) ; libellé du départ QF4 | écart I-OND2-KVA |
-| Ventilation Four | source du second coffret de tourelles ; plaque « Prs dans TGBT9A case A2 52E » à confirmer | coffret non raccordé |
+| Ventilation Four | gros plan des deux petites plaques du coffret de droite (p3) ; origine de l’armoire Helipac | le coffret F2 est raccordé (plaque « Pris dans TGBT 9A case A2 52E ») ; le coffret de droite et Helipac n’ont pas d’origine lisible |
 | Gorge (Spang) | plaque constructeur nette, modèle exact, notice | diagnostic des zones 1-3 |
 | Varivolt | plaque de chaque unité (affectation de la plaque 26013-1) ; tableau d’annonces net | écart I-VARIVOLT-PLATE |
 | Tableau 20 kV CNR / EDF | référence complète du relais TR 6A (TR 5A : Easergy T60 lu) | relais actuels ≠ références de l’unifilaire |

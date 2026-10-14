@@ -199,7 +199,7 @@ coupler(b, 'Couplage TGBT 2 — NW40HA 4P (case 4-53)', 'confirme', T2DOC, case=
 # TGBT 3
 b = tgbt(3, 'SS2', 'probable', 'okken_blanc_vert', 'documente', cpl_rule=ROLL, cpl_src=T3DOC,
          note='Okken (plan CX781001) — façade blanche à bandeau vert (photos). Cartouche du plan : « SOUS-STATION 2 » alors que TR3A/TR3B sont alimentés par le tableau 20 kV SS1. Pas d’onglet TR3 dans le classeur Excel.',
-         photos=['Tgbt 3.pdf p1-p8', 'Tgbt 3 (2).pdf p1-p16'], docs=[T3DOC, T3LOCK, 'Verrouillage DJ TR3B.pdf (scanné)', 'TR2/TR3 Plan d’ensemble, essais individuels (p1 - Copie.zip)', 'Gaine à barres p46268'],
+         photos=['Tgbt 3.pdf p1-p8', 'Tgbt 3 (2).pdf p1-p16'], docs=[T3DOC, T3LOCK, 'p1 - Copie.zip › Verrouillage DJ TR3B.pdf (scan transcrit)', 'TR2/TR3 Plan d’ensemble, essais individuels (p1 - Copie.zip)', 'Gaine à barres p46268'],
          facade='TGBT3', it='IM400 + IFL12MC (x2)')
 arrivals(b, 3, 'Arrivée TR3A — QTR3A MTZ2 40H1 4P Micrologic 5.0X (case 3+28)', 'Arrivée TR3B — QTR3B MTZ2 40H1 4P (case 4+28)', 'TR3A', 'TR3B', src=T3DOC,
          qa_extra=dict(case='3+28', model='MTZ2 40H1 4P', ir='2887 A', keys='A3A (Ronis)'), qb_extra=dict(case='4+28', model='MTZ2 40H1 4P', ir='2887 A'))
@@ -542,7 +542,7 @@ PHOTO_ONLY = [
  ('TS46B', 'TS 46B', 'TS', 'TERRAIN', 'Entre Packman et l’emballage (indication utilisateur). Absent du classeur.', ['Ts46b.pdf p1-p6']),
  ('OM27', 'Tableau OM 27', 'TS', None, 'Absent du classeur.', ['Tableau OM 27 .pdf p1']),
  ('ARM110', 'Armoire 110 V — instrument ampèremètre', 'Armoire 110 V', None, None, ['Armoire 110v instrument ampère mètre .pdf p1']),
- ('VENTIL', 'Ventilation Four', 'Coffret', None, None, ['Ventilation FOUR.pdf p1-p6']),
+ ('VENTIL', 'Coffret ventilation local Boosting F2', 'Coffret', None, 'Plaque lue sur Ventilation FOUR.pdf p3. Les pages 1, 2, 4, 5 et 6 montrent une autre armoire (Helipac).', ['Ventilation FOUR.pdf p3']),
  ('DECARBO', 'Décarbonatation', 'Coffret', None, 'Excel TS17A C29 « 7M10 Armoire commande decarbonatation » — rapprochement probable.', ['Decarbo .pdf p1-p2']),
  ('GORGE', 'Gorge Four 2', 'Armoires', None, 'Armoires grises à sectionneurs à poignée (photos). Excel TGBT 9A H6 « Normal secours gorge Four 2 » — rapprochement probable.', ['Gorge .pdf p1-p15']),
  ('GRADATHYR', 'Gradathyr (gradateurs à thyristors)', 'Armoires', 'SS1', 'Équipements de boosting cités en SS1 par l’utilisateur ; alimentation non documentée.', ['GRADATHYR.pdf p1-p5']),
@@ -779,7 +779,23 @@ PROCS = [
              'À l’aide de la clé T3A, déverrouiller l’un des volets de condamnation des bornes du transformateur (ces volets ôtés, la clé T3A reste prisonnière).'],
       warn='ATTENTION : les parties figurées en rouge sur le plan doivent être considérées comme restant sous tension après l’exécution des manœuvres énumérées. DÉFENSE D’OUVRIR TANT QUE LES CONDUCTEURS DE CE COMPARTIMENT N’ONT PAS ÉTÉ MIS HORS TENSION.'),
  dict(id='P-TR3B', title='Exploitation des verrouillages par serrures — Cellule DJ-TR3B', board='TGBT3', ents=['TGBT3_QB', 'SS1_C3B', 'TR3B'],
-      status='Document présent (scanné, texte non extrait) — à transcrire', src='p1 - Copie.zip › Verrouillage DJ TR3B.pdf', but=[], steps=[], warn=None),
+      status='Document constructeur (Schneider Electric, scan transcrit le 12/10/2026) — validation de l’exploitant requise',
+      src='p1 - Copie.zip › 12_TGBT N°3 › Verrouillage DJ TR3B.pdf',
+      but=['INTERDIRE la fermeture du sectionneur de terre de la cellule « DJ-TR3B » tant que le circuit de commande du groupe n’est pas mis hors service.',
+           'INTERDIRE l’accès au transformateur de puissance tant que le sectionneur de terre de la cellule disjoncteur n’est pas verrouillé dans la position FERMÉ.',
+           'INTERDIRE la manœuvre en charge du sectionneur de ligne.',
+           'INTERDIRE l’accès au disjoncteur et aux transformateurs de courant, sectionneur de ligne fermé.',
+           'PERMETTRE la manœuvre à vide du disjoncteur, sectionneur de ligne ouvert.'],
+      steps=['Ouvrir et verrouiller ouvert le disjoncteur BT QTR3B (la clé A3B est libre).',
+             'Porter la clé A3B sur la serrure de condamnation du sectionneur de terre de la cellule « DJ-TR3B ».',
+             'Ouvrir et verrouiller « ouvert » le disjoncteur de la cellule « DJ-TR3B » (récupérer la clé D3B libre).',
+             'À l’aide de la clé D3B déverrouiller, ouvrir et verrouiller « ouvert » le sectionneur de ligne (la 1re clé D3B est prisonnière et la 2e clé D3B est libre).',
+             'Possibilité de faire les essais à vide du disjoncteur à l’aide de la 2e clé D3B.',
+             'À l’aide de la clé A3B déverrouiller et fermer le sectionneur de terre de la cellule « DJ-TR3B » (la clé A3B devient prisonnière).',
+             'Enlever le panneau de la cellule « DJ-TR3B » (le sectionneur de terre peut être rouvert, la clé A3B reste prisonnière).',
+             'Panneau de la cellule « DJ-TR3B » enlevé, prendre la clé T3B à l’intérieur.',
+             'À l’aide de la clé T3B, déverrouiller l’un des volets de condamnation des bornes du transformateur (ces volets ôtés, la clé T3B reste prisonnière).'],
+      warn='ATTENTION : les parties figurées en rouge sur le plan doivent être considérées comme restant sous tension après l’exécution des manœuvres énumérées. DÉFENSE D’OUVRIR TANT QUE LES CONDUCTEURS DE CE COMPARTIMENT N’ONT PAS ÉTÉ MIS HORS TENSION.'),
  dict(id='P-TGBT3-SRC', title='TGBT 3 — Choix de source (clés Ronis)', board='TGBT3', ents=['TGBT3_QA', 'TGBT3_QB', 'TGBT3_QC'],
       status='Règle constructeur (plan CX781001 p.15) — aucune séquence fournie', src=T3DOC,
       but=['Permutation des sources à la charge de l’exploitant.', 'Combinaisons autorisées QTR3A / QC / QTR3B : 1-0-1, 0-1-1, 1-1-0 (jamais trois appareils fermés).'], steps=[], warn=None),
@@ -872,7 +888,7 @@ exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'audit_202
 INV = json.load(open(sys.argv[1].replace('excel.json', 'inv.json'), encoding='utf-8')) if False else None
 
 data = dict(
-  meta=dict(app='OCC ÉNERGIE', version='1.15', built='2026-10-11', data='Dossier DISTRIBUTION-ELECTRIQUE (Plan électrique, 50 PDF photo, classeur, archives p1*.zip) + audit du 11/10/2026', unifilaire='Owens Corning R112529 — UNIFILAIRE HTA/BT — rév. H', site='Usine OCF à Laudun'),
+  meta=dict(app='OCC ÉNERGIE', version='1.16', built='2026-10-12', data='Dossier Plan électrique relu le 12/10/2026 (classeur, unifilaire, photos, archives p1*.zip : verrouillage TR3B, PV France Transfo, schémas DM1 Varivolt)', unifilaire='Owens Corning R112529 — UNIFILAIRE HTA/BT — rév. H', site='Usine OCF à Laudun'),
   loc=LOC, nodes=list(nodes.values()), edges=edges, boards=list(boards.values()), facades=F, issues=issues, procs=PROCS,
   xl_left=[dict(sheet=s, cell=c, label=l) for s, c, l in left], **D_EXTRA)
 json.dump(data, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
