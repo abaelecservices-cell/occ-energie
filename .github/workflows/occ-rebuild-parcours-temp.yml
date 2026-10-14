@@ -1,4 +1,5 @@
 name: OCC Energie - Reconstruire HTML apres correction routeur
+# Rebuild after facade selector fix
 
 on:
   push:
