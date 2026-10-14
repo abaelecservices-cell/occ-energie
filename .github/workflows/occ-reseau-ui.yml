@@ -1,0 +1,46 @@
+name: OCC Energie - Test navigateur unifilaire
+
+on:
+  push:
+    branches:
+      - main
+      - codex/reprise-unifilaire-navigation-2026-10-14
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unifilaire-navigateur:
+    name: Recherche et localisation (Chrome)
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer Playwright
+        run: python -m pip install --disable-pip-version-check playwright==1.56.0
+      - name: Chrome du runner
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          echo "OCC_CHROME=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+      - name: Construire le HTML embarque
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py
+      - name: Tester la recherche sur l unifilaire
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/smoke_reseau.py
+      - name: Conserver la capture du test
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: occ-energie-reseau-navigateur
+          path: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/artifacts/unifilaire-recherche.png
+          if-no-files-found: ignore
+          retention-days: 14

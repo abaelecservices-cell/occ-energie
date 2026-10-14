@@ -2331,6 +2331,81 @@ function netFocus(id) {
   }
   return null;
 }
+
+/* Recherche contextuelle sur l'unifilaire : reutilise l'index global sans modifier les donnees. */
+const NET_FINDER = { query: '', selected: null };
+function netFinderPanel() {
+  return '<section class="card glass" style="padding:12px 14px;margin:12px 0" aria-label="Recherche sur le schema">' +
+    '<label for="net-find" style="font-weight:700;display:block;margin-bottom:7px">Rechercher et localiser sur le schema</label>' +
+    '<input id="net-find" class="f" type="search" autocomplete="off" style="width:100%;max-width:650px" ' +
+    'placeholder="TR 1A, cellule, repere, TGBT, TS7..." aria-label="Rechercher un equipement sur le schema">' +
+    '<div id="net-hits" class="list" style="margin-top:6px" role="listbox"></div>' +
+    '<div id="net-doc" style="margin-top:8px" role="status" aria-live="polite"></div>' +
+    '</section>';
+}
+function bindNetFinder(viewer) {
+  const field = $('#net-find'), results = $('#net-hits'), detail = $('#net-doc');
+  if (!field || !viewer) return;
+  field.value = NET_FINDER.query;
+
+  function infoFor(id) {
+    const n = NODE[id], b = BOARD[id] || (n && boardOf(n));
+    const locId = (b && b.loc) || (n && n.loc);
+    const loc = locChain(locId).map(x => x.name).join(' / ') || 'Localisation non documentee';
+    const conf = (b && b.loc_conf) || (n && n.conf) || 'inconnu';
+    const keys = n && n.keys ? [String(n.keys)] :
+      b ? D.nodes.filter(x => x.board === b.id && x.keys).slice(0, 8).map(x => short(x) + ' : ' + x.keys) : [];
+    const title = b && !n ? b.name : n ? n.label : id;
+    const related = D.issues.filter(i => issueActive(i) && (i.ents || []).some(e => e === id || (b && e === b.id))).slice(0, 4);
+    const warning = related.length ? '<div class="banner danger" style="margin-top:8px">⚠️<div><b>Ecarts documentaires lies au repere :</b><br>' + related.map(i => '<a href="#" data-open="issue:' + esc(i.id) + '">' + esc(i.title) + '</a>').join('<br>') + '</div></div>' : '';
+    const keyTxt = keys.length ? keys.map(x => '<div class="small">' + esc(x) + '</div>').join('') :
+      '<span class="muted">Aucune cle associee a cette selection dans les donnees.</span>';
+    detail.innerHTML = '<div class="card glass" style="padding:10px 12px">' +
+      '<b>' + esc(title) + '</b> ' + confPill(n ? n.conf : conf) +
+      '<div class="small" style="margin-top:7px"><b>Localisation documentaire :</b> ' + esc(loc) +
+      (b && b.loc_conf && b.loc_conf !== 'confirme' ? ' (a confirmer)' : '') + '</div>' +
+      '<div class="small" style="margin-top:5px"><b>Cles / reperes documentes :</b></div>' + keyTxt +
+      warning +
+      '<div class="row" style="margin-top:8px"><button class="btn" type="button" data-open="' + esc(id) + '">Ouvrir la fiche</button>' +
+      '<button class="btn ghost" type="button" data-go="#/plans">Ouvrir les plans de localisation</button></div>' +
+      '<p class="small muted" style="margin:7px 0 0">Les cles et localisations proviennent des documents et ne constituent ni un relevé terrain ni une autorisation de manoeuvre.</p></div>';
+  }
+  function selectId(id) {
+    NET_FINDER.selected = id;
+    const target = NETVIEW === 'full' ? (BOARD[id] ? id : netFocus(id)) :
+      (NODE[id] ? focusTarget(id) : null);
+    if (!target || !viewer.focusOn(target)) {
+      if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
+      toast('Selection documentee : cet equipement n est pas dessine directement sur le schema.');
+    }
+    infoFor(id);
+  }
+  function renderHits() {
+    NET_FINDER.query = field.value;
+    const q = NET_FINDER.query.trim();
+    if (!q) { results.innerHTML = ''; return; }
+    const found = search(q, 70).filter(x => x.kind === 'node' || x.kind === 'board').slice(0, 12);
+    results.innerHTML = found.length ? found.map(x =>
+      '<button type="button" class="li" style="width:100%;text-align:left;cursor:pointer" data-net-id="' + esc(x.id) + '">' +
+      '<span class="pill">' + esc(x.kind === 'board' ? 'Tableau' : (TYPE[x.t] || x.t)) + '</span>' +
+      '<span class="grow"><b>' + esc(x.label) + '</b><span class="src" style="display:block">' + esc(recContext(x)) + '</span></span><span>⌖</span></button>').join('') :
+      '<p class="small muted">Aucun element trouve dans le modele documente.</p>';
+  }
+  results.onclick = e => {
+    const item = e.target.closest('[data-net-id]');
+    if (item) selectId(item.dataset.netId);
+  };
+  field.addEventListener('input', renderHits);
+  field.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const first = results.querySelector('[data-net-id]');
+      if (first) { e.preventDefault(); selectId(first.dataset.netId); }
+    }
+  });
+  renderHits();
+  if (NET_FINDER.selected) infoFor(NET_FINDER.selected);
+}
+
 function vNet(focus) {
   VIEW().innerHTML = `<h1>Réseau HTA / BT</h1><p class="sub">Topologie selon l’unifilaire 20 kV (R112529 rév. H) et le classeur de distribution. Touchez un élément pour sa fiche.</p>
   ${simBanner()}
@@ -2338,11 +2413,16 @@ function vNet(focus) {
     <button class="btn ghost" id="rst">Réinitialiser l’hypothèse</button><button class="btn ghost" id="cnr">${rawClosed('SRC_CNR') ? 'Simuler une perte CNR' : 'Rétablir la CNR'}</button><span class="small muted">${Object.keys(SIM).length} modification(s) par rapport à l’hypothèse initiale</span></div>
   <div class="seg glass" style="margin-bottom:10px"><button id="v1" class="${NETVIEW === 'full' ? 'on' : ''}">Schéma complet : 20 kV → transfos → TGBT → tableaux</button><button id="v2" class="${NETVIEW === 'uni' ? 'on' : ''}">Ordre physique des cellules HTA (unifilaire)</button></div>
   <p class="small muted" style="margin:0 0 8px">${NETVIEW === 'full' ? 'Schéma de principe : le demi-jeu de barres 20 kV gauche (cellules TR xA) est dessiné au-dessus du droit (cellules TR xB) ; au croisement d’un trait vertical et du jeu de barres droit, il n’y a pas de liaison. En mode simulation, touchez un disjoncteur, une arrivée ou un couplage.' : 'Cellules dans l’ordre de l’unifilaire R112529 rév. H.'}</p>
+  ${netFinderPanel()}
   <div id="hta"></div>
   <h2>Tableaux secondaires</h2><div class="grid">${D.boards.filter(b => b.kind !== 'TGBT' && b.kind !== 'HTA').map(b => { const hs = b.halves.filter(h => NODE[h.id]); return `<div class="li glass" style="border-radius:16px" data-go="#/b/${b.id}">${hs.map(h => `<span class="dot ${isLive(h.id) ? 'on' : 'off'}"></span>`).join('')}<div class="grow"><b>${esc(b.name)}</b><div class="src">${hs.map(h => esc(h.label.replace(b.name, '').replace(/^ — /, '') || 'JdB') + ' : ' + (isLive(h.id) ? 'alimenté' : 'non alimenté')).join(' · ')}</div></div></div>`; }).join('')}</div>
   ${footer()}`;
   const handler = id => { const n = NODE[id]; if (SIMMODE && n && (SW.has(n.t) || n.t === 'src')) { if (setSw(id, !isClosed(id))) { toast(`${short(n)} : ${isClosed(id) ? 'fermé' : 'ouvert'} (simulation)`); rerender(); } } else openEntity(id); };
-  mountViewer($('#hta'), NETVIEW === 'full' ? fullNetSVG() : htaSVG(), { onClick: handler, focus: focus && NODE[focus] ? (NETVIEW === 'full' ? netFocus(focus) : focusTarget(focus)) : null, legend: '<span style="color:#12b76a">━ alimenté</span><span style="color:#e5484d">━ non alimenté</span><span>□ appareil ouvert · ■ fermé</span>' });
+  const selectedFocus = focus || NET_FINDER.selected;
+  const viewer = mountViewer($('#hta'), NETVIEW === 'full' ? fullNetSVG() : htaSVG(), { onClick: handler,
+    focus: selectedFocus ? (NETVIEW === 'full' ? (BOARD[selectedFocus] ? selectedFocus : netFocus(selectedFocus)) : (NODE[selectedFocus] ? focusTarget(selectedFocus) : null)) : null,
+    legend: '<span style="color:#12b76a">━ alimenté</span><span style="color:#e5484d">━ non alimenté</span><span>□ appareil ouvert · ■ fermé</span>' });
+  bindNetFinder(viewer);
   $('#v1').onclick = () => { NETVIEW = 'full'; rerender(); }; $('#v2').onclick = () => { NETVIEW = 'uni'; rerender(); };
   $('#m0').onclick = () => { SIMMODE = false; rerender(); }; $('#m1').onclick = () => { SIMMODE = true; rerender(); };
   $('#rst').onclick = () => { resetSim(); rerender(); };
