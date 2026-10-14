@@ -64,7 +64,7 @@ def main():
         assert all(r["Statut de verification"] == "A RELEVER" for r in boards_to_visit)
         with (out / names[1]).open(encoding="utf-8-sig", newline="") as h:
             cases_to_visit = list(csv.DictReader(h, delimiter=";"))
-        assert len(cases_to_visit) == 2
+        assert len(cases_to_visit) == 1, "Seul D2 manque de facade et de case"
         assert all(not r["Case relevee"] and not r["Etiquette lue exactement"]
                    for r in cases_to_visit)
 
