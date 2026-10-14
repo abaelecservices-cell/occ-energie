@@ -1225,8 +1225,8 @@ function vBoard(id, sub, target) {
     <p class="small muted" style="margin-bottom:0">${transfoLoad(id)}</p>` : ''}</details>` : ''}
   <div class="seg glass" id="btabs">${[['f', 'Façade'], ['d', `Départs (${deps.length})`], ['s', 'Alimentation'], ['p', 'Photos'], ...(iss.length ? [['i', `Incohérences (${iss.length})`]] : [])].map(([k, l]) => `<button data-t="${k}" class="${BTAB === k ? 'on' : ''}">${l}</button>`).join('')}</div>
   <div id="bbody" style="margin-top:14px"></div>${footer()}`;
-  $('#btabs button').forEach(x => x.onclick = () => { BTAB = x.dataset.t; vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); });
-  $('#srcmode button').forEach(x => x.onclick = () => { applyMode(id, x.dataset.m); vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); });
+  document.querySelectorAll('#btabs button').forEachx => x.onclick = () => { BTAB = x.dataset.t; vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); });
+  document.querySelectorAll('#srcmode button').forEach(x => x.onclick = () => { applyMode(id, x.dataset.m); vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); });
   const body = $('#bbody');
   if (BTAB === 'f') {
     if (b.facade) {
