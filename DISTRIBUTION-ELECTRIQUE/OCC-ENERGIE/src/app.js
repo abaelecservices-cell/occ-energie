@@ -315,7 +315,7 @@ function shell() {
   try { const t = localStorage.getItem('occE.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   document.addEventListener('click', e => {
     const o = e.target.closest('[data-open]'); if (o) { e.preventDefault(); openEntity(o.dataset.open); return; }
-    const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); closeSheet(); location.hash = g.dataset.go; }
+    const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); closeSheet(); location.hash = g.dataset.go; route(false); }
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); if (e.key === '/' && document.activeElement !== $('#search')) { e.preventDefault(); $('#search').focus(); } });
 }
@@ -1027,9 +1027,11 @@ function swSymH(id, cx, cy) {
 /* ======================================================================= vues */
 const VIEW = () => $('#view');
 let CUR = { route: '', args: [] };
+let LAST_ROUTED_HASH = null;
 function setTab(k) { $$('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === k)); }
 function rerender() { route(true); }
 function route(keep) {
+  LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
   const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
@@ -1191,6 +1193,9 @@ function vBoards() {
 let BTAB = 'f';
 function vBoard(id, sub, target) {
   const b = BOARD[id]; if (!b) return vBoards();
+  const selectedDeparture = target && NODE[target] && NODE[target].t === 'dep' &&
+    (NODE[target].board === id || (facadeFor(target) &&
+    boardForFacade(facadeFor(target)) === id)) ? NODE[target] : null;
   if (sub === 'f') BTAB = 'f';
   const hasSrc = !!(NODE[id + '_QA'] && NODE[id + '_QB'] && NODE[id + '_QC']);
   const deps = DEPS_BY_BOARD[id] || [];
@@ -1200,7 +1205,16 @@ function vBoard(id, sub, target) {
   VIEW().innerHTML = `<div class="crumbs" style="margin-top:10px">${loc}<i>›</i><a>${esc(b.name)}</a></div>
   <h1>${esc(b.name)}</h1>
   <div class="row" style="margin-bottom:10px"><span class="pill k">${esc(b.kind)}</span>${b.loc && b.loc_conf !== 'confirme' ? confPill(b.loc_conf) : ''}${b.it ? `<span class="pill b">Neutre IT</span>` : ''}</div>
-  <div class="row" style="margin:6px 0 10px"><button class="btn" data-go="#/courant/${id}">⚡ Remettre le courant</button>${planFor(id) ? `<button class="btn ghost" data-go="#/plans/${planFor(id)}/${id}">📍 Voir sur le plan</button>` : ''}</div>
+  <div class="row" style="margin:6px 0 10px"><button class="btn" data-go="#/courant/${id}">⚡ Remettre le courant</button>${planFor(id) ? `<button class="btn ghost" data-go="#/plans/${planFor(id)}/${id}${selectedDeparture ? '/' + selectedDeparture.id : ''}">📍 Voir sur le plan</button>` : ''}</div>
+  ${selectedDeparture ? `<div id="facade-return" class="card glass" style="padding:12px;margin:8px 0">
+    <b>Départ sélectionné : ${esc(selectedDeparture.label)}</b>
+    ${selectedDeparture.case ? `<span class="pill">Case ${esc(selectedDeparture.case)}</span>` : ''}
+    <div class="row" style="margin-top:8px">
+      <button class="btn" id="facade-to-reseau" data-go="#/reseau/${esc(selectedDeparture.id)}">← Voir son alimentation sur le schéma</button>
+      ${parcoursContext(selectedDeparture.id).zone ? `<button class="btn ghost" id="facade-to-site" data-go="#/site/${esc(selectedDeparture.id)}">📍 Retour au bâtiment</button>` : ''}
+    </div>
+    <p class="small muted" style="margin:6px 0 0">Liaison documentaire, non vérification de l’état réel du réseau.</p>
+  </div>` : ''}
   ${hasSrc || b.alias || b.note || b.sap || b.obs || (D.insul || {})[id] ? `<details class="card glass" style="margin:12px 0"><summary><b>Plus d’informations</b> <span class="small muted">${hasSrc ? 'règle de couplage, simulation du choix de source, ' : ''}notes</span></summary>
     ${b.alias ? `<p class="small muted">${esc(b.alias)}</p>` : ''}${b.note ? `<p class="small">${esc(b.note)}</p>` : ''}${b.sap ? `<p class="small">SAP ${esc(b.sap)}</p>` : ''}
     ${b.it ? `<p class="small">Neutre IT — contrôle d’isolement : ${esc(b.it)}${(D.insul || {})[id] ? ` · <a href="#" data-go="#/courant/${id}/isol">table voie → départ</a>` : ''}</p>` : ''}
@@ -1211,15 +1225,15 @@ function vBoard(id, sub, target) {
     <p class="small muted" style="margin-bottom:0">${transfoLoad(id)}</p>` : ''}</details>` : ''}
   <div class="seg glass" id="btabs">${[['f', 'Façade'], ['d', `Départs (${deps.length})`], ['s', 'Alimentation'], ['p', 'Photos'], ...(iss.length ? [['i', `Incohérences (${iss.length})`]] : [])].map(([k, l]) => `<button data-t="${k}" class="${BTAB === k ? 'on' : ''}">${l}</button>`).join('')}</div>
   <div id="bbody" style="margin-top:14px"></div>${footer()}`;
-  $$('#btabs button').forEach(x => x.onclick = () => { BTAB = x.dataset.t; vBoard(id); });
-  $$('#srcmode button').forEach(x => x.onclick = () => { applyMode(id, x.dataset.m); vBoard(id, null, target); });
+  for (const x of document.querySelectorAll('#btabs button')) x.onclick = () => { BTAB = x.dataset.t; vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); };
+  for (const x of document.querySelectorAll('#srcmode button')) x.onclick = () => { applyMode(id, x.dataset.m); vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); };
   const body = $('#bbody');
   if (BTAB === 'f') {
     if (b.facade) {
       const f = D.facades[b.facade];
       body.innerHTML = `<div class="banner info" style="margin-bottom:10px">✏️<div class="small"><b>Reconstruction vectorielle</b> — ${esc(f.conf)}<br><span class="muted">Source : ${esc(f.src)}</span></div></div><div id="fv"></div>`;
       mountViewer($('#fv'), facadeSVG(b.facade, { live: true }), { onClick: openEntity, focus: target, legend: '<span>● vert : alimenté (simulé)</span><span>● rouge : non alimenté</span><span>Touchez un appareil</span>' });
-      if (target && NODE[target]) body.insertAdjacentHTML('afterbegin', '<div class="banner info" id="facade-target" style="margin-bottom:10px"><div><b>Départ ciblé : ' + esc(NODE[target].label) + '</b>' + (NODE[target].case ? '<div class="small">Case ' + esc(NODE[target].case) + '</div>' : '') + '<button class="btn ghost" style="margin-top:7px" data-open="' + esc(target) + '">Ouvrir la fiche du départ</button></div></div>');
+      if (selectedDeparture) body.insertAdjacentHTML('afterbegin', '<div class="banner info" id="facade-target" style="margin-bottom:10px"><div><b>Départ ciblé : ' + esc(NODE[target].label) + '</b>' + (NODE[target].case ? '<div class="small">Case ' + esc(NODE[target].case) + '</div>' : '') + '<button class="btn ghost" style="margin-top:7px" data-open="' + esc(target) + '">Ouvrir la fiche du départ</button></div></div>');
     } else body.innerHTML = `<div class="card glass"><h3 style="margin-top:0">Façade non reconstruite</h3><p class="small">Aucune façade n’est dessinée pour ce tableau : soit les photographies n’ont pas encore été relevées, soit les étiquettes ne sont pas lisibles. Les appareils ne sont pas représentés par un symbole générique pour éviter toute confusion.</p><div>${photoLinks(b.photos)}</div></div>`;
   } else if (BTAB === 'd') {
     const halves = b.halves.length ? b.halves : [{ id: null, label: 'Départs' }];
@@ -1408,5 +1422,5 @@ function vReg() {
 
 /* ======================================================================= démarrage */
 shell();
-window.addEventListener('hashchange', () => { closeSheet(); route(false); });
+window.addEventListener('hashchange', () => { if (location.hash === LAST_ROUTED_HASH) return; closeSheet(); route(false); });
 route(false);
