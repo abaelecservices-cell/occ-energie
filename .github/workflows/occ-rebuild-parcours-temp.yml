@@ -48,5 +48,6 @@ jobs:
             echo 'HTML identique'
           else
             git commit -m 'build(occ-energie): livrer le parcours interactif autonome'
+            git pull --rebase origin codex/parcours-depart-site-facade-2026-10-14
             git push origin HEAD:codex/parcours-depart-site-facade-2026-10-14
           fi
