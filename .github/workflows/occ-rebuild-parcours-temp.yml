@@ -1,4 +1,5 @@
 name: OCC Energie - Synchroniser parcours HTML
+# Rebuild after path focus fix
 
 on:
   push:
