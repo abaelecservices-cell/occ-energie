@@ -76,6 +76,10 @@ jobs:
           print("Taille :", fichier.stat().st_size, "octets")
           PY
 
+      - name: Garantir la synchronisation du HTML livre
+        run: |
+          git diff --exit-code -- DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
+
       - name: Verifier la coherence electrique
         run: |
           python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_coherence_electrique.py
