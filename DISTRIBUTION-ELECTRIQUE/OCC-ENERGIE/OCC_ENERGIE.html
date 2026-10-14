@@ -602,7 +602,7 @@ function shell() {
   try { const t = localStorage.getItem('occE.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   document.addEventListener('click', e => {
     const o = e.target.closest('[data-open]'); if (o) { e.preventDefault(); openEntity(o.dataset.open); return; }
-    const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); closeSheet(); location.hash = g.dataset.go; }
+    const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); closeSheet(); location.hash = g.dataset.go; route(false); }
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); if (e.key === '/' && document.activeElement !== $('#search')) { e.preventDefault(); $('#search').focus(); } });
 }
@@ -1314,9 +1314,11 @@ function swSymH(id, cx, cy) {
 /* ======================================================================= vues */
 const VIEW = () => $('#view');
 let CUR = { route: '', args: [] };
+let LAST_ROUTED_HASH = null;
 function setTab(k) { $$('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === k)); }
 function rerender() { route(true); }
 function route(keep) {
+  LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
   const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
@@ -2847,7 +2849,7 @@ function vReg() {
 
 /* ======================================================================= démarrage */
 shell();
-window.addEventListener('hashchange', () => { closeSheet(); route(false); });
+window.addEventListener('hashchange', () => { if (location.hash === LAST_ROUTED_HASH) return; closeSheet(); route(false); });
 route(false);
 </script>
 </body>
