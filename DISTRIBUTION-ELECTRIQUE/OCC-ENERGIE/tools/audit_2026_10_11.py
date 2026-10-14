@@ -74,12 +74,18 @@ for b in boards.values():
     if b.get('kind') == 'TGBT': b['coupler']['op'] = OPRULE
 
 # ------------------------------------------------------------------ transformateurs : surveillance thermique et ventilation
-nodes['TR3A']['cooling'] = 'Sec Trihal — sondes PT100 + relais de température : alarme, déclenchement, ventilateurs 1 et 2 (CX7810_C p27)'
-nodes['TR3B']['cooling'] = 'Sec Trihal — sondes PT100 + relais de température : alarme, déclenchement, ventilateurs 1 et 2 (CX7810_C p43)'
+_NT = 'Sec Trihal — sondes PT100 + relais NT935 AD : ventilateur 1 à 130 °C, alarme à 140 °C, déclenchement à 150 °C (schéma de câblage 106-267462 E, réglage dessiné — à confirmer sur le relais)'
+nodes['TR3A']['cooling'] = _NT + ' ; CX7810_C p27'
+nodes['TR3B']['cooling'] = _NT + ' ; CX7810_C p43'
 ISSUE('I-TR3-COOL', 'basse', 'TR 3B : DGPT2 (unifilaire) ou sec Trihal (dossier 2025) ?',
       'L’unifilaire R112529 rév. H indique une protection DGPT2 (transformateur immergé) pour le TR 3B. Le dossier du TGBT 3 (12/2024) et le dossier constructeur 2025 décrivent des transformateurs secs Trihal '
-      'avec sondes et relais de température (alarme, déclenchement, ventilateurs). Le transformateur a probablement été remplacé : la fiche suit le dossier récent. Seuils d’un dessin ≠ réglages actuels.',
+      'avec sondes PT100 et relais NT935 (ventilateur 1 à 130 °C, alarme à 140 °C, déclenchement à 150 °C sur le schéma de câblage). Le transformateur a probablement été remplacé : la fiche suit le dossier récent. Ces seuils sont ceux du dessin, pas une relève sur le relais.',
       [UNI, T3A], ['TR3A', 'TR3B'])
+ISSUE('I-VARIVOLT-TC', 'basse', 'Varivolt : TC câblé en 200/5 (schéma 2023) ou en 100/5 (unifilaire) ?',
+      'Les schémas Schneider des cellules DM1-A départ Varivolt (S000119797, dessins 697408-000 zone 1 et 697409-000 zone 2, 27/03/2023) portent « câblé sur grand rapport » sur les TC 3 × ARM3/N2F 200-100/5 A : le grand rapport est 200/5. '
+      'L’unifilaire R112529 retient 100/5 (valeur soulignée). Le relais et ses réglages I> ne figurent pas sur ces schémas. À relever sur le relais.',
+      ['p1 - Copie (2).zip › schema DM1 départ varivolt zone 1.pdf', 'p1 - Copie (2).zip › schema DM1 départ varivolt zone 2.pdf', UNI],
+      ['SS2_CZ1', 'SS2_CZ2', 'AEF1-TRZ1', 'AEF1-TRZ2'])
 nodes['TR7A']['cooling'] = 'Sondes + relais T935 : « ventilation et déclenchement température par relais T 935 » (étiquette, Tr7b .pdf p5)'
 
 # ------------------------------------------------------------------ TGBT 9 : plaques relues, contrôleur d'isolement, Gorge Four 2

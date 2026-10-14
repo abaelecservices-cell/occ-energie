@@ -38,8 +38,10 @@ MAP = {
  'VARIVOLT': ('VARIVOLT', 'confirme', None),
  'BOOSTING CREUSET 1': ('TR8A', 'probable', 'Plan : « Boosting creuset 1 » ↔ transformateur BOOSTING 3200 kVA (S3) de l’unifilaire'),
  'BOOSTING CREUSET 2': ('TR8B', 'probable', 'Plan : « Boosting creuset 2 » ↔ transformateur BOOSTING 3200 kVA (S12)'),
- 'COFFRET VENTILATION LOCAL BOOSTING 1': ('VENTIL', 'probable', None), 'COFFRET VENTILATITION LOCAL BOOSTING 1': ('VENTIL', 'probable', None),
- 'COFFRET VENTILATION LOCAL BOSSTING 2': ('VENTIL', 'probable', None), 'ARMOIRE VENTILATEUR HELICOIDES HELIPAC': ('VENTIL', 'probable', None),
+ 'COFFRET VENTILATION LOCAL BOOSTING 1': ('VENTF1', 'probable', 'Plan « local boosting 1 » ↔ coffret de droite sur Ventilation FOUR.pdf p3'),
+ 'COFFRET VENTILATITION LOCAL BOOSTING 1': ('VENTF1', 'probable', None),
+ 'COFFRET VENTILATION LOCAL BOSSTING 2': ('VENTIL', 'confirme', 'Plan « Bossting 2 » ↔ plaque « Coffret ventilation local Boosting F2 »'),
+ 'ARMOIRE VENTILATEUR HELICOIDES HELIPAC': ('HELIPAC', 'confirme', None),
  # SS1 côté droit
  'TABLEA GORGE': ('GORGE', 'confirme', None), 'TABLEAU 6KV': ('KV6', 'confirme', None),
  'SPANG 2': ('SPANG2', 'confirme', None), 'SPANG 5': ('SPANG5', 'confirme', None), 'SPANG 6': ('SPANG6', 'confirme', None),

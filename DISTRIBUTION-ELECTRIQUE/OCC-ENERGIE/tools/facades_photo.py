@@ -729,6 +729,59 @@ facade('DECARBO', 'DECARBO', 'armoire_grise', 'DÉCARBONATATION — ARMOIRE DE C
 facade('AUX7B', 'AUX7B', 'enclosure_blanc', 'COFFRET 24 V / 230 V TR7B', '24 V et 230 V tr7b.pdf p1', 'Relevé photo : coffret mural blanc, arrêt d’urgence en façade.', brand='', cols=[
   dict(n='', w=700, units=[dict(y=10, h=3, k='plate', node='AUX7B_J', label='24 V ET 230 V TR7B', plate='white', x=0.5), deco(18, 4, 'estop', x=0.6), deco(30, 6, 'handle', x=0.1)], doors=[(6, 48)])])
 for b in ('ARM110', 'ECLSST1', 'OM27', 'DECARBO', 'AUX7B', 'GRADATHYR'): boards[b]['style'] = 'armoire_grise' if b != 'AUX7B' else 'enclosure_blanc'
+
+# ---------- ventilation du four (Ventilation FOUR.pdf, relu le 12/10/2026 : les pages ne sont pas inexploitables)
+VP = 'Ventilation FOUR.pdf'
+# p3, coffret de gauche, plaque nette
+boards['VENTIL'].update(
+    name='Coffret ventilation local Boosting F2',
+    photos=[VP + ' p3'],
+    style='enclosure_blanc',
+    note='Plaque : « Coffret ventilation local Boosting F2 — Pris dans TGBT 9A case A2 52E ». Marque Ventifield Industries, étiquette 3×400 V. Quatre tourelles (voyant marche, voyant défaut, commutateur auto/manu) et arrêt d’urgence. Le départ n’a pas été relu sur la façade du TGBT 9 (étiquettes de la colonne A2 illisibles).')
+_vf2 = dep('TGBT9', 'A', 'COFFRET VENTILATION LOCAL BOOSTING F2 — CASE A2 52E', VP + ' p3 (plaque du coffret)',
+           case='A2-52E', conf='probable',
+           note='Lu sur le coffret, pas sur le TGBT 9. La colonne A2 du TGBT 9 a des départs dont l’étiquette de façade n’a pas été lue.')
+feed(_vf2, 'VENTIL_J', conf='probable', src=VP + ' p3 (plaque du coffret)')
+facade('VENTIL', 'VENTIL', 'enclosure_blanc', 'COFFRET VENTILATION LOCAL BOOSTING F2', VP + ' p3',
+       'Plaque blanche lue en gros plan. Tourelles 1 à 4 de gauche à droite.', brand='Ventifield Industries', cols=[
+    dict(n='', w=800, units=[
+        dict(y=4, h=5, k='plate', node='VENTIL_J', label='BOOSTING F2 / PRIS DANS TGBT 9A / CASE A2 52E / 3×400 V', plate='white'),
+        dict(y=14, h=8, k='plate', label='TOURELLE 1', plate='white'),
+        dict(y=24, h=8, k='plate', label='TOURELLE 2', plate='white'),
+        dict(y=34, h=8, k='plate', label='TOURELLE 3', plate='white'),
+        dict(y=44, h=8, k='plate', label='TOURELLE 4', plate='white'),
+        deco(58, 5, 'estop', 'ARRÊT D’URGENCE', x=0.5),
+    ], doors=[(3, 72)])])
+
+# p3, coffret de droite : même famille, plaque trop petite pour un numéro de case
+sub('VENTF1', 'Coffret ventilation local Boosting 1', kind='Coffret', loc='SS1G', loc_conf='probable',
+    photos=[VP + ' p3'],
+    note='Second coffret mural, à droite du Boosting F2 sur la même photo. Quatre tourelles (marche / défaut / auto-manu) et arrêt d’urgence. Deux petites plaques en haut : l’une se lit comme le pendant « Boosting » du coffret F2, l’autre comme une alimentation depuis le TGBT 9A ; le numéro de départ n’est pas assez net pour être saisi. Le plan d’implantation appelle cet emplacement « coffret ventilation local boosting 1 ».')
+boards['VENTF1']['loc_src'] = 'PLAN IMPLANTATION 2.pptx'
+facade('VENTF1', 'VENTF1', 'enclosure_blanc', 'COFFRET VENTILATION — TOURELLES (BOOSTING 1)', VP + ' p3',
+       'Même photo que le coffret F2, armoire de droite. Tourelles 1 à 4 lisibles ; plaques du haut trop petites pour un repère de case.', brand='', cols=[
+    dict(n='', w=800, units=[
+        dict(y=4, h=5, k='plate', node='VENTF1_J', label='TOURELLES / COFFRET DE DROITE / ALIMENTATION TGBT 9A (CASE NON LUE)', plate='white'),
+        dict(y=14, h=8, k='plate', label='TOURELLE 1', plate='white'),
+        dict(y=24, h=8, k='plate', label='TOURELLE 2', plate='white'),
+        dict(y=34, h=8, k='plate', label='TOURELLE 3', plate='white'),
+        dict(y=44, h=8, k='plate', label='TOURELLE 4', plate='white'),
+        deco(58, 5, 'estop', 'ARRÊT D’URGENCE', x=0.5),
+    ], doors=[(3, 72)])])
+
+# p1, p4, p5 : armoire au sol, porte nette (p2 et p6 sont les mêmes portes, plus sombres)
+sub('HELIPAC', 'Armoire ventilateurs hélicoïdes Helipac', kind='Armoire', loc='SS1G', loc_conf='confirme',
+    photos=[VP + ' p1', VP + ' p4', VP + ' p5'],
+    note='Plaque « ARMOIRE VENTILATEUR HELICOIDES HELIPAC ». Dix ventilateurs en deux rangées (1 à 5 en haut, 6 à 10 en bas) : voyant de présence, marche, arrêt. Arrêt d’urgence, sélecteur manu/auto, lampe « présence tension ». Aucune plaque d’alimentation sur la porte.')
+boards['HELIPAC']['loc_src'] = 'PLAN IMPLANTATION 2.pptx'
+facade('HELIPAC', 'HELIPAC', 'armoire_grise', 'ARMOIRE VENTILATEUR HELICOIDES HELIPAC', VP + ' p1, p4, p5',
+       'Porte lue sur les pages 1 et 4 (nettes). Pages 2 et 6 : même armoire, local plus sombre.', brand='', cols=[
+    dict(n='1 à 5', w=500, units=[dict(y=4, h=6, k='plate', node='HELIPAC_J', label='ARMOIRE VENTILATEUR / HELICOIDES HELIPAC', plate='white')] + [
+        dict(y=12 + i * 8, h=7, k='plate', label=f'VENTILATEUR {i+1}', plate='white') for i in range(5)] + [
+        deco(56, 5, 'estop', 'ARRÊT D’URGENCE', x=0.5), deco(64, 4, 'voy', 'PRÉSENCE TENSION', x=0.5)], doors=[(3, 76)]),
+    dict(n='6 à 10', w=500, units=[
+        dict(y=12 + i * 8, h=7, k='plate', label=f'VENTILATEUR {i+6}', plate='white') for i in range(5)], doors=[(3, 76)]),
+])
 # tableau 20 kV CNR / EDF : ordre des premières cellules confirmé par photo
 F['SS1_20']['conf'] = 'Ordre des cellules selon l’unifilaire, confirmé sur photo pour les premières cellules (PFM parafoudres, DM1 TR 6A repère 010, DM1 TR 5A repère 01, TR 4A, TR 3A — plaques rouges « DÉPART 20 kV TRANSFORMATEUR … ») ; cellules SM6 Schneider.'
 F['SS1_20']['src'] = UNI + ' + Tableau 20kv edf cnr .pdf p1, p3'

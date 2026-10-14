@@ -171,7 +171,9 @@ for t in ('TR3A', 'TR3B'):
     n['maker'] = 'France Transfo — Trihal (sec enrobé)'
     n['note'] = ((n.get('note') + ' ') if n.get('note') else '') + (
         'Dossier TGBT 3 : deux transformateurs Trihal 2000 kVA, 20 000 V / 410 V, Dyn11, Ucc 6 %, secs enrobés classe F, refroidissement AN, 4 410 kg, 2 336 × 1 280 × 2 725 mm, IP31, '
-        'surveillance de température par sondes et relais NT935 ; n° de série 1466597 (« TR2 » du fournisseur) et 1466588 (« TR3 ») — correspondance avec TR 3A / TR 3B à confirmer. '
+        'surveillance de température par sondes PT100 et relais NT935 AD : le schéma de câblage 106-267462 indice E dessine ventilateur 1 à 130 °C, alarme à 140 °C, déclenchement à 150 °C (réglage dessiné, à confirmer sur le relais). '
+        'Ucc garanti 6 %, mesuré 5,93 % (n° 1466597, essai du 28/01/2025) et 5,96 % (n° 1466588, essai du 29/01/2025). '
+        'N° de série 1466597 (dossier fournisseur « TR2 ») et 1466588 (dossier « TR3 ») — correspondance avec TR 3A / TR 3B à confirmer sur les plaques. '
         'Liaison BT vers le TGBT 3 : gaine à barres Canalis KTA 3200 A 3P+N+PE IP55 (2 liaisons, plans P46268).')
     n['src'] = (n.get('src') or '') + ' ; ' + ZTR
 for q in ('TGBT3_QA', 'TGBT3_QB'):
@@ -191,8 +193,10 @@ for nid, z in (('SS2_CZ1', '1'), ('SS2_CZ2', '2')):
     n['model'] = 'SM6 24 kV DM1-A 400 A — sectionneur CS 400 A + disjoncteur SF1 type 1 RI 400 A'
     n['keys'] = f'X0{z}01 · S0{z}01 · O0{z}01 (clés tubulaires, verrouillages type 50 + « protection transfo BT » C4-D)'
     n['note'] = ((n.get('note') + ' ') if n.get('note') else '') + (
-        f'Dossier constructeur : cellule repère client 0{z}101, extension par la {"droite" if z == "1" else "gauche"} du tableau ; TC 3 × ARM3/N2F 200-100/5 A (cl. 0,5s et 5P15), '
-        'VPIS V2, tore CSH120, câble 3 × (1 × 240 mm²) maxi, auxiliaires 110 V CC ; réseau 20 kV, 12,5 kA, neutre impédant.')
+        f'Dossier constructeur : cellule repère client 0{z}101, dessin 69740{"8" if z == "1" else "9"}-000, extension par la {"droite" if z == "1" else "gauche"} du tableau ; '
+        'TC 3 × ARM3/N2F 200-100/5 A (enroulement mesure 5 A 7,5 VA cl. 0,5 ; protection 5 A 5 VA cl. 5P15), mention « câblé sur grand rapport » (200/5 A). '
+        'L’unifilaire retient au contraire 100/5 A. VPIS V2, tore CSH120 1/470 A, câble admissible 3 × (1 × 240 mm²) maxi (le câble posé indiqué sur l’unifilaire est plus petit), '
+        'auxiliaires 110 V CC (moteur d’armement 110-127 V CC) ; réseau 20 kV, Icc 12,5 kA, neutre impédant. Les réglages I> du relais ne figurent pas sur ce schéma.')
     n['src'] = (n.get('src') or '') + ' ; ' + zs
     PROCS.append(dict(id=f'P-VARIVOLT{z}', title=f'Verrouillages par serrures — cellule DM1-A « départ Varivolt zone {z} »', board='SS2_20', ents=[nid],
         status='Document constructeur (Schneider Electric, 2023) — validation de l’exploitant requise', src=zs + ' folios 9-10',
