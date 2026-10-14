@@ -73,19 +73,6 @@ with sync_playwright() as playwright:
 
     page.locator("#plan-to-facade").click()
     page.wait_for_function("CUR.route === 'b'", timeout=15000)
-    print("DEBUG_BOARD", page.evaluate("""(selected) => ({
-      hash: location.hash,
-      cur: CUR,
-      tab: BTAB,
-      nodeType: NODE[selected]?.t,
-      nodeBoard: NODE[selected]?.board,
-      board: BOARD[CUR.args[0]]?.id,
-      boardFacade: BOARD[CUR.args[0]]?.facade,
-      facadeFor: facadeFor(selected),
-      facadeBoard: boardForFacade(facadeFor(selected)),
-      bbody: document.querySelector("#bbody")?.innerText?.slice(0,180),
-      target: document.querySelector("#facade-target")?.outerHTML
-    })""", cible), "ERRORS", errors, flush=True)
     page.locator("#facade-target").wait_for(timeout=15000)
     page.locator("#fv svg g.flash").wait_for(timeout=15000)  # focus pose au prochain frame navigateur
     assert "Case" in page.locator("#facade-target").inner_text(), "Repere de case absent"
