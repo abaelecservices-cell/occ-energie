@@ -77,6 +77,16 @@ with sync_playwright() as playwright:
     assert "Case" in page.locator("#facade-target").inner_text(), "Repere de case absent"
     page.screenshot(path=str(ARTIFACTS / "parcours-site-facade.png"), full_page=True)
 
+    # Trajet inverse : case ciblée -> onglet des départs -> réseau -> trajet amont
+    page.locator('#btabs [data-t="d"]').click()
+    page.locator("#facade-return").wait_for(timeout=10000)
+    assert cible in page.locator("#facade-to-reseau").get_attribute("data-go")
+    page.locator("#facade-to-reseau").click()
+    page.locator('#net-path[data-path-target="' + cible + '"]').wait_for(timeout=15000)
+    assert page.evaluate("NETVIEW") == "full"
+    assert page.locator("#hta svg .trace-wire").count() > 0
+    page.locator('#net-doc [data-go="#/site/' + cible + '"]').wait_for(timeout=10000)
+
     browser.close()
 
     if errors:
