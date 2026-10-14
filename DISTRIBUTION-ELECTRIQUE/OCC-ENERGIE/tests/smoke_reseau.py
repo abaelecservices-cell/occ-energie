@@ -78,7 +78,9 @@ with sync_playwright() as playwright:
        bbody: document.querySelector("#bbody")?.innerText?.slice(0, 180),
        error: document.querySelector("#view")?.innerText?.slice(0, 150),
        sheet: document.querySelector("#facade-target")?.outerHTML,
-    })"""), flush=True)
+       hashHandler: typeof route,
+       docReady: document.readyState,
+    })"""), "PAGE_ERRORS", errors, flush=True)
     page.locator("#facade-target").wait_for(timeout=15000)
     page.locator("#fv svg g.flash").wait_for(timeout=15000)  # focus pose au prochain frame navigateur
     assert "Case" in page.locator("#facade-target").inner_text(), "Repere de case absent"
