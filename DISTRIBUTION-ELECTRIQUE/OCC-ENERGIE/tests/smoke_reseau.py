@@ -72,15 +72,7 @@ with sync_playwright() as playwright:
     assert cible in page.locator("#plan-to-facade").get_attribute("data-go")
 
     page.locator("#plan-to-facade").click()
-    print("DEBUG_FACADE", page.evaluate("""() => ({
-       hash: location.hash,
-       route: CUR,
-       bbody: document.querySelector("#bbody")?.innerText?.slice(0, 180),
-       error: document.querySelector("#view")?.innerText?.slice(0, 150),
-       sheet: document.querySelector("#facade-target")?.outerHTML,
-       hashHandler: typeof route,
-       docReady: document.readyState,
-    })"""), "PAGE_ERRORS", errors, flush=True)
+    page.wait_for_function("CUR.route === 'b'", timeout=15000)
     page.locator("#facade-target").wait_for(timeout=15000)
     page.locator("#fv svg g.flash").wait_for(timeout=15000)  # focus pose au prochain frame navigateur
     assert "Case" in page.locator("#facade-target").inner_text(), "Repere de case absent"
