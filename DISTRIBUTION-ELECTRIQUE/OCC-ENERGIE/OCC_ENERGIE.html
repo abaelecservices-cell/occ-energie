@@ -2526,6 +2526,7 @@ function bindNetFinder(viewer) {
   }
   function selectId(id) {
     NET_FINDER.selected = id;
+    if (NETVIEW !== 'full' && NODE[id] && NODE[id].t === 'dep') { NETVIEW = 'full'; rerender(); return; }
     const target = NETVIEW === 'full' ? (BOARD[id] ? id : netFocus(id)) :
       (NODE[id] ? focusTarget(id) : null);
     if (!target || !viewer.focusOn(target)) {
@@ -2562,6 +2563,7 @@ function bindNetFinder(viewer) {
 }
 
 function vNet(focus) {
+  if (focus && NODE[focus] && NODE[focus].t === 'dep') NETVIEW = 'full';
   VIEW().innerHTML = `<h1>Réseau HTA / BT</h1><p class="sub">Topologie selon l’unifilaire 20 kV (R112529 rév. H) et le classeur de distribution. Touchez un élément pour sa fiche.</p>
   ${simBanner()}
   <div class="row" style="margin:12px 0"><div class="seg glass"><button id="m0" class="${SIMMODE ? '' : 'on'}">Consultation</button><button id="m1" class="${SIMMODE ? 'on' : ''}">Mode simulation</button></div>
