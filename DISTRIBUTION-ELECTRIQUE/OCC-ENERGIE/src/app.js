@@ -449,7 +449,7 @@ function openEntity(key) {
   const plan = (() => { const r = planFor(n.id) ? n.id : n.board && planFor(n.board) ? n.board : null; return r ? `<button class="btn ghost" data-go="#/plans/${planFor(r)}/${r}">Voir sur le plan</button>` : ''; })();
   const btns = `<div class="row" style="margin:10px 0">
     ${n.t !== 'src' ? `<button class="btn" data-go="#/courant/${n.id}">⚡ Remettre le courant</button>` : ''}
-    ${fid ? `<button class="btn ghost" data-go="#/b/${boardForFacade(fid)}/f/${n.id}">Voir sur la façade</button>` : ''}${plan}</div>`;
+    ${fid ? `<button class="btn ghost" data-go="#/b/${boardForFacade(fid)}/f/${n.id}">Voir sur la façade</button>` : ''}${parcoursContext(n.id).zone ? `<button class="btn ghost" data-go="#/site/${n.id}">📍 Localiser dans l'usine</button>` : ''}${plan}</div>`;
   const ds = n.t === 'tr' || n.t === 'bus' || n.t === 'src' || n.role === 'arrivee' || n.t === 'cpl' ? downstream(n.id).map(x => NODE[x]).filter(x => x.t === 'dep') : [];
   const bd = `${btns}${kv.length ? `<dl class="kv">${kv.join('')}</dl>` : ''}
     ${iss.length ? `<div class="banner sim">⚠️<div class="small">${iss.map(i => `<a href="#" data-open="issue:${i.id}">${esc(i.title)}</a>`).join('<br>')}</div></div>` : ''}
@@ -1032,8 +1032,8 @@ function rerender() { route(true); }
 function route(keep) {
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
-  const fn = { '': vHome, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
-  setTab({ '': 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg' }[r] || 'home');
+  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
+  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
   const sn = simNotice(); if (sn && !$('.simnote', VIEW())) { VIEW().insertAdjacentHTML('afterbegin', sn); $('#simreset').onclick = () => { resetSim(); rerender(); toast('Configuration normale rétablie'); }; }
   if (keep) scrollTo(0, y); else scrollTo(0, 0);
@@ -1092,7 +1092,7 @@ function bindNetFinder(viewer) {
       '<div class="small" style="margin-top:7px"><b>Localisation documentaire :</b> ' + esc(loc) +
       (b && b.loc_conf && b.loc_conf !== 'confirme' ? ' (a confirmer)' : '') + '</div>' +
       '<div class="small" style="margin-top:5px"><b>Cles / reperes documentes :</b></div>' + keyTxt +
-      warning +
+      warning + parcoursSummary(id) +
       '<div class="row" style="margin-top:8px"><button class="btn" type="button" data-open="' + esc(id) + '">Ouvrir la fiche</button>' +
       '<button class="btn ghost" type="button" data-go="#/plans">Ouvrir les plans de localisation</button></div>' +
       '<p class="small muted" style="margin:7px 0 0">Les cles et localisations proviennent des documents et ne constituent ni un relevé terrain ni une autorisation de manoeuvre.</p></div>';
@@ -1106,6 +1106,7 @@ function bindNetFinder(viewer) {
       toast('Selection documentee : cet equipement n est pas dessine directement sur le schema.');
     }
     infoFor(id);
+    parcoursHighlight(id);
   }
   function renderHits() {
     NET_FINDER.query = field.value;
@@ -1146,10 +1147,12 @@ function vNet(focus) {
   ${footer()}`;
   const handler = id => { const n = NODE[id]; if (SIMMODE && n && (SW.has(n.t) || n.t === 'src')) { if (setSw(id, !isClosed(id))) { toast(`${short(n)} : ${isClosed(id) ? 'fermé' : 'ouvert'} (simulation)`); rerender(); } } else openEntity(id); };
   const selectedFocus = focus || NET_FINDER.selected;
+  if (focus && NODE[focus]) NET_FINDER.selected = focus;
   const viewer = mountViewer($('#hta'), NETVIEW === 'full' ? fullNetSVG() : htaSVG(), { onClick: handler,
     focus: selectedFocus ? (NETVIEW === 'full' ? (BOARD[selectedFocus] ? selectedFocus : netFocus(selectedFocus)) : (NODE[selectedFocus] ? focusTarget(selectedFocus) : null)) : null,
     legend: '<span style="color:#12b76a">━ alimenté</span><span style="color:#e5484d">━ non alimenté</span><span>□ appareil ouvert · ■ fermé</span>' });
   bindNetFinder(viewer);
+  if (NET_FINDER.selected) parcoursHighlight(NET_FINDER.selected);
   $('#v1').onclick = () => { NETVIEW = 'full'; rerender(); }; $('#v2').onclick = () => { NETVIEW = 'uni'; rerender(); };
   $('#m0').onclick = () => { SIMMODE = false; rerender(); }; $('#m1').onclick = () => { SIMMODE = true; rerender(); };
   $('#rst').onclick = () => { resetSim(); rerender(); };
@@ -1214,7 +1217,7 @@ function vBoard(id, sub, target) {
       const f = D.facades[b.facade];
       body.innerHTML = `<div class="banner info" style="margin-bottom:10px">✏️<div class="small"><b>Reconstruction vectorielle</b> — ${esc(f.conf)}<br><span class="muted">Source : ${esc(f.src)}</span></div></div><div id="fv"></div>`;
       mountViewer($('#fv'), facadeSVG(b.facade, { live: true }), { onClick: openEntity, focus: target, legend: '<span>● vert : alimenté (simulé)</span><span>● rouge : non alimenté</span><span>Touchez un appareil</span>' });
-      if (target) setTimeout(() => openEntity(target), 350);
+      if (target && NODE[target]) body.insertAdjacentHTML('afterbegin', '<div class="banner info" id="facade-target" style="margin-bottom:10px"><div><b>Départ ciblé : ' + esc(NODE[target].label) + '</b>' + (NODE[target].case ? '<div class="small">Case ' + esc(NODE[target].case) + '</div>' : '') + '<button class="btn ghost" style="margin-top:7px" data-open="' + esc(target) + '">Ouvrir la fiche du départ</button></div></div>');
     } else body.innerHTML = `<div class="card glass"><h3 style="margin-top:0">Façade non reconstruite</h3><p class="small">Aucune façade n’est dessinée pour ce tableau : soit les photographies n’ont pas encore été relevées, soit les étiquettes ne sont pas lisibles. Les appareils ne sont pas représentés par un symbole générique pour éviter toute confusion.</p><div>${photoLinks(b.photos)}</div></div>`;
   } else if (BTAB === 'd') {
     const halves = b.halves.length ? b.halves : [{ id: null, label: 'Départs' }];
