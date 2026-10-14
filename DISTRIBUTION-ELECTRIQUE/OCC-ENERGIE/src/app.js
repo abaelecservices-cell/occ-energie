@@ -223,7 +223,7 @@ function addRec(kind, id, label, extra, t) {
 D.boards.forEach(b => addRec('board', b.id, b.name, [b.id, b.kind, 'tableau', (b.halves || []).map(h => h.label).join(' '), b.sap].join(' '), 'board'));
 D.nodes.forEach(n => {
   const b = boardOf(n);
-  const extra = [b ? b.name : '', n.case ? 'case ' + n.case : '', n.model, n.xl ? n.xl.label : '', n.alias, n.kva, n.cell, n.keys, n.rep,
+  const extra = [n.id, b ? b.name : '', n.case ? 'case ' + n.case : '', n.model, n.xl ? n.xl.label : '', n.alias, n.kva, n.cell, n.keys, n.rep,
     n.t === 'tr' ? 'transformateur transfo' : '', n.t === 'cpl' ? 'couplage' : '', n.role === 'arrivee' ? 'arrivee' : ''].join(' ');
   addRec('node', n.id, n.label, extra, n.t);
 });
