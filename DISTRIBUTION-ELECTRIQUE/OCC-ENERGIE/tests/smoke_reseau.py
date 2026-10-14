@@ -42,7 +42,7 @@ with sync_playwright() as playwright:
     assert page.locator("svg g.flash").count() > 0, "Focus perdu en vue unifilaire"
 
     # Chaque resultat doit pouvoir ouvrir sa fiche sans erreur JS.
-    page.locator('#net-doc [data-open="TR1A"]').click()
+    page.locator('#net-doc .btn[data-open="TR1A"]').click()
     assert "open" in page.locator("#sheet").get_attribute("class")
     page.screenshot(path=str(ARTIFACTS / "unifilaire-recherche.png"), full_page=True)
 
