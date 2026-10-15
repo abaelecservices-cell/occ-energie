@@ -42,6 +42,7 @@ jobs:
         run: |
           python tools/build_data.py build/excel.json build/data.json
           python tools/build_app.py
+          python tools/build_app.py --lite
           python tests/test_coherence_electrique.py
           python tests/test_ts8.py
           python tests/test_terrain_20261015.py
@@ -53,6 +54,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json
           git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
+          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE_2024_LITE.html
           git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs/
           if ! git diff --cached --quiet; then
             git commit -m "build(occ-energie): reconstruire le modele et le HTML"
