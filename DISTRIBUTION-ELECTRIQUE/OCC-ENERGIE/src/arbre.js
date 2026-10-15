@@ -34,11 +34,20 @@ function tHead(bid, via, icon) {
     <a class="tact" href="#" data-go="#/courant/${bid}" title="Remettre le courant">⚡</a>`;
 }
 function tIcon(b) { return b.kind === 'HTA' ? '⚡' : b.kind === 'TGBT' ? '▦' : b.kind === 'Coffret' ? '▫' : '▭'; }
+// Afficher tous les départs dans l'arborescence, sans en déduire une position en façade.
+function arbreDepLeaves(bid, bus, includeUnassigned = false) {
+  const ds = (DEPS_BY_BOARD[bid] || []).filter(d => {
+    const db = busOf(d.id);
+    return includeUnassigned ? db !== bus.sa && db !== bus.sb : !bus || db === bus;
+  });
+  if (!ds.length) return '';
+  return `<details class="tnode tdeps" data-n="${esc(norm('depart departs '+BOARD[bid].name))}"><summary><span class="ticon">≡</span><b>Départs documentés (${ds.length})</b><span class="tmeta">repères cliquables · positions physiques non présumées</span></summary><div class="tkids">${ds.sort((a,b)=>dn(a).localeCompare(dn(b),'fr',{numeric:true})).map(d => `<div class="tnode tleaf" data-n="${esc(norm(d.label + ' ' + (d.case||'')))}">${tDot(d.id)}<span class="ticon">↳</span><a class="tname" data-open="${esc(d.id)}" href="#">${esc(dn(d))}</a><span class="tmeta">${d.case?'case '+esc(d.case)+' · ':''}${confPill(d.conf)} · <a href="#" data-go="#/b/${bid}/f/${d.id}">Façade</a></span></div>`).join('')}</div></details>`;
+}
 function arbreBoard(bid, depth, path, via) {
   const b = BOARD[bid], p2 = path.concat(bid), kids = arbreKids(bid, p2);
   const head = tHead(bid, via, tIcon(b));
   const data = `data-n="${esc(norm(b.name + ' ' + (b.alias || '')))}"`;
-  if (!kids.length) return `<div class="tnode tleaf" ${data}>${head}</div>`;
+  if (!kids.length && !(DEPS_BY_BOARD[bid] || []).length) return `<div class="tnode tleaf" ${data}>${head}</div>`;
   const render = k => k.board ? arbreBoard(k.board, depth + 1, p2, tVia(k))
     : k.tr.map(t => `<div class="tnode tleaf" data-n="${esc(norm(t.tr.label))}">${tDot(t.tr.id)}<span class="ticon">◎</span><a class="tname" href="#" data-open="${t.tr.id}">${esc(dn(t.tr))}</a><span class="tmeta">${esc(t.tr.kva || '')} — ${esc(tnm('cellule', t.cell))}</span></div>`).join('');
   let inner;
@@ -46,9 +55,9 @@ function arbreBoard(bid, depth, path, via) {
   if (s) {  // TGBT scindé : chaque moitié sous son transformateur
     const half = k => { const v = k.via[0]; const bu = v ? busOf(v.from.id) : null; return bu === s.ba ? 'A' : bu === s.bb ? 'B' : '?'; };
     const grp = { A: [], B: [], '?': [] }; kids.forEach(k => grp[half(k)].push(k));
-    const hl = (h, lab, tr) => `<details class="tnode thalf" ${depth < 4 ? 'open' : ''} data-n="${esc(norm(lab))}"><summary>${tDot(h === 'A' ? s.ba : s.bb)}<span class="ticon">½</span><b>${esc(lab)}</b><span class="tmeta">sur ${esc(dn(tr))}${tr.kva ? ' ' + esc(tr.kva) : ''} · ${(DEPS_BY_BOARD[bid] || []).filter(d => busOf(d.id) === (h === 'A' ? s.ba : s.bb)).length} départs</span></summary><div class="tkids">${grp[h].map(render).join('') || '<div class="tnode tleaf tmeta">Aucun tableau alimenté documenté</div>'}</div></details>`;
-    inner = hl('A', s.la, s.sa) + `<div class="tcpl">⇄ ${esc(tnm('couplage', s.qc))} —${isClosed(s.qc.id) ? 'fermé' : 'ouvert'} (simulation)</div>` + hl('B', s.lb, s.sb) + grp['?'].map(render).join('');
-  } else inner = kids.map(render).join('');
+    const hl = (h, lab, tr) => `<details class="tnode thalf" ${depth < 4 ? 'open' : ''} data-n="${esc(norm(lab))}"><summary>${tDot(h === 'A' ? s.ba : s.bb)}<span class="ticon">½</span><b>${esc(lab)}</b><span class="tmeta">sur ${esc(dn(tr))}${tr.kva ? ' ' + esc(tr.kva) : ''} · ${(DEPS_BY_BOARD[bid] || []).filter(d => busOf(d.id) === (h === 'A' ? s.ba : s.bb)).length} départs</span></summary><div class="tkids">${grp[h].map(render).join('') + arbreDepLeaves(bid, h === 'A' ? s.ba : s.bb) || '<div class="tnode tleaf tmeta">Aucun tableau ni départ documenté</div>'}</div></details>`;
+    inner = hl('A', s.la, s.sa) + `<div class="tcpl">⇄ ${esc(tnm('couplage', s.qc))} —${isClosed(s.qc.id) ? 'fermé' : 'ouvert'} (simulation)</div>` + hl('B', s.lb, s.sb) + grp['?'].map(render).join('') + arbreDepLeaves(bid, { sa: s.ba, sb: s.bb }, true);
+  } else inner = kids.map(render).join('') + arbreDepLeaves(bid, null);
   return `<details class="tnode" ${depth < 3 ? 'open' : ''} ${data}><summary>${head}</summary><div class="tkids">${inner}</div></details>`;
 }
 // Inventaire exhaustif : les équipements non reliés à la racine restent affichés,
