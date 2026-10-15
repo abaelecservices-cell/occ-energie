@@ -12,7 +12,7 @@ Ouvrir **`OCC_ENERGIE.html`** (double-clic sur PC ; sur iPhone : app Fichiers �
 | Accueil | Vue aérienne IGN, accès aux postes et sous-stations |
 | Dépannage | Parcours en 3 touches : équipement (tableau, départ, machine, transformateur, cellule 20 kV) → symptôme observé → fiche. Raccourcis « Où il se trouve », « Ce qu’il alimente », « Fiche détaillée ». Diagnostic documentaire : `#/depannage/<repère>` |
 | Plans | Plans d’implantation : poste de livraison CNR / EDF, sous-stations 1 et 2 (chaîne 20 kV → transfos → TGBT) |
-| Tableaux | Arborescence CNR / EDF → TGBT → TS ; façades vectorielles, départs, alimentation, photos, écarts |
+| Tableaux | Arborescence CNR / EDF → cellules 20 kV → transformateurs → TGBT → TS → départs ; façades **uniquement vectorielles**, alimentation, sources documentaires et écarts |
 | Réseau | Schéma 20 kV → transfos → TGBT ; mode simulation |
 | Entretien | Gammes indicatives par type d’équipement + journal local exportable (CSV) |
 | Registre (icône en haut) | Écarts actifs / résolus, avancement par tableau, clés, procédures, informations à fournir, dossier des photos sur ce poste |
@@ -26,7 +26,7 @@ La barre de recherche (raccourci `/`) est toujours visible.
 
 La simulation est une hypothèse de travail : elle est signalée sur toutes les vues (avec son heure) tant qu’elle diffère de la configuration normale ; les fiches de dépannage n’en dépendent pas et le « test dans le simulateur » travaille sur une copie.
 
-Les liens photo ouvrent les PDF du dossier `Plan électrique` placé à côté du dossier de l’application (`../Plan électrique/`) ; un autre emplacement peut être réglé dans le Registre (enregistré sur le poste).
+**Présentation des armoires : vectorielle uniquement.** Les photos sont conservées hors interface pour reconstruire et vérifier les façades. Aucun onglet photo, aucune visionneuse de photographie d'armoire, aucun lien d'ouverture de clichés. Les tableaux sans géométrie vérifiée affichent un gabarit vectoriel **non coté et non utilisable pour la consignation**. Les départs restent consultables dans l’arborescence sans inventer leur emplacement physique.
 
 ## Arborescence
 
