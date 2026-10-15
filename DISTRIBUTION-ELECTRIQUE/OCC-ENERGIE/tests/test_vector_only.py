@@ -13,7 +13,7 @@ for forbidden in ("Voir la photo", "id=\"phbtn\"", "PHOTO_BASE",
 
 for expected in ("b.vector_placeholder = true", "Gabarit vectoriel NON COTÉ",
                  "Façade vectorielle", "['o', 'Documents']",
-                 "Les départs"):
+                 "Géométrie inconnue"):
     assert expected in app, f"Affichage vectoriel incomplet : {expected}"
 
 assert "function arbreDepLeaves(" in tree
