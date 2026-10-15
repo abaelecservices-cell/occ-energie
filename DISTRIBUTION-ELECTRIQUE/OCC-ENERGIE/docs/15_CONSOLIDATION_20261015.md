@@ -12,7 +12,8 @@ Sauvegarde conservée : `backup/main-before-consolidation-20261015` (`4a11b68`).
 - PR #14 : conserver les libellés du simulateur issus de #13 et réunir les entrées CI.
   L'archive 2024 reste distincte du graphe actif : 36 départs et 68 historiques.
 - PR #15 : conserver le retour au schéma complet et ajouter la route historique.
-- `main` (`b612461`) est inclus : conservation des noms de livraison TS8 et mobile.
+- `main` (`3b92414`) est inclus : tuiles WebP préservées ; livraisons TS8/mobile
+  manuelles archivées exactement dans `archives/20261015-main-3b92414/`.
 - La branche `codex/unifilaire-localisation-2026-10-14` est déjà incluse.
 - `transfert/iphone-html-2026-10-15` ajoute seulement un workflow temporaire de
   transfert ; conservée sans intégration de ce workflow à la chaîne de référence.

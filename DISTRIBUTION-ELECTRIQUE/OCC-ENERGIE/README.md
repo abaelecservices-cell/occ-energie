@@ -125,3 +125,7 @@ La consolidation préserve le JavaScript et les fonctions existants. Elle ne con
 pas une migration TypeScript, une certification électrique, une mesure Lighthouse,
 ni une preuve de couverture unitaire à 80 %. Les connexions physiques et les procédures
 de manœuvre restent soumises aux sources et validations du site.
+
+Les livraisons manuelles de `main` à `3b92414` sont conservées exactement dans
+`archives/20261015-main-3b92414/`. Leurs tuiles WebP TS8 sont également conservées.
+Les HTML de référence sont reconstruits à partir des sources et des relevés détaillés.
