@@ -1,0 +1,26 @@
+name: Transfert temporaire OCC Energie HTML iPhone
+on:
+  push:
+    branches:
+      - transfert/iphone-html-2026-10-15
+  workflow_dispatch:
+jobs:
+  transferer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Controle du fichier OCC Energie
+        shell: bash
+        run: |
+          test -s "DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html"
+          sha1sum "DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html"
+      - name: Exporter une copie exacte
+        uses: actions/upload-artifact@v4
+        with:
+          name: OCC_ENERGIE_iPhone_HTML
+          path: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 2
