@@ -15,6 +15,7 @@ Ouvrir **`OCC_ENERGIE.html`** (double-clic sur PC ; sur iPhone : app Fichiers �
 | Tableaux | Arborescence CNR / EDF → TGBT → TS ; façades vectorielles, départs, alimentation, photos, écarts |
 | Réseau | Schéma 20 kV → transfos → TGBT ; mode simulation |
 | Entretien | Gammes indicatives par type d’équipement + journal local exportable (CSV) |
+| Excel 2024 (dans Tableaux) | Référence historisée : 36 départs (TGBT 1/2/4), 68 lignes d'âge des équipements. Recherche, filtre par TGBT et rapprochement visuel des repères de cases avec le modèle actuel. **N'ajoute pas de liaison dans le graphe**. URL interne : `#/historique2024`. |
 | Registre (icône en haut) | Écarts actifs / résolus, avancement par tableau, clés, procédures, informations à fournir, dossier des photos sur ce poste |
 
 La barre de recherche (raccourci `/`) est toujours visible.
