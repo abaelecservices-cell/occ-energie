@@ -1066,6 +1066,10 @@ function route(keep) {
   LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
+  // Toute nouvelle navigation vers un départ commence sur le schéma complet.
+  // Un simple re-rendu (bouton de vue HTA) ne réinitialise pas la préférence.
+  if (r === 'reseau' && args[0] && !keep && (NODE[args[0]] || BOARD[args[0]]))
+    NETVIEW = 'full';
   const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
   setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
@@ -1131,20 +1135,9 @@ function bindNetFinder(viewer) {
       '<p class="small muted" style="margin:7px 0 0">Les cles et localisations proviennent des documents et ne constituent ni un relevé terrain ni une autorisation de manoeuvre.</p></div>';
   }
   function selectId(id) {
-    NET_FINDER.selected = id;
-    NET_FINDER.query = field.value.trim();
-    const selectedBanner = $('#net-focus-status');
-    if (selectedBanner) selectedBanner.textContent = '⚡ Départ ou équipement sélectionné : ' +
-      (NODE[id] ? NODE[id].label : BOARD[id] ? BOARD[id].name : id) +
-      ' — conducteur amont en halo. Ouverture de la façade sur clic uniquement.';
-    if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
-    const target = BOARD[id] ? id : netFocus(id);
-    if (!target || !viewer.focusOn(target))
-      toast('Repère présent dans le modèle : seul son réseau amont est dessiné sur ce synoptique.');
-    infoFor(id);
-    parcoursHighlight(id);
-    results.innerHTML = '';
-    field.setAttribute('aria-activedescendant', '');
+    // Une URL partageable garde le départ sélectionné après actualisation.
+    // Le même flux est utilisé par la recherche globale et celle du réseau.
+    openOnUnifilaire(id, field.value.trim());
   }
   function renderHits() {
     NET_FINDER.query = field.value;
@@ -1192,7 +1185,6 @@ function bindNetFinder(viewer) {
 }
 
 function vNet(focus) {
-  if (focus && (NODE[focus] || BOARD[focus])) NETVIEW = 'full';
   VIEW().innerHTML = `<h1>Réseau HTA / BT</h1><p class="sub">Topologie selon l’unifilaire 20 kV (R112529 rév. H) et le classeur de distribution. Touchez un élément pour sa fiche.</p>
   ${simBanner()}
   <div class="row" style="margin:12px 0"><div class="seg glass"><button id="m0" class="${SIMMODE ? '' : 'on'}">Consultation</button><button id="m1" class="${SIMMODE ? 'on' : ''}">Mode simulation</button></div>
