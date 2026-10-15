@@ -51,8 +51,7 @@ function saveSim() {
 }
 /* Règles appliquées en simulation (une fermeture est REFUSÉE si elle crée l'une de ces situations) :
    1. deux sources sur le même réseau : CNR et EDF ne peuvent jamais alimenter en même temps (indication exploitant), ni réseau + groupe électrogène ;
-   2. deux transformateurs en parallèle sur un même jeu de barres (règle d'exploitation « jamais arrivée A, couplage et arrivée B fermés » —
-      donnée par l'exploitant ; sur le TGBT 3 des clés Ronis sont dessinées mais le même dossier écrit « aucun verrouillage » : écart I-TGBT3-LOCK). */
+   2. deux transformateurs en parallèle sur un même jeu de barres (garde-fou conservatoire du simulateur ; aucune interdiction générale n'a été confirmée par l'exploitant le 15/10/2026 ; les permissifs physiques restent à documenter). */
 const SRC_NAME = { SRC_CNR: 'CNR', SRC_EDF: 'EDF', GE1: 'groupe électrogène n°1' };
 function conflicts() {
   const out = [];
@@ -61,10 +60,10 @@ function conflicts() {
       if ((SW.has(nv.t) || nv.t === 'src') && !isClosed(v)) continue; if (stopTr && nv.t === 'tr') continue; seen.add(v); q.push(v); } }
     return seen; };
   // 2 bis. chaque TGBT est scindé en deux demi-jeux de barres, chacun alimenté par son transformateur ; le couplage ne se ferme
-  //    qu'après ouverture de l'arrivée qui alimentait le demi-jeu de barres (règle exploitant) : jamais arrivée A + couplage + arrivée B fermés,
+  //    qu'après ouverture de l'arrivée correspondante DANS CE SIMULATEUR (hypothèse conservatoire non confirmée comme règle site) : jamais arrivée A + couplage + arrivée B fermés,
   //    que les transformateurs soient sous tension ou non (sinon le transformateur hors service serait réalimenté par le côté BT)
   D.boards.forEach(b => { const qa = NODE[b.id + '_QA'], qb = NODE[b.id + '_QB'], qc = NODE[b.id + '_QC'];
-    if (qa && qb && qc && isClosed(qa.id) && isClosed(qb.id) && isClosed(qc.id)) out.push({ kind: 'cpl', txt: `${b.name} : le couplage ne se ferme qu’après avoir ouvert l’arrivée qui alimentait le demi-tableau (jamais arrivée A, couplage et arrivée B fermés ensemble).` }); });
+    if (qa && qb && qc && isClosed(qa.id) && isClosed(qb.id) && isClosed(qc.id)) out.push({ kind: 'cpl', txt: `${b.name} : simulation bloquée par prudence : configuration avec deux arrivées et couplage fermés non qualifiée. Ceci ne décrit pas un verrouillage physique ni une interdiction générale sur site.` }); });
   // 3. interverrouillages par clé documentés appareil par appareil (ex. by-pass total onduleur / arrivée générale onduleur)
   D.nodes.forEach(n => { if (n.excl && isClosed(n.id) && isClosed(n.excl)) out.push({ kind: 'key', txt: `Interverrouillage par clé : « ${short(n)} » et « ${short(NODE[n.excl])} » ne peuvent pas être fermés en même temps.` }); });
   const srcs = D.nodes.filter(n => n.t === 'src' && isClosed(n.id));
@@ -78,7 +77,7 @@ function conflicts() {
   const seenPair = new Set();
   for (let i = 0; i < byTr.length; i++) for (let j = i + 1; j < byTr.length; j++) {
     const shared = [...byTr[i][1]].find(x => x !== byTr[i][0] && byTr[j][1].has(x) && NODE[x].t === 'bus');
-    if (shared && !seenPair.has(shared)) { seenPair.add(shared); out.push({ kind: 'tr', txt: `Interverrouillage 2 sur 3 : ${short(NODE[byTr[i][0]])} et ${short(NODE[byTr[j][0]])} seraient en parallèle sur ${short(NODE[shared])}. Ouvrir d’abord une arrivée.` }); }
+    if (shared && !seenPair.has(shared)) { seenPair.add(shared); out.push({ kind: 'tr', txt: `Simulation conservatoire : ${short(NODE[byTr[i][0]])} et ${short(NODE[byTr[j][0]])} seraient en parallèle sur ${short(NODE[shared])}. Conditions de parallélisme non validées : simulation bloquée, sans constituer une consigne de manœuvre.` }); }
   }
   return out;
 }
@@ -93,7 +92,7 @@ function setSw(id, v) {
 function refusal(id, c) {
   openSheet(`<span class="pill r">Simulation</span><h2>Fermeture refusée : ${esc(short(NODE[id]))}</h2>`,
     `<div class="banner danger">⛔<div>${c.map(x => esc(x.txt)).join('<br>')}</div></div>
-     <p class="small">Règles appliquées par le simulateur : jamais deux sources en même temps (CNR / EDF / groupe). Règle d’exploitation : chaque TGBT est scindé en deux, chaque moitié alimentée par son transformateur ; le couplage ne se ferme qu’après avoir ouvert l’arrivée qui alimentait la moitié à réalimenter (jamais arrivée A, couplage et arrivée B fermés ensemble).</p>`);
+     <p class="small">Règles appliquées par le simulateur : jamais deux sources en même temps (CNR / EDF / groupe). Hypothèse conservatoire du simulateur (non assimilable à une règle d’exploitation du site) : la fermeture simultanée des deux arrivées et du couplage est bloquée tant que les conditions de parallélisme ne sont pas documentées. Le couplage de secours est pratiqué sur site ; vérifier ses permissifs et protections avant toute manœuvre.</p>`);
 }
 function resetSim() { SIM = {}; saveSim(); LIVE = LIVE_TMP = energize(); }
 /* bandeau commun : une simulation modifiée est toujours signalée, avec son heure */
