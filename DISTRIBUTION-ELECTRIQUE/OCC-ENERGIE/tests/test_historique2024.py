@@ -31,4 +31,9 @@ s = APP.read_text(encoding='utf-8')
 assert '"historique2024":' in s
 assert 'Referentiel Excel 2024' in s or 'Référentiel Excel 2024' in s
 assert 'hx24-list' in s
+LITE = ROOT / 'OCC_ENERGIE_2024_LITE.html'
+assert LITE.is_file(), 'HTML leger absent'
+sl = LITE.read_text(encoding='utf-8')
+assert '"historique2024":' in sl and 'hx24-list' in sl
+assert 'Mode léger 2024' in sl
 print('OK : historique 2024 (36 departs, 68 lignes) trace et integre, graphe actif preserve')
