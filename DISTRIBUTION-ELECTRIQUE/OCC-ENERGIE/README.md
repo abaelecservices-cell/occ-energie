@@ -21,7 +21,7 @@ La barre de recherche (raccourci `/`) est toujours visible.
 
 **Sécurité** : application consultative. Chaque fiche affiche son statut AVANT ses étapes :
 - *Fiche de contrôle* (tableau coupé, cellule HTA, défaut d’isolement, température transformateur, commande impossible) : aucune ouverture ni fermeture rédigée ;
-- *Projet non validé* (départ déclenché, couplage, retour à la normale) : rédigé d’après la topologie documentée et la règle d’exploitation donnée par l’exploitant, à faire valider ;
+- *Projet non validé* (départ déclenché, couplage, retour à la normale) : rédigé d’après une topologie documentaire incomplètement validée, à faire contrôler par les personnes habilitées ; aucune règle générale d’interdiction du couplage n’a été confirmée par l’exploitant le 15/10/2026 ;
 - *Validée* : seulement si inscrite dans `validations.json` pour cet équipement ET cette version (champ `empreinte` imprimé sur la fiche) ; une fiche modifiée après validation s’affiche « validation caduque ».
 
 La simulation est une hypothèse de travail : elle est signalée sur toutes les vues (avec son heure) tant qu’elle diffère de la configuration normale ; les fiches de dépannage n’en dépendent pas et le « test dans le simulateur » travaille sur une copie.
