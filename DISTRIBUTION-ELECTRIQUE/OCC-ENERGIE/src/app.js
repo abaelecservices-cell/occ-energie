@@ -451,7 +451,7 @@ function openEntity(key) {
     ${n.t !== 'src' ? `<button class="btn" data-go="#/courant/${n.id}">⚡ Remettre le courant</button>` : ''}
     ${fid ? `<button class="btn ghost" data-go="#/b/${boardForFacade(fid)}/f/${n.id}">Voir sur la façade</button>` : ''}${parcoursContext(n.id).zone ? `<button class="btn ghost" data-go="#/site/${n.id}">📍 Localiser dans l'usine</button>` : ''}${plan}</div>`;
   const ds = n.t === 'tr' || n.t === 'bus' || n.t === 'src' || n.role === 'arrivee' || n.t === 'cpl' ? downstream(n.id).map(x => NODE[x]).filter(x => x.t === 'dep') : [];
-  const bd = `${btns}${kv.length ? `<dl class="kv">${kv.join('')}</dl>` : ''}
+  const bd = `${b && b.safety_warning ? `<div class="banner danger" role="alert" style="margin-bottom:10px"><span aria-hidden="true">⚠️</span><div><b>Avertissement électrique</b><div class="small">${esc(b.safety_warning)}</div></div></div>` : ""}${btns}${kv.length ? `<dl class="kv">${kv.join('')}</dl>` : ''}
     ${iss.length ? `<div class="banner sim">⚠️<div class="small">${iss.map(i => `<a href="#" data-open="issue:${i.id}">${esc(i.title)}</a>`).join('<br>')}</div></div>` : ''}
     <details class="blk"><summary><b>Plus d’informations</b></summary>
       <dl class="kv" style="margin-top:8px">${more.join('')}</dl>
@@ -1223,6 +1223,7 @@ function vBoard(id, sub, target) {
     <div class="seg glass" style="margin:10px 0" id="srcmode">${[['n', 'Normal (A + B, couplage ouvert)'], ['a', 'Transfo A seul'], ['b', 'Transfo B seul'], ['ca', 'Couplage fermé sur A'], ['cb', 'Couplage fermé sur B']].map(([k, l]) => `<button data-m="${k}" class="${srcMode(id) === k ? 'on' : ''}">${l}</button>`).join('')}</div>
     ${il ? `<div class="banner ${il.lvl}">⚠️<div>${esc(il.txt)}</div></div>` : ''}${simBanner()}
     <p class="small muted" style="margin-bottom:0">${transfoLoad(id)}</p>` : ''}</details>` : ''}
+  ${b.safety_warning ? `<div class="banner danger" role="alert" style="margin:12px 0"><span aria-hidden="true">⚠️</span><div><b>Avertissement électrique</b><div class="small">${esc(b.safety_warning)}</div></div></div>` : ""}
   <div class="seg glass" id="btabs">${[['f', 'Façade'], ['d', `Départs (${deps.length})`], ['s', 'Alimentation'], ['p', 'Photos'], ...(iss.length ? [['i', `Incohérences (${iss.length})`]] : [])].map(([k, l]) => `<button data-t="${k}" class="${BTAB === k ? 'on' : ''}">${l}</button>`).join('')}</div>
   <div id="bbody" style="margin-top:14px"></div>${footer()}`;
   for (const x of document.querySelectorAll('#btabs button')) x.onclick = () => { BTAB = x.dataset.t; vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); };

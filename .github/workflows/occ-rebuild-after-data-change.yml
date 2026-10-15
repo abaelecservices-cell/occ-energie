@@ -1,0 +1,50 @@
+name: OCC Energie - Regeneration modele et HTML
+
+on:
+  push:
+    branches:
+      - main
+      - codex/ts8-releve-photo-2026-10-15
+    paths:
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_data.py'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ts8_photo.py'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/app.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: occ-energie-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recomposer modele, HTML et inventaire
+        working-directory: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE
+        run: |
+          python tools/build_data.py build/excel.json build/data.json
+          python tools/build_app.py
+          python tests/test_coherence_electrique.py
+          python tests/test_ts8.py
+          python tools/build_docs.py
+      - name: Publier les fichiers livres
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json
+          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
+          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs/
+          if ! git diff --cached --quiet; then
+            git commit -m "build(occ-energie): reconstruire la facade TS8 et le HTML"
+            git push
+          fi
