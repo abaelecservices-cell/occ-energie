@@ -1223,6 +1223,7 @@ function vBoard(id, sub, target) {
     <div class="seg glass" style="margin:10px 0" id="srcmode">${[['n', 'Normal (A + B, couplage ouvert)'], ['a', 'Transfo A seul'], ['b', 'Transfo B seul'], ['ca', 'Couplage fermé sur A'], ['cb', 'Couplage fermé sur B']].map(([k, l]) => `<button data-m="${k}" class="${srcMode(id) === k ? 'on' : ''}">${l}</button>`).join('')}</div>
     ${il ? `<div class="banner ${il.lvl}">⚠️<div>${esc(il.txt)}</div></div>` : ''}${simBanner()}
     <p class="small muted" style="margin-bottom:0">${transfoLoad(id)}</p>` : ''}</details>` : ''}
+  ${b.safety_warning ? `<div class="banner danger" role="alert" style="margin:12px 0"><span aria-hidden="true">⚠️</span><div><b>Avertissement électrique</b><div class="small">${esc(b.safety_warning)}</div></div></div>` : ""}
   <div class="seg glass" id="btabs">${[['f', 'Façade'], ['d', `Départs (${deps.length})`], ['s', 'Alimentation'], ['p', 'Photos'], ...(iss.length ? [['i', `Incohérences (${iss.length})`]] : [])].map(([k, l]) => `<button data-t="${k}" class="${BTAB === k ? 'on' : ''}">${l}</button>`).join('')}</div>
   <div id="bbody" style="margin-top:14px"></div>${footer()}`;
   for (const x of document.querySelectorAll('#btabs button')) x.onclick = () => { BTAB = x.dataset.t; vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); };
