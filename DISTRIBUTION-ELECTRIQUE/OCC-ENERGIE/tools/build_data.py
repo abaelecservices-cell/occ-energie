@@ -884,6 +884,9 @@ exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'hta_photo
 # --------------------------------------------------------------------------- corrections et ajouts de l'audit du 11/10/2026 (relus sur les sources)
 exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'audit_2026_10_11.py'), encoding='utf-8').read())
 
+# TS8 : nouvelle façade relevée sur terrain (aucune attribution de circuit par simple position).
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ts8_photo.py'), encoding='utf-8').read())
+
 # --------------------------------------------------------------------------- registre documentaire
 INV = json.load(open(sys.argv[1].replace('excel.json', 'inv.json'), encoding='utf-8')) if False else None
 
