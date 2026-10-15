@@ -893,6 +893,9 @@ exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ts8_photo
 # Lot de photos du 15 octobre : façades TS15, TS16, Gorge et Varivolt,
 # rapprochement conservateur avec les départs existants et traçabilité terrain.
 exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'terrain_photo_20261015.py'), encoding='utf-8').read())
+# TS1 Ensimage et deux armoires de commande distinctes : uniquement dessins vectoriels,
+# sans départs ou raccordements inventés.
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ensimage_vector_20261015.py'), encoding='utf-8').read())
 for d in deps.values(): d.pop('_fac', None)
 
 

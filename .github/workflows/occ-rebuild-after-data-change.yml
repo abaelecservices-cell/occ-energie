@@ -5,13 +5,17 @@ on:
     branches:
       - main
       - codex/ts8-releve-photo-2026-10-15
+      - codex/clarification-couplage-20261015
     paths:
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_data.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ts8_photo.py'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ensimage_vector_20261015.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/terrain_photo_20261015.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/arbre.js'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_terrain_20261015.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/app.js'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_vector_only.py'
+      - '.github/workflows/occ-rebuild-after-data-change.yml'
   workflow_dispatch:
 
 permissions:
@@ -40,6 +44,8 @@ jobs:
           python tests/test_coherence_electrique.py
           python tests/test_ts8.py
           python tests/test_terrain_20261015.py
+          python tests/test_vector_only.py
+          python tests/test_ensimage_vector.py
           python tools/build_docs.py
       - name: Publier les fichiers livres
         run: |
