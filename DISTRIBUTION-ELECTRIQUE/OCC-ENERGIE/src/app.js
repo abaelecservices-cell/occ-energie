@@ -233,7 +233,7 @@ function addRec(kind, id, label, extra, t) {
 D.boards.forEach(b => addRec('board', b.id, b.name, [b.id, b.kind, 'tableau', (b.halves || []).map(h => h.label).join(' '), b.sap].join(' '), 'board'));
 D.nodes.forEach(n => {
   const b = boardOf(n);
-  const extra = [b ? b.name : '', n.case ? 'case ' + n.case : '', n.model, n.xl ? n.xl.label : '', n.alias, n.kva, n.cell, n.keys, n.rep,
+  const extra = [n.id, b ? b.name : '', n.case ? 'case ' + n.case : '', n.model, n.xl ? n.xl.label : '', n.alias, n.kva, n.cell, n.keys, n.rep,
     n.t === 'tr' ? 'transformateur transfo' : '', n.t === 'cpl' ? 'couplage' : '', n.role === 'arrivee' ? 'arrivee' : ''].join(' ');
   addRec('node', n.id, n.label, extra, n.t);
 });
@@ -361,10 +361,26 @@ function bindSearch() {
   clr.onclick = () => { inp.value = ''; render(); inp.focus(); };
   document.addEventListener('click', e => { if (!e.target.closest('#searchwrap')) box.classList.remove('open'); });
 }
+function openOnUnifilaire(id, query = '') {
+  if (!NODE[id] && !BOARD[id]) return false;
+  // Une recherche ouvre uniquement le schéma. Façade et implantation sur clic explicite.
+  closeSheet();
+  NET_FINDER.selected = id;
+  NET_FINDER.query = query || (NODE[id] ? NODE[id].label : BOARD[id].name);
+  NETVIEW = 'full';
+  const destination = '#/reseau/' + encodeURIComponent(id);
+  if (location.hash === destination) route(false);
+  else location.hash = destination;
+  return true;
+}
 function pick(r) {
-  if (!r) return; $('#results').classList.remove('open'); $('#search').blur();
-  if (r.kind === 'board') { location.hash = '#/b/' + r.id; return; }
-  openEntity(r.kind === 'node' ? r.id : r.kind + ':' + r.id);
+  if (!r) return;
+  $('#results').classList.remove('open'); $('#search').blur();
+  if (r.kind === 'node' || r.kind === 'board') {
+    openOnUnifilaire(r.id, $('#search').value.trim());
+    return;
+  }
+  openEntity(r.kind + ':' + r.id);
 }
 
 /* --------------------------------------------------------------- fiche */
@@ -549,8 +565,24 @@ function mountViewer(host, svg, { onClick, focus, legend, native } = {}) {
     else zoomAt(b.dataset.z === 'in' ? 1.4 : 1 / 1.4, r.left + r.width / 2, r.top + r.height / 2); });
   const focusOn = id => { const g = el.querySelector(`[data-id="${CSS.escape(id)}"]`); if (!g) return false; $$('.flash', el).forEach(x => x.classList.remove('flash')); g.classList.add('flash');
     const bb = g.getBBox(); const w = Math.max(bb.width * 3.2, init.w / 6), h = Math.max(bb.height * 3.2, init.h / 6); v = { x: bb.x + bb.width / 2 - w / 2, y: bb.y + bb.height / 2 - h / 2, w, h }; apply(); return true; };
+  // Cadrage de tous les segments deja representes et surlignes, sans inventer de cables.
+  const focusOnTrace = () => {
+    const segments = [...el.querySelectorAll('.trace-wire, .trace-node')];
+    if (!segments.length) return false;
+    const bounds = segments.map(g => {
+      try { return g.getBBox(); } catch (e) { return null; }
+    }).filter(b => b && Number.isFinite(b.x) && b.width >= 0 && b.height >= 0);
+    if (!bounds.length) return false;
+    const x0 = Math.min(...bounds.map(b => b.x)), y0 = Math.min(...bounds.map(b => b.y));
+    const x1 = Math.max(...bounds.map(b => b.x + b.width));
+    const y1 = Math.max(...bounds.map(b => b.y + b.height));
+    const w = Math.min(init.w, Math.max(init.w / 7, (x1 - x0) * 1.16));
+    const h = Math.min(init.h, Math.max(init.h / 7, (y1 - y0) * 1.16));
+    v = { x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - h / 2, w, h };
+    apply(); return true;
+  };
   if (focus) requestAnimationFrame(() => focusOn(focus));
-  return { focusOn, reset: () => { v = { ...init }; apply(); } };
+  return { focusOn, focusOnTrace, reset: () => { v = { ...init }; apply(); } };
 }
 
 /* ======================================================================= façades vectorielles */
@@ -1047,6 +1079,10 @@ function route(keep) {
   LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
+  // Toute nouvelle navigation vers un départ commence sur le schéma complet.
+  // Un simple re-rendu (bouton de vue HTA) ne réinitialise pas la préférence.
+  if (r === 'reseau' && args[0] && !keep && (NODE[args[0]] || BOARD[args[0]]))
+    NETVIEW = 'full';
   const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024 }[r] || vHome;
   setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
@@ -1082,7 +1118,6 @@ function netFinderPanel() {
     '<input id="net-find" class="f" type="search" autocomplete="off" style="width:100%;max-width:650px" ' +
     'placeholder="TR 1A, cellule, repere, TGBT, TS7..." aria-label="Rechercher un equipement sur le schema">' +
     '<div id="net-hits" class="list" style="margin-top:6px" role="listbox"></div>' +
-    '<div id="net-doc" style="margin-top:8px" role="status" aria-live="polite"></div>' +
     '</section>';
 }
 function bindNetFinder(viewer) {
@@ -1113,16 +1148,9 @@ function bindNetFinder(viewer) {
       '<p class="small muted" style="margin:7px 0 0">Les cles et localisations proviennent des documents et ne constituent ni un relevé terrain ni une autorisation de manoeuvre.</p></div>';
   }
   function selectId(id) {
-    NET_FINDER.selected = id;
-    if (NETVIEW !== 'full' && NODE[id] && NODE[id].t === 'dep') { NETVIEW = 'full'; rerender(); return; }
-    const target = NETVIEW === 'full' ? (BOARD[id] ? id : netFocus(id)) :
-      (NODE[id] ? focusTarget(id) : null);
-    if (!target || !viewer.focusOn(target)) {
-      if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
-      toast('Selection documentee : cet equipement n est pas dessine directement sur le schema.');
-    }
-    infoFor(id);
-    parcoursHighlight(id);
+    // Une URL partageable garde le départ sélectionné après actualisation.
+    // Le même flux est utilisé par la recherche globale et celle du réseau.
+    openOnUnifilaire(id, field.value.trim());
   }
   function renderHits() {
     NET_FINDER.query = field.value;
@@ -1139,19 +1167,37 @@ function bindNetFinder(viewer) {
     const item = e.target.closest('[data-net-id]');
     if (item) selectId(item.dataset.netId);
   };
-  field.addEventListener('input', renderHits);
-  field.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      const first = results.querySelector('[data-net-id]');
-      if (first) { e.preventDefault(); selectId(first.dataset.netId); }
+  detail.addEventListener('click', e => {
+    if (e.target.closest('#net-fit-path')) {
+      e.preventDefault();
+      if (!viewer.focusOnTrace()) toast('Aucun segment graphique individualisé pour ce parcours.');
     }
   });
-  renderHits();
-  if (NET_FINDER.selected) infoFor(NET_FINDER.selected);
+  field.addEventListener('input', renderHits);
+  field.addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
+    const candidates = [...results.querySelectorAll('[data-net-id]')];
+    if (!candidates.length) return;
+    e.preventDefault();
+    const q = norm(field.value);
+    const exact = candidates.filter(el => {
+      const n = NODE[el.dataset.netId], b = BOARD[el.dataset.netId];
+      return norm(el.dataset.netId) === q || (n && norm(n.label) === q) ||
+        (b && norm(b.name) === q);
+    });
+    if (exact.length === 1) selectId(exact[0].dataset.netId);
+    else if (candidates.length === 1) selectId(candidates[0].dataset.netId);
+    else {
+      detail.innerHTML = '<div class="banner info" role="status">Plusieurs équipements correspondent à cette recherche. Sélectionnez le bon départ dans la liste avant d’afficher son chemin.</div>';
+    }
+  });
+  if (NET_FINDER.selected) {
+    results.innerHTML = ''; // la sélection est faite : l'unifilaire reste visible en premier
+    infoFor(NET_FINDER.selected);
+  } else renderHits();
 }
 
 function vNet(focus) {
-  if (focus && NODE[focus] && NODE[focus].t === 'dep') NETVIEW = 'full';
   VIEW().innerHTML = `<h1>Réseau HTA / BT</h1><p class="sub">Topologie selon l’unifilaire 20 kV (R112529 rév. H) et le classeur de distribution. Touchez un élément pour sa fiche.</p>
   ${simBanner()}
   <div class="row" style="margin:12px 0"><div class="seg glass"><button id="m0" class="${SIMMODE ? '' : 'on'}">Consultation</button><button id="m1" class="${SIMMODE ? 'on' : ''}">Mode simulation</button></div>
@@ -1159,12 +1205,21 @@ function vNet(focus) {
   <div class="seg glass" style="margin-bottom:10px"><button id="v1" class="${NETVIEW === 'full' ? 'on' : ''}">Schéma complet : 20 kV → transfos → TGBT → tableaux</button><button id="v2" class="${NETVIEW === 'uni' ? 'on' : ''}">Ordre physique des cellules HTA (unifilaire)</button></div>
   <p class="small muted" style="margin:0 0 8px">${NETVIEW === 'full' ? 'Schéma de principe : le demi-jeu de barres 20 kV gauche (cellules TR xA) est dessiné au-dessus du droit (cellules TR xB) ; au croisement d’un trait vertical et du jeu de barres droit, il n’y a pas de liaison. En mode simulation, touchez un disjoncteur, une arrivée ou un couplage.' : 'Cellules dans l’ordre de l’unifilaire R112529 rév. H.'}</p>
   ${netFinderPanel()}
+  <div id="net-focus-status" class="net-focus-status" role="status" aria-live="polite">${focus || NET_FINDER.selected
+    ? '⚡ Départ ou équipement sélectionné : ' + esc(NODE[focus || NET_FINDER.selected]?.label ||
+      BOARD[focus || NET_FINDER.selected]?.name || focus || NET_FINDER.selected) +
+      ' — conducteur amont en halo. Façade sur clic uniquement.'
+    : 'Recherchez un départ : son chemin électrique s’affichera d’abord en halo sur ce schéma.'}</div>
   <div id="hta"></div>
+  <div id="net-doc" role="region" aria-label="Informations sur le départ sélectionné" style="margin-top:12px"></div>
   <h2>Tableaux secondaires</h2><div class="grid">${D.boards.filter(b => b.kind !== 'TGBT' && b.kind !== 'HTA').map(b => { const hs = b.halves.filter(h => NODE[h.id]); return `<div class="li glass" style="border-radius:16px" data-go="#/b/${b.id}">${hs.map(h => `<span class="dot ${isLive(h.id) ? 'on' : 'off'}"></span>`).join('')}<div class="grow"><b>${esc(b.name)}</b><div class="src">${hs.map(h => esc(h.label.replace(b.name, '').replace(/^ — /, '') || 'JdB') + ' : ' + (isLive(h.id) ? 'alimenté' : 'non alimenté')).join(' · ')}</div></div></div>`; }).join('')}</div>
   ${footer()}`;
   const handler = id => { const n = NODE[id]; if (SIMMODE && n && (SW.has(n.t) || n.t === 'src')) { if (setSw(id, !isClosed(id))) { toast(`${short(n)} : ${isClosed(id) ? 'fermé' : 'ouvert'} (simulation)`); rerender(); } } else openEntity(id); };
   const selectedFocus = focus || NET_FINDER.selected;
-  if (focus && NODE[focus]) NET_FINDER.selected = focus;
+  if (focus && (NODE[focus] || BOARD[focus])) {
+    NET_FINDER.selected = focus;
+    if (!NET_FINDER.query) NET_FINDER.query = NODE[focus] ? NODE[focus].label : BOARD[focus].name;
+  }
   const viewer = mountViewer($('#hta'), NETVIEW === 'full' ? fullNetSVG() : htaSVG(), { onClick: handler,
     focus: selectedFocus ? (NETVIEW === 'full' ? (BOARD[selectedFocus] ? selectedFocus : netFocus(selectedFocus)) : (NODE[selectedFocus] ? focusTarget(selectedFocus) : null)) : null,
     legend: '<span style="color:#12b76a">━ alimenté</span><span style="color:#e5484d">━ non alimenté</span><span>□ appareil ouvert · ■ fermé</span>' });
