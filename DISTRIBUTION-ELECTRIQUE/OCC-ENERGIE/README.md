@@ -7,6 +7,9 @@ Indépendante de l’application OCC Bobinage (aucun code ni donnée partagés).
 
 Ouvrir **`OCC_ENERGIE.html`** (double-clic sur PC ; sur iPhone : app Fichiers → ouvrir). Fonctionne hors ligne.
 
+**Livrable complémentaire du 15/10/2026** : **[`OCC_ENERGIE_VECTORIEL_MOBILE.html`](OCC_ENERGIE_VECTORIEL_MOBILE.html)** — application autonome à façades vectorielles uniquement, 503 départs documentés, 66 ensembles d'armoires et tableaux (dont des gabarits non cotés), arborescence jusqu'aux départs. Les clichés des armoires ne sont pas embarqués. La vue aérienne est allégée et moins détaillée que dans l'application principale. Ce fichier est consultatif, non utilisable comme document de consignation ; il ne remplace pas `OCC_ENERGIE.html` en production.
+
+
 | Onglet | Rôle |
 |---|---|
 | Accueil | Vue aérienne IGN, accès aux postes et sous-stations |
