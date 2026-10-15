@@ -890,12 +890,17 @@ exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'audit_202
 
 # TS8 : nouvelle façade relevée sur terrain (aucune attribution de circuit par simple position).
 exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ts8_photo.py'), encoding='utf-8').read())
+# Lot de photos du 15 octobre : façades TS15, TS16, Gorge et Varivolt,
+# rapprochement conservateur avec les départs existants et traçabilité terrain.
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'terrain_photo_20261015.py'), encoding='utf-8').read())
+for d in deps.values(): d.pop('_fac', None)
+
 
 # --------------------------------------------------------------------------- registre documentaire
 INV = json.load(open(sys.argv[1].replace('excel.json', 'inv.json'), encoding='utf-8')) if False else None
 
 data = dict(
-  meta=dict(app='OCC ÉNERGIE', version='1.16', built='2026-10-12', data='Dossier Plan électrique relu le 12/10/2026 (classeur, unifilaire, photos, archives p1*.zip : verrouillage TR3B, PV France Transfo, schémas DM1 Varivolt)', unifilaire='Owens Corning R112529 — UNIFILAIRE HTA/BT — rév. H', site='Usine OCF à Laudun'),
+  meta=dict(app='OCC ÉNERGIE', version='1.17', built='2026-10-15', data='Dossier Plan électrique relu le 12/10/2026 (classeur, unifilaire, photos, archives p1*.zip : verrouillage TR3B, PV France Transfo, schémas DM1 Varivolt)', unifilaire='Owens Corning R112529 — UNIFILAIRE HTA/BT — rév. H', site='Usine OCF à Laudun'),
   loc=LOC, nodes=list(nodes.values()), edges=edges, boards=list(boards.values()), facades=F, issues=issues, procs=PROCS,
   xl_left=[dict(sheet=s, cell=c, label=l) for s, c, l in left], **D_EXTRA)
 json.dump(data, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
