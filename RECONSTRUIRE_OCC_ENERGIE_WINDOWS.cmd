@@ -18,14 +18,16 @@ py -3 tests\test_coherence_electrique.py || goto :fail
 py -3 tests\test_ts8.py || goto :fail
 py -3 tests\test_terrain_20261015.py || goto :fail
 py -3 tools\build_app.py || goto :fail
+py -3 tools\build_app.py --lite || goto :fail
+py -3 tests\test_historique2024.py || goto :fail
 py -3 tools\build_docs.py || goto :fail
 echo.
-echo RECONSTRUCTION OK : OCC_ENERGIE.html
+echo RECONSTRUCTION OK : OCC_ENERGIE.html ET OCC_ENERGIE_2024_LITE.html
 cd /d "%~dp0"
 git status --short
 set /p PUSH="Publier la reconstruction sur GitHub ? (oui/N) : "
 if /i not "%PUSH%"=="oui" goto :success
-git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs
+git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE_2024_LITE.html DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs
 git diff --cached --quiet && goto :success
 git commit -m "build(occ-energie): regenerer facades terrain et HTML" || goto :fail
 git push || goto :fail
