@@ -51,6 +51,34 @@ function arbreBoard(bid, depth, path, via) {
   } else inner = kids.map(render).join('');
   return `<details class="tnode" ${depth < 3 ? 'open' : ''} ${data}><summary>${head}</summary><div class="tkids">${inner}</div></details>`;
 }
+// Inventaire exhaustif : les équipements non reliés à la racine restent affichés,
+// sans transformer une hypothèse documentaire en liaison d'exploitation.
+function arbreSansOrigine() {
+  const seen = new Set(['PL20']);
+  const visit = (bid, path) => {
+    if (path.length > 24) return;
+    for (const k of arbreKids(bid, path)) {
+      if (!k.board || path.includes(k.board)) continue;
+      seen.add(k.board);
+      visit(k.board, path.concat(k.board));
+    }
+  };
+  visit('PL20', ['PL20']);
+  const missing = D.boards.filter(b => !seen.has(b.id))
+    .sort((a, b) => a.name.localeCompare(b.name, 'fr', { numeric: true }));
+  if (!missing.length) return '';
+  return `<details class="tnode tss" open data-n="origine non documentee armoires non rattachees">
+    <summary><span class="ticon">⚠️</span><b>Origine non documentée / hors parcours CNR–EDF (${missing.length})</b>
+      <span class="tmeta">inventoriés, mais aucun chemin complet démontré depuis la racine</span></summary>
+    <div class="tkids"><p class="small muted">Ces éléments restent consultables. Cette rubrique ne signifie
+      pas qu'ils sont hors tension et ne peut pas servir de consigne de manœuvre.</p>
+      ${missing.map(b => `<div class="tnode tleaf" data-n="${esc(norm(b.name + ' ' + (b.alias || '')))}">
+        <span class="dot unk"></span><span class="ticon">${tIcon(b)}</span>
+        <a class="tname" href="#" data-go="#/b/${b.id}">${esc(b.name)}</a>
+        <span class="tmeta">${esc(tLoc(b))} · ${(DEPS_BY_BOARD[b.id] || []).length} départ(s) · amont à établir</span>
+      </div>`).join('')}
+    </div></details>`;
+}
 function arbreHTML() {
   // racine : sources → poste de livraison ; puis les tableaux 20 kV regroupés par sous-station
   const pl = BOARD.PL20, plKids = arbreKids('PL20', ['PL20']);
@@ -61,7 +89,8 @@ function arbreHTML() {
   return `<details class="tnode troot" open data-n="cnr edf sources"><summary>${tDot('SRC_CNR')}<span class="ticon">⚡</span><b>CNR</b><span class="tmeta">réseau normal</span>
       <span class="tsep">/</span>${tDot('SRC_EDF')}<b>EDF</b><span class="tmeta">secours — bascule automatique sur manque CNR, jamais les deux ensemble</span></summary>
     <div class="tkids"><details class="tnode" open data-n="${esc(norm(pl.name))}"><summary>${tHead('PL20', 'arrivées CNR (01) et EDF (04)', '⚡')}</summary><div class="tkids">${ss}</div></details></div></details>
-    ${ge.map(g => { const to = (DOWN[g.id] || []).map(e => NODE[e.b]).find(x => x && x.board); return `<div class="tnode tleaf" data-n="${esc(norm(g.label))}">${tDot(g.id)}<span class="ticon">⚙</span><b>${esc(dn(g))}</b><span class="tmeta">${to ? '→ ' + esc(BOARD[to.board].name) + ' (' + esc(dn(to)) + ')' : ''} — logique de permutation non documentée</span></div>`; }).join('')}`;
+    ${ge.map(g => { const to = (DOWN[g.id] || []).map(e => NODE[e.b]).find(x => x && x.board); return `<div class="tnode tleaf" data-n="${esc(norm(g.label))}">${tDot(g.id)}<span class="ticon">⚙</span><b>${esc(dn(g))}</b><span class="tmeta">${to ? '→ ' + esc(BOARD[to.board].name) + ' (' + esc(dn(to)) + ')' : ''} — logique de permutation non documentée</span></div>`; }).join('')}
+    ${arbreSansOrigine()}`;
 }
 function bindArbre(host) {
   const q = $('#tq'); if (!q) return;
