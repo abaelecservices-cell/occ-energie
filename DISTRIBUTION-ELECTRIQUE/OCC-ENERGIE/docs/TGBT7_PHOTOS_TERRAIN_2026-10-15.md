@@ -52,3 +52,10 @@
 3. Les associations départ/protection/charge, la topologie amont et les consignes de manœuvre doivent rester marquées comme non vérifiées quand elles ne sont pas explicitement documentées.
 4. Ne pas assimiler les batteries de condensateurs TGBT 7A / 7B au tableau principal TGBT 7.
 5. Après transfert : associer les photos aux entrées du registre et, séparément, actualiser les vues de l'application en conservant une traçabilité et une validation terrain.
+
+## Conditionnement préparé pour dépôt GitHub par navigateur
+L'archive d'origine (~43 Mo) a été scindée en **deux archives ZIP contenant ensemble les 36 photographies d'origine, sans perte de données** et sans les métadonnées parasites `__MACOSX`. Ces deux archives ne sont **pas encore dans le dépôt**.
+- `TGBT7_photos_partie_1.zip` — 22 184 716 octets ; SHA-256 `0716132df04e2b01598a67cf24cb06193800c5dd252cf832ef01d5afa9296fb4`.
+- `TGBT7_photos_partie_2.zip` — 22 066 781 octets ; SHA-256 `373ece50573af2daa75e562d29dff9a04257ca5c1484cee03eacbb28c92f2358`.
+
+Importer les deux archives dans `DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/sources/`. L'application ne les affiche pas automatiquement ; après dépôt, un travail de liaison photo/tableau reste nécessaire.
