@@ -85,6 +85,7 @@ function arbreSansOrigine() {
         <span class="dot unk"></span><span class="ticon">${tIcon(b)}</span>
         <a class="tname" href="#" data-go="#/b/${b.id}">${esc(b.name)}</a>
         <span class="tmeta">${esc(tLoc(b))} · ${(DEPS_BY_BOARD[b.id] || []).length} départ(s) · amont à établir</span>
+        ${arbreDepLeaves(b.id, null)}
       </div>`).join('')}
     </div></details>`;
 }
