@@ -7,6 +7,8 @@ Indépendante de l’application OCC Bobinage (aucun code ni donnée partagés).
 
 Ouvrir **`OCC_ENERGIE.html`** (double-clic sur PC ; sur iPhone : app Fichiers → ouvrir). Fonctionne hors ligne.
 
+**Version légère immédiatement disponible sur la branche de rapprochement** : `OCC_ENERGIE_2024_LITE.html`. Elle embarque le modèle complet (équipements, liaisons, façades, navigation et historique Excel 2024), mais omet les tuiles satellites du plus haut niveau de zoom afin de réduire la taille du fichier. La version normale reste `OCC_ENERGIE.html` et doit être régénérée avant fusion dans `main`.
+
 | Onglet | Rôle |
 |---|---|
 | Accueil | Vue aérienne IGN, accès aux postes et sous-stations |
@@ -32,7 +34,8 @@ Les liens photo ouvrent les PDF du dossier `Plan électrique` placé à côté d
 ## Arborescence
 
 ```
-OCC_ENERGIE.html        application (à diffuser)
+OCC_ENERGIE.html        application complète (reconstruction en attente sur la PR)
+OCC_ENERGIE_2024_LITE.html  application légère (zoom satellite limité)
 docs/                   livrables : inventaire, registre photos, incertitudes, photos à reprendre, avancement, contrôles
 src/                    sources : app.js, manoeuvres.js (fiches), courant.js (parcours), fiche.js, plans.js, plansvg.js, arbre.js, net.js, style.css, index.html
 tools/                  parse_excel.py, parse_pptx.py, aerial.py, ortho.py + recale_ortho.py + site_tiles.py (orthophoto IGN : assets/vue_aerienne, tuiles embarquées) → build_data.py (+ facades_photo.py, unifilaire_detail.py, hta_photo.py, audit_2026_10_11.py) → build_plans.py → build_app.py → build_docs.py
@@ -53,10 +56,13 @@ py -3 -I tools/build_plans.py
 ```
 ```bash
 py -3 -I tools/build_app.py
+py -3 -I tools/build_app.py --lite
 ```
 ```bash
 py -3 -I tools/build_docs.py
 ```
+
+Le croisement des 36 départs de l'index historique 2024 est documenté dans `docs/14_RAPPROCHEMENT_INDEX_EXCEL_2024.md`. Une case concordante n'est pas une validation de la destination alimentée.
 
 Les façades sont décrites par des données (`F[...]` dans `tools/build_data.py` : colonnes, largeurs en mm, cases, appareils) et dessinées en SVG par l’application. Les salles disposent d’un repère en mm prêt à recevoir les cotes.
 
