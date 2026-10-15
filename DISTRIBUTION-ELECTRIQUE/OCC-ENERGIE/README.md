@@ -69,3 +69,11 @@ Les façades sont décrites par des données (`F[...]` dans `tools/build_data.py
 ## Confidentialité
 
 Documents sensibles : ne pas publier ce dossier sur un dépôt public ni sur un service en ligne. Aucune connexion au réseau industriel, aucune commande à distance.
+
+## Relevé TS8 du 15 octobre 2026 — livraison intermédiaire
+
+- **`OCC_ENERGIE_TS8.html`** : version reconstituée du parcours OCC Énergie contenant la façade SVG TS8 (4 travées, 5 tiroirs, 10 repères cliquables sur les 20 départs existants). Les départs sans correspondance photographique restent dans l'inventaire, sans placement inventé. Attention : la plaque rouge indique une **alimentation prise en amont du disjoncteur principal** ; l'application ne certifie jamais une consignation.
+- Le fichier utilise **25 tuiles graphiques externes** dans `assets/vue_aerienne/occ_files/` et conserve les 9 autres tuiles directement intégrées. Pour préserver l'affichage de la carte satellite, lancer cette version avec le dossier complet du dépôt, de préférence depuis un serveur local ; **ce n'est pas la version portable mono-fichier**.
+- **`OCC_ENERGIE.html`** demeure la version autonome antérieure, conservée sans modification. Pour régénérer la version mono-fichier intégrant le TS8 et les autres relevés du 15/10/2026, utiliser `tools/build_data.py` suivi de `tools/build_app.py` puis des tests depuis une copie locale complète (ou lorsque les runners GitHub Actions refonctionneront).
+- Sources intégrées : `tools/ts8_photo.py`, `src/app.js` et `docs/TS8_RELEVE_TERRAIN_2026-10-15.md`. La reconstruction vectorielle ne contient aucune photographie de façade. Les 20 départs Excel de TS8 sont conservés ; aucune arête électrique nouvelle n'a été ajoutée.
+- Contrôle du 15/10/2026 : extraction/parse JSON embarqué, unicité des 10 repères, 20 départs, ordre des 4 travées, 5 tiroirs, présence de l'alerte, absence d'arête orpheline : **conforme**. **Test visuel de navigateur et tests Python non exécutés** en raison des runners GitHub indisponibles.
