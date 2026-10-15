@@ -451,7 +451,7 @@ function openEntity(key) {
     ${n.t !== 'src' ? `<button class="btn" data-go="#/courant/${n.id}">⚡ Remettre le courant</button>` : ''}
     ${fid ? `<button class="btn ghost" data-go="#/b/${boardForFacade(fid)}/f/${n.id}">Voir sur la façade</button>` : ''}${parcoursContext(n.id).zone ? `<button class="btn ghost" data-go="#/site/${n.id}">📍 Localiser dans l'usine</button>` : ''}${plan}</div>`;
   const ds = n.t === 'tr' || n.t === 'bus' || n.t === 'src' || n.role === 'arrivee' || n.t === 'cpl' ? downstream(n.id).map(x => NODE[x]).filter(x => x.t === 'dep') : [];
-  const bd = `${btns}${kv.length ? `<dl class="kv">${kv.join('')}</dl>` : ''}
+  const bd = `${b && b.safety_warning ? `<div class="banner danger" role="alert" style="margin-bottom:10px"><span aria-hidden="true">⚠️</span><div><b>Avertissement électrique</b><div class="small">${esc(b.safety_warning)}</div></div></div>` : ""}${btns}${kv.length ? `<dl class="kv">${kv.join('')}</dl>` : ''}
     ${iss.length ? `<div class="banner sim">⚠️<div class="small">${iss.map(i => `<a href="#" data-open="issue:${i.id}">${esc(i.title)}</a>`).join('<br>')}</div></div>` : ''}
     <details class="blk"><summary><b>Plus d’informations</b></summary>
       <dl class="kv" style="margin-top:8px">${more.join('')}</dl>
