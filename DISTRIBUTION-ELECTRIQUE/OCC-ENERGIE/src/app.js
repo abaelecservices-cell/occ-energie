@@ -1045,8 +1045,8 @@ function route(keep) {
   LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
-  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
-  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg' }[r] || 'home');
+  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024 }[r] || vHome;
+  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
   const sn = simNotice(); if (sn && !$('.simnote', VIEW())) { VIEW().insertAdjacentHTML('afterbegin', sn); $('#simreset').onclick = () => { resetSim(); rerender(); toast('Configuration normale rétablie'); }; }
   if (keep) scrollTo(0, y); else scrollTo(0, 0);
@@ -1189,7 +1189,7 @@ function vBoards() {
   const groups = {}; D.boards.forEach(b => { const t = top(b); (groups[t.id] = groups[t.id] || { name: t.name, bs: [] }).bs.push(b); });
   const ordered = ['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].filter(k => groups[k]).concat(Object.keys(groups).filter(k => !['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].includes(k)));
   VIEW().innerHTML = `<h1 style="margin-top:14px">Tableaux</h1>
-  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
+  <div class="row" style="margin-bottom:12px"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
   ${BVIEW === 'arbre' ? `<div class="row" style="margin-bottom:10px"><input class="f" id="tq" type="search" placeholder="Rechercher dans l’arborescence (TGBT 2, TS 44, étuve…)" style="flex:1;min-width:220px"><button class="btn ghost" id="topen">Tout déplier</button><button class="btn ghost" id="tclose">Replier</button></div>
     <div class="card glass tree" id="tree">${arbreHTML()}</div>
     <p class="small muted">Hiérarchie tirée des liaisons documentées (unifilaire, plans, classeur, photos). ● état simulé · ⚡ remettre le courant. Les tableaux dont l’alimentation n’est pas documentée n’apparaissent pas dans l’arborescence : voir « Par localisation ».</p>`
