@@ -635,7 +635,18 @@ function unitSVG(u, x, w, st, opts) {
     case 'window': s += `<rect x="${x + w * .18}" y="${y}" width="${w * .64}" height="${h}" rx="6" fill="#30363a" opacity=".9"/>${[0, 1, 2, 3].map(i => `<rect x="${x + w * .25 + i * w * .14}" y="${y + 20}" width="16" height="${h - 40}" fill="#b87333" opacity=".55"/>`).join('')}<text x="${x + w / 2}" y="${y + h / 2}" font-size="18" fill="#fff" text-anchor="middle">${esc(u.label || '')}</text>`; break;
     case 'ats': s += `<rect x="${cx - 100}" y="${y}" width="200" height="230" rx="8" fill="#26292c"/><circle cx="${cx}" cy="${y + 110}" r="34" fill="#444" stroke="#888" stroke-width="4"/><rect x="${cx - 90}" y="${y + 190}" width="85" height="26" fill="#2563eb"/><rect x="${cx + 5}" y="${y + 190}" width="85" height="26" fill="#2563eb"/><text x="${cx - 47}" y="${y + 208}" font-size="12" fill="#fff" text-anchor="middle">A↔FORÇAGE</text><text x="${cx + 47}" y="${y + 208}" font-size="12" fill="#fff" text-anchor="middle">A↔AUTO</text>`; break;
     case 'paper': s += `<rect x="${cx - 160}" y="${y}" width="320" height="${h}" fill="#fbfbfb" stroke="#bbb"/><rect x="${cx - 70}" y="${y + 20}" width="200" height="50" fill="#f7d117"/><text x="${cx}" y="${y + h - 14}" font-size="13" text-anchor="middle" fill="#555">consigne affichée</text>`; break;
-    case 'bluetags': s += [0, 1, 2, 3, 4].map(i => `<rect x="${x + 40 + (i % 3) * 150}" y="${y + Math.floor(i / 3) * 40}" width="130" height="24" fill="#9fd3f5"/>`).join(''); break;
+    case 'bluetags': {
+      // Étiquettes visuelles : leur présence ne crée aucun départ ni liaison électrique.
+      const tags = Array.isArray(u.tags) && u.tags.length ? u.tags : ['', '', '', '', ''];
+      const ncols = 3, margin = 22, gap = 8, tw = (w - 2 * margin - 2 * gap) / ncols;
+      s += tags.map((tag, i) => {
+        const tx = x + margin + (i % ncols) * (tw + gap);
+        const ty = y + Math.floor(i / ncols) * 30;
+        const fs = Math.max(7, Math.min(13, tw / Math.max(5, String(tag).length * .62)));
+        return `<g><rect x="${tx}" y="${ty}" width="${tw}" height="24" rx="2" fill="#9fd3f5" stroke="#70b9dd" stroke-width="0.6"/><title>${esc(tag)}</title><text x="${tx + tw / 2}" y="${ty + 16}" text-anchor="middle" font-size="${fs}" font-weight="600" fill="#174263">${esc(tag)}</text></g>`;
+      }).join('');
+      break;
+    }
     case 'rot': { // Compact NS à commande rotative prolongée (poignée noire, plastron Okken)
       const plH = 2.6 * U, bw = Math.min(w * .5, 330), bh = Math.min(h - plH - 14, 300), bx = cx - bw / 2, by = y + plH + 10;
       if (u.label) s += plateSVG(cx - pw / 2, y, pw, plH, u.label, u.plate || 'green', w < 400 ? 16 : 19);

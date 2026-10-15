@@ -694,8 +694,8 @@ F['TGBT3'] = dict(style='okken_blanc_vert', title='TGBT N°3 — CX781001', bran
   cols=from_cases(R3, [(1, 650), (2, 650), ('2c', 250), (3, 650), (4, 650), (5, 650), ('5c', 250), (6, 650)], None))
 
 # TS9 — relevé photos
-F['TS9'] = dict(style='okken_beige', title='TS9', brand='MERLIN GERIN', height=80, src='Ts9.pdf p1, p2, p5, p7',
-  conf='Relevé photo : étiquettes noires partiellement lisibles, étiquettes bleues illisibles (col. 2). Positions verticales estimées.',
+F['TS9'] = dict(style='okken_beige', title='TS9', brand='MERLIN GERIN', height=80, src='Ts9.pdf p1, p2, p5, p7 ; IMG_4081-4092 (15/10/2026)',
+  conf='Relevé photo : étiquettes noires partiellement lisibles, 15 étiquettes bleues lues sur les clichés du 15/10/2026, sans association validée aux protections (col. 2). Positions verticales estimées.',
   cols=[
    dict(n='1', w=500, units=[
      dict(y=10, h=10, k='drawer', dep=T9ID[0], plate='yellow', label='Transfert fuel domestique n°2 7PM26'),
@@ -707,12 +707,16 @@ F['TS9'] = dict(style='okken_beige', title='TS9', brand='MERLIN GERIN', height=8
    ], doors=[(0, 10), (10, 20), (20, 30), (30, 80)]),
    dict(n='', w=400, units=[
      dict(y=13, h=6, k='meter', label='Centrale de mesure'),
-     dict(y=36, h=8, k='paper', label='Consigne d’exploitation affichée (illisible sur photo)'),
+     dict(y=36, h=8, k='paper', label='Consigne secours photographiée — manoeuvres à valider'),
      dict(y=46, h=8, k='ats', label='Automate permutation sources « A ↔ forçage / A ↔ auto »'),
      dict(y=43, h=3, k='plate', dep=T9ID[2], plate='black', x=0.72, label='7M21 COFFRET Cde SIRÈNES AL. INCENDIE'),
      dict(y=48, h=3, k='plate', dep=T9ID[3], plate='white', x=0.72, label='Alim. commande C1 tours de refroidissement'),
    ], doors=[(0, 80)]),
-   dict(n='2', w=550, units=[dict(y=12, h=6, k='bluetags', label='Étiquettes bleues (illisibles) : coffret alim butane, éclairage…'), dict(y=28, h=4, k='bluetags', label='Alim Vigilohm, Alim 110 V…'), dict(y=34, h=2, k='blank')], doors=[(0, 12), (12, 80)]),
+   dict(n='2', w=550, units=[dict(y=12, h=10, k='bluetags', label='Étiquettes bleues relevées le 15/10/2026 (rang supérieur)', tags=[
+       'COFFRET ALIM BUTANE', 'CONTROLE DIESEL EAU FROIDE', 'PRIMAIRE TRANSFO 380 - 110',
+       'ECL SECOURS CHAUFFERIE', 'DEPART COFFRET ALARME PORTAIL SNCF', 'ECLAIRAGE SECOURS GROUPES',
+       'SECONDAIRE TRANSFO 380 - 110', 'SECHEUR AIR', 'INSTRUMENTATION CHAUFFERIE']), dict(y=28, h=8, k='bluetags', label='Étiquettes bleues relevées le 15/10/2026 (rang inférieur)', tags=[
+       'ALIM VIGILHOM', '7 PM 20', 'RESERVE', 'ALIM 110 V', '7M15 CONTROLE DIESEL', 'ALARME CHAUFFERIE']), dict(y=34, h=2, k='blank')], doors=[(0, 12), (12, 80)]),
    dict(n='3', w=500, units=[
      dict(y=10, h=3, k='plate', dep=T9ID[4], plate='black', label='7M08-7M09. ALIM. COFFRET CHAUDIÈRE 1et2'),
      dict(y=10, h=8, k='arc', x=0.55, label='ATTENTION Risque Classe 0 — Tableau TR2B TS17B TS9 CHAUDIÈRE — 400 V — 1,62 kA — 0,19 cal/cm² — 14,91 cm'),
