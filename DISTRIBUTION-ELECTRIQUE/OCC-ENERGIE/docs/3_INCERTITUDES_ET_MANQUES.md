@@ -22,6 +22,12 @@ Le même dossier Schneider (CX7810_C, 12/2024) dessine des clés Ronis de choix 
 
 Documents : p1 - Copie.zip › 12_TGBT N°3 › CX7810_C TQC.PDF
 
+### [HAUTE] TS8 — circuits alimentés en amont du disjoncteur principal
+
+Plaque rouge sur travée 4 : « ALIMENTATION PRISE EN AMONT DU DISJONCTEUR PRINCIPAL ». Dérivations et protections concernées non identifiées. NE PAS déduire une mise hors tension intégrale de l’ouverture du disjoncteur principal. Pas de topologie de disjoncteur ajoutée sans schéma.
+
+Documents : Relevé photographique TS8 du 15/10/2026 (19 vues extérieures, non archivées dans GitHub)
+
 ### [MOYENNE] Repères « VERS TGBT » inversés sur l’unifilaire (TR 1A / TR 2A)
 
 L’unifilaire 20 kV (R112529 rév. H) porte sous la cellule « TR 1A » la mention « VERS TGBT 2 » et sous « TR 2A » « VERS TGBT 1 ». Règle donnée par l’exploitant : chaque TGBT n est alimenté par les transformateurs TR nA et TR nB (cohérent avec l’Excel et le plan Schneider TGBT 2 « ARRIVÉE TRANSFO TR2A »). Le modèle applique TR 1A → TGBT 1A et TR 2A → TGBT 2A. Reste à vérifier que les cellules HTA repérées « TR 1A » / « TR 2A » sur le tableau 20 kV alimentent bien ces transformateurs (étiquettes de cellule). Lecture détaillée : le disjoncteur BT dessiné sous TR 1A est un NW32H1 Micrologic 5.0P (clé T1b EL42462) — c’est le modèle de l’arrivée du TGBT 1A (plan Schneider TGBT1A, case 2-28), alors que l’arrivée TR2A du TGBT 2 est un NW40H1. Avec l’étiquette « PROVIENT DE TR 1A » photographiée sur le TGBT 1, trois éléments indiquent TR 1A → TGBT 1 : les mentions « VERS TGBT 2 / VERS TGBT 1 » de l’unifilaire sont très probablement inversées. — Photos du tableau 20 kV (Sous-station 2) : les plaques gravées donnent, côté A, « TRANSFORMATEUR 2A » puis « TRANSFORMATEUR 1A » contre l’arrivée secours EDF, symétriquement au côté B (arrivée CNR, 1B, 2B…). L’unifilaire place TR 1A puis TR 2A : nouvel indice que l’unifilaire inverse 1A et 2A. À confirmer par le suivi des câbles.
@@ -75,6 +81,24 @@ Documents : schema unifilaire 20 KV derniere version.pdf
 Le fichier « Départ 20kv edf cnr.pdf », d’abord rattaché au poste de livraison, montre le tableau 20 kV TR 1 à 6 de la Sous-station 2. La façade du poste de livraison reste dessinée d’après l’unifilaire seul.
 
 Documents : Départ 20kv edf cnr.pdf
+
+### [MOYENNE] TS8 — 3 tiroirs et plusieurs étiquettes non associés
+
+Travée 1 : les tiroirs 1, 3 et 5 ne disposent pas de repère lisible. Les étiquettes PC 63A, armoire générateur air chaud et pompe eau déminéralisée ne permettent pas une association sûre au disjoncteur sous-jacent ; les vingt départs Excel restent consultables dans la liste sans placement inventé.
+
+Documents : Relevé photographique TS8 du 15/10/2026 (19 vues extérieures, non archivées dans GitHub); Copie de Distribution.xlsm › TR 4A & 4B › C8:C27
+
+### [MOYENNE] Archive Onduleur 6A : identification erronée
+
+IMG_4267 affiche « PROVIENT DE TR 6A — BATTERIE CONDENSATEUR 6A ». Les 4 clichés de « Onduleur 6 a.zip » documentent la batterie COND6A et non un onduleur. Nulle nouvelle liaison électrique créée.
+
+Documents : Relevé terrain OCF du 15/10/2026 — 153 photos, 10 archives (lot livré séparément); IMG_4267.heic
+
+### [MOYENNE] Façades existantes : nouveaux clichés à recouper
+
+Nouveaux relevés TGBT2 (11), TGBT6 (13), TGBT9 (30), tableau 6kV (22), Bronzini (8) et condensateur TR6A (4). Aucun changement de départ/couplage ou position des cellules n’est autorisé sans confrontation des repères aux schémas. Images JPG livrées hors dépôt ; plaques partiellement illisibles.
+
+Documents : Relevé terrain OCF du 15/10/2026 — 153 photos, 10 archives (lot livré séparément)
 
 ### [BASSE] TR 3A / 3B : 2000 kVA confirmé par les plaques ; type de surveillance à vérifier
 

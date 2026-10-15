@@ -1,9 +1,13 @@
 """Assemble le fichier HTML autonome : OCC_ENERGIE.html (CSS + données + JS inline)."""
-import os, json, sys
+import os, json, argparse
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--lite', action='store_true')
+parser.add_argument('--output', choices=['OCC_ENERGIE_TS8.html', 'OCC_ENERGIE_VECTORIEL_MOBILE.html'])
+args = parser.parse_args()
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 rd = lambda p: open(os.path.join(R, p), encoding='utf-8').read()
 html = rd('src/index.html')
-lite = '--lite' in sys.argv
+lite = args.lite
 if lite:
     html = html.replace('<title>OCC ÉNERGIE</title>', '<title>OCC ÉNERGIE — Mode léger 2024</title>')
 data = json.loads(rd('build/data.json'))
@@ -30,6 +34,6 @@ data = scrub(data)
 data = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 js = rd('src/app.js').replace('/*PLANS*/', rd('src/plans.js').replace('/*PLANSVG*/', rd('src/plansvg.js')) + '\n' + rd('src/net.js') + '\n' + rd('src/manoeuvres.js') + '\n' + rd('src/fiche.js') + '\n' + rd('src/courant.js') + '\n' + rd('src/arbre.js') + '\n' + rd('src/parcours.js') + '\n' + rd('src/historique2024.js'))
 html = html.replace('/*CSS*/', rd('src/style.css')).replace('/*DATA*/', data).replace('/*JS*/', js)
-out = os.path.join(R, 'OCC_ENERGIE_2024_LITE.html' if lite else 'OCC_ENERGIE.html')
-open(out, 'w', encoding='utf-8').write(html)
+out = os.path.join(R, args.output or ('OCC_ENERGIE_2024_LITE.html' if lite else 'OCC_ENERGIE.html'))
+open(out, 'w', encoding='utf-8', newline='\n').write(html)
 print(out, round(os.path.getsize(out) / 1024), 'Ko -', nval, 'ordre(s) de manoeuvre valide(s)')

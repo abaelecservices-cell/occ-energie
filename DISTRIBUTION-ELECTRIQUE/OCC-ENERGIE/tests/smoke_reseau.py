@@ -30,8 +30,10 @@ with sync_playwright() as playwright:
     page.locator("#net-find").fill("TR1A")
     page.locator('[data-net-id="TR1A"]').wait_for(timeout=15000)
     page.locator('[data-net-id="TR1A"]').click()
+    page.wait_for_function("document.querySelector('#net-doc').textContent.includes('Localisation documentaire')")
     assert "Localisation documentaire" in page.locator("#net-doc").inner_text()
     assert "Cles / reperes documentes" in page.locator("#net-doc").inner_text()
+    page.locator("svg g.flash").first.wait_for()
     assert page.locator("svg g.flash").count() > 0, "Pas de halo sur le schema complet"
 
     # Changement de vue : la selection doit rester focusable.
@@ -89,6 +91,7 @@ with sync_playwright() as playwright:
     assert board_index >= 0, "Le tableau TGBT2 est absent de la recherche"
     page.locator("#results .res").nth(board_index).click()
     page.wait_for_function("CUR.route === 'reseau'", timeout=10000)
+    page.wait_for_function("CUR.args[0] === 'TGBT2'")
     assert page.evaluate("NET_FINDER.selected") == "TGBT2"
     assert page.locator("#hta svg").count() == 1
 

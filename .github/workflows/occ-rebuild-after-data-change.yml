@@ -1,68 +1,32 @@
 name: OCC Energie - Regeneration modele et HTML
-
 on:
   push:
-    branches:
-      - main
-      - codex/ts8-releve-photo-2026-10-15
-      - codex/clarification-couplage-20261015
-      - codex/croisement-classeur-2024-2026
-    paths:
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_data.py'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ts8_photo.py'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ensimage_vector_20261015.py'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/terrain_photo_20261015.py'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/arbre.js'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_terrain_20261015.py'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/app.js'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_vector_only.py'
-      - '.github/workflows/occ-rebuild-after-data-change.yml'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/historique2024.js'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/sources/referentiel_excel_2024.json'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py'
-      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_historique2024.py'
+    branches: ['main', 'integration/consolidation-securisee-20261015', 'codex/**']
+    paths: ['DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/**', '.github/workflows/**']
+  pull_request:
+    branches: ['main', 'integration/consolidation-securisee-20261015']
   workflow_dispatch:
-
 permissions:
-  contents: write
-
+  contents: read
 concurrency:
   group: occ-energie-build-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   regen:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Recomposer modele, HTML et inventaire
-        working-directory: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE
-        run: |
-          python tools/build_data.py build/excel.json build/data.json
-          python tools/build_app.py
-          python tools/build_app.py --lite
-          python tests/test_coherence_electrique.py
-          python tests/test_ts8.py
-          python tests/test_terrain_20261015.py
-          python tests/test_vector_only.py
-          python tests/test_historique2024.py
-          python tests/test_ensimage_vector.py
-          python tools/build_docs.py
-      - name: Publier les fichiers livres
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json
-          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
-          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE_2024_LITE.html
-          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs/
-          if ! git diff --cached --quiet; then
-            git commit -m "build(occ-energie): reconstruire le modele et le HTML"
-            git push
-          fi
+      - name: Reconstruire tous les livrables et tester
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/rebuild.py
+      - name: Verifier les fichiers livres sans ecrire sur la branche
+        run: git diff --exit-code -- DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: occ-energie-html-consolides
+          path: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE*.html
+          if-no-files-found: error
+          retention-days: 30

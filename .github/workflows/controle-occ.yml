@@ -4,10 +4,11 @@ name: OCC Energie - Controle qualite
 on:
   push:
     branches:
-            - '**'
+      - '**'
   pull_request:
     branches:
       - main
+      - integration/consolidation-securisee-20261015
   workflow_dispatch:
 
 permissions:
@@ -52,7 +53,7 @@ jobs:
 
       - name: Reconstruire OCC Energie
         run: |
-          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py
+          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/rebuild.py
 
       - name: Verifier le HTML reconstruit
         run: |
@@ -78,7 +79,7 @@ jobs:
 
       - name: Garantir la synchronisation du HTML livre
         run: |
-          git diff --exit-code -- DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
+          git diff --exit-code -- DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE
 
       - name: Verifier la coherence electrique
         run: |

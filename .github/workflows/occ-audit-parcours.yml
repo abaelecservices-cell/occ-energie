@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - main
+      - integration/consolidation-securisee-20261015
       - codex/fiabilite-parcours-inverse-2026-10-14
   pull_request:
-    branches: [main]
+    branches: [main, integration/consolidation-securisee-20261015]
   workflow_dispatch:
 
 permissions:

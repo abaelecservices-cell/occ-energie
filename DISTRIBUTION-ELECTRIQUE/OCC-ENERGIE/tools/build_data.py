@@ -907,4 +907,4 @@ data = dict(
   loc=LOC, nodes=list(nodes.values()), edges=edges, boards=list(boards.values()), facades=F, issues=issues, procs=PROCS,
   xl_left=[dict(sheet=s, cell=c, label=l) for s, c, l in left], **D_EXTRA)
 json.dump(data, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-print('nœuds', len(nodes), 'arêtes', len(edges), 'tableaux', len(boards), 'départs', len(deps), 'incohérences', len(issues))
+print('nœuds', len(nodes), 'arêtes', len(edges), 'tableaux', len(boards), 'départs', sum(n['t'] == 'dep' for n in nodes.values()), 'incohérences', len(issues))

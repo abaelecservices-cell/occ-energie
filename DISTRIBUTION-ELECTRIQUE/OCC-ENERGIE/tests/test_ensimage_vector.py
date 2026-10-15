@@ -18,7 +18,7 @@ for bid in ("ENSIM_A", "ENSIM_B"):
     assert "Gabarit" in d["facades"][bid]["conf"]
     assert boards[bid]["loc_conf"] == "inconnu"
     assert not any(x["a"] == bid + "_J" or x["b"] == bid + "_J" for x in d["edges"])
-    assert not any(n["board"] == bid and n["t"] == "dep" for n in d["nodes"])
+    assert not any(n.get("board") == bid and n["t"] == "dep" for n in d["nodes"])
     assert nodes[bid + "_J"]["t"] == "bus"
 assert boards["TS8"]["facade"] == "TS8"
 print("PASS : TS1 vectoriel et deux armoires ensimage sans arêtes inventées.")
