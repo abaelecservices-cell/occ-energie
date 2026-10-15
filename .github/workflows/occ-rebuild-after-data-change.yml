@@ -8,6 +8,9 @@ on:
     paths:
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_data.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ts8_photo.py'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/terrain_photo_20261015.py'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/arbre.js'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_terrain_20261015.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/app.js'
   workflow_dispatch:
 
@@ -36,6 +39,7 @@ jobs:
           python tools/build_app.py
           python tests/test_coherence_electrique.py
           python tests/test_ts8.py
+          python tests/test_terrain_20261015.py
           python tools/build_docs.py
       - name: Publier les fichiers livres
         run: |
@@ -45,6 +49,6 @@ jobs:
           git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
           git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs/
           if ! git diff --cached --quiet; then
-            git commit -m "build(occ-energie): reconstruire la facade TS8 et le HTML"
+            git commit -m "build(occ-energie): reconstruire le modele et le HTML"
             git push
           fi
