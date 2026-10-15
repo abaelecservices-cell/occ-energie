@@ -29,7 +29,8 @@ function hx24Alerts(r) {
   const notes = {
     '2:B:6:36': 'Écart connu : l’index 2024 indique TS12 ; une photographie du TGBT 2 documentée au Registre montre « RÉSERVE » sur cette case. Destination actuelle à vérifier sur le terrain.',
     '2:B:2:36': 'L’index 2024 classe TS2A côté B ; le dossier technique du TGBT 2 positionne la case 2-36 côté A. Contradiction documentaire à signaler, sans changer la liaison.',
-    '4:B:7:10': 'L’index 2024 indique TS24A des deux côtés du TGBT 4 (2-10 A et 7-10 B). Établir les deux destinations exactes avant tout regroupement.'
+    '4:B:7:10': 'L’index 2024 indique TS24A des deux côtés du TGBT 4 (2-10 A et 7-10 B). Établir les deux destinations exactes avant tout regroupement.',
+    '4:A:4:28': 'L’index 2024 situe TS42 côté A en 4-28 ; le modèle actuel comporte un départ en cette case mais rattaché au côté B. Ne pas déplacer de départ sans schéma et relevé confirmé.'
   };
   return notes[key] || '';
 }
