@@ -51,8 +51,7 @@ function saveSim() {
 }
 /* Règles appliquées en simulation (une fermeture est REFUSÉE si elle crée l'une de ces situations) :
    1. deux sources sur le même réseau : CNR et EDF ne peuvent jamais alimenter en même temps (indication exploitant), ni réseau + groupe électrogène ;
-   2. deux transformateurs en parallèle sur un même jeu de barres (règle d'exploitation « jamais arrivée A, couplage et arrivée B fermés » —
-      donnée par l'exploitant ; sur le TGBT 3 des clés Ronis sont dessinées mais le même dossier écrit « aucun verrouillage » : écart I-TGBT3-LOCK). */
+   2. configuration pouvant mettre des transformateurs en parallèle sur un même jeu de barres (blocage logiciel conservatoire, sans supposer une interdiction générale de couplage sur le site ; écart de documentation des clés Ronis du TGBT 3). */
 const SRC_NAME = { SRC_CNR: 'CNR', SRC_EDF: 'EDF', GE1: 'groupe électrogène n°1' };
 function conflicts() {
   const out = [];
@@ -60,11 +59,12 @@ function conflicts() {
     while (q.length) { const u = q.shift(); for (const v of nextOf(u)) { if (seen.has(v)) continue; const nv = NODE[v];
       if ((SW.has(nv.t) || nv.t === 'src') && !isClosed(v)) continue; if (stopTr && nv.t === 'tr') continue; seen.add(v); q.push(v); } }
     return seen; };
-  // 2 bis. chaque TGBT est scindé en deux demi-jeux de barres, chacun alimenté par son transformateur ; le couplage ne se ferme
-  //    qu'après ouverture de l'arrivée qui alimentait le demi-jeu de barres (règle exploitant) : jamais arrivée A + couplage + arrivée B fermés,
-  //    que les transformateurs soient sous tension ou non (sinon le transformateur hors service serait réalimenté par le côté BT)
+  // 2 bis. simulation conservatoire : refuser QA + QB + couplage fermés simultanément.
+  //    Sur site le couplage est utilisé pour maintenir l'alimentation lors de la maintenance d'un transformateur.
+  //    La limitation logicielle ne prouve ni l'existence d'un verrouillage physique, ni une interdiction générale.
+  //    La protection contre les retours BT et les procédures autorisées restent hors simulation.
   D.boards.forEach(b => { const qa = NODE[b.id + '_QA'], qb = NODE[b.id + '_QB'], qc = NODE[b.id + '_QC'];
-    if (qa && qb && qc && isClosed(qa.id) && isClosed(qb.id) && isClosed(qc.id)) out.push({ kind: 'cpl', txt: `${b.name} : le couplage ne se ferme qu’après avoir ouvert l’arrivée qui alimentait le demi-tableau (jamais arrivée A, couplage et arrivée B fermés ensemble).` }); });
+    if (qa && qb && qc && isClosed(qa.id) && isClosed(qb.id) && isClosed(qc.id)) out.push({ kind: 'cpl', txt: `${b.name} : simulation prudente — arrivées A et B plus couplage fermés simultanément non pris en charge ; cela ne signifie pas que le couplage est interdit en exploitation.` }); });
   // 3. interverrouillages par clé documentés appareil par appareil (ex. by-pass total onduleur / arrivée générale onduleur)
   D.nodes.forEach(n => { if (n.excl && isClosed(n.id) && isClosed(n.excl)) out.push({ kind: 'key', txt: `Interverrouillage par clé : « ${short(n)} » et « ${short(NODE[n.excl])} » ne peuvent pas être fermés en même temps.` }); });
   const srcs = D.nodes.filter(n => n.t === 'src' && isClosed(n.id));
@@ -78,7 +78,7 @@ function conflicts() {
   const seenPair = new Set();
   for (let i = 0; i < byTr.length; i++) for (let j = i + 1; j < byTr.length; j++) {
     const shared = [...byTr[i][1]].find(x => x !== byTr[i][0] && byTr[j][1].has(x) && NODE[x].t === 'bus');
-    if (shared && !seenPair.has(shared)) { seenPair.add(shared); out.push({ kind: 'tr', txt: `Interverrouillage 2 sur 3 : ${short(NODE[byTr[i][0]])} et ${short(NODE[byTr[j][0]])} seraient en parallèle sur ${short(NODE[shared])}. Ouvrir d’abord une arrivée.` }); }
+    if (shared && !seenPair.has(shared)) { seenPair.add(shared); out.push({ kind: 'tr', txt: `Simulation : risque de parallélisme entre ${short(NODE[byTr[i][0]])} et ${short(NODE[byTr[j][0]])} sur ${short(NODE[shared])}. Configuration refusée dans l’outil ; appliquer uniquement une procédure d’exploitation validée.` }); }
   }
   return out;
 }
@@ -93,7 +93,7 @@ function setSw(id, v) {
 function refusal(id, c) {
   openSheet(`<span class="pill r">Simulation</span><h2>Fermeture refusée : ${esc(short(NODE[id]))}</h2>`,
     `<div class="banner danger">⛔<div>${c.map(x => esc(x.txt)).join('<br>')}</div></div>
-     <p class="small">Règles appliquées par le simulateur : jamais deux sources en même temps (CNR / EDF / groupe). Règle d’exploitation : chaque TGBT est scindé en deux, chaque moitié alimentée par son transformateur ; le couplage ne se ferme qu’après avoir ouvert l’arrivée qui alimentait la moitié à réalimenter (jamais arrivée A, couplage et arrivée B fermés ensemble).</p>`);
+     <p class="small">Règles appliquées par le simulateur : jamais deux sources en même temps (CNR / EDF / groupe). Le couplage des demi-jeux est utilisé en exploitation pour les opérations prévues par le site. Le simulateur refuse par prudence les deux arrivées et le couplage fermés simultanément : ce n’est ni un verrouillage physique démontré, ni une procédure de manœuvre.</p>`);
 }
 function resetSim() { SIM = {}; saveSim(); LIVE = LIVE_TMP = energize(); }
 /* bandeau commun : une simulation modifiée est toujours signalée, avec son heure */
@@ -123,7 +123,7 @@ function energize() {
   return live;
 }
 let LIVE = energize(); LIVE_TMP = LIVE;
-// état mémorisé incohérent avec les interverrouillages (ancienne version) -> remise à l'hypothèse initiale
+// état mémorisé incompatible avec les gardes conservatoires du simulateur -> remise à l'hypothèse initiale
 if (conflicts().length) { SIM = {}; saveSim(); LIVE = LIVE_TMP = energize(); }
 const isLive = id => LIVE.has(id);
 function interlock(boardId) {
@@ -131,7 +131,7 @@ function interlock(boardId) {
   if (!qa || !qb || !qc) return null;
   const b = BOARD[boardId], n = [qa, qb, qc].filter(x => isClosed(x.id)).length;
   const ronis = b.coupler && b.coupler.rule && /1-1-0/.test(b.coupler.rule);
-  if (n === 3) return { lvl: 'danger', txt: 'Configuration INTERDITE par la règle d’exploitation : trois appareils fermés = transformateurs en parallèle.' + (ronis ? ' Clés Ronis dessinées sur le plan (présence à vérifier).' : '') };
+  if (n === 3) return { lvl: 'danger', txt: 'Configuration refusée par le simulateur : trois appareils fermés peuvent créer un parallélisme selon la topologie. Aucune interdiction générale de couplage sur le site n’en est déduite.' + (ronis ? ' Clés Ronis dessinées sur le plan (présence à vérifier).' : '') };
   if (b.coupler.status !== 'documente' && isClosed(qc.id)) return { lvl: 'sim', txt: 'Couplage non documenté : configuration non vérifiée.' };
   return null;
 }
@@ -1045,8 +1045,8 @@ function route(keep) {
   LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
-  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
-  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg' }[r] || 'home');
+  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024 }[r] || vHome;
+  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
   const sn = simNotice(); if (sn && !$('.simnote', VIEW())) { VIEW().insertAdjacentHTML('afterbegin', sn); $('#simreset').onclick = () => { resetSim(); rerender(); toast('Configuration normale rétablie'); }; }
   if (keep) scrollTo(0, y); else scrollTo(0, 0);
@@ -1189,7 +1189,7 @@ function vBoards() {
   const groups = {}; D.boards.forEach(b => { const t = top(b); (groups[t.id] = groups[t.id] || { name: t.name, bs: [] }).bs.push(b); });
   const ordered = ['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].filter(k => groups[k]).concat(Object.keys(groups).filter(k => !['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].includes(k)));
   VIEW().innerHTML = `<h1 style="margin-top:14px">Tableaux</h1>
-  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
+  <div class="row" style="margin-bottom:12px"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
   ${BVIEW === 'arbre' ? `<div class="row" style="margin-bottom:10px"><input class="f" id="tq" type="search" placeholder="Rechercher dans l’arborescence (TGBT 2, TS 44, étuve…)" style="flex:1;min-width:220px"><button class="btn ghost" id="topen">Tout déplier</button><button class="btn ghost" id="tclose">Replier</button></div>
     <div class="card glass tree" id="tree">${arbreHTML()}</div>
     <p class="small muted">Hiérarchie tirée des liaisons documentées (unifilaire, plans, classeur, photos). ● état simulé · ⚡ remettre le courant. Les tableaux dont l’alimentation n’est pas documentée n’apparaissent pas dans l’arborescence : voir « Par localisation ».</p>`
