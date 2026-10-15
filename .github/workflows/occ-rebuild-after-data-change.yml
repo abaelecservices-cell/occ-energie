@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - codex/ts8-releve-photo-2026-10-15
+      - codex/croisement-classeur-2024-2026
     paths:
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_data.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/ts8_photo.py'
@@ -12,6 +13,10 @@ on:
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/arbre.js'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_terrain_20261015.py'
       - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/app.js'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/src/historique2024.js'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/sources/referentiel_excel_2024.json'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py'
+      - 'DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/test_historique2024.py'
   workflow_dispatch:
 
 permissions:
@@ -40,6 +45,7 @@ jobs:
           python tests/test_coherence_electrique.py
           python tests/test_ts8.py
           python tests/test_terrain_20261015.py
+          python tests/test_historique2024.py
           python tools/build_docs.py
       - name: Publier les fichiers livres
         run: |
