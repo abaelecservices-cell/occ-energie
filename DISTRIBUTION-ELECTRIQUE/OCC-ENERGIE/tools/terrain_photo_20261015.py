@@ -139,31 +139,39 @@ facade('GORGE', 'GORGE', 'armoire_grise', 'GORGE — FOUR 2', TERRAIN_1510 + ' /
       ], doors=[(4,76)]) for i in range(3)
   ], note='Les trois modules sont représentés d’après la perspective ; leur identité électrique est à relever.')
 
-# ---- Varivolt 1 et 2 : deux armoires distinctes, aucun couplage déduit.
+# ---- Varivolt : deux armoires physiquement séparées, zones 1 et 2.
+# La photo prouve les quatre IHM d'électrodes, pas la source de chaque circuit.
 boards['VARIVOLT']['note'] = (
     (boards['VARIVOLT'].get('note') or '') +
-    ' Lot 15/10/2026 : deux armoires séparées Varivolt 1 (zone 1) et '
-    'Varivolt 2 (zone 2). Cellules HTA amont/TC et correspondances '
-    'électrodes à vérifier sur schémas DM1 ; ne pas confondre avec un tableau commun.'
+    ' Lot 15/10/2026 : deux armoires distinctes. VARIVOLT 1 (ZONE 1) : '
+    'électrodes 1-2 et 3-4 ; VARIVOLT 2 (ZONE 2) : '
+    'électrodes 5-6 et 7-8. Afficheurs de mesures et voyants '
+    'présents en façade. Associations aux cellules HTA et circuits '
+    'de puissance non prouvées par les seules photographies.'
 )
-facade('VARIVOLT', 'VARIVOLT', 'armoire_grise', 'VARIVOLT 1 ET 2 — ZONES DISTINCTES',
-    TERRAIN_1510 + ' / Varivolt.zip / 13 images',
-    'Deux ensembles photographiés distincts. Organisation schématique en deux '
-    'colonnes pour différencier les armoires, sans déduction de liaison ou couplage.',
-    brand='VARIVOLT — marque et modèle à confirmer', cols=[
-      dict(n='VARIVOLT 1 / ZONE 1', w=820, units=[
-          dict(y=8, h=6, k='plate', label='VARIVOLT 1 / ZONE 1', nodep=True),
-          dict(y=23, h=12, k='hmi', label='Commandes et afficheurs visibles'),
-          dict(y=42, h=12, k='handle', label='Appareil de coupure (repère à relever)'),
-          dict(y=61, h=6, k='plate', label='SOURCE AMONT NON VÉRIFIÉE', nodep=True),
-      ], doors=[(4,75)]),
-      dict(n='VARIVOLT 2 / ZONE 2', w=820, units=[
-          dict(y=8, h=6, k='plate', label='VARIVOLT 2 / ZONE 2', nodep=True),
-          dict(y=23, h=12, k='hmi', label='Commandes et afficheurs visibles'),
-          dict(y=42, h=12, k='handle', label='Appareil de coupure (repère à relever)'),
-          dict(y=61, h=6, k='plate', label='SOURCE AMONT NON VÉRIFIÉE', nodep=True),
-      ], doors=[(4,75)]),
-  ], note='Deux armoires physiques. La séparation graphique ne représente pas un jeu de barres ni un couplage.')
+facade('VARIVOLT', 'VARIVOLT', 'enclosure_blanc', 'VARIVOLT 1 & 2 — ÉLECTRODES',
+    TERRAIN_1510 + ' / Varivolt.zip / IMG_4221 à 4233',
+    'Deux armoires distinctes représentées côte à côte avec deux afficheurs '
+    'de mesures chacune. Emplacement relatif des voyants approximatif ; '
+    'aucun interrupteur ni départ électrique créé dans le graphe.',
+    brand='VARIVOLT — identification par étiquettes d’armoires', cols=[
+      dict(n='VARIVOLT 1 — ZONE 1', w=980, units=[
+          dict(y=5, h=7, k='plate', label='VARIVOLT 1 / ZONE 1', nodep=True),
+          dict(y=19, h=7, k='hmi', label='ÉLECTRODES 1-2 / PHASE 1'),
+          dict(y=31, h=7, k='hmi', label='ÉLECTRODES 3-4 / PHASE 2'),
+          dict(y=44, h=4, k='voy2', label='Voyants présence / marche / défaut'),
+          dict(y=54, h=4, k='paper', label='Consignes affichées en façade'),
+          dict(y=66, h=6, k='grille', label='Ventilation basse'),
+      ], doors=[(4,76)]),
+      dict(n='VARIVOLT 2 — ZONE 2', w=980, units=[
+          dict(y=5, h=7, k='plate', label='VARIVOLT 2 / ZONE 2', nodep=True),
+          dict(y=19, h=7, k='hmi', label='ÉLECTRODES 5-6 / PHASE 1'),
+          dict(y=31, h=7, k='hmi', label='ÉLECTRODES 7-8 / PHASE 2'),
+          dict(y=44, h=4, k='voy2', label='Voyants présence / marche / défaut'),
+          dict(y=54, h=4, k='paper', label='Consignes affichées en façade'),
+          dict(y=66, h=6, k='grille', label='Ventilation basse'),
+      ], doors=[(4,76)]),
+  ], note='Deux armoires physiques non couplées dans le modèle ; source et liaisons à confirmer.')
 
 # ---- Relevés apportant de la matière aux façades déjà existantes.
 for bid in ('TGBT2', 'TGBT6', 'TGBT9', 'KV6', 'BRONZINI', 'COND6A'):
