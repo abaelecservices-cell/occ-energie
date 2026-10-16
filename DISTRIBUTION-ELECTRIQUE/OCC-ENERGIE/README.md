@@ -1,5 +1,7 @@
 # OCC ÉNERGIE — Cartographie du réseau électrique
 
+> **Contrôle des photos déjà transmises (16/10/2026) :** consulter en priorité [le registre de réception vérifié](docs/16_REGISTRE_SOURCES_VERIFIEES_20261016.md) avant toute demande de nouveau relevé. Les anciennes listes de « photos manquantes » décrivent parfois seulement l'absence des originaux dans GitHub, **pas l'absence d'envoi par l'exploitant**. Corriger l'inversion vérifiée des séries TS1 / TS8 dans les livrables de photothèque avant toute qualification visuelle.
+
 Application autonome (un seul fichier) de cartographie, de dépannage, d’entretien et d’aide à la compréhension des manœuvres de la distribution électrique de l’usine.
 Indépendante de l’application OCC Bobinage (aucun code ni donnée partagés). *Designed by Labidi El Fahli.*
 
