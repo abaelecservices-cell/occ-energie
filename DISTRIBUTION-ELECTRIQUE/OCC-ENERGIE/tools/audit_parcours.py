@@ -132,6 +132,131 @@ def write_report(data, dest=DEST):
               "Les identifiants probables ou inconnus restent a confirmer avant intervention.",
               "Ces nombres signalent des besoins documentaires, et ne mesurent pas la fiabilite physique."]
     (dest / "SYNTHESE.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    # Preparation de la revue terrain : tableaux sans facade vectorielle, sans
+    # supposer que les photographies actuellement referencees sont lisibles.
+    dep_by_board = defaultdict(list)
+    for n in data["nodes"]:
+        if n["t"] == "dep":
+            dep_by_board[n.get("board")].append(n)
+    cases = facade_ids(data)
+    def location_names(board):
+        found = []
+        cursor = board.get("loc")
+        visited = set()
+        while cursor and cursor in data["loc"] and cursor not in visited:
+            visited.add(cursor)
+            here = data["loc"][cursor]
+            found.insert(0, here.get("name") or cursor)
+            cursor = here.get("parent")
+        return " > ".join(found) if found else "NON LOCALISE"
+    missing_boards = []
+    for b in sorted(data["boards"], key=lambda x: (location_names(x), x["name"])):
+        facade = b.get("facade")
+        has_facade = bool(facade and facade in data["facades"])
+        if has_facade:
+            continue
+        missing_boards.append({
+            "Identifiant tableau": b["id"],
+            "Nom du tableau": b["name"],
+            "Emplacement documentaire": location_names(b),
+            "Confiance emplacement": b.get("loc_conf") or "inconnu",
+            "Categorie": b.get("kind") or "",
+            "Departs repertories": len(dep_by_board.get(b["id"], [])),
+            "Photos sources repertoriees": " | ".join(b.get("photos") or []),
+            "Facade vectorielle": "MANQUANTE",
+            "Batiment a relever": "",
+            "Local a relever": "",
+            "Photo ensemble (fichier)": "",
+            "Photos colonnes de face": "",
+            "Photo plaque armoire": "",
+            "Nombres colonnes observes": "",
+            "Referent du releve": "",
+            "Date du releve": "",
+            "Commentaire / incertitude": "",
+            "Statut de verification": "A RELEVER",
+        })
+    with (dest / "FACADES_MANQUANTES_RELEVE_TERRAIN.csv").open(
+        "w", encoding="utf-8-sig", newline=""
+    ) as f:
+        writer = csv.DictWriter(f, fieldnames=list(missing_boards[0]) if missing_boards else [
+            "Identifiant tableau", "Nom du tableau", "Emplacement documentaire",
+            "Confiance emplacement", "Categorie", "Departs repertories",
+            "Photos sources repertoriees", "Facade vectorielle",
+            "Batiment a relever", "Local a relever", "Photo ensemble (fichier)",
+            "Photos colonnes de face", "Photo plaque armoire",
+            "Nombres colonnes observes", "Referent du releve",
+            "Date du releve", "Commentaire / incertitude", "Statut de verification",
+        ], delimiter=";")
+        writer.writeheader()
+        writer.writerows(missing_boards)
+    missing_cases = []
+    for row in rows:
+        if row["Facade"] and row["Case"]:
+            continue
+        missing_cases.append({
+            "ID tableau": row["Identifiant tableau"],
+            "Tableau": row["Tableau"],
+            "ID depart": row["Identifiant depart"],
+            "Libelle documentaire": row["Libelle"],
+            "Case documentaire": row["Case"],
+            "Facade documentaire": row["Facade"],
+            "Colonne relevee": "",
+            "Case relevee": "",
+            "Etiquette lue exactement": "",
+            "Repere disjoncteur / appareillage": "",
+            "Nom fichier photo": "",
+            "Date / operateur": "",
+            "Statut": "A RELEVER",
+            "Observation": "",
+        })
+    with (dest / "CASES_A_IDENTIFIER_TERRAIN.csv").open(
+        "w", encoding="utf-8-sig", newline=""
+    ) as f:
+        fields = list(missing_cases[0]) if missing_cases else [
+            "ID tableau", "Tableau", "ID depart", "Libelle documentaire",
+            "Case documentaire", "Facade documentaire", "Colonne relevee",
+            "Case relevee", "Etiquette lue exactement",
+            "Repere disjoncteur / appareillage", "Nom fichier photo",
+            "Date / operateur", "Statut", "Observation",
+        ]
+        writer = csv.DictWriter(f, fieldnames=fields, delimiter=";")
+        writer.writeheader()
+        writer.writerows(missing_cases)
+    checklist = [
+        "# OCC Energie - tour terrain des facades (sans manoeuvre)",
+        "",
+        "Base documentaire uniquement ; toute localisation non confirmee reste a verifier.",
+        "",
+        f"Tableaux dont la facade vectorielle manque : **{len(missing_boards)}**.",
+        f"Departs sans facade individualisee ou sans case : **{len(missing_cases)}**.",
+        "",
+        "Pour chaque tableau : relever la salle et le batiment, faire une photographie",
+        "d'ensemble de face puis une photo perpendiculaire de chaque colonne et de",
+        "chaque etiquette de depart. Nommer les fichiers avec le repere tableau,",
+        "la colonne et la date. Ne pas ouvrir un coffret ni manoeuvrer un organe",
+        "pour les besoins d'un releve visuel. Respecter les acces et habilitations.",
+        "",
+        "Saisir ensuite uniquement les observations reelles dans les deux fichiers",
+        "CSV. Ne pas remplacer les references documentaires existantes par des",
+        "suppositions. Conserver les photos et leur auteur/date.",
+        "",
+        "## Tableaux a photographier",
+        "",
+        "| Tableau | Localisation documentaire | Departs indexes | Photos deja referencees |",
+        "|---|---|---:|---|",
+    ]
+    for b in missing_boards:
+        checklist.append(
+            "| " + b["Nom du tableau"].replace("|", "/") + " | " +
+            b["Emplacement documentaire"].replace("|", "/") + " | " +
+            str(b["Departs repertories"]) + " | " +
+            ("Oui (a verifier)" if b["Photos sources repertoriees"] else "Non") + " |"
+        )
+    (dest / "CHECKLIST_TOUR_TERRAIN.md").write_text(
+        "\n".join(checklist) + "\n", encoding="utf-8"
+    )
+    print("Tour terrain :", len(missing_boards), "facades manquantes et",
+          len(missing_cases), "cases/departs a completer")
     print("Rapport de completude :", len(rows), "departs ; fichier", str(dest))
     return rows
 

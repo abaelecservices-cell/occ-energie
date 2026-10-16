@@ -269,3 +269,24 @@ input.f.big{font-size:17px;padding:14px 16px;border-radius:16px}
 #site-map .viewer{height: min(75vh,780px)}
 #site-map svg .zone.flash .zout{stroke:#ffe04b;stroke-width:5;filter:drop-shadow(0 0 3px #ffd23f)}
 #site-map svg .zone.flash .zlab{opacity:1}
+
+
+/* Recherche : schéma électrique en premier, avant la fiche et les façades. */
+.net-focus-status{padding:11px 14px;margin:8px 0 10px;border-radius:12px;border:1px solid rgba(10,159,90,.35);background:rgba(10,159,90,.08);font-size:14px;line-height:1.5;font-weight:650}
+#hta{margin:8px 0 14px}
+#hta>.viewer{height:min(69vh,760px);min-height:360px}
+#net-doc .trace-summary{margin-top:8px}
+.trace-summary .trace-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.trace-feedback{margin-top:9px;padding:9px 11px;border-radius:10px;border:1px solid rgba(225,167,37,.35);background:rgba(255,205,61,.09);font-weight:700;line-height:1.4}
+.trace-chain{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.trace-chain summary{cursor:pointer;font-size:13px;font-weight:750}
+.trace-chain .trace-steps{padding:8px 0}
+#hta svg .trace-wire{stroke:#ffd633!important;stroke-width:9!important;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 3px #ffc833) drop-shadow(0 0 8px rgba(255,200,16,.95));animation:occ-trace-glow 1.8s ease-in-out infinite alternate}
+#hta svg .trace-wire.trace-doubt{stroke:#ff9d35!important;stroke-dasharray:9 6!important;filter:drop-shadow(0 0 6px rgba(255,142,34,.95));animation:none}
+#hta svg .trace-node .hl{stroke:#f8d54a!important;stroke-width:5!important;opacity:1;filter:drop-shadow(0 0 6px rgba(255,195,33,.7))}
+#hta svg .trace-node.trace-doubt .hl{stroke:#ff9235!important;stroke-dasharray:7 5}
+#hta svg .trace-target .hl{stroke:#fff58c!important;stroke-width:8!important;filter:drop-shadow(0 0 8px #ffdf31);animation:occ-target-glow 1.2s ease-in-out infinite alternate}
+@keyframes occ-trace-glow{from{filter:drop-shadow(0 0 3px #ffd452)}to{filter:drop-shadow(0 0 8px #ffd452) drop-shadow(0 0 13px #ffc120)}}
+@keyframes occ-target-glow{from{opacity:.7}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){#hta svg .trace-wire,#hta svg .trace-target .hl{animation:none!important}}
+@media (max-width:700px){#hta>.viewer{height:58vh;min-height:300px}.net-focus-status{font-size:12px}.trace-summary .trace-actions .btn{flex:1 1 175px}}

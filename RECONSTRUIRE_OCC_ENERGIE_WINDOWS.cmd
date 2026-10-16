@@ -13,19 +13,14 @@ git diff --quiet || (echo Modifications locales non enregistrees. & pause & exit
 git diff --cached --quiet || (echo Modifications indexees non enregistrees. & pause & exit /b 3)
 git pull --ff-only || (echo Echec git pull. & pause & exit /b 3)
 cd /d "DISTRIBUTION-ELECTRIQUE\OCC-ENERGIE"
-py -3 tools\build_data.py build\excel.json build\data.json || goto :fail
-py -3 tests\test_coherence_electrique.py || goto :fail
-py -3 tests\test_ts8.py || goto :fail
-py -3 tests\test_terrain_20261015.py || goto :fail
-py -3 tools\build_app.py || goto :fail
-py -3 tools\build_docs.py || goto :fail
+py -3 tools\rebuild.py || goto :fail
 echo.
-echo RECONSTRUCTION OK : OCC_ENERGIE.html
+echo RECONSTRUCTION OK : les quatre livrables OCC_ENERGIE*.html
 cd /d "%~dp0"
 git status --short
 set /p PUSH="Publier la reconstruction sur GitHub ? (oui/N) : "
 if /i not "%PUSH%"=="oui" goto :success
-git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs
+git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/build/data.json DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE*.html DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/docs
 git diff --cached --quiet && goto :success
 git commit -m "build(occ-energie): regenerer facades terrain et HTML" || goto :fail
 git push || goto :fail

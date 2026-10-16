@@ -9,7 +9,7 @@ on:
       - 'DISTRIBUTION-ELECTRIQUE/Plan électrique/schema unifilaire 20 KV derniere version.pdf'
       - '.github/workflows/occ-unifilaire-pdf.yml'
   pull_request:
-    branches: [main]
+    branches: [main, integration/consolidation-securisee-20261015]
   workflow_dispatch:
 
 permissions:

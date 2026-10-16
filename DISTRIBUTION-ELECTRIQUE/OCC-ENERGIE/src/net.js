@@ -41,8 +41,8 @@ function fullNetSVG() {
     const xL0 = M - 20, xL1 = W - M - 30, xR0 = M + 70, xR1 = W - M + 20;
     // câbles depuis le poste de livraison (bords gauche / droit)
     const xa = M - 10, xb = W - M + 10;
-    o += `<path d="M${xE} ${yPL}V${yPL + 14 + si * 10}H${M - 45 - si * 12}V${y0 + 22}H${xa}V${yL - 30}" fill="none" stroke="${col('PL_A04')}" data-wire-id="PL_A04" stroke-width="3" stroke-dasharray="8 5"/>`;
-    o += `<path d="M${xC} ${yPL}V${yPL + 14 + si * 10}H${W - M + 45 + si * 12}V${y0 + 22}H${xb}V${yR - 30}" fill="none" stroke="${col('PL_B01')}" data-wire-id="PL_B01" stroke-width="3" stroke-dasharray="8 5"/>`;
+    o += `<path d="M${xE} ${yPL}V${yPL + 14 + si * 10}H${M - 45 - si * 12}V${y0 + 22}H${xa}V${yL - 30}" fill="none" stroke="${col('PL_A04')}" data-wire-id="PL_A04" data-wire-edge="PL_A04|${S.aL}" stroke-width="3" stroke-dasharray="8 5"/>`;
+    o += `<path d="M${xC} ${yPL}V${yPL + 14 + si * 10}H${W - M + 45 + si * 12}V${y0 + 22}H${xb}V${yR - 30}" fill="none" stroke="${col('PL_B01')}" data-wire-id="PL_B01" data-wire-edge="PL_B01|${S.aR}" stroke-width="3" stroke-dasharray="8 5"/>`;
     o += swSym(S.aL, xa, yL - 18, 'sw') + L(xa, yL - 3, xa, yL, S.aL, 4) + swSym(S.aR, xb, yR - 18, 'sw') + L(xb, yR - 3, xb, yR, S.aR, 4);
     o += label(xa + 16, yL - 34, short(NODE[S.aL]).replace(/ \(.*/, ''), 10, 700, 'start') + label(xb - 16, yR - 34, short(NODE[S.aR]).replace(/ \(.*/, ''), 10, 700, 'end');
     // jeux de barres 20 kV (gauche en haut, droit en bas) + couplage

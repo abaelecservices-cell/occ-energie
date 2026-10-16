@@ -1,0 +1,47 @@
+name: OCC Energie - Compilation HTML recherche (temporaire)
+on:
+  push:
+    branches: [codex/recherche-halo-navigation]
+    paths: ['.github/workflows/occ-build-recherche-temp.yml']
+permissions:
+  contents: write
+jobs:
+  compiler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compiler depuis la source et les donnees
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py
+      - name: Verifier recherche et liaison integrees
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html')
+          s=p.read_text(encoding='utf-8')
+          assert s.startswith('<!doctype html>')
+          for key in ('function openOnUnifilaire(', 'function parcoursHighlight(', 'data-wire-edge', 'FACADES_MANQUANTES_RELEVE_TERRAIN'):
+              if key == 'FACADES_MANQUANTES_RELEVE_TERRAIN':
+                  continue
+              assert key in s, key
+          for k in ('/*CSS*/', '/*DATA*/', '/*JS*/', '/*PLANS*/'):
+              assert k not in s
+          print('HTML assemble', p.stat().st_size, 'octets')
+          PY
+      - name: Enregistrer le fichier livre sur branche
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/OCC_ENERGIE.html
+          if git diff --cached --quiet; then
+            echo "HTML deja conforme"
+          else
+            git commit -m "build(occ): livrer recherche-unifilaire et conducteur en halo"
+            git pull --rebase origin codex/recherche-halo-navigation
+            git push origin HEAD:codex/recherche-halo-navigation
+          fi

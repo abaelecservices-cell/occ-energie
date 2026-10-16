@@ -893,6 +893,9 @@ exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ts8_photo
 # Lot de photos du 15 octobre : façades TS15, TS16, Gorge et Varivolt,
 # rapprochement conservateur avec les départs existants et traçabilité terrain.
 exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'terrain_photo_20261015.py'), encoding='utf-8').read())
+# TS1 Ensimage et deux armoires de commande distinctes : uniquement dessins vectoriels,
+# sans départs ou raccordements inventés.
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ensimage_vector_20261015.py'), encoding='utf-8').read())
 for d in deps.values(): d.pop('_fac', None)
 
 
@@ -904,4 +907,4 @@ data = dict(
   loc=LOC, nodes=list(nodes.values()), edges=edges, boards=list(boards.values()), facades=F, issues=issues, procs=PROCS,
   xl_left=[dict(sheet=s, cell=c, label=l) for s, c, l in left], **D_EXTRA)
 json.dump(data, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-print('nœuds', len(nodes), 'arêtes', len(edges), 'tableaux', len(boards), 'départs', len(deps), 'incohérences', len(issues))
+print('nœuds', len(nodes), 'arêtes', len(edges), 'tableaux', len(boards), 'départs', sum(n['t'] == 'dep' for n in nodes.values()), 'incohérences', len(issues))

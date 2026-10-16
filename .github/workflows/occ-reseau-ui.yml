@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - main
+      - integration/consolidation-securisee-20261015
       - codex/reprise-unifilaire-navigation-2026-10-14
   pull_request:
-    branches: [main]
+    branches: [main, integration/consolidation-securisee-20261015]
   workflow_dispatch:
 
 permissions:
@@ -33,14 +34,17 @@ jobs:
           echo "OCC_CHROME=$CHROME" >> "$GITHUB_ENV"
           "$CHROME" --version
       - name: Construire le HTML embarque
-        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/build_app.py
+        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tools/rebuild.py
       - name: Tester la recherche sur l unifilaire
-        run: python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/smoke_reseau.py
+        run: |
+          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/smoke_reseau.py
+          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/smoke_catalogue.py
+          python DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/tests/smoke_features.py
       - name: Conserver la capture du test
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: occ-energie-reseau-navigateur
-          path: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/artifacts/unifilaire-recherche.png
+          path: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/artifacts/*.png
           if-no-files-found: ignore
           retention-days: 14

@@ -5,15 +5,26 @@ const D = window.OCC_DATA;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-/* dossier des photos sources : par défaut à côté de l'application (../Plan électrique/), modifiable pour ce poste (Registre) */
-const PHOTO_KEY = 'occE.photodir', PHOTO_DEF = '../Plan%20%C3%A9lectrique/';
-let PHOTO_BASE = PHOTO_DEF;
-try { PHOTO_BASE = localStorage.getItem(PHOTO_KEY) || PHOTO_DEF; } catch (e) {}
+/* Photos utilisées uniquement hors application comme références de reconstruction. */
 
 /* ======================================================================= modèle */
 const NODE = {}, BOARD = {}, ADJ = {}, DOWN = {}, UP = {};
 D.nodes.forEach(n => NODE[n.id] = n);
 D.boards.forEach(b => BOARD[b.id] = b);
+// Gabarits vectoriels sans affirmation de géométrie, de position ou de connexion.
+for (const b of D.boards) {
+  if (b.facade && D.facades[b.facade]) continue;
+  const fid = 'DOC_' + b.id;
+  D.facades[fid] = {
+    style: 'armoire_grise', title: b.name + ' — GABARIT NON COTÉ', brand: '',
+    src: 'Inventaire OCC — dimensions et appareils non relevés',
+    conf: 'PROVISOIRE : gabarit non coté sans appareils positionnés',
+    height: 80, cols: [{ n: 'Géométrie inconnue', w: 820, units: [], doors: [[9, 71]] }],
+    note: 'La liste des départs est consultable séparément ; aucune correspondance physique n’est présumée.'
+  };
+  b.facade = fid;
+  b.vector_placeholder = true;
+}
 D.edges.forEach(e => {
   (ADJ[e.a] = ADJ[e.a] || []).push(e.b); (ADJ[e.b] = ADJ[e.b] || []).push(e.a);
   (DOWN[e.a] = DOWN[e.a] || []).push(e); (UP[e.b] = UP[e.b] || []).push(e);
@@ -51,8 +62,7 @@ function saveSim() {
 }
 /* Règles appliquées en simulation (une fermeture est REFUSÉE si elle crée l'une de ces situations) :
    1. deux sources sur le même réseau : CNR et EDF ne peuvent jamais alimenter en même temps (indication exploitant), ni réseau + groupe électrogène ;
-   2. deux transformateurs en parallèle sur un même jeu de barres (règle d'exploitation « jamais arrivée A, couplage et arrivée B fermés » —
-      donnée par l'exploitant ; sur le TGBT 3 des clés Ronis sont dessinées mais le même dossier écrit « aucun verrouillage » : écart I-TGBT3-LOCK). */
+   2. deux transformateurs en parallèle sur un même jeu de barres (garde-fou conservatoire du simulateur ; aucune interdiction générale n'a été confirmée par l'exploitant le 15/10/2026 ; les permissifs physiques restent à documenter). */
 const SRC_NAME = { SRC_CNR: 'CNR', SRC_EDF: 'EDF', GE1: 'groupe électrogène n°1' };
 function conflicts() {
   const out = [];
@@ -61,10 +71,10 @@ function conflicts() {
       if ((SW.has(nv.t) || nv.t === 'src') && !isClosed(v)) continue; if (stopTr && nv.t === 'tr') continue; seen.add(v); q.push(v); } }
     return seen; };
   // 2 bis. chaque TGBT est scindé en deux demi-jeux de barres, chacun alimenté par son transformateur ; le couplage ne se ferme
-  //    qu'après ouverture de l'arrivée qui alimentait le demi-jeu de barres (règle exploitant) : jamais arrivée A + couplage + arrivée B fermés,
+  //    qu'après ouverture de l'arrivée correspondante DANS CE SIMULATEUR (hypothèse conservatoire non confirmée comme règle site) : jamais arrivée A + couplage + arrivée B fermés,
   //    que les transformateurs soient sous tension ou non (sinon le transformateur hors service serait réalimenté par le côté BT)
   D.boards.forEach(b => { const qa = NODE[b.id + '_QA'], qb = NODE[b.id + '_QB'], qc = NODE[b.id + '_QC'];
-    if (qa && qb && qc && isClosed(qa.id) && isClosed(qb.id) && isClosed(qc.id)) out.push({ kind: 'cpl', txt: `${b.name} : le couplage ne se ferme qu’après avoir ouvert l’arrivée qui alimentait le demi-tableau (jamais arrivée A, couplage et arrivée B fermés ensemble).` }); });
+    if (qa && qb && qc && isClosed(qa.id) && isClosed(qb.id) && isClosed(qc.id)) out.push({ kind: 'cpl', txt: `${b.name} : simulation bloquée par prudence : configuration avec deux arrivées et couplage fermés non qualifiée. Ceci ne décrit pas un verrouillage physique ni une interdiction générale sur site.` }); });
   // 3. interverrouillages par clé documentés appareil par appareil (ex. by-pass total onduleur / arrivée générale onduleur)
   D.nodes.forEach(n => { if (n.excl && isClosed(n.id) && isClosed(n.excl)) out.push({ kind: 'key', txt: `Interverrouillage par clé : « ${short(n)} » et « ${short(NODE[n.excl])} » ne peuvent pas être fermés en même temps.` }); });
   const srcs = D.nodes.filter(n => n.t === 'src' && isClosed(n.id));
@@ -78,7 +88,7 @@ function conflicts() {
   const seenPair = new Set();
   for (let i = 0; i < byTr.length; i++) for (let j = i + 1; j < byTr.length; j++) {
     const shared = [...byTr[i][1]].find(x => x !== byTr[i][0] && byTr[j][1].has(x) && NODE[x].t === 'bus');
-    if (shared && !seenPair.has(shared)) { seenPair.add(shared); out.push({ kind: 'tr', txt: `Interverrouillage 2 sur 3 : ${short(NODE[byTr[i][0]])} et ${short(NODE[byTr[j][0]])} seraient en parallèle sur ${short(NODE[shared])}. Ouvrir d’abord une arrivée.` }); }
+    if (shared && !seenPair.has(shared)) { seenPair.add(shared); out.push({ kind: 'tr', txt: `Simulation conservatoire : ${short(NODE[byTr[i][0]])} et ${short(NODE[byTr[j][0]])} seraient en parallèle sur ${short(NODE[shared])}. Conditions de parallélisme non validées : simulation bloquée, sans constituer une consigne de manœuvre.` }); }
   }
   return out;
 }
@@ -93,7 +103,7 @@ function setSw(id, v) {
 function refusal(id, c) {
   openSheet(`<span class="pill r">Simulation</span><h2>Fermeture refusée : ${esc(short(NODE[id]))}</h2>`,
     `<div class="banner danger">⛔<div>${c.map(x => esc(x.txt)).join('<br>')}</div></div>
-     <p class="small">Règles appliquées par le simulateur : jamais deux sources en même temps (CNR / EDF / groupe). Règle d’exploitation : chaque TGBT est scindé en deux, chaque moitié alimentée par son transformateur ; le couplage ne se ferme qu’après avoir ouvert l’arrivée qui alimentait la moitié à réalimenter (jamais arrivée A, couplage et arrivée B fermés ensemble).</p>`);
+     <p class="small">Règles appliquées par le simulateur : jamais deux sources en même temps (CNR / EDF / groupe). Hypothèse conservatoire du simulateur (non assimilable à une règle d’exploitation du site) : la fermeture simultanée des deux arrivées et du couplage est bloquée tant que les conditions de parallélisme ne sont pas documentées. Le couplage de secours est pratiqué sur site ; vérifier ses permissifs et protections avant toute manœuvre.</p>`);
 }
 function resetSim() { SIM = {}; saveSim(); LIVE = LIVE_TMP = energize(); }
 /* bandeau commun : une simulation modifiée est toujours signalée, avec son heure */
@@ -123,7 +133,7 @@ function energize() {
   return live;
 }
 let LIVE = energize(); LIVE_TMP = LIVE;
-// état mémorisé incohérent avec les interverrouillages (ancienne version) -> remise à l'hypothèse initiale
+// état mémorisé incompatible avec les gardes conservatoires du simulateur -> remise à l'hypothèse initiale
 if (conflicts().length) { SIM = {}; saveSim(); LIVE = LIVE_TMP = energize(); }
 const isLive = id => LIVE.has(id);
 function interlock(boardId) {
@@ -131,7 +141,7 @@ function interlock(boardId) {
   if (!qa || !qb || !qc) return null;
   const b = BOARD[boardId], n = [qa, qb, qc].filter(x => isClosed(x.id)).length;
   const ronis = b.coupler && b.coupler.rule && /1-1-0/.test(b.coupler.rule);
-  if (n === 3) return { lvl: 'danger', txt: 'Configuration INTERDITE par la règle d’exploitation : trois appareils fermés = transformateurs en parallèle.' + (ronis ? ' Clés Ronis dessinées sur le plan (présence à vérifier).' : '') };
+  if (n === 3) return { lvl: 'danger', txt: 'Configuration refusée par le simulateur : trois appareils fermés peuvent créer un parallélisme selon la topologie. Aucune interdiction générale de couplage sur le site n’en est déduite.' + (ronis ? ' Clés Ronis dessinées sur le plan (présence à vérifier).' : '') };
   if (b.coupler.status !== 'documente' && isClosed(qc.id)) return { lvl: 'sim', txt: 'Couplage non documenté : configuration non vérifiée.' };
   return null;
 }
@@ -223,7 +233,7 @@ function addRec(kind, id, label, extra, t) {
 D.boards.forEach(b => addRec('board', b.id, b.name, [b.id, b.kind, 'tableau', (b.halves || []).map(h => h.label).join(' '), b.sap].join(' '), 'board'));
 D.nodes.forEach(n => {
   const b = boardOf(n);
-  const extra = [b ? b.name : '', n.case ? 'case ' + n.case : '', n.model, n.xl ? n.xl.label : '', n.alias, n.kva, n.cell, n.keys, n.rep,
+  const extra = [n.id, b ? b.name : '', n.case ? 'case ' + n.case : '', n.model, n.xl ? n.xl.label : '', n.alias, n.kva, n.cell, n.keys, n.rep,
     n.t === 'tr' ? 'transformateur transfo' : '', n.t === 'cpl' ? 'couplage' : '', n.role === 'arrivee' ? 'arrivee' : ''].join(' ');
   addRec('node', n.id, n.label, extra, n.t);
 });
@@ -351,10 +361,26 @@ function bindSearch() {
   clr.onclick = () => { inp.value = ''; render(); inp.focus(); };
   document.addEventListener('click', e => { if (!e.target.closest('#searchwrap')) box.classList.remove('open'); });
 }
+function openOnUnifilaire(id, query = '') {
+  if (!NODE[id] && !BOARD[id]) return false;
+  // Une recherche ouvre uniquement le schéma. Façade et implantation sur clic explicite.
+  closeSheet();
+  NET_FINDER.selected = id;
+  NET_FINDER.query = query || (NODE[id] ? NODE[id].label : BOARD[id].name);
+  NETVIEW = 'full';
+  const destination = '#/reseau/' + encodeURIComponent(id);
+  if (location.hash === destination) route(false);
+  else location.hash = destination;
+  return true;
+}
 function pick(r) {
-  if (!r) return; $('#results').classList.remove('open'); $('#search').blur();
-  if (r.kind === 'board') { location.hash = '#/b/' + r.id; return; }
-  openEntity(r.kind === 'node' ? r.id : r.kind + ':' + r.id);
+  if (!r) return;
+  $('#results').classList.remove('open'); $('#search').blur();
+  if (r.kind === 'node' || r.kind === 'board') {
+    openOnUnifilaire(r.id, $('#search').value.trim());
+    return;
+  }
+  openEntity(r.kind + ':' + r.id);
 }
 
 /* --------------------------------------------------------------- fiche */
@@ -363,12 +389,6 @@ function openSheet(hd, bd) {
   $('#sheet').classList.add('open'); $('#scrim').classList.add('open'); $('#sheet').setAttribute('aria-hidden', 'false');
 }
 function closeSheet() { $('#sheet').classList.remove('open'); $('#scrim').classList.remove('open'); $('#sheet').setAttribute('aria-hidden', 'true'); }
-function photoLinks(list) {
-  if (!list || !list.length) return '<span class="muted">Aucune photo référencée.</span>';
-  return list.map(p => { const m = p.match(/^(.*?\.pdf)\s*(p[\d-]+)?/i); const f = m ? m[1].trim() : p; const pg = m && m[2] ? m[2].replace(/^p(\d+).*/, '$1') : '';
-    const real = (D.photofiles || {})[f.normalize('NFC')];   // nom exact sur le disque (é composé ou décomposé)
-    return `<div class="li" style="cursor:default"><span>📷</span><div class="grow"><div>${esc(p)}</div><div class="src">Photo non embarquée (règle : façades vectorielles). ${real || !D.photofiles ? `<a href="${PHOTO_BASE}${encodeURIComponent(real || f)}${pg ? '#page=' + pg : ''}" target="_blank" rel="noopener">Ouvrir la source${pg ? ' p. ' + pg : ''}</a>` : '<b>fichier introuvable dans le dossier des photos</b>'}</div></div></div>`; }).join('');
-}
 function crumbsFor(n) {
   const b = boardOf(n), parts = [];
   if (b) {
@@ -461,11 +481,9 @@ function openEntity(key) {
       ${n.t === 'dep' || n.t === 'bus' ? sameFeedBlock(n.id) : ''}
       ${ds.length ? `<div class="blk"><h4>Alimente ${ds.length} départ(s)</h4>${groupByBus(ds)}</div>` : ''}
       ${procs.length ? `<div class="blk"><h4>Procédures</h4>${procs.map(p => `<div class="li" data-open="proc:${p.id}"><span>📘</span><div class="grow">${esc(p.title)}<div class="src">${esc(p.status)}</div></div></div>`).join('')}</div>` : ''}
-      <div class="row" style="margin-top:10px"><button class="btn ghost" data-go="#/reseau/${n.id}">Voir sur le réseau</button><button class="btn ghost" id="phbtn">Voir la photo</button>
-        ${SW.has(n.t) ? `<button class="btn ghost" id="tgl">${isClosed(n.id) ? 'Simuler ouvert' : 'Simuler fermé'}</button>` : ''}<button class="btn ghost" data-go="#/entretien/${n.id}">Journal</button></div>
-      <div id="phbox"></div></details>`;
+      <div class="row" style="margin-top:10px"><button class="btn ghost" data-go="#/reseau/${n.id}">Voir sur le réseau</button>
+        ${SW.has(n.t) ? `<button class="btn ghost" id="tgl">${isClosed(n.id) ? 'Simuler ouvert' : 'Simuler fermé'}</button>` : ''}<button class="btn ghost" data-go="#/entretien/${n.id}">Journal</button></div></details>`;
   openSheet(hd, bd);
-  $('#phbtn').onclick = () => { $('#phbox').innerHTML = `<div class="blk"><h4>Photos sources (${b ? esc(b.name) : ''})</h4>${photoLinks(b ? b.photos : [])}</div>`; };
   const t = $('#tgl'); if (t) t.onclick = () => { if (setSw(n.id, !isClosed(n.id))) { openEntity(n.id); rerender(); } };
 }
 /* relevés documentaires (photo ou document) : affichés comme tels, jamais comme un état vérifié sur le terrain */
@@ -547,8 +565,24 @@ function mountViewer(host, svg, { onClick, focus, legend, native } = {}) {
     else zoomAt(b.dataset.z === 'in' ? 1.4 : 1 / 1.4, r.left + r.width / 2, r.top + r.height / 2); });
   const focusOn = id => { const g = el.querySelector(`[data-id="${CSS.escape(id)}"]`); if (!g) return false; $$('.flash', el).forEach(x => x.classList.remove('flash')); g.classList.add('flash');
     const bb = g.getBBox(); const w = Math.max(bb.width * 3.2, init.w / 6), h = Math.max(bb.height * 3.2, init.h / 6); v = { x: bb.x + bb.width / 2 - w / 2, y: bb.y + bb.height / 2 - h / 2, w, h }; apply(); return true; };
+  // Cadrage de tous les segments deja representes et surlignes, sans inventer de cables.
+  const focusOnTrace = () => {
+    const segments = [...el.querySelectorAll('.trace-wire, .trace-node')];
+    if (!segments.length) return false;
+    const bounds = segments.map(g => {
+      try { return g.getBBox(); } catch (e) { return null; }
+    }).filter(b => b && Number.isFinite(b.x) && b.width >= 0 && b.height >= 0);
+    if (!bounds.length) return false;
+    const x0 = Math.min(...bounds.map(b => b.x)), y0 = Math.min(...bounds.map(b => b.y));
+    const x1 = Math.max(...bounds.map(b => b.x + b.width));
+    const y1 = Math.max(...bounds.map(b => b.y + b.height));
+    const w = Math.min(init.w, Math.max(init.w / 7, (x1 - x0) * 1.16));
+    const h = Math.min(init.h, Math.max(init.h / 7, (y1 - y0) * 1.16));
+    v = { x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - h / 2, w, h };
+    apply(); return true;
+  };
   if (focus) requestAnimationFrame(() => focusOn(focus));
-  return { focusOn, reset: () => { v = { ...init }; apply(); } };
+  return { focusOn, focusOnTrace, reset: () => { v = { ...init }; apply(); } };
 }
 
 /* ======================================================================= façades vectorielles */
@@ -1045,8 +1079,12 @@ function route(keep) {
   LAST_ROUTED_HASH = location.hash;
   const h = location.hash.replace(/^#\/?/, ''); const [r, ...args] = h.split('/').map(decodeURIComponent);
   CUR = { route: r, args };
-  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg }[r] || vHome;
-  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg' }[r] || 'home');
+  // Toute nouvelle navigation vers un départ commence sur le schéma complet.
+  // Un simple re-rendu (bouton de vue HTA) ne réinitialise pas la préférence.
+  if (r === 'reseau' && args[0] && !keep && (NODE[args[0]] || BOARD[args[0]]))
+    NETVIEW = 'full';
+  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024 }[r] || vHome;
+  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
   const sn = simNotice(); if (sn && !$('.simnote', VIEW())) { VIEW().insertAdjacentHTML('afterbegin', sn); $('#simreset').onclick = () => { resetSim(); rerender(); toast('Configuration normale rétablie'); }; }
   if (keep) scrollTo(0, y); else scrollTo(0, 0);
@@ -1080,7 +1118,6 @@ function netFinderPanel() {
     '<input id="net-find" class="f" type="search" autocomplete="off" style="width:100%;max-width:650px" ' +
     'placeholder="TR 1A, cellule, repere, TGBT, TS7..." aria-label="Rechercher un equipement sur le schema">' +
     '<div id="net-hits" class="list" style="margin-top:6px" role="listbox"></div>' +
-    '<div id="net-doc" style="margin-top:8px" role="status" aria-live="polite"></div>' +
     '</section>';
 }
 function bindNetFinder(viewer) {
@@ -1111,16 +1148,9 @@ function bindNetFinder(viewer) {
       '<p class="small muted" style="margin:7px 0 0">Les cles et localisations proviennent des documents et ne constituent ni un relevé terrain ni une autorisation de manoeuvre.</p></div>';
   }
   function selectId(id) {
-    NET_FINDER.selected = id;
-    if (NETVIEW !== 'full' && NODE[id] && NODE[id].t === 'dep') { NETVIEW = 'full'; rerender(); return; }
-    const target = NETVIEW === 'full' ? (BOARD[id] ? id : netFocus(id)) :
-      (NODE[id] ? focusTarget(id) : null);
-    if (!target || !viewer.focusOn(target)) {
-      if (NETVIEW !== 'full') { NETVIEW = 'full'; rerender(); return; }
-      toast('Selection documentee : cet equipement n est pas dessine directement sur le schema.');
-    }
-    infoFor(id);
-    parcoursHighlight(id);
+    // Une URL partageable garde le départ sélectionné après actualisation.
+    // Le même flux est utilisé par la recherche globale et celle du réseau.
+    openOnUnifilaire(id, field.value.trim());
   }
   function renderHits() {
     NET_FINDER.query = field.value;
@@ -1137,19 +1167,37 @@ function bindNetFinder(viewer) {
     const item = e.target.closest('[data-net-id]');
     if (item) selectId(item.dataset.netId);
   };
-  field.addEventListener('input', renderHits);
-  field.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      const first = results.querySelector('[data-net-id]');
-      if (first) { e.preventDefault(); selectId(first.dataset.netId); }
+  detail.addEventListener('click', e => {
+    if (e.target.closest('#net-fit-path')) {
+      e.preventDefault();
+      if (!viewer.focusOnTrace()) toast('Aucun segment graphique individualisé pour ce parcours.');
     }
   });
-  renderHits();
-  if (NET_FINDER.selected) infoFor(NET_FINDER.selected);
+  field.addEventListener('input', renderHits);
+  field.addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
+    const candidates = [...results.querySelectorAll('[data-net-id]')];
+    if (!candidates.length) return;
+    e.preventDefault();
+    const q = norm(field.value);
+    const exact = candidates.filter(el => {
+      const n = NODE[el.dataset.netId], b = BOARD[el.dataset.netId];
+      return norm(el.dataset.netId) === q || (n && norm(n.label) === q) ||
+        (b && norm(b.name) === q);
+    });
+    if (exact.length === 1) selectId(exact[0].dataset.netId);
+    else if (candidates.length === 1) selectId(candidates[0].dataset.netId);
+    else {
+      detail.innerHTML = '<div class="banner info" role="status">Plusieurs équipements correspondent à cette recherche. Sélectionnez le bon départ dans la liste avant d’afficher son chemin.</div>';
+    }
+  });
+  if (NET_FINDER.selected) {
+    results.innerHTML = ''; // la sélection est faite : l'unifilaire reste visible en premier
+    infoFor(NET_FINDER.selected);
+  } else renderHits();
 }
 
 function vNet(focus) {
-  if (focus && NODE[focus] && NODE[focus].t === 'dep') NETVIEW = 'full';
   VIEW().innerHTML = `<h1>Réseau HTA / BT</h1><p class="sub">Topologie selon l’unifilaire 20 kV (R112529 rév. H) et le classeur de distribution. Touchez un élément pour sa fiche.</p>
   ${simBanner()}
   <div class="row" style="margin:12px 0"><div class="seg glass"><button id="m0" class="${SIMMODE ? '' : 'on'}">Consultation</button><button id="m1" class="${SIMMODE ? 'on' : ''}">Mode simulation</button></div>
@@ -1157,12 +1205,21 @@ function vNet(focus) {
   <div class="seg glass" style="margin-bottom:10px"><button id="v1" class="${NETVIEW === 'full' ? 'on' : ''}">Schéma complet : 20 kV → transfos → TGBT → tableaux</button><button id="v2" class="${NETVIEW === 'uni' ? 'on' : ''}">Ordre physique des cellules HTA (unifilaire)</button></div>
   <p class="small muted" style="margin:0 0 8px">${NETVIEW === 'full' ? 'Schéma de principe : le demi-jeu de barres 20 kV gauche (cellules TR xA) est dessiné au-dessus du droit (cellules TR xB) ; au croisement d’un trait vertical et du jeu de barres droit, il n’y a pas de liaison. En mode simulation, touchez un disjoncteur, une arrivée ou un couplage.' : 'Cellules dans l’ordre de l’unifilaire R112529 rév. H.'}</p>
   ${netFinderPanel()}
+  <div id="net-focus-status" class="net-focus-status" role="status" aria-live="polite">${focus || NET_FINDER.selected
+    ? '⚡ Départ ou équipement sélectionné : ' + esc(NODE[focus || NET_FINDER.selected]?.label ||
+      BOARD[focus || NET_FINDER.selected]?.name || focus || NET_FINDER.selected) +
+      ' — conducteur amont en halo. Façade sur clic uniquement.'
+    : 'Recherchez un départ : son chemin électrique s’affichera d’abord en halo sur ce schéma.'}</div>
   <div id="hta"></div>
+  <div id="net-doc" role="region" aria-label="Informations sur le départ sélectionné" style="margin-top:12px"></div>
   <h2>Tableaux secondaires</h2><div class="grid">${D.boards.filter(b => b.kind !== 'TGBT' && b.kind !== 'HTA').map(b => { const hs = b.halves.filter(h => NODE[h.id]); return `<div class="li glass" style="border-radius:16px" data-go="#/b/${b.id}">${hs.map(h => `<span class="dot ${isLive(h.id) ? 'on' : 'off'}"></span>`).join('')}<div class="grow"><b>${esc(b.name)}</b><div class="src">${hs.map(h => esc(h.label.replace(b.name, '').replace(/^ — /, '') || 'JdB') + ' : ' + (isLive(h.id) ? 'alimenté' : 'non alimenté')).join(' · ')}</div></div></div>`; }).join('')}</div>
   ${footer()}`;
   const handler = id => { const n = NODE[id]; if (SIMMODE && n && (SW.has(n.t) || n.t === 'src')) { if (setSw(id, !isClosed(id))) { toast(`${short(n)} : ${isClosed(id) ? 'fermé' : 'ouvert'} (simulation)`); rerender(); } } else openEntity(id); };
   const selectedFocus = focus || NET_FINDER.selected;
-  if (focus && NODE[focus]) NET_FINDER.selected = focus;
+  if (focus && (NODE[focus] || BOARD[focus])) {
+    NET_FINDER.selected = focus;
+    if (!NET_FINDER.query) NET_FINDER.query = NODE[focus] ? NODE[focus].label : BOARD[focus].name;
+  }
   const viewer = mountViewer($('#hta'), NETVIEW === 'full' ? fullNetSVG() : htaSVG(), { onClick: handler,
     focus: selectedFocus ? (NETVIEW === 'full' ? (BOARD[selectedFocus] ? selectedFocus : netFocus(selectedFocus)) : (NODE[selectedFocus] ? focusTarget(selectedFocus) : null)) : null,
     legend: '<span style="color:#12b76a">━ alimenté</span><span style="color:#e5484d">━ non alimenté</span><span>□ appareil ouvert · ■ fermé</span>' });
@@ -1183,16 +1240,16 @@ function focusTarget(id) {
 let BVIEW = 'arbre';
 function vBoards() {
   window.__planCur = null;
-  const fstat = b => b.facade ? '<span class="pill g">Façade</span>' : (b.photos && b.photos.length ? '<span class="pill a">Photos à refaire</span>' : '<span class="pill">Sans photo</span>');
+  const fstat = b => b.vector_placeholder ? '<span class="pill a">Gabarit non relevé</span>' : b.facade ? '<span class="pill g">Façade vectorielle</span>' : '<span class="pill r">Façade absente</span>';
   // regroupement par grand emplacement (poste, sous-station, chaufferie, STEP, site…)
   const top = b => { const l = locChain(b.loc); return l[1] || { id: 'ZZ', name: 'Localisation non documentée' }; };
   const groups = {}; D.boards.forEach(b => { const t = top(b); (groups[t.id] = groups[t.id] || { name: t.name, bs: [] }).bs.push(b); });
   const ordered = ['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].filter(k => groups[k]).concat(Object.keys(groups).filter(k => !['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].includes(k)));
   VIEW().innerHTML = `<h1 style="margin-top:14px">Tableaux</h1>
-  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
+  <div class="row" style="margin-bottom:12px"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
   ${BVIEW === 'arbre' ? `<div class="row" style="margin-bottom:10px"><input class="f" id="tq" type="search" placeholder="Rechercher dans l’arborescence (TGBT 2, TS 44, étuve…)" style="flex:1;min-width:220px"><button class="btn ghost" id="topen">Tout déplier</button><button class="btn ghost" id="tclose">Replier</button></div>
     <div class="card glass tree" id="tree">${arbreHTML()}</div>
-    <p class="small muted">Hiérarchie tirée des liaisons documentées (unifilaire, plans, classeur, photos). ● état simulé · ⚡ remettre le courant. Les tableaux dont l’alimentation n’est pas documentée n’apparaissent pas dans l’arborescence : voir « Par localisation ».</p>`
+    <p class="small muted">Hiérarchie tirée des liaisons documentées (unifilaire, plans, classeur, photos). ● état simulé · ⚡ remettre le courant. Les tableaux sans chemin amont complet figurent sous « Origine non documentée » : aucun raccordement n’est inventé.</p>`
   : ordered.map(k => { const g = groups[k]; return `<h2>${esc(g.name)} <span class="pill">${g.bs.length}</span></h2><div class="grid">${g.bs.sort((a, b) => a.name.localeCompare(b.name, 'fr', { numeric: true })).map(b => {
     const nd = (DEPS_BY_BOARD[b.id] || []).length, sw = STY[b.style] ? STY[b.style].panel : /sm6/.test(b.style || '') ? '#f1f1ef' : 'var(--line)';
     return `<div class="bcard glass" data-go="#/b/${b.id}"><div class="sw" style="background:${sw};border:1px solid var(--line)"></div><div class="row" style="justify-content:space-between"><b>${esc(b.name)}</b><span class="pill">${esc(b.kind)}</span></div>
@@ -1235,7 +1292,7 @@ function vBoard(id, sub, target) {
     ${il ? `<div class="banner ${il.lvl}">⚠️<div>${esc(il.txt)}</div></div>` : ''}${simBanner()}
     <p class="small muted" style="margin-bottom:0">${transfoLoad(id)}</p>` : ''}</details>` : ''}
   ${b.safety_warning ? `<div class="banner danger" role="alert" style="margin:12px 0"><span aria-hidden="true">⚠️</span><div><b>Avertissement électrique</b><div class="small">${esc(b.safety_warning)}</div></div></div>` : ""}
-  <div class="seg glass" id="btabs">${[['f', 'Façade'], ['d', `Départs (${deps.length})`], ['s', 'Alimentation'], ['p', 'Photos'], ...(iss.length ? [['i', `Incohérences (${iss.length})`]] : [])].map(([k, l]) => `<button data-t="${k}" class="${BTAB === k ? 'on' : ''}">${l}</button>`).join('')}</div>
+  <div class="seg glass" id="btabs">${[['f', 'Façade'], ['d', `Départs (${deps.length})`], ['s', 'Alimentation'], ['o', 'Documents'], ...(iss.length ? [['i', `Incohérences (${iss.length})`]] : [])].map(([k, l]) => `<button data-t="${k}" class="${BTAB === k ? 'on' : ''}">${l}</button>`).join('')}</div>
   <div id="bbody" style="margin-top:14px"></div>${footer()}`;
   for (const x of document.querySelectorAll('#btabs button')) x.onclick = () => { BTAB = x.dataset.t; vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); };
   for (const x of document.querySelectorAll('#srcmode button')) x.onclick = () => { applyMode(id, x.dataset.m); vBoard(id, null, selectedDeparture ? selectedDeparture.id : null); };
@@ -1243,18 +1300,19 @@ function vBoard(id, sub, target) {
   if (BTAB === 'f') {
     if (b.facade) {
       const f = D.facades[b.facade];
-      body.innerHTML = `<div class="banner info" style="margin-bottom:10px">✏️<div class="small"><b>Reconstruction vectorielle</b> — ${esc(f.conf)}<br><span class="muted">Source : ${esc(f.src)}</span></div></div><div id="fv"></div>`;
-      mountViewer($('#fv'), facadeSVG(b.facade, { live: true }), { onClick: openEntity, focus: target, legend: '<span>● vert : alimenté (simulé)</span><span>● rouge : non alimenté</span><span>Touchez un appareil</span>' });
+      body.innerHTML = `<div class="banner info" style="margin-bottom:10px">✏️<div class="small"><b>${b.vector_placeholder ? 'Gabarit vectoriel NON COTÉ' : 'Reconstruction vectorielle'}</b> — ${esc(f.conf)}<br><span class="muted">Source : ${esc(f.src)}</span></div></div><div id="fv"></div>`;
+      mountViewer($('#fv'), facadeSVG(b.facade, { live: true }), { onClick: openEntity, focus: target, legend: b.vector_placeholder ? '<span>Gabarit non coté : aucun appareillage physique positionné</span>' : '<span>● vert : alimenté (simulé)</span><span>● rouge : non alimenté</span><span>Touchez un appareil</span>' });
+      if (b.vector_placeholder) body.insertAdjacentHTML('beforeend', '<div class="banner danger" role="alert">⚠️ Façade réelle non relevée : positions inconnues. Voir « Départs ». Ne pas utiliser ce gabarit pour une consignation.</div>');
       if (selectedDeparture) body.insertAdjacentHTML('afterbegin', '<div class="banner info" id="facade-target" style="margin-bottom:10px"><div><b>Départ ciblé : ' + esc(NODE[target].label) + '</b>' + (NODE[target].case ? '<div class="small">Case ' + esc(NODE[target].case) + '</div>' : '') + '<button class="btn ghost" style="margin-top:7px" data-open="' + esc(target) + '">Ouvrir la fiche du départ</button></div></div>');
-    } else body.innerHTML = `<div class="card glass"><h3 style="margin-top:0">Façade non reconstruite</h3><p class="small">Aucune façade n’est dessinée pour ce tableau : soit les photographies n’ont pas encore été relevées, soit les étiquettes ne sont pas lisibles. Les appareils ne sont pas représentés par un symbole générique pour éviter toute confusion.</p><div>${photoLinks(b.photos)}</div></div>`;
+    } else body.innerHTML = `<div class="card glass"><h3 style="margin-top:0">Façade non reconstruite</h3><p class="small">Aucune façade n’est dessinée pour ce tableau : soit les photographies n’ont pas encore été relevées, soit les étiquettes ne sont pas lisibles. Les appareils ne sont pas représentés par un symbole générique pour éviter toute confusion.</p></div>`;
   } else if (BTAB === 'd') {
     const halves = b.halves.length ? b.halves : [{ id: null, label: 'Départs' }];
     body.innerHTML = halves.map(h => { const ds = deps.filter(d => !h.id || busOf(d.id) === h.id); if (!ds.length) return ''; return `<div class="card glass" style="margin-bottom:12px"><div class="row" style="justify-content:space-between"><h3 style="margin:0">${esc(h.label)}</h3>${h.id && NODE[h.id] ? `<span class="pill ${isLive(h.id) ? 'g' : 'r'}">${isLive(h.id) ? 'alimenté' : 'non alimenté'} (simulé)</span>` : ''}</div><div class="list" style="margin-top:8px">${ds.map(liNode).join('')}</div></div>`; }).join('') || '<p class="muted">Aucun départ documenté.</p>';
   } else if (BTAB === 's') {
     const any = b.halves.find(h => NODE[h.id]);
     body.innerHTML = any ? b.halves.filter(h => NODE[h.id]).map(h => `<div class="card glass" style="margin-bottom:12px"><h3 style="margin-top:0">${esc(h.label)}</h3>${sourcesBlock(h.id)}</div>`).join('') : (b.kind === 'HTA' ? `<div class="card glass">${sourcesBlock(id === 'PL20' ? 'PL_B01' : id === 'SS1_20' ? 'SS1_BL' : id === 'SS2_20' ? 'SS2_BL' : 'KV6_BL')}</div>` : '<p class="muted">Non documenté.</p>');
-  } else if (BTAB === 'p') {
-    body.innerHTML = `<div class="card glass"><h3 style="margin-top:0">Photographies sources</h3>${photoLinks(b.photos)}<h3>Documents</h3>${(b.docs || []).map(d => `<div class="small">• ${esc(d)}</div>`).join('') || '<span class="muted">—</span>'}
+  } else if (BTAB === 'o') {
+    body.innerHTML = `<div class="card glass"><h3 style="margin-top:0">Documents et provenance</h3>${(b.docs || []).map(d => `<div class="small">• ${esc(d)}</div>`).join('') || '<span class="muted">—</span>'}
       <h3>Procédures</h3>${D.procs.filter(p => p.board === id).map(p => `<div class="li" data-open="proc:${p.id}"><span>📘</span><div class="grow">${esc(p.title)}<div class="src">${esc(p.status)}</div></div></div>`).join('') || '<span class="muted">—</span>'}</div>`;
   } else body.innerHTML = iss.map(i => `<div class="li glass" style="border-radius:16px;margin-bottom:8px" data-open="issue:${i.id}"><span>⚠️</span><div class="grow"><b>${esc(i.title)}</b><div class="small">${esc(i.text)}</div></div></div>`).join('') || '<p class="muted">Aucune incohérence relevée pour ce tableau.</p>';
 }
@@ -1402,7 +1460,7 @@ function vReg() {
   const crit = b => { const nd = (DEPS_BY_BOARD[b.id] || []).length; return [
     ['Topologie amont', b.kind === 'HTA' || (b.halves || []).some(h => NODE[h.id] && upPaths(h.id, 1).length) ? 1 : 0],
     ['Départs listés', nd ? 1 : 0], ['Façade', b.facade ? 1 : 0], ['Couplage', b.coupler.status === 'documente' || b.coupler.status === 'sans_objet' ? 1 : 0],
-    ['Localisation', b.loc && b.loc_conf === 'confirme' ? 1 : b.loc ? .5 : 0], ['Photos', b.photos && b.photos.length ? 1 : 0]]; };
+    ['Localisation', b.loc && b.loc_conf === 'confirme' ? 1 : b.loc ? .5 : 0]]; };
   const ok = v => v === 1 ? '<span class="pill g">✓</span>' : v ? '<span class="pill a">~</span>' : '<span class="pill r">✗</span>';
   VIEW().innerHTML = `<h1>Registre et contrôle qualité</h1><p class="sub">Traçabilité des sources, état d’avancement mesurable par tableau, incohérences et informations manquantes.</p>
   <h2>Légende de confiance</h2><div class="row">${Object.values(CONF).map(([k, t]) => `<span class="pill ${k}">${t}</span>`).join('')}<span class="small muted">Toute information porte sa source (document › repère) dans sa fiche.</span></div>
@@ -1423,13 +1481,8 @@ function vReg() {
     <li>Exports PDF des 9 plans DWG « R122618 rev1 SS2 UPS distribution » (01, 02, 05, 10, 12, 13, 14, 15, 16).</li>
     <li>Charges mesurées datées et limites d’exploitation (une puissance en kVA n’est pas une réserve disponible).</li>
     <li>Schémas des auxiliaires 110 V CC / 24 V CC (diagnostic « ne s’arme pas / ne commande pas »).</li></ol></div>
-  <h2>Dossier des photos sur ce poste</h2><div class="card glass"><p class="small">Les liens « Ouvrir la source » cherchent les PDF dans ce dossier. Par défaut : le dossier « Plan électrique » placé à côté du dossier de l’application. Réglage enregistré sur ce poste uniquement.</p>
-    <div class="row"><input class="f" id="phdir" style="flex:1;min-width:240px" value="${esc(decodeURI(PHOTO_BASE))}"><button class="btn" id="phsave">Enregistrer</button><button class="btn ghost" id="phdef">Par défaut</button></div>
-    <p class="small muted">Exemple : file:///C:/Users/…/DISTRIBUTION-ELECTRIQUE/Plan électrique/</p></div>
   ${footer()}`;
-  const setDir = v => { PHOTO_BASE = v; try { if (v === PHOTO_DEF) localStorage.removeItem(PHOTO_KEY); else localStorage.setItem(PHOTO_KEY, v); } catch (e) {} toast('Dossier des photos enregistré'); vReg(); };
-  $('#phsave').onclick = () => { let v = $('#phdir').value.trim().replace(/\\/g, '/'); if (!v) return; if (!v.endsWith('/')) v += '/'; if (/^[a-z]:\//i.test(v)) v = 'file:///' + v; setDir(encodeURI(v)); };
-  $('#phdef').onclick = () => setDir(PHOTO_DEF);
+
 }
 
 /* ======================================================================= démarrage */
