@@ -142,3 +142,10 @@ de manœuvre restent soumises aux sources et validations du site.
 Les livraisons manuelles de `main` à `3b92414` sont conservées exactement dans
 `archives/20261015-main-3b92414/`. Leurs tuiles WebP TS8 sont également conservées.
 Les HTML de référence sont reconstruits à partir des sources et des relevés détaillés.
+
+
+## Reconstruction complète en un clic sous Windows
+
+Dans le dossier `DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE`, ouvrir `FINALISER_OCC_ENERGIE_WINDOWS.cmd` sur un poste équipé de Python 3. Le lanceur exécute `tools/rebuild.py` sans connexion au réseau industriel : régénération des quatre HTML de référence, synchronisation de `OCC_ENERGIE_SAP_20261017_LITE.html` avec le mode léger, puis tests documentaires locaux. Il s'arrête et signale l'erreur si un test échoue. Il ne publie rien sur GitHub et n'effectue aucune manœuvre électrique.
+
+**Statut GitHub du 17/10 :** la version légère SAP est déjà versionnée et contrôlée au niveau de la syntaxe et du modèle. Les trois HTML complets ont été préservés dans leur version antérieure, les GitHub Actions échouant avant le démarrage du runner. Ils ne doivent être présentés comme actualisés qu'après reconstruction, tests et commit de leurs nouvelles versions. Le mode léger n'intègre pas les tuiles du niveau de zoom 12, mais conserve le graphe complet.
