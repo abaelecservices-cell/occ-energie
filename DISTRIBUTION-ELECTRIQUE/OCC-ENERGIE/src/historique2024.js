@@ -102,7 +102,7 @@ function vHistorique2024() {
     '<p class="small muted">Sources : Distribution électrique 2024.xlsx › INDEX (lignes 5–40) et Age equipement (lignes 2–69). Les anomalies de saisie sont préservées. Le rapprochement de case est informatique ; les liaisons du graphe restent indépendantes.</p>';
   const filter = () => {
     const q = norm(HX24_QUERY);
-    $$('.hx24entry', $('#hx24-list')).forEach(el => {
+    $$$('.hx24entry', $('#hx24-list')).forEach(el => {
       const right = HX24_MODE !== 'departs' || HX24_BOARD === 'tous' ||
         el.dataset.hxBoard === HX24_BOARD;
       el.style.display = right && (!q || el.dataset.hxQ.includes(q)) ? '' : 'none';
