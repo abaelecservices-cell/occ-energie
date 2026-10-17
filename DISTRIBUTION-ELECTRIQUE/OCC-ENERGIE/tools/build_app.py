@@ -2,7 +2,7 @@
 import os, json, argparse
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--lite', action='store_true')
-parser.add_argument('--output', choices=['OCC_ENERGIE_TS8.html', 'OCC_ENERGIE_VECTORIEL_MOBILE.html'])
+parser.add_argument('--output', choices=['OCC_ENERGIE_TS8.html', 'OCC_ENERGIE_VECTORIEL_MOBILE.html', 'OCC_ENERGIE_STANDALONE.html'])
 args = parser.parse_args()
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 rd = lambda p: open(os.path.join(R, p), encoding='utf-8').read()
@@ -21,6 +21,19 @@ if lite:
     # Le fichier normal conserve toute la résolution satellite de l'usine.
     site = data.get('site', {})
     site['tiles'] = {k: v for k, v in site.get('tiles', {}).items() if int(k.split('/')[0]) <= 11}
+# Mode de livraison GitHub : l'application complète conserve les 34 tuiles,
+# mais les 22 tuiles de zoom 12 sont chargées depuis le dossier d'assets local.
+# Cela permet de versionner sans perdre le zoom maximal malgré les limites de
+# transport des gros blobs (> 6 Mo). La version --lite reste mono-fichier.
+# Pour générer un seul gros HTML totalement autonome :
+#   py -3 tools/build_app.py --output OCC_ENERGIE_STANDALONE.html
+if not lite and args.output != 'OCC_ENERGIE_STANDALONE.html':
+    site = data.get('site', {})
+    tiles = site.get('tiles', {})
+    site['tiles'] = {
+        **{k: v for k, v in tiles.items() if int(k.split('/')[0]) <= 11},
+        **{k: 'assets/ts8_site_tiles/' + k + '.webp' for k in tiles if int(k.split('/')[0]) == 12},
+    }
 # registre de validation des ordres de manœuvre (signés par le chargé d'exploitation) ; les clés « _… » sont des commentaires
 vp = os.path.join(R, 'validations.json')
 data['validations'] = {k: v for k, v in json.load(open(vp, encoding='utf-8')).items() if not k.startswith('_')} if os.path.exists(vp) else {}
