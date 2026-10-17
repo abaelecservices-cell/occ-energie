@@ -34,4 +34,5 @@ for filename in ("OCC_ENERGIE.html", "OCC_ENERGIE_TS8.html", "OCC_ENERGIE_VECTOR
     rendered = (R / filename).read_text(encoding="utf-8")
     assert '"referentielSAP":' in rendered, filename + " non regenere depuis les sources"
     assert "function vComplements(" in rendered, filename + " module absent"
+assert (R / "OCC_ENERGIE_SAP_20261017_LITE.html").read_bytes() == (R / "OCC_ENERGIE_2024_LITE.html").read_bytes(), "La version SAP livrée doit suivre la reconstruction du mode léger"
 print("OK : 28 SAP, 17 points, 11 façades candidates intégrés ; 66 tableaux / 735 liaisons inchangés")
