@@ -176,7 +176,7 @@ function vPlans(pid, focus, selected) {
     VIEW().innerHTML = `<h1 style="margin-top:14px">Plans d’implantation</h1>
     <div class="seg glass" style="margin-bottom:10px">${PLAN_TABS.map(([id, t]) => `<button data-p="${id}" class="${id === 'PLAN_PDL' ? 'on' : ''}">${esc(t)}</button>`).join('')}</div>
     <div id="pv"></div>${footer()}`;
-    $$$('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
+    $('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
     window.__planCur = 'PLAN_PDL';
     mountViewer($('#pv'), pdlSVG(), { focus, legend: '<span style="color:#12b76a">━ sous tension</span><span style="color:#e5484d">┅ ouvert / hors tension (simulation)</span><span>Touchez une cellule ou une sous-station</span>',
       onClick: id => { if (id.startsWith('PLAN_')) location.hash = '#/plans/' + id; else openEntity(id); } });
@@ -197,7 +197,7 @@ function vPlans(pid, focus, selected) {
     ${p.note ? `<p class="small">${esc(p.note)}</p>` : ''}${loc && loc.note ? `<p class="small">⚠️ ${esc(loc.note)}</p>` : ''}
     <div class="list">${p.items.filter(i => i.k === 'box').sort((a, b) => (b.ref ? 1 : 0) - (a.ref ? 1 : 0)).map(planItemHTML).join('')}</div>
     <p class="src">Source : ${esc(p.src)} — redessiné en vectoriel, proportions du document, non coté. Les liaisons sont électriques, pas le tracé des câbles.</p></details>${footer()}`;
-  $$$('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
+  $('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
   $('#lk1').onclick = () => { PLAN_LINKS = 'all'; vPlans(p.id); }; $('#lk0').onclick = () => { PLAN_LINKS = false; vPlans(p.id); };
   mountViewer($('#pv'), planSVG(p), {
     focus, legend: '<span>TGBT 1A ▢ TGBT 1B : demi-tableaux et couplage (▢ ouvert · ■ fermé)</span><span style="color:#e5484d">■ coupé (simulation)</span><span>┅ emplacement probable</span>',

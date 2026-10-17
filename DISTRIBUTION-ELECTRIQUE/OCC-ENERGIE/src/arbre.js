@@ -105,14 +105,14 @@ function arbreHTML() {
 function bindArbre(host) {
   const q = $('#tq'); if (!q) return;
   q.oninput = () => {
-    const v = norm(q.value), nodes = $$$('.tnode', host);
+    const v = norm(q.value), nodes = $('.tnode', host);
     nodes.forEach(n => { n.style.display = ''; });
     if (!v) return;
     // un nœud reste visible s'il correspond ou si un descendant correspond ; les ancêtres d'une correspondance sont dépliés
     const match = n => (n.dataset.n || '').includes(v);
-    [...nodes].reverse().forEach(n => { const sub = $$$('.tnode', n).some(c => c.style.display !== 'none'); n.style.display = match(n) || sub ? '' : 'none'; if (sub && n.tagName === 'DETAILS') n.open = true; });
-    nodes.forEach(n => { if (match(n)) $$$('.tnode', n).forEach(c => { c.style.display = ''; }); });
+    [...nodes].reverse().forEach(n => { const sub = $('.tnode', n).some(c => c.style.display !== 'none'); n.style.display = match(n) || sub ? '' : 'none'; if (sub && n.tagName === 'DETAILS') n.open = true; });
+    nodes.forEach(n => { if (match(n)) $('.tnode', n).forEach(c => { c.style.display = ''; }); });
   };
-  $('#topen').onclick = () => $$$('details.tnode', host).forEach(d => d.open = true);
-  $('#tclose').onclick = () => $$$('details.tnode', host).forEach((d, i) => d.open = d.classList.contains('troot') || d.classList.contains('tss'));
+  $('#topen').onclick = () => $('details.tnode', host).forEach(d => d.open = true);
+  $('#tclose').onclick = () => $('details.tnode', host).forEach((d, i) => d.open = d.classList.contains('troot') || d.classList.contains('tss'));
 }
