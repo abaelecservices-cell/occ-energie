@@ -1243,7 +1243,7 @@ function focusTarget(id) {
 let BVIEW = 'arbre';
 function vBoards() {
   window.__planCur = null;
-  const fstat = b => b.vector_placeholder ? '<span class="pill a">Gabarit non relevé</span>' : b.facade ? '<span class="pill g">Façade vectorielle</span>' : '<span class="pill r">Façade absente</span>';
+  const fstat = b => b.vector_placeholder ? '<span class="pill a">Gabarit non relevé</span>' : b.facade ? '<span class="pill a">Façade vectorielle — fidélité terrain non certifiée</span>' : '<span class="pill r">Façade absente</span>';
   // regroupement par grand emplacement (poste, sous-station, chaufferie, STEP, site…)
   const top = b => { const l = locChain(b.loc); return l[1] || { id: 'ZZ', name: 'Localisation non documentée' }; };
   const groups = {}; D.boards.forEach(b => { const t = top(b); (groups[t.id] = groups[t.id] || { name: t.name, bs: [] }).bs.push(b); });
@@ -1475,15 +1475,7 @@ function vReg() {
   ${keysSection()}
   <h2>Procédures</h2><div class="list card glass">${D.procs.map(p => `<div class="li" data-open="proc:${p.id}"><span>${p.steps.length || p.but.length ? '📘' : '⏳'}</span><div class="grow">${esc(p.title)}<div class="src">${esc(p.status)}</div></div></div>`).join('')}</div>
   <h2>Classeur Excel</h2><p class="small">Toutes les lignes non vides des onglets TR 1 à TR 9 sont rattachées à un tableau du modèle (${D.xl_left.length} ligne(s) non rattachée(s)). Onglet TR 3 absent du classeur.</p>
-  <h2>Informations à fournir</h2><div class="card glass"><ol class="small" style="padding-left:18px;margin:0">
-    <li>Procédures d’exploitation du site, validées : perte d’une cellule ou d’un transformateur, changement de source, groupe, onduleurs, retour à la normale (identité, conditions préalables, critères d’arrêt, validation).</li>
-    <li>Réponses de l’exploitant : convention de la légende des clés ; retour sur CNR automatique ou manuel ; logique du groupe électrogène.</li>
-    <li>Confirmation sur site du croisement TR 1A / TR 2A ↔ TGBT 1 / TGBT 2 et des serrures Ronis du TGBT 3 (écart I-TGBT3-LOCK).</li>
-    <li>Photos du poste de livraison 20 kV (aucune photo) et dossiers ZIP 13 à 19 et 21 (TGBT 4 à 9).</li>
-    <li>Relevés ciblés : tables « localisation défaut » des TGBT 5, 6, 7 ; cases B2/B3 du TGBT 9 ; plaque de l’onduleur 2 et départ QF4 ; source du 2e coffret ventilation Four ; plaque Spang Gorge ; petits départs Bronzini ; régulateurs des condensateurs ; OM 27 portes ouvertes.</li>
-    <li>Exports PDF des 9 plans DWG « R122618 rev1 SS2 UPS distribution » (01, 02, 05, 10, 12, 13, 14, 15, 16).</li>
-    <li>Charges mesurées datées et limites d’exploitation (une puissance en kVA n’est pas une réserve disponible).</li>
-    <li>Schémas des auxiliaires 110 V CC / 24 V CC (diagnostic « ne s’arme pas / ne commande pas »).</li></ol></div>
+  <h2>Informations restant à qualifier</h2><div class="banner info">📋<div><b>Les photographies déjà envoyées sont recensées.</b> Les 17 points encore à qualifier sont détaillés dans le module SAP et compléments, avec les schémas, repères ou preuves ciblées attendus. Aucune reprise photographique générale n’est demandée.</div></div><p><a class="btn" href="#/complements">Voir les 17 compléments, l’index SAP et les façades à vérifier →</a></p>
   ${footer()}`;
 
 }
