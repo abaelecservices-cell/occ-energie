@@ -23,5 +23,5 @@ for filename, good_patterns in required.items():
     for good in good_patterns:
         assert good in src, f"{filename}: sélecteur multiple absent: {good}"
         bad = good.replace("$$(", "$(", 1)
-        assert re.search(r"(?<!\\$)" + re.escape(bad), src) is None, f"{filename}: querySelector au lieu de querySelectorAll: {bad}"
+        assert re.search(r"(?<!\$)" + re.escape(bad), src) is None, f"{filename}: querySelector au lieu de querySelectorAll: {bad}"
 print("OK : sélecteurs DOM de collection (plans, simulation, arbre, historique)")
