@@ -93,7 +93,7 @@ function vHome() {
   ${footer()}`;
   mountViewer($('#aerial'), siteSVG(), { onClick: id => openZone(id.slice(1)), native: D.site.tiles ? 1000 / D.site.w : null });
   if (D.site.tiles) orthoTiles($('#aerial svg'), D.site);
-  $('.tile[data-zone]').forEach(b => b.onclick = () => openZone(b.dataset.zone));
+  $$('.tile[data-zone]').forEach(b => b.onclick = () => openZone(b.dataset.zone));
 }
 
 /* ---------- Plans d'implantation */

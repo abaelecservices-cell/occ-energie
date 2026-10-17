@@ -27,7 +27,7 @@ function vCourant(id, sit) {
   VIEW().innerHTML = `<div class="crumbs noprint" style="margin-top:12px"><a data-go="#/courant">⚡ Dépannage</a><i>›</i><a data-go="#/courant/${id}">${esc(name)}</a><i>›</i><a>${esc(chosen.t)}</a></div>
     ${moSheetHTML(mo)}
     ${courantDetails(mo.at ? mo.at.id : id)}${footer()}`;
-  $('[data-mosim]').forEach(x => x.onclick = () => moSim(mo));
+  $$('[data-mosim]').forEach(x => x.onclick = () => moSim(mo));
 }
 /* ce qu'alimente un équipement ou un tableau (aval documenté) */
 function courantAval(id) {
