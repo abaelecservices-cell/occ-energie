@@ -3,6 +3,7 @@
 Évite les TypeError dans les écrans plans, courants, arborescence et historique.
 """
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 required = {
@@ -22,5 +23,5 @@ for filename, good_patterns in required.items():
     for good in good_patterns:
         assert good in src, f"{filename}: sélecteur multiple absent: {good}"
         bad = good.replace("$$(", "$(", 1)
-        assert bad not in src, f"{filename}: querySelector au lieu de querySelectorAll: {bad}"
+        assert re.search(r"(?<!\\$)" + re.escape(bad), src) is None, f"{filename}: querySelector au lieu de querySelectorAll: {bad}"
 print("OK : sélecteurs DOM de collection (plans, simulation, arbre, historique)")
