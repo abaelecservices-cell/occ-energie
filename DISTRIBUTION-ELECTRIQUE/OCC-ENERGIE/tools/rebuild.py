@@ -1,5 +1,6 @@
 """Reconstruction locale/CI complète, sans modification de Git ni accès réseau."""
 from pathlib import Path
+from shutil import copyfile
 import subprocess
 import sys
 
@@ -15,6 +16,8 @@ def main():
     run('tools/build_plans.py')
     run('tools/build_app.py')
     run('tools/build_app.py', '--lite')
+    # Conserver l'alias de diffusion SAP strictement identique au mode léger.
+    copyfile(ROOT / 'OCC_ENERGIE_2024_LITE.html', ROOT / 'OCC_ENERGIE_SAP_20261017_LITE.html')
     for name in ('OCC_ENERGIE_TS8.html', 'OCC_ENERGIE_VECTORIEL_MOBILE.html'):
         run('tools/build_app.py', '--output', name)
     run('tools/build_docs.py')
