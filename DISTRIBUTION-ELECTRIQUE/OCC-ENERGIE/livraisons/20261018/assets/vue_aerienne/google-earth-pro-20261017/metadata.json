@@ -1,0 +1,39 @@
+{
+  "source": "Google Earth Pro",
+  "producer": "Airbus",
+  "imageDate": "2026-04-16",
+  "exportSize": [
+    8192,
+    3748
+  ],
+  "crop": null,
+  "referenceFile": "reference-utilisateur.png",
+  "referenceSha256": "b0e7dc50f0e61d49f800409b73418ff2dcdd0f98ce58bf711781bb2796e2e1d3",
+  "referenceRegistration": {
+    "peak": 0.5478312154871237,
+    "width": 1215,
+    "height": 505,
+    "dx": 328,
+    "dy": 65,
+    "refWidth": 500,
+    "refHeight": 344,
+    "sourceSize": [
+      1976,
+      1358
+    ]
+  },
+  "appSize": [
+    1976,
+    1358
+  ],
+  "registration": {
+    "peak": 0.4457266053638368,
+    "proWidth": 1285,
+    "dx": 133,
+    "dy": 2,
+    "webWidth": 1000
+  },
+  "tiles": 17,
+  "nativeTiles": "WebP sans perte, pixels décodés comparés au rectangle source",
+  "sourceSha256": "bcee52eab173e76b78bdf069dc4ae8a88b234a9f974c351269fc69f8119041ed"
+}

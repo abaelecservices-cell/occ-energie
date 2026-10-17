@@ -1,0 +1,221 @@
+{
+  "source": "Correction utilisateur du 16/10/2026 : Armoire Gradathyr N3,1 creuset = TGBT8, alimenté par deux transformateurs ; distinguer les transformateurs secondaires.",
+  "boards": [
+    {
+      "id": "TGBT8",
+      "name": "TGBT 8 — Gradathyr N3,1 creuset",
+      "alias": "TGBT8 Gradathyr N3.1 creuset",
+      "note": "Identification de l’armoire N3,1 creuset corrigée par l’utilisateur le 16/10/2026. Alimentée par deux transformateurs HTA. Les transformateurs secondaires creuset / boosting sont distincts et désormais repérés au plan. Association physique TR8A/TR8B et affectation des départs secondaires à confirmer. Le tableau Gorge OM221 reste un équipement distinct."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "TR_GORGE_1",
+      "t": "tr",
+      "label": "Transformateur boosting Gorge 1",
+      "board": "GRADATHYR",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_GORGE_2",
+      "t": "tr",
+      "label": "Transformateur boosting Gorge 2",
+      "board": "GRADATHYR",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_GORGE_3",
+      "t": "tr",
+      "label": "Transformateur boosting Gorge 3",
+      "board": "GRADATHYR",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_CREUSET_3_1",
+      "t": "tr",
+      "label": "Transformateur secondaire creuset 3,1",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_CREUSET_4_1",
+      "t": "tr",
+      "label": "Transformateur secondaire creuset 4,1",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_CREUSET_3_2",
+      "t": "tr",
+      "label": "Transformateur secondaire creuset 3,2",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_CREUSET_4_2",
+      "t": "tr",
+      "label": "Transformateur secondaire creuset 4,2",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_CREUSET_5",
+      "t": "tr",
+      "label": "Transformateur secondaire creuset 5",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_CREUSET_6",
+      "t": "tr",
+      "label": "Transformateur secondaire creuset 6",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_BOOST_CREUSET_1",
+      "t": "tr",
+      "label": "Transformateur secondaire boosting creuset 1",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    },
+    {
+      "id": "TR_BOOST_CREUSET_2",
+      "t": "tr",
+      "label": "Transformateur secondaire boosting creuset 2",
+      "board": "TGBT8",
+      "stage": "secondary",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "src": "PLAN IMPLANTATION 2.pptx — PLAN_SS1 ; correction utilisateur du 16/10/2026",
+      "note": "Transformateur distinct du couple HTA alimentant le TGBT8. Présence au plan ; départ, demi-jeu de barres, tension et puissance non établis. Pas de liaison électrique ajoutée sans correspondance amont précise."
+    }
+  ],
+  "planPatches": [
+    {
+      "index": 0,
+      "ref": "TR_GORGE_1",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 1,
+      "ref": "TR_GORGE_2",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 2,
+      "ref": "TR_GORGE_3",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 3,
+      "ref": "TR_CREUSET_3_1",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 4,
+      "ref": "TR_CREUSET_4_1",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 5,
+      "ref": "TR_CREUSET_3_2",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 6,
+      "ref": "TR_CREUSET_4_2",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 7,
+      "ref": "TR_CREUSET_5",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 8,
+      "ref": "TR_CREUSET_6",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 9,
+      "ref": "TR_BOOST_CREUSET_1",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 10,
+      "ref": "TR_BOOST_CREUSET_2",
+      "conf": "a_verifier",
+      "note": "Transformateur secondaire identifié séparément ; départ amont et caractéristiques à confirmer."
+    },
+    {
+      "index": 14,
+      "ref": "TGBT8",
+      "t": "TGBT 8 — Gradathyr N3,1 creuset",
+      "conf": "confirme",
+      "note": "Identification corrigée par l’utilisateur le 16/10/2026. Ne pas confondre avec le tableau Gorge OM221."
+    },
+    {
+      "index": 17,
+      "ref": "TR8A",
+      "conf": "probable",
+      "note": "Deux transformateurs d’alimentation du TGBT8. Association physique 1/A et 2/B à confirmer ; repères distincts des transformateurs secondaires de boosting."
+    },
+    {
+      "index": 18,
+      "ref": "TR8B",
+      "conf": "probable",
+      "note": "Deux transformateurs d’alimentation du TGBT8. Association physique 1/A et 2/B à confirmer ; repères distincts des transformateurs secondaires de boosting."
+    }
+  ]
+}

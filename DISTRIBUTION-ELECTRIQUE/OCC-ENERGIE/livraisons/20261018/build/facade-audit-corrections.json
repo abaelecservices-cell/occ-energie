@@ -1,0 +1,4942 @@
+{
+  "facades": {
+    "TS12": {
+      "style": "okken_blanc_vert",
+      "title": "TS12 — EMBALLAGE / ROVING",
+      "brand": "Schneider Electric — Okken",
+      "height": 80,
+      "src": "Ts 12 .pdf p1-p22",
+      "conf": "Photos Ts 12.pdf p1-p12 : six travées, gaine de mesure séparée graphiquement, quatre tiroirs en haut des travées 2 et 5, fenêtres basses. Aucune affectation des tiroirs par ordre du classeur. Arrivées et couplage conservés ; détails non lus disponibles en liste.",
+      "cols": [
+        {
+          "n": "1",
+          "w": 700,
+          "units": [
+            {
+              "k": "window",
+              "y": 10,
+              "h": 62,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "drawer",
+              "y": 12.0,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 17.5,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 23.0,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 28.5,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "window",
+              "y": 48,
+              "h": 26,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 350,
+          "units": [
+            {
+              "k": "display-small",
+              "y": 25,
+              "h": 6,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "nw",
+              "y": 29,
+              "h": 14,
+              "label": "",
+              "node": "TS12_QA"
+            },
+            {
+              "k": "nw",
+              "y": 54,
+              "h": 14,
+              "label": "",
+              "node": "TS12_QC"
+            },
+            {
+              "k": "meter",
+              "y": 45,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "nw",
+              "y": 29,
+              "h": 14,
+              "label": "",
+              "node": "TS12_QB"
+            },
+            {
+              "k": "meter",
+              "y": 45,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "5",
+          "w": 700,
+          "units": [
+            {
+              "k": "drawer",
+              "y": 12.0,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 17.5,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 23.0,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 28.5,
+              "h": 5.4,
+              "label": ""
+            },
+            {
+              "k": "window",
+              "y": 48,
+              "h": 26,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "6",
+          "w": 700,
+          "units": [
+            {
+              "k": "window",
+              "y": 10,
+              "h": 62,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "TS44": {
+      "style": "okken_blanc_noir",
+      "title": "TS44 — DEPUIS SST1 TGBT N°2",
+      "brand": "Schneider Electric — Okken",
+      "height": 80,
+      "src": "Ts 44.pdf p1, p5, p11",
+      "conf": "Ts 44.pdf p1-p12 : six travées principales, fenêtres et trois disjoncteurs centraux. Les coffrets de pompes voisins ne sont pas une septième travée TS44. Affectations par ordre du classeur retirées ; les tiroirs non attribués restent anonymes. Symbole graphique des trois disjoncteurs agrandi selon la photo ; ce symbole ne définit pas leur référence électrique.",
+      "cols": [
+        {
+          "n": "1",
+          "w": 700,
+          "units": [
+            {
+              "k": "drawer",
+              "y": 28,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 33,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 38,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 43,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 48,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 53,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 66,
+              "h": 5,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "window",
+              "y": 11,
+              "h": 62,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "nt",
+              "y": 29,
+              "h": 15,
+              "label": "",
+              "node": "TS44_QA"
+            },
+            {
+              "k": "meter",
+              "y": 45,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "nt",
+              "y": 55,
+              "h": 15,
+              "label": "",
+              "node": "TS44_QC"
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "nt",
+              "y": 29,
+              "h": 15,
+              "label": "",
+              "node": "TS44_QB"
+            },
+            {
+              "k": "meter",
+              "y": 45,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "5",
+          "w": 700,
+          "units": [
+            {
+              "k": "window",
+              "y": 11,
+              "h": 62,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "6",
+          "w": 700,
+          "units": [
+            {
+              "k": "window",
+              "y": 11,
+              "h": 18,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 35,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 40,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 45,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 50,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 55,
+              "h": 4.8,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 60,
+              "h": 4.8,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "TS7": {
+      "style": "okken_blanc_noir",
+      "title": "TS7 — FOUR 1",
+      "brand": "Merlin Gerin — Okken",
+      "height": 80,
+      "src": "Ts 7.pdf p4-p11",
+      "conf": "Ts 7.pdf p4-p11 : travées et gaines de mesure distinguées ; quatre tiroirs en haut à gauche, trois en haut de la travée 2, commandes centrales et fenêtre droite. Les positions déduites du classeur sont retirées. Aucun départ aval attribué sans lecture de plaque.",
+      "cols": [
+        {
+          "n": "1",
+          "w": 700,
+          "units": [
+            {
+              "k": "drawer",
+              "y": 11.0,
+              "h": 5.3,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 16.5,
+              "h": 5.3,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 22.0,
+              "h": 5.3,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 27.5,
+              "h": 5.3,
+              "label": ""
+            },
+            {
+              "k": "window",
+              "y": 40,
+              "h": 33,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "drawer",
+              "y": 11.0,
+              "h": 6,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 17.5,
+              "h": 6,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 24.0,
+              "h": 6,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 45,
+              "h": 4,
+              "label": "DISJONCTEUR AUXILIAIRES"
+            },
+            {
+              "k": "rot",
+              "y": 55,
+              "h": 7,
+              "label": "ISOLEMENT JEU DE BARRES A"
+            },
+            {
+              "k": "plate",
+              "y": 64,
+              "h": 4,
+              "label": "ARRIVÉE TS7A",
+              "node": "TS7_QA",
+              "plate": "red"
+            },
+            {
+              "k": "ns",
+              "y": 70,
+              "h": 7,
+              "label": "ARRIVÉE GROUPE N°1",
+              "node": "TS7_QG"
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 350,
+          "units": [
+            {
+              "k": "meter",
+              "y": 34,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "meter",
+              "y": 51,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "mod2",
+              "y": 59,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "gauge",
+              "y": 65,
+              "h": 5,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "rot",
+              "y": 17,
+              "h": 8,
+              "label": "INTER COUPLAGE"
+            },
+            {
+              "k": "rot",
+              "y": 31,
+              "h": 8,
+              "label": "ARRIVÉE TS7B",
+              "node": "TS7_QB"
+            },
+            {
+              "k": "drawer",
+              "y": 42,
+              "h": 5.5,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 48,
+              "h": 5.5,
+              "label": ""
+            },
+            {
+              "k": "drawer",
+              "y": 54,
+              "h": 5.5,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 300,
+          "units": [
+            {
+              "k": "gauge",
+              "y": 30,
+              "h": 5,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "window",
+              "y": 12,
+              "h": 61,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "TS1": {
+      "title": "TS1 — Ensimage",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "handle",
+              "y": 15,
+              "h": 10,
+              "label": "ARRIVÉE 1A"
+            },
+            {
+              "k": "plate",
+              "y": 40,
+              "h": 12,
+              "label": "SOUS TENSION MÊME INTERRUPTEUR ARRIVÉE OUVERT",
+              "plate": "red"
+            },
+            {
+              "k": "plate",
+              "y": 65,
+              "h": 7,
+              "label": "Réserve"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "lever",
+              "y": 9,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 18,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 27,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 36,
+              "h": 7,
+              "label": "Extraction salle manteaux",
+              "dep": "D0118",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur IMG_3979 ; dimensions schématiques."
+            },
+            {
+              "k": "lever",
+              "y": 45,
+              "h": 7,
+              "label": "Pompe eau déminéralisée — repère à confirmer"
+            },
+            {
+              "k": "lever",
+              "y": 54,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 65,
+              "h": 12,
+              "label": "N°6 manuscrit — affectation à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "lever",
+              "y": 9,
+              "h": 7,
+              "label": "Aspirateur cuve stockage"
+            },
+            {
+              "k": "lever",
+              "y": 18,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 27,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 36,
+              "h": 7,
+              "label": "Agitateur 9M05 bis — manuscrit"
+            },
+            {
+              "k": "lever",
+              "y": 45,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 54,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 65,
+              "h": 12,
+              "label": "N°1 manuscrit — affectation à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "lever",
+              "y": 13,
+              "h": 13,
+              "label": "N°2 manuscrit — affectation à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 31,
+              "h": 13,
+              "label": "N°3 manuscrit — affectation à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 49,
+              "h": 13,
+              "label": "N°5 manuscrit — affectation à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 67,
+              "h": 13,
+              "label": "Cuve N°4 — manuscrit"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "5",
+          "w": 700,
+          "units": [
+            {
+              "k": "lever",
+              "y": 9,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 18,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 27,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 36,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 45,
+              "h": 7,
+              "label": "Départ avec compteur — repère à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 54,
+              "h": 7,
+              "label": "Départ avec compteur — repère à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 65,
+              "h": 12,
+              "label": "Réserve"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "6",
+          "w": 700,
+          "units": [
+            {
+              "k": "lever",
+              "y": 9,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 17,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 25,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 33,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 41,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 49,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 57,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 65,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "7",
+          "w": 700,
+          "units": [
+            {
+              "k": "lever",
+              "y": 9,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 17,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 25,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 33,
+              "h": 7,
+              "label": "Réserve"
+            },
+            {
+              "k": "lever",
+              "y": 41,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 49,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 57,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            },
+            {
+              "k": "lever",
+              "y": 65,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "Auxiliaires",
+          "w": 700,
+          "units": [
+            {
+              "k": "voy2",
+              "y": 16,
+              "h": 15,
+              "label": "Signalisation et avertisseur"
+            },
+            {
+              "k": "plate",
+              "y": 40,
+              "h": 7,
+              "label": "Étuves chauffe-fût — plaque visible"
+            },
+            {
+              "k": "handle",
+              "y": 53,
+              "h": 7,
+              "label": "Commandes auxiliaires — repères à préciser"
+            },
+            {
+              "k": "handle",
+              "y": 66,
+              "h": 7,
+              "label": "Commandes auxiliaires — repères à préciser"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "MCC.TS1.9M05",
+      "src": "Ts1.zip / IMG_3978 à IMG_3992.heic",
+      "conf": "Huit colonnes physiques, arrivée comprise. Numéros de colonnes 2 à 7 = ordre de lecture gauche-droite, non repères constructeur. Implantation schématique ; seule l’extraction salle manteaux est reliée à un départ existant. Arrivée 1A visible ; origine amont non confirmée par cette plaque.",
+      "synoptic": false,
+      "appearance": {
+        "panel": "#91a5b1",
+        "shade": "#667e8d",
+        "grille": "#4a5359",
+        "plain": true
+      }
+    },
+    "TS8": {
+      "title": "TS8 — Groupe frigo",
+      "cols": [
+        {
+          "n": "1",
+          "w": 700,
+          "units": [
+            {
+              "k": "rot2",
+              "y": 10,
+              "h": 5,
+              "label": "Tiroir — plaque non attribuée"
+            },
+            {
+              "k": "rot2",
+              "y": 18,
+              "h": 5,
+              "label": "Tiroir — plaque non attribuée"
+            },
+            {
+              "k": "rot2",
+              "y": 26,
+              "h": 5,
+              "label": "Tiroir — plaque non attribuée"
+            },
+            {
+              "k": "rot2",
+              "y": 34,
+              "h": 5,
+              "label": "Surpresseur 4P062 Nettoyage forming",
+              "dep": "D0270",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 42,
+              "h": 5,
+              "label": "Tiroir — plaque non attribuée"
+            },
+            {
+              "k": "plate",
+              "y": 51,
+              "h": 5,
+              "label": "ES02:Volet ouest local machines frigo",
+              "dep": "D0271",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 60,
+              "h": 5,
+              "label": "ES02:Volet est local machines frigo",
+              "dep": "D0272",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 70,
+              "h": 4,
+              "label": "PRISE PS 63A — destination à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 15,
+              "h": 5,
+              "label": "Prise PC 63A Four 1",
+              "dep": "D0276",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 65,
+              "h": 5,
+              "label": "Convoyeur de liaison Forming/roving",
+              "dep": "D0279",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 12,
+              "h": 5,
+              "label": "Ppe eau glacée n°1 7PM01",
+              "dep": "D0280",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 24,
+              "h": 5,
+              "label": "Générateur air chaud n°3",
+              "dep": "D0281",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 38,
+              "h": 4,
+              "label": "PC 63A — destination à préciser"
+            },
+            {
+              "k": "plate",
+              "y": 47,
+              "h": 5,
+              "label": "PC ventilo coulée de verre",
+              "dep": "D0284",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 57,
+              "h": 5,
+              "label": "Armoire générateur air chaud n°3",
+              "dep": "D0285",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            },
+            {
+              "k": "plate",
+              "y": 69,
+              "h": 5,
+              "label": "9P15 Alim ppe eau déminé",
+              "dep": "D0286",
+              "est": true,
+              "est_note": "Position relative photographiée ; proportions schématiques."
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "nw",
+              "y": 25,
+              "h": 18,
+              "label": "Disjoncteur principal — référence à relever"
+            },
+            {
+              "k": "plate",
+              "y": 49,
+              "h": 9,
+              "label": "ALIMENTATION PRISE EN AMONT DU DISJONCTEUR PRINCIPAL",
+              "plate": "red"
+            },
+            {
+              "k": "meter",
+              "y": 18,
+              "h": 4,
+              "label": "",
+              "x": 0.8
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "prisma_beige",
+      "brand": "Relevé photographique",
+      "src": "Ts8.zip / IMG_3966, IMG_3969, IMG_3971, IMG_3973.jpeg",
+      "conf": "Quatre colonnes photographiées. Seules les plaques attribuables sont reliées aux départs existants ; les autres départs restent dans la liste. La pancarte de la colonne 4 ne permet pas d’identifier le circuit pris en amont.",
+      "synoptic": false
+    },
+    "TS15": {
+      "style": "prisma_beige",
+      "title": "TS 15 — Batch",
+      "brand": "Merlin Gerin — Prisma",
+      "height": 80,
+      "cols": [
+        {
+          "n": "1",
+          "w": 650,
+          "units": [
+            {
+              "dep": "D0376",
+              "y": 10,
+              "h": 5,
+              "k": "plate",
+              "label": "2M09 ARM Cont HVAC Salle de passage",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0377",
+              "y": 20,
+              "h": 5,
+              "k": "plate",
+              "label": "Gm1-13 Palan Niveau 9-20m",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0378",
+              "y": 30,
+              "h": 5,
+              "k": "plate",
+              "label": "BP 07 Volet",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0379",
+              "y": 40,
+              "h": 5,
+              "k": "plate",
+              "label": "GM1-19 Palan Niveau 35m",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "y": 50,
+              "h": 4,
+              "k": "plate",
+              "label": "AR2B — ARRIVÉE 2B",
+              "plate": "black"
+            },
+            {
+              "y": 59,
+              "h": 4,
+              "k": "plate",
+              "label": "RÉSERVE",
+              "plate": "black"
+            },
+            {
+              "y": 65,
+              "h": 4,
+              "k": "plate",
+              "label": "ARMOIRE ÉCLAIRAGE + PC BATCH",
+              "plate": "black"
+            },
+            {
+              "dep": "D0382",
+              "y": 72,
+              "h": 5,
+              "k": "plate",
+              "label": "2M03 ARM syst de percage et tr tolede",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 650,
+          "units": [
+            {
+              "dep": "D0384",
+              "y": 10,
+              "h": 5,
+              "k": "rot2",
+              "label": "2PM01 Ppe a huile melangeur",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0385",
+              "y": 18,
+              "h": 5,
+              "k": "rot2",
+              "label": "2AM01 Ventialteur HVAC salle de pesage",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0386",
+              "y": 26,
+              "h": 5,
+              "k": "rot2",
+              "label": "Batterie de chauffe HVAC salle de pesage 2M06-1",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0387",
+              "y": 34,
+              "h": 5,
+              "k": "rot2",
+              "label": "Batterie de chauffe HVAC salle de pesage 2M06-2",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0388",
+              "y": 42,
+              "h": 5,
+              "k": "rot2",
+              "label": "Batterie de chauffe HVAC salle de pesage 2M06-3",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0389",
+              "y": 50,
+              "h": 5,
+              "k": "rot2",
+              "label": "Mélangeur 2SM01",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0390",
+              "y": 58,
+              "h": 5,
+              "k": "rot2",
+              "label": "Mélangeur 2SM02",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "3",
+          "w": 650,
+          "units": [
+            {
+              "dep": "D0392",
+              "y": 15,
+              "h": 5,
+              "k": "plate",
+              "label": "Aspiration centralisée BATCH",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0393",
+              "y": 32,
+              "h": 5,
+              "k": "plate",
+              "label": "2M04 Armoire déchargement waeschle",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0394",
+              "y": 49,
+              "h": 5,
+              "k": "plate",
+              "label": "PS 63A niveau 0-00 et 4-60m",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0395",
+              "y": 62,
+              "h": 5,
+              "k": "plate",
+              "label": "PS 63A niveau 9-20 et 17-20m",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "src": "Ts 15.zip / IMG_4165, IMG_4167, IMG_4175, IMG_4177, IMG_4179, IMG_4182, IMG_4183, IMG_4184.heic",
+      "conf": "Colonnes et ordre des plaques lisibles relevés sur photos. Proportions indicatives et pointillées ; les départs sans position prouvée restent dans la liste. Les plaques sans correspondance certaine ne créent pas de liaison électrique.",
+      "synoptic": false
+    },
+    "TS16": {
+      "style": "prisma_beige",
+      "title": "TS 16 — STEP",
+      "brand": "Merlin Gerin — Prisma",
+      "height": 80,
+      "cols": [
+        {
+          "n": "1",
+          "w": 650,
+          "units": [
+            {
+              "y": 10,
+              "h": 4,
+              "k": "plate",
+              "label": "ARRIVÉE — origine à clarifier",
+              "plate": "black"
+            },
+            {
+              "y": 23,
+              "h": 4,
+              "k": "plate",
+              "label": "ALIMENTATION COFFRET ZONE DÉCHETS",
+              "plate": "black"
+            },
+            {
+              "dep": "D0331",
+              "y": 35,
+              "h": 5,
+              "k": "plate",
+              "label": "7P22 Armoire commande eaux usées",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0334",
+              "y": 54,
+              "h": 5,
+              "k": "plate",
+              "label": "7M16",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0335",
+              "y": 64,
+              "h": 5,
+              "k": "plate",
+              "label": "STEP",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 650,
+          "units": [
+            {
+              "dep": "D0336",
+              "y": 10,
+              "h": 5,
+              "k": "rot2",
+              "label": "Ppe eau de riviere 7P10",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0337",
+              "y": 23,
+              "h": 5,
+              "k": "rot2",
+              "label": "Ppe eau de riviere 7P11",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "dep": "D0333",
+              "y": 38,
+              "h": 5,
+              "k": "plate",
+              "label": "Reprise egoutture",
+              "plate": "black",
+              "est": true,
+              "est_note": "Colonne et ordre photographiés ; proportions schématiques, sans cote mesurée."
+            },
+            {
+              "y": 54,
+              "h": 4,
+              "k": "plate",
+              "label": "PRISE PS 63A EAUX USÉES",
+              "plate": "black"
+            },
+            {
+              "y": 66,
+              "h": 4,
+              "k": "plate",
+              "label": "OM42 — ARM.0 BT LOCAL EDF",
+              "plate": "black"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "src": "Ts 16.zip / IMG_4149, IMG_4150, IMG_4154, IMG_4156.heic (IMG_4164 exclue : elle montre TS15)",
+      "conf": "Colonnes et ordre des plaques lisibles relevés sur photos. Proportions indicatives et pointillées ; les départs sans position prouvée restent dans la liste. Les plaques sans correspondance certaine ne créent pas de liaison électrique.",
+      "synoptic": false
+    },
+    "TS17": {
+      "style": "prisma_beige",
+      "title": "TS17A / TS17B — CHAUFFERIE",
+      "brand": "Merlin Gerin — Prisma",
+      "height": 80,
+      "src": "Ts17A.zip / Ts17b.zip — photos originales HEIC relues le 15/10/2026",
+      "conf": "4 colonnes TS17A et 3 colonnes TS17B relevées sur photos. Positions relatives documentées pour les plaques lisibles ; dimensions schématiques (pointillés). Les départs non localisés restent disponibles dans la liste, sans position inventée.",
+      "cols": [
+        {
+          "n": "17A-1",
+          "w": 650,
+          "units": [
+            {
+              "y": 9,
+              "h": 4,
+              "k": "plate",
+              "label": "ARRIVÉE JEU DE BARRES A — DEPUIS TR 9A",
+              "plate": "black"
+            },
+            {
+              "y": 22,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Arrivée secours n°1",
+              "plate": "black",
+              "dep": "D0339"
+            },
+            {
+              "y": 34,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM08 Ppe eau chaude n°2",
+              "plate": "black",
+              "dep": "D0338"
+            },
+            {
+              "y": 50,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7M42 Ppe eau froide n°4",
+              "plate": "black",
+              "dep": "D0340"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "17A-2",
+          "w": 650,
+          "units": [
+            {
+              "y": 15,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Prise PS chaufferie exterieure Ppes",
+              "plate": "black",
+              "dep": "D0342"
+            },
+            {
+              "y": 25,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Prise PS 63A château d'eau",
+              "plate": "black",
+              "dep": "D0343"
+            },
+            {
+              "y": 35,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Rechauffeur GAZ",
+              "plate": "black",
+              "dep": "D0344"
+            },
+            {
+              "y": 45,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Alim A TS9",
+              "plate": "black",
+              "dep": "D0345"
+            },
+            {
+              "y": 55,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Arrivée 2A Normale",
+              "plate": "black",
+              "dep": "D0346"
+            },
+            {
+              "y": 65,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7M06-1 TE 11 Ecl chaufferie",
+              "plate": "black",
+              "dep": "D0347"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "17A-3",
+          "w": 650,
+          "units": [
+            {
+              "y": 9,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM05 Ppe eau froide n°1",
+              "plate": "black",
+              "dep": "D0348"
+            },
+            {
+              "y": 24,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM48 Ppe eau chaude n°6",
+              "plate": "black",
+              "dep": "D0349"
+            },
+            {
+              "y": 36,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM46 Ppe eau chaude n°4",
+              "plate": "black",
+              "dep": "D0350"
+            },
+            {
+              "y": 48,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM20 Ppe château d'eau",
+              "plate": "black",
+              "dep": "D0351"
+            },
+            {
+              "y": 60,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM14 Ppe eau décarbonation",
+              "plate": "black",
+              "dep": "D0352"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "17A-4",
+          "w": 650,
+          "units": [
+            {
+              "y": 9,
+              "h": 4,
+              "k": "plate",
+              "label": "COUPLAGE JEU DE BARRES — liaison à vérifier",
+              "plate": "black"
+            },
+            {
+              "y": 24,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Vibreur trémie chaux decarbonatation",
+              "plate": "black",
+              "dep": "D0353"
+            },
+            {
+              "y": 36,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Vanne alvéolaire décarbonatation",
+              "plate": "black",
+              "dep": "D0354"
+            },
+            {
+              "y": 57,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Ph métre automatique d'eau process",
+              "plate": "black",
+              "dep": "D0358"
+            },
+            {
+              "y": 67,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7M10 Armoire commande decarbonatation",
+              "plate": "black",
+              "dep": "D0359"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "17B-1",
+          "w": 650,
+          "units": [
+            {
+              "y": 9,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM15 Ppe eau decarbo n°2",
+              "plate": "black",
+              "dep": "D0360"
+            },
+            {
+              "y": 19,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM16 Ppe reprise eau de lavage sur filtre eau decarbo",
+              "plate": "black",
+              "dep": "D0361"
+            },
+            {
+              "y": 29,
+              "h": 4,
+              "k": "plate",
+              "label": "Tiroir — plaque à confirmer",
+              "plate": "black"
+            },
+            {
+              "y": 39,
+              "h": 4,
+              "k": "plate",
+              "label": "Tiroir — plaque à confirmer",
+              "plate": "black"
+            },
+            {
+              "y": 49,
+              "h": 4,
+              "k": "plate",
+              "label": "Tiroir — plaque à confirmer",
+              "plate": "black"
+            },
+            {
+              "y": 59,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM07 Ppe eau chaude n°1",
+              "plate": "black",
+              "dep": "D0365"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "17B-2",
+          "w": 650,
+          "units": [
+            {
+              "y": 9,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM44",
+              "plate": "black",
+              "dep": "D0366"
+            },
+            {
+              "y": 21,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM09 Ppe eau chaude n°3",
+              "plate": "black",
+              "dep": "D0367"
+            },
+            {
+              "y": 33,
+              "h": 4,
+              "k": "plate",
+              "label": "ASSERVISSEMENT",
+              "plate": "black"
+            },
+            {
+              "y": 43,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM06 Ppe eau froide",
+              "plate": "black",
+              "dep": "D0368"
+            },
+            {
+              "y": 53,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "Alim B TS9",
+              "plate": "black",
+              "dep": "D0369"
+            },
+            {
+              "y": 63,
+              "h": 4,
+              "k": "plate",
+              "label": "ARRIVÉE 2B NORMALE",
+              "plate": "black"
+            },
+            {
+              "y": 71,
+              "h": 5,
+              "k": "plate",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7M06-2 TE11 Ecl chaufferie",
+              "plate": "black",
+              "dep": "D0370"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "17B-3",
+          "w": 650,
+          "units": [
+            {
+              "y": 9,
+              "h": 4,
+              "k": "plate",
+              "label": "ARRIVÉE JEU DE BARRES B — DEPUIS TR 9B",
+              "plate": "black"
+            },
+            {
+              "y": 22,
+              "h": 4,
+              "k": "plate",
+              "label": "ARRIVÉE SECOURS 2",
+              "plate": "black"
+            },
+            {
+              "y": 34,
+              "h": 5,
+              "k": "rot2",
+              "est": true,
+              "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+              "label": "7PM47 Ppe eau chaude n°5",
+              "plate": "black",
+              "dep": "D0371"
+            },
+            {
+              "y": 51,
+              "h": 4,
+              "k": "plate",
+              "label": "7PM41 — POMPE EAU FROIDE N°3 (doublon classeur à lever)",
+              "plate": "black"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "synoptic": false
+    },
+    "TS24": {
+      "title": "TS24 — Four 2",
+      "cols": [
+        {
+          "n": "A1 voisin",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 8,
+              "h": 6,
+              "label": "Tableau TS24A1 voisin"
+            },
+            {
+              "k": "rot2",
+              "y": 18,
+              "h": 6,
+              "label": "Arrivée — repère à confirmer"
+            },
+            {
+              "k": "rot2",
+              "y": 42,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            },
+            {
+              "k": "rot2",
+              "y": 47,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            },
+            {
+              "k": "rot2",
+              "y": 52,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            },
+            {
+              "k": "rot2",
+              "y": 57,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            },
+            {
+              "k": "rot2",
+              "y": 62,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            },
+            {
+              "k": "rot2",
+              "y": 67,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            },
+            {
+              "k": "rot2",
+              "y": 72,
+              "h": 4,
+              "label": "Tiroir — plaque à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "grille",
+              "y": 14,
+              "h": 7,
+              "label": "Ventilation"
+            },
+            {
+              "k": "grille",
+              "y": 30,
+              "h": 7,
+              "label": "Ventilation"
+            },
+            {
+              "k": "rot2",
+              "y": 44,
+              "h": 6,
+              "label": "Ventilateur de refroidissement n°2",
+              "dep": "D0299",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 51,
+              "h": 6,
+              "label": "Ventilateur registre cheminée n°2",
+              "dep": "D0300",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 58,
+              "h": 6,
+              "label": "Ventilateur combustion canaux n°2",
+              "dep": "D0301",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 65,
+              "h": 6,
+              "label": "Ventilateur refroidissement n°1",
+              "dep": "D0302",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 26,
+              "h": 7,
+              "label": "Portes fermées — plaques non attribuées"
+            },
+            {
+              "k": "meter",
+              "y": 46,
+              "h": 6,
+              "label": "Contrôles"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 25,
+              "h": 7,
+              "label": "Portes fermées — plaques non attribuées"
+            },
+            {
+              "k": "meter",
+              "y": 45,
+              "h": 6,
+              "label": "Contrôles"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "5",
+          "w": 700,
+          "units": [
+            {
+              "k": "rot2",
+              "y": 28,
+              "h": 6,
+              "label": "Ventilateur de refroidissement n°4",
+              "dep": "D0313",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 37,
+              "h": 6,
+              "label": "Ventilateur registre cheminée n°1",
+              "dep": "D0311",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 46,
+              "h": 6,
+              "label": "Ventilateur combustion canaux n°1",
+              "dep": "D0312",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 56,
+              "h": 7,
+              "label": "Départ — plaque à préciser"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "prisma_beige",
+      "brand": "Relevé photo.zip",
+      "src": "photo.zip / IMG_4440 à IMG_4469.heic",
+      "conf": "Vue schématique des cinq colonnes visibles, dont TS24A1 voisin explicitement distingué. Sept ventilateurs attribués aux plaques lisibles. Aucune limite A/B ou liaison secours déduite des portes fermées. Les autres départs restent dans la liste.",
+      "synoptic": false
+    },
+    "TS28": {
+      "title": "TS28 — Clim Four 2",
+      "cols": [
+        {
+          "n": "1",
+          "w": 700,
+          "units": [
+            {
+              "k": "rot2",
+              "y": 8,
+              "h": 9,
+              "label": "Arrivée — plaque : TGBT6 TR6A"
+            },
+            {
+              "k": "rot2",
+              "y": 21,
+              "h": 6,
+              "label": "4AM05 Ventilateur laveur ch canal 3",
+              "dep": "D0315",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 28,
+              "h": 6,
+              "label": "4AM06 Ventilateur laveur ch canal 4",
+              "dep": "D0316",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 35,
+              "h": 6,
+              "label": "4PM03 Moteur fosse carrier canal 3",
+              "dep": "D0317",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 42,
+              "h": 6,
+              "label": "4PM04 Moteur fosse carrier canal 4",
+              "dep": "D0318",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 49,
+              "h": 6,
+              "label": "Ventilateur refroidissement chopper 41",
+              "dep": "D0319",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 56,
+              "h": 6,
+              "label": "Ventilateur refroidissement chopper 33",
+              "dep": "D0320",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 63,
+              "h": 6,
+              "label": "Ventilateur refroidissement chopper 42",
+              "dep": "D0321",
+              "est": true,
+              "est_note": "Ordre lu sur photo ; proportions schématiques."
+            },
+            {
+              "k": "rot2",
+              "y": 71,
+              "h": 6,
+              "label": "Ventilateur soufflage chopper 43–44"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "voy2",
+              "y": 17,
+              "h": 5,
+              "label": "Commandes et signalisation"
+            },
+            {
+              "k": "handle",
+              "y": 31,
+              "h": 5,
+              "label": "Commande"
+            },
+            {
+              "k": "plate",
+              "y": 53,
+              "h": 8,
+              "label": "Porte — affectation interne à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 29,
+              "h": 9,
+              "label": "Porte — repère à préciser"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "prisma_beige",
+      "brand": "Relevé photo.zip",
+      "src": "photo.zip / IMG_4491 à IMG_4500.heic",
+      "conf": "Trois colonnes photographiées. Sept départs attribués par libellés. Plaque arrivée TGBT6 TR6A enregistrée comme lecture, sans nouvelle liaison. Chopper 43–44 non assimilé au seul chopper 43 du modèle. TS40 (IMG_4501 à 4505) est distinct et reste en galerie documentaire.",
+      "synoptic": false
+    },
+    "TS42": {
+      "title": "TS42 — Filières 4A02–4A09",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 9,
+              "h": 7,
+              "label": "TS42 — plaque amont TR4A, case 4-28"
+            },
+            {
+              "k": "handle",
+              "y": 27,
+              "h": 7,
+              "label": "Sectionnement"
+            },
+            {
+              "k": "paper",
+              "y": 42,
+              "h": 18,
+              "label": "Document de consignation photographié"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "2",
+          "w": 700,
+          "units": [
+            {
+              "k": "fan",
+              "y": 10,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 17,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            },
+            {
+              "k": "fan",
+              "y": 33,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 40,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            },
+            {
+              "k": "fan",
+              "y": 56,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 63,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "3",
+          "w": 700,
+          "units": [
+            {
+              "k": "fan",
+              "y": 10,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 17,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            },
+            {
+              "k": "fan",
+              "y": 33,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 40,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            },
+            {
+              "k": "fan",
+              "y": 56,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 63,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "4",
+          "w": 700,
+          "units": [
+            {
+              "k": "fan",
+              "y": 10,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 17,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            },
+            {
+              "k": "fan",
+              "y": 33,
+              "h": 6,
+              "label": "Ventilation module"
+            },
+            {
+              "k": "display-small",
+              "y": 40,
+              "h": 7,
+              "label": "Régulation — repère filière à préciser"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "prisma_beige",
+      "brand": "Relevé photo.zip",
+      "src": "photo.zip / IMG_4576 à IMG_4585.heic",
+      "conf": "Quatre colonnes, dont arrivée et huit modules. Identification TS42 lue sur la plaque et repères 4A02 / 4A03 / 4A04 visibles. L’attribution exhaustive des huit positions reste à relever. Aucun nœud ni câble créé pour les autres Spang du lot.",
+      "synoptic": false,
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "TS9": {
+      "style": "okken_beige",
+      "title": "TS9",
+      "brand": "MERLIN GERIN",
+      "height": 80,
+      "src": "Ts9.pdf p1, p2, p5, p7",
+      "conf": "Relevé photo : étiquettes noires partiellement lisibles, étiquettes bleues illisibles (col. 2). Positions verticales estimées.",
+      "cols": [
+        {
+          "n": "1",
+          "w": 500,
+          "units": [
+            {
+              "y": 10,
+              "h": 10,
+              "k": "drawer",
+              "dep": "D0396",
+              "plate": "yellow",
+              "label": "Transfert fuel domestique n°2 7PM26"
+            },
+            {
+              "y": 20,
+              "h": 10,
+              "k": "drawer",
+              "dep": "D0397",
+              "plate": "yellow",
+              "label": "Compresseur air instrum secours 7KM07",
+              "counter": false
+            },
+            {
+              "y": 34,
+              "h": 3,
+              "k": "plate",
+              "node": "TS9_ISA",
+              "plate": "black",
+              "label": "INTERRUPTEUR GÉNÉRAL ISOLEMENT JdB-A"
+            },
+            {
+              "y": 42,
+              "h": 3,
+              "k": "plate",
+              "node": "TS9_QS",
+              "plate": "black",
+              "label": "ARRIVÉE SECOURS GROUPE 1"
+            },
+            {
+              "y": 50,
+              "h": 3,
+              "k": "plate",
+              "node": "TS9_QA",
+              "plate": "black",
+              "label": "ARRIVÉE TS17A"
+            },
+            {
+              "y": 54,
+              "h": 7,
+              "k": "arc",
+              "label": "ATTENTION Risque Classe 0"
+            }
+          ],
+          "doors": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              80
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 400,
+          "units": [
+            {
+              "y": 13,
+              "h": 6,
+              "k": "meter",
+              "label": "Centrale de mesure"
+            },
+            {
+              "y": 36,
+              "h": 8,
+              "k": "paper",
+              "label": "Consigne d’exploitation affichée (illisible sur photo)"
+            },
+            {
+              "y": 46,
+              "h": 8,
+              "k": "ats",
+              "label": "Automate permutation sources « A ↔ forçage / A ↔ auto »"
+            },
+            {
+              "y": 43,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0398",
+              "plate": "black",
+              "x": 0.72,
+              "label": "7M21 COFFRET Cde SIRÈNES AL. INCENDIE"
+            },
+            {
+              "y": 48,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0399",
+              "plate": "white",
+              "x": 0.72,
+              "label": "Alim. commande C1 tours de refroidissement"
+            }
+          ],
+          "doors": [
+            [
+              0,
+              80
+            ]
+          ]
+        },
+        {
+          "n": "2",
+          "w": 550,
+          "units": [
+            {
+              "y": 12,
+              "h": 6,
+              "k": "bluetags",
+              "label": "Étiquettes bleues (illisibles) : coffret alim butane, éclairage…"
+            },
+            {
+              "y": 28,
+              "h": 4,
+              "k": "bluetags",
+              "label": "Alim Vigilohm, Alim 110 V…"
+            },
+            {
+              "y": 34,
+              "h": 2,
+              "k": "blank"
+            }
+          ],
+          "doors": [
+            [
+              0,
+              12
+            ],
+            [
+              12,
+              80
+            ]
+          ]
+        },
+        {
+          "n": "3",
+          "w": 500,
+          "units": [
+            {
+              "y": 10,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0400",
+              "plate": "black",
+              "label": "7M08-7M09. ALIM. COFFRET CHAUDIÈRE 1et2"
+            },
+            {
+              "y": 10,
+              "h": 8,
+              "k": "arc",
+              "x": 0.55,
+              "label": "ATTENTION Risque Classe 0 — Tableau TR2B TS17B TS9 CHAUDIÈRE — 400 V — 1,62 kA — 0,19 cal/cm² — 14,91 cm"
+            },
+            {
+              "y": 19,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0401",
+              "plate": "black",
+              "label": "7M13. ARMOIRE Cde DIESEL POMPE EAU FROIDE"
+            },
+            {
+              "y": 27,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0402",
+              "plate": "black",
+              "label": "AUXILIAIRES GROUPE 2"
+            },
+            {
+              "y": 35,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0403",
+              "plate": "black",
+              "label": "AUXILIAIRES GROUPE 1"
+            },
+            {
+              "y": 43,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0404",
+              "plate": "black",
+              "label": "7PM043. CHAUFFAGE DIESEL PROCESS"
+            },
+            {
+              "y": 51,
+              "h": 3,
+              "k": "plate",
+              "node": "TS9_QC",
+              "plate": "black",
+              "label": "COUPLAGE JEU DE BARRES"
+            },
+            {
+              "y": 63,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0405",
+              "plate": "black",
+              "label": "PRISE PS CHAUFFERIE"
+            },
+            {
+              "y": 69,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0406",
+              "plate": "black",
+              "label": "PM05. VOLET CHAUFFERIE"
+            }
+          ],
+          "doors": [
+            [
+              0,
+              6
+            ],
+            [
+              6,
+              80
+            ]
+          ]
+        },
+        {
+          "n": "4",
+          "w": 550,
+          "units": [
+            {
+              "y": 14,
+              "h": 11,
+              "k": "drawer",
+              "dep": "D0407",
+              "plate": "red",
+              "label": "AE7P025 400V"
+            },
+            {
+              "y": 25,
+              "h": 11,
+              "k": "drawer",
+              "dep": "D0408",
+              "label": "Tiroir 2 (étiquette illisible)",
+              "counter": false
+            },
+            {
+              "y": 38,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0409",
+              "plate": "black",
+              "label": "ARMOIRE SILO KAOLIN"
+            },
+            {
+              "y": 44,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0410",
+              "plate": "black",
+              "label": "SÉCHEUR 7K121"
+            },
+            {
+              "y": 49,
+              "h": 3,
+              "k": "plate",
+              "dep": "D0411",
+              "plate": "black",
+              "label": "SÉCHEUR 7K122"
+            },
+            {
+              "y": 56,
+              "h": 4,
+              "k": "plate",
+              "dep": "D0412",
+              "plate": "black",
+              "label": "DÉPART RÉCHAUFFEUR 7.5KW 7K121"
+            },
+            {
+              "y": 63,
+              "h": 4,
+              "k": "plate",
+              "dep": "D0413",
+              "plate": "black",
+              "label": "DÉPART RÉCHAUFFEUR 7.5KW 7K122"
+            },
+            {
+              "y": 73,
+              "h": 3,
+              "k": "plate",
+              "node": "TS9_QB",
+              "plate": "black",
+              "label": "ARRIVÉE B NORMALE TS17B"
+            }
+          ],
+          "doors": [
+            [
+              0,
+              14
+            ],
+            [
+              14,
+              25
+            ],
+            [
+              25,
+              36
+            ],
+            [
+              36,
+              80
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 330,
+          "units": [
+            {
+              "y": 16,
+              "h": 6,
+              "k": "meter",
+              "label": "Centrale de mesure"
+            }
+          ],
+          "doors": [
+            [
+              0,
+              80
+            ]
+          ]
+        }
+      ],
+      "synoptic": false
+    },
+    "ETUVE789": {
+      "title": "Distribution étuves 7–8–9",
+      "cols": [
+        {
+          "n": "Distribution",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 10,
+              "h": 8,
+              "label": "ÉTUVES 7 ; 8 ; 9 — puissance"
+            },
+            {
+              "k": "plate",
+              "y": 22,
+              "h": 7,
+              "label": "Plaque : TGBT2A — case 1-53"
+            },
+            {
+              "k": "handle",
+              "y": 40,
+              "h": 7,
+              "label": "Sectionnement"
+            },
+            {
+              "k": "voy2",
+              "y": 53,
+              "h": 4,
+              "label": "Sous tension"
+            },
+            {
+              "k": "plate",
+              "y": 69,
+              "h": 7,
+              "label": "Gestion arrêt d’urgence étuves 7 ; 8 ; 9",
+              "plate": "red"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "prisma_beige",
+      "brand": "Relevé photo.zip",
+      "src": "photo.zip / IMG_4591 à IMG_4593.heic",
+      "conf": "Armoire de distribution identifiée par plaque. Ne représente ni les trois armoires locales des étuves ni le coffret ondulé 7–10. Cheminement et chaîne arrêt d’urgence non vérifiés.",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "COFAGIT": {
+      "title": "Coffret agitateur",
+      "cols": [
+        {
+          "n": "10",
+          "w": 700,
+          "units": [
+            {
+              "k": "handle",
+              "y": 14,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "drive",
+              "y": 24,
+              "h": 8,
+              "label": "Commande variateur — affectation à préciser"
+            },
+            {
+              "k": "voy2",
+              "y": 35,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "handle",
+              "y": 45,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "drive",
+              "y": 55,
+              "h": 8,
+              "label": "Commande variateur — affectation à préciser"
+            },
+            {
+              "k": "voy2",
+              "y": 66,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 72,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "Vue partielle",
+      "src": "Ensimage .zip / première photo IMG_4033.heic ; identification fournie par l’utilisateur le 15/10/2026",
+      "conf": "Identification du coffret confirmée par l’utilisateur. Vue partielle de la colonne repérée 10 : deux commandes variateur visibles. Affectation individuelle aux cuves 14 à 17 non établie ; aucun départ n’est fusionné ni repositionné arbitrairement.",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "GORGE": {
+      "style": "armoire_grise",
+      "title": "Gorge Four 2 — zones 1, 2, 3 et armoire auxiliaire",
+      "brand": "Relevé des façades photographiées",
+      "height": 80,
+      "cols": [
+        {
+          "n": "Zone 1",
+          "w": 800,
+          "units": [
+            {
+              "k": "grille",
+              "y": 8,
+              "h": 8,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 4,
+              "label": "ZONE N°1 — GORGE"
+            },
+            {
+              "k": "display-small",
+              "y": 29,
+              "h": 5,
+              "label": "Afficheur de zone"
+            },
+            {
+              "k": "grille",
+              "y": 39,
+              "h": 9,
+              "label": ""
+            },
+            {
+              "k": "handle",
+              "y": 52,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 10,
+              "label": ""
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "Zone 2",
+          "w": 800,
+          "units": [
+            {
+              "k": "grille",
+              "y": 8,
+              "h": 8,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 4,
+              "label": "ZONE N°2 — GORGE"
+            },
+            {
+              "k": "display-small",
+              "y": 29,
+              "h": 5,
+              "label": "Afficheur de zone"
+            },
+            {
+              "k": "grille",
+              "y": 39,
+              "h": 9,
+              "label": ""
+            },
+            {
+              "k": "handle",
+              "y": 52,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 10,
+              "label": ""
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "Zone 3",
+          "w": 800,
+          "units": [
+            {
+              "k": "grille",
+              "y": 8,
+              "h": 8,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 4,
+              "label": "ZONE N°3 — GORGE"
+            },
+            {
+              "k": "display-small",
+              "y": 29,
+              "h": 5,
+              "label": "Afficheur de zone"
+            },
+            {
+              "k": "grille",
+              "y": 39,
+              "h": 9,
+              "label": ""
+            },
+            {
+              "k": "handle",
+              "y": 52,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 10,
+              "label": ""
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "Auxiliaire",
+          "w": 800,
+          "units": [
+            {
+              "k": "grille",
+              "y": 9,
+              "h": 12,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 26,
+              "h": 5,
+              "label": "Spang — référence à relever"
+            },
+            {
+              "k": "grille",
+              "y": 52,
+              "h": 20,
+              "label": ""
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "src": "Gorge.zip / IMG_4241, IMG_4244.heic",
+      "conf": "Éléments visibles uniquement ; proportions schématiques. Aucun circuit intérieur, réglage ou fonctionnement déduit des voyants photographiés.",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "GRADATHYR": {
+      "style": "armoire_grise",
+      "title": "O M 221 — TABLEAU GORGE — GRADATHYR",
+      "brand": "Gradateurs à thyristors",
+      "height": 80,
+      "src": "GRADATHYR.pdf p1-p5",
+      "conf": "Relevé photo à pleine résolution : armoires « GRADATHYR ZONE N°1 - GORGE » et « ZONE N°2 - GORGE » lues ; troisième armoire (p5, sombre) non lue.",
+      "cols": [
+        {
+          "n": "",
+          "w": 850,
+          "units": [
+            {
+              "y": 3,
+              "h": 3,
+              "k": "plate",
+              "plate": "black",
+              "label": "O M 221 / TABLEAU GORGE",
+              "x": 0.3
+            },
+            {
+              "y": 8,
+              "h": 3,
+              "k": "plate",
+              "label": "GRADATHYR / ZONE N°1 - GORGE",
+              "plate": "black",
+              "x": 0.5,
+              "dep": "D0459"
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "display-small",
+              "label": "Écran Power Electronics",
+              "x": 0.5
+            },
+            {
+              "y": 46,
+              "h": 3,
+              "k": "voy",
+              "label": "Zone en marche · Défaut général · Défaut thyristor",
+              "x": 0.25
+            },
+            {
+              "y": 52,
+              "h": 3,
+              "k": "voy2",
+              "label": "Réarmement défaut · Test lampes",
+              "x": 0.5
+            },
+            {
+              "y": 48,
+              "h": 8,
+              "k": "handle",
+              "x": 0.9
+            },
+            {
+              "y": 68,
+              "h": 8,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 850,
+          "units": [
+            {
+              "y": 8,
+              "h": 3,
+              "k": "plate",
+              "label": "GRADATHYR / ZONE N°2 - GORGE",
+              "plate": "black",
+              "x": 0.5,
+              "dep": "D0460"
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "display-small",
+              "label": "Écran Power Electronics",
+              "x": 0.5
+            },
+            {
+              "y": 46,
+              "h": 3,
+              "k": "voy",
+              "label": "Zone en marche · Défaut général · Défaut thyristor",
+              "x": 0.25
+            },
+            {
+              "y": 52,
+              "h": 3,
+              "k": "voy2",
+              "x": 0.5
+            },
+            {
+              "y": 48,
+              "h": 8,
+              "k": "handle",
+              "x": 0.9
+            },
+            {
+              "y": 68,
+              "h": 8,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 850,
+          "units": [
+            {
+              "y": 8,
+              "h": 3,
+              "k": "plate",
+              "label": "GRADATHYR / ZONE N°3 - GORGE",
+              "plate": "black",
+              "x": 0.5,
+              "dep": "D0461"
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "display-small",
+              "label": "Écran",
+              "x": 0.5
+            },
+            {
+              "y": 46,
+              "h": 3,
+              "k": "voy",
+              "x": 0.25
+            },
+            {
+              "y": 48,
+              "h": 8,
+              "k": "handle",
+              "x": 0.9
+            },
+            {
+              "y": 68,
+              "h": 8,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "VARIVOLT": {
+      "style": "armoire_grise",
+      "title": "Varivolt — zones 1 et 2",
+      "brand": "Relevé des façades photographiées",
+      "height": 80,
+      "cols": [
+        {
+          "n": "Zone 1",
+          "w": 800,
+          "units": [
+            {
+              "k": "plate",
+              "y": 7,
+              "h": 4,
+              "label": "VARIVOLT 1 — 26013-3"
+            },
+            {
+              "k": "plate",
+              "y": 15,
+              "h": 4,
+              "label": "ZONE 1 — FOUR 93-01"
+            },
+            {
+              "k": "annunciator",
+              "y": 23,
+              "h": 6,
+              "label": "Tableau d’annonces"
+            },
+            {
+              "k": "plate",
+              "y": 34,
+              "h": 3,
+              "x": 0.25,
+              "label": "Électrodes 1–2"
+            },
+            {
+              "k": "plate",
+              "y": 34,
+              "h": 3,
+              "x": 0.75,
+              "label": "Électrodes 3–4"
+            },
+            {
+              "k": "meter",
+              "y": 39,
+              "h": 4,
+              "x": 0.25
+            },
+            {
+              "k": "meter",
+              "y": 39,
+              "h": 4,
+              "x": 0.75
+            },
+            {
+              "k": "voy2",
+              "y": 48,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "sel",
+              "y": 58,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 70,
+              "h": 5,
+              "label": ""
+            }
+          ],
+          "doors": null
+        },
+        {
+          "n": "Zone 2",
+          "w": 800,
+          "units": [
+            {
+              "k": "plate",
+              "y": 7,
+              "h": 4,
+              "label": "VARIVOLT 2 — 26013-4"
+            },
+            {
+              "k": "plate",
+              "y": 15,
+              "h": 4,
+              "label": "ZONE 2 — FOUR 93-01"
+            },
+            {
+              "k": "annunciator",
+              "y": 23,
+              "h": 6,
+              "label": "Tableau d’annonces"
+            },
+            {
+              "k": "plate",
+              "y": 34,
+              "h": 3,
+              "x": 0.25,
+              "label": "Électrodes 5–6"
+            },
+            {
+              "k": "plate",
+              "y": 34,
+              "h": 3,
+              "x": 0.75,
+              "label": "Électrodes 7–8"
+            },
+            {
+              "k": "meter",
+              "y": 39,
+              "h": 4,
+              "x": 0.25
+            },
+            {
+              "k": "meter",
+              "y": 39,
+              "h": 4,
+              "x": 0.75
+            },
+            {
+              "k": "voy2",
+              "y": 48,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "sel",
+              "y": 58,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 70,
+              "h": 5,
+              "label": ""
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "src": "Varivolt.zip / IMG_4221, IMG_4228.heic",
+      "conf": "Éléments visibles uniquement ; proportions schématiques. Aucun circuit intérieur, réglage ou fonctionnement déduit des voyants photographiés.",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "TS33": {
+      "title": "TS33 — Spang",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 9,
+              "h": 8,
+              "label": "TS33"
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 9,
+              "label": "TGBT4 — case 1A26"
+            },
+            {
+              "k": "handle",
+              "y": 40,
+              "h": 7,
+              "label": "Sectionnement photographié"
+            },
+            {
+              "k": "plate",
+              "y": 60,
+              "h": 12,
+              "label": "Channel 1 forehearth 1 & 2 ; huit zones 60 kW ; 400 V ; 800 A ; K06280-1"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "Relevé photographique partiel",
+      "src": "photo.zip / IMG_4538.heic",
+      "conf": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+      "mode": "photo-partial",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "TS34": {
+      "title": "TS34 — Spang",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 9,
+              "h": 8,
+              "label": "TS34"
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 9,
+              "label": "TGBT4 — case 1A13"
+            },
+            {
+              "k": "handle",
+              "y": 40,
+              "h": 7,
+              "label": "Sectionnement photographié"
+            },
+            {
+              "k": "plate",
+              "y": 60,
+              "h": 12,
+              "label": "Channel 1 forehearth 3 & 4 ; huit zones 60 kW ; 400 V ; 800 A ; K06280-2"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "Relevé photographique partiel",
+      "src": "photo.zip / IMG_4544.heic",
+      "conf": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+      "mode": "photo-partial",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "TS37": {
+      "title": "TS37 — Spang",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 9,
+              "h": 8,
+              "label": "TS37"
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 9,
+              "label": "TGBT1 — case 6-28"
+            },
+            {
+              "k": "handle",
+              "y": 40,
+              "h": 7,
+              "label": "Sectionnement photographié"
+            },
+            {
+              "k": "plate",
+              "y": 60,
+              "h": 12,
+              "label": "Channel 2 forehearth 1 & 2 ; huit zones 60 kW ; 400 V ; 800 A ; K06280-3"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "Relevé photographique partiel",
+      "src": "photo.zip / IMG_4555.heic",
+      "conf": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+      "mode": "photo-partial",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "TS45": {
+      "title": "TS45 — Spang",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 9,
+              "h": 8,
+              "label": "TS45"
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 9,
+              "label": "TGBT5 — case 1A44"
+            },
+            {
+              "k": "handle",
+              "y": 40,
+              "h": 7,
+              "label": "Sectionnement photographié"
+            },
+            {
+              "k": "plate",
+              "y": 60,
+              "h": 12,
+              "label": "Forehearth Ends & Drains ; 400 V ; 800 A ; K06250-5"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "Relevé photographique partiel",
+      "src": "photo.zip / IMG_4572.heic",
+      "conf": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+      "mode": "photo-partial",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "TS47": {
+      "title": "TS47 — Spang",
+      "cols": [
+        {
+          "n": "Arrivée",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 9,
+              "h": 8,
+              "label": "TS47"
+            },
+            {
+              "k": "plate",
+              "y": 21,
+              "h": 9,
+              "label": "TGBT3 — case 6-53"
+            },
+            {
+              "k": "handle",
+              "y": 40,
+              "h": 7,
+              "label": "Sectionnement photographié"
+            },
+            {
+              "k": "plate",
+              "y": 60,
+              "h": 12,
+              "label": "Forehearth Ends & Drains ; 400 V ; 800 A ; K06280-5"
+            }
+          ],
+          "doors": null
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "Relevé photographique partiel",
+      "src": "photo.zip / IMG_4549.heic",
+      "conf": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+      "mode": "photo-partial",
+      "appearance": {
+        "panel": "#e5e5db",
+        "shade": "#b3b7ad",
+        "grille": "#444a46",
+        "plain": true
+      }
+    },
+    "PEG": {
+      "title": "Pompes eau glacée",
+      "cols": [
+        {
+          "n": "7PM65",
+          "w": 700,
+          "doors": null,
+          "units": [
+            {
+              "k": "plate",
+              "y": 5,
+              "h": 5,
+              "label": "TS44B — Q5-18"
+            },
+            {
+              "k": "voy2",
+              "y": 16,
+              "h": 4,
+              "label": "Voyant de présence"
+            },
+            {
+              "k": "handle",
+              "y": 25,
+              "h": 5,
+              "label": "Sectionnement"
+            },
+            {
+              "k": "drive",
+              "y": 36,
+              "h": 10,
+              "label": "Interface Schneider"
+            },
+            {
+              "k": "voy2",
+              "y": 49,
+              "h": 4,
+              "label": "Arrêt d’urgence et commande"
+            },
+            {
+              "k": "handle",
+              "y": 57,
+              "h": 4,
+              "label": "Sélecteur"
+            },
+            {
+              "k": "voy2",
+              "y": 65,
+              "h": 4,
+              "label": "Signalisation"
+            },
+            {
+              "k": "grille",
+              "y": 73,
+              "h": 5,
+              "label": "Ventilation"
+            }
+          ]
+        },
+        {
+          "n": "7PM03",
+          "w": 700,
+          "doors": null,
+          "units": [
+            {
+              "k": "plate",
+              "y": 5,
+              "h": 5,
+              "label": "TS44A — Q2-24"
+            },
+            {
+              "k": "voy2",
+              "y": 16,
+              "h": 4,
+              "label": "Voyant de présence"
+            },
+            {
+              "k": "handle",
+              "y": 25,
+              "h": 5,
+              "label": "Sectionnement"
+            },
+            {
+              "k": "drive",
+              "y": 36,
+              "h": 10,
+              "label": "Interface Schneider"
+            },
+            {
+              "k": "voy2",
+              "y": 49,
+              "h": 4,
+              "label": "Arrêt d’urgence et commande"
+            },
+            {
+              "k": "handle",
+              "y": 57,
+              "h": 4,
+              "label": "Sélecteur"
+            },
+            {
+              "k": "voy2",
+              "y": 65,
+              "h": 4,
+              "label": "Signalisation"
+            },
+            {
+              "k": "grille",
+              "y": 73,
+              "h": 5,
+              "label": "Ventilation"
+            }
+          ]
+        }
+      ],
+      "height": 80,
+      "style": "armoire_grise",
+      "brand": "7PM65 / 7PM03",
+      "src": "Pompes-eau-glacee.pdf, pages 1 à 3",
+      "conf": "Deux coffrets distincts, sans couplage ajouté. Étiquettes amont lues sur la page 3 ; repère 7PM65 (et non 7PM63). Q2-24 de la plaque 7PM03 diffère de la case 1-24 présente dans le modèle TS44 : écart conservé explicitement, sans substitution ni nouvelle liaison."
+    },
+    "COND2A": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIE CONDENSATEURS TR 2A",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Batterie condensateur tr2a .pdf p1-p2",
+      "conf": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+      "cols": [
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "k": "plate",
+              "y": 8,
+              "h": 4,
+              "label": "COND2A",
+              "plate": "green",
+              "node": "COND2A_J"
+            },
+            {
+              "k": "display-small",
+              "y": 23,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "warning",
+              "y": 32,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 66,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 66,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 500,
+          "units": [
+            {
+              "k": "grille",
+              "y": 50,
+              "h": 10,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 11,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND2B": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIE CONDENSATEURS TR 2B",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condensateur tr2b .pdf p1",
+      "conf": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+      "cols": [
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "k": "plate",
+              "y": 8,
+              "h": 4,
+              "label": "COND2B",
+              "plate": "green",
+              "node": "COND2B_J"
+            },
+            {
+              "k": "display-small",
+              "y": 23,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "warning",
+              "y": 32,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 66,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 66,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 500,
+          "units": [
+            {
+              "k": "grille",
+              "y": 50,
+              "h": 10,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 11,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND6B": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIE CONDENSATEURS TR 6B",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condensateur 6b .pdf p1",
+      "conf": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+      "cols": [
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "k": "plate",
+              "y": 8,
+              "h": 4,
+              "label": "COND6B",
+              "plate": "green",
+              "node": "COND6B_J"
+            },
+            {
+              "k": "display-small",
+              "y": 23,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "warning",
+              "y": 32,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 66,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 66,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 500,
+          "units": [
+            {
+              "k": "grille",
+              "y": 50,
+              "h": 10,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 11,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND6A": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIE CONDENSATEURS TR 6A",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condensateur 6a.pdf p1-p2",
+      "conf": "Condensateur 6a.pdf p1 : deux portes blanches, régulateur à gauche ; aucune grille visible en façade. Grilles génériques retirées.",
+      "cols": [
+        {
+          "n": "",
+          "w": 700,
+          "units": [
+            {
+              "k": "plate",
+              "y": 7,
+              "h": 4,
+              "label": "CONDENSATEURS 6A",
+              "plate": "green"
+            },
+            {
+              "k": "display-small",
+              "y": 19,
+              "h": 6,
+              "label": ""
+            },
+            {
+              "k": "warning",
+              "y": 30,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 700,
+          "units": [
+            {
+              "k": "warning",
+              "y": 30,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND4": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIES CONDENSATEURS TR 4A / TR 4B",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condesanteur tr4b et 4 a .pdf p1-p2",
+      "conf": "Condesanteur tr4b et 4 a.pdf : deux ensembles à deux portes asymétriques. Quatre portes représentées ; pas de liaison ajoutée entre ensembles.",
+      "cols": [
+        {
+          "n": "4A",
+          "w": 900,
+          "units": [
+            {
+              "k": "plate",
+              "y": 7,
+              "h": 4,
+              "label": "CONDENSATEURS 4A",
+              "plate": "green",
+              "node": "COND4_A"
+            },
+            {
+              "k": "display-small",
+              "y": 22,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 65,
+              "h": 10,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 65,
+              "h": 10,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 500,
+          "units": [
+            {
+              "k": "grille",
+              "y": 50,
+              "h": 10,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 11,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "4B",
+          "w": 900,
+          "units": [
+            {
+              "k": "plate",
+              "y": 7,
+              "h": 4,
+              "label": "CONDENSATEURS 4B",
+              "plate": "green",
+              "node": "COND4_B"
+            },
+            {
+              "k": "display-small",
+              "y": 22,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 65,
+              "h": 10,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 65,
+              "h": 10,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 500,
+          "units": [
+            {
+              "k": "grille",
+              "y": 50,
+              "h": 10,
+              "label": ""
+            },
+            {
+              "k": "grille",
+              "y": 63,
+              "h": 11,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND5A": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIE CONDENSATEURS TR 5A",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condensateur tr 5a.pdf p1-p2",
+      "conf": "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées.",
+      "cols": [
+        {
+          "n": "",
+          "w": 700,
+          "units": [
+            {
+              "k": "mesh",
+              "y": 5,
+              "h": 13,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 20,
+              "h": 4,
+              "label": "CONDENSATEURS 5A",
+              "plate": "green"
+            },
+            {
+              "k": "warning",
+              "y": 32,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "mesh",
+              "y": 68,
+              "h": 9,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND5B": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIE CONDENSATEURS TR 5B",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condensateur 5b.pdf p1-p2",
+      "conf": "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées.",
+      "cols": [
+        {
+          "n": "",
+          "w": 700,
+          "units": [
+            {
+              "k": "mesh",
+              "y": 5,
+              "h": 13,
+              "label": ""
+            },
+            {
+              "k": "plate",
+              "y": 20,
+              "h": 4,
+              "label": "CONDENSATEURS 5B",
+              "plate": "green"
+            },
+            {
+              "k": "warning",
+              "y": 32,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "mesh",
+              "y": 68,
+              "h": 9,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "COND7": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIES CONDENSATEURS TGBT 7A / 7B",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Batterie condensateur tgbt7a et 7b.pdf p1-p2",
+      "conf": "Relevé photo — armoires VarSet Schneider Electric ; Plaques non lisibles.",
+      "cols": [
+        {
+          "n": "",
+          "w": 800,
+          "units": [
+            {
+              "y": 6,
+              "h": 3,
+              "k": "plate",
+              "node": "COND7_A",
+              "label": "BATTERIE CONDENSATEUR 7A",
+              "plate": "green",
+              "x": 0.5
+            },
+            {
+              "y": 17,
+              "h": 5,
+              "k": "varlogic",
+              "label": "Régulateur varmétrique VarLogic"
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 800,
+          "units": [
+            {
+              "y": 6,
+              "h": 3,
+              "k": "plate",
+              "node": "COND7_B",
+              "label": "BATTERIE CONDENSATEUR 7B",
+              "plate": "green",
+              "x": 0.5
+            },
+            {
+              "y": 17,
+              "h": 5,
+              "k": "varlogic",
+              "label": "Régulateur varmétrique VarLogic"
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        }
+      ],
+      "note": null
+    },
+    "COND9": {
+      "style": "enclosure_blanc",
+      "title": "BATTERIES CONDENSATEURS TGBT 9A / 9B",
+      "brand": "Schneider Electric — VarSet",
+      "height": 80,
+      "src": "Condensateur tgbt 9a et 9b .pdf p1-p4",
+      "conf": "Relevé photo — armoires VarSet Schneider Electric ; Plaques blanches non lisibles.",
+      "cols": [
+        {
+          "n": "",
+          "w": 800,
+          "units": [
+            {
+              "y": 6,
+              "h": 3,
+              "k": "plate",
+              "node": "COND9_A",
+              "label": "BATTERIE CONDENSATEUR 9A",
+              "plate": "green",
+              "x": 0.5
+            },
+            {
+              "y": 17,
+              "h": 5,
+              "k": "varlogic",
+              "label": "Régulateur varmétrique VarLogic"
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 800,
+          "units": [
+            {
+              "y": 6,
+              "h": 3,
+              "k": "plate",
+              "node": "COND9_B",
+              "label": "BATTERIE CONDENSATEUR 9B",
+              "plate": "green",
+              "x": 0.5
+            },
+            {
+              "y": 17,
+              "h": 5,
+              "k": "varlogic",
+              "label": "Régulateur varmétrique VarLogic"
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.28,
+              "widthRatio": 0.35
+            },
+            {
+              "k": "grille",
+              "y": 67,
+              "h": 9,
+              "label": "",
+              "x": 0.72,
+              "widthRatio": 0.35
+            }
+          ],
+          "doors": [
+            [
+              3,
+              78
+            ]
+          ]
+        }
+      ],
+      "note": null
+    },
+    "OND1": {
+      "style": "enclosure_blanc",
+      "title": "ONDULEUR 1 — GALAXY PW 2nd GEN",
+      "brand": "Schneider Electric — Galaxy PW",
+      "height": 80,
+      "src": "Onduleur 1 .pdf",
+      "conf": "Relevé photo : armoire Schneider Electric Galaxy PW 2nd Gen (bandeau vert, écran, grilles basses).",
+      "cols": [
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "y": 4,
+              "h": 3,
+              "k": "plate",
+              "node": "OND1_UPS",
+              "label": "ONDULEUR 1",
+              "plate": "blue",
+              "x": 0.8
+            },
+            {
+              "y": 10,
+              "h": 8,
+              "k": "paper",
+              "label": "Consignes d’exploitation"
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "handle"
+            },
+            {
+              "y": 60,
+              "h": 14,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              2,
+              78
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "y": 8,
+              "h": 6,
+              "k": "display-small",
+              "label": "Écran de supervision Galaxy",
+              "x": 0.7
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "handle"
+            },
+            {
+              "y": 60,
+              "h": 14,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              2,
+              78
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "appearance": {
+        "panel": "#f3f3ed",
+        "shade": "#c6cec3",
+        "grille": "#313a35",
+        "band": "#3dcd58",
+        "plain": true
+      }
+    },
+    "OND2": {
+      "style": "enclosure_blanc",
+      "title": "ONDULEUR 2 — GALAXY PW 2nd GEN",
+      "brand": "Schneider Electric — Galaxy PW",
+      "height": 80,
+      "src": "Onduleur 2 .pdf",
+      "conf": "Relevé photo : armoire Schneider Electric Galaxy PW 2nd Gen (bandeau vert, écran, grilles basses).",
+      "cols": [
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "y": 4,
+              "h": 3,
+              "k": "plate",
+              "node": "OND2_UPS",
+              "label": "ONDULEUR 2",
+              "plate": "blue",
+              "x": 0.8
+            },
+            {
+              "y": 10,
+              "h": 8,
+              "k": "paper",
+              "label": "Consignes d’exploitation"
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "handle"
+            },
+            {
+              "y": 60,
+              "h": 14,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              2,
+              78
+            ]
+          ]
+        },
+        {
+          "n": "",
+          "w": 900,
+          "units": [
+            {
+              "y": 8,
+              "h": 6,
+              "k": "display-small",
+              "label": "Écran de supervision Galaxy",
+              "x": 0.7
+            },
+            {
+              "y": 36,
+              "h": 6,
+              "k": "handle"
+            },
+            {
+              "y": 60,
+              "h": 14,
+              "k": "grille"
+            }
+          ],
+          "doors": [
+            [
+              2,
+              78
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "appearance": {
+        "panel": "#f3f3ed",
+        "shade": "#c6cec3",
+        "grille": "#313a35",
+        "band": "#3dcd58",
+        "plain": true
+      }
+    },
+    "VENTIL": {
+      "title": "Ventilation Four",
+      "cols": [
+        {
+          "n": "Porte photographiée",
+          "w": 700,
+          "units": [
+            {
+              "k": "signal-column",
+              "y": 12,
+              "h": 12,
+              "label": "",
+              "x": 0.18
+            },
+            {
+              "k": "signal-column",
+              "y": 12,
+              "h": 12,
+              "label": "",
+              "x": 0.33999999999999997
+            },
+            {
+              "k": "signal-column",
+              "y": 12,
+              "h": 12,
+              "label": "",
+              "x": 0.5
+            },
+            {
+              "k": "signal-column",
+              "y": 12,
+              "h": 12,
+              "label": "",
+              "x": 0.6599999999999999
+            },
+            {
+              "k": "signal-column",
+              "y": 12,
+              "h": 12,
+              "label": "",
+              "x": 0.8200000000000001
+            },
+            {
+              "k": "signal-column",
+              "y": 28,
+              "h": 12,
+              "label": "",
+              "x": 0.18
+            },
+            {
+              "k": "signal-column",
+              "y": 28,
+              "h": 12,
+              "label": "",
+              "x": 0.33999999999999997
+            },
+            {
+              "k": "signal-column",
+              "y": 28,
+              "h": 12,
+              "label": "",
+              "x": 0.5
+            },
+            {
+              "k": "signal-column",
+              "y": 28,
+              "h": 12,
+              "label": "",
+              "x": 0.6599999999999999
+            },
+            {
+              "k": "signal-column",
+              "y": 28,
+              "h": 12,
+              "label": "",
+              "x": 0.8200000000000001
+            },
+            {
+              "k": "estop",
+              "y": 44,
+              "h": 5,
+              "label": ""
+            },
+            {
+              "k": "handle",
+              "y": 53,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "height": 80,
+      "style": "enclosure_blanc",
+      "brand": "Relevé photographique partiel",
+      "src": "Ventilation FOUR.pdf p1,p2,p4-p6 ; coffrets distincts p3",
+      "conf": "Ventilation FOUR.pdf p1,p2,p4-p6 : armoire principale à deux rangées de cinq groupes de trois organes lumineux, arrêt d’urgence central et poignée. Les deux coffrets muraux de p3 sont distincts et restent visibles en source ; aucune fonction attribuée aux voyants sans plaque.",
+      "mode": "photo-partial",
+      "synoptic": false
+    },
+    "DECARBO": {
+      "style": "armoire_grise",
+      "title": "DÉCARBONATATION — ARMOIRE DE COMMANDE",
+      "brand": "",
+      "height": 80,
+      "src": "Decarbo .pdf p1, p2",
+      "conf": "Decarbo.pdf p1 et p2 montrent deux armoires différentes. Vues séparées, sans prétendre deux portes contiguës ni une liaison entre les deux.",
+      "cols": [
+        {
+          "n": "Vue p1",
+          "w": 700,
+          "units": [
+            {
+              "k": "display-small",
+              "y": 15,
+              "h": 6,
+              "label": ""
+            },
+            {
+              "k": "isolator",
+              "y": 30,
+              "h": 4,
+              "label": "",
+              "x": 0.3
+            },
+            {
+              "k": "isolator",
+              "y": 30,
+              "h": 4,
+              "label": "",
+              "x": 0.7
+            },
+            {
+              "k": "signal-column",
+              "y": 45,
+              "h": 10,
+              "label": "",
+              "x": 0.3
+            },
+            {
+              "k": "signal-column",
+              "y": 45,
+              "h": 10,
+              "label": "",
+              "x": 0.7
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        },
+        {
+          "n": "Vue p2",
+          "w": 700,
+          "units": [
+            {
+              "k": "voy",
+              "y": 9,
+              "h": 4,
+              "label": ""
+            },
+            {
+              "k": "hmi",
+              "y": 22,
+              "h": 10,
+              "label": ""
+            },
+            {
+              "k": "drive",
+              "y": 39,
+              "h": 8,
+              "label": ""
+            },
+            {
+              "k": "signal-column",
+              "y": 54,
+              "h": 8,
+              "label": "",
+              "x": 0.18
+            },
+            {
+              "k": "signal-column",
+              "y": 54,
+              "h": 8,
+              "label": "",
+              "x": 0.33999999999999997
+            },
+            {
+              "k": "signal-column",
+              "y": 54,
+              "h": 8,
+              "label": "",
+              "x": 0.5
+            },
+            {
+              "k": "signal-column",
+              "y": 54,
+              "h": 8,
+              "label": "",
+              "x": 0.6599999999999999
+            },
+            {
+              "k": "signal-column",
+              "y": 54,
+              "h": 8,
+              "label": "",
+              "x": 0.8200000000000001
+            },
+            {
+              "k": "estop",
+              "y": 68,
+              "h": 4,
+              "label": ""
+            }
+          ],
+          "doors": [
+            [
+              4.5,
+              76.5
+            ]
+          ]
+        }
+      ],
+      "note": null,
+      "mode": "photo-partial",
+      "synoptic": false
+    }
+  },
+  "changes": {
+    "TS12": "Photos Ts 12.pdf p1-p12 : six travées, gaine de mesure séparée graphiquement, quatre tiroirs en haut des travées 2 et 5, fenêtres basses. Aucune affectation des tiroirs par ordre du classeur. Arrivées et couplage conservés ; détails non lus disponibles en liste.",
+    "TS44": "Ts 44.pdf p1-p12 : six travées principales, fenêtres et trois disjoncteurs centraux. Les coffrets de pompes voisins ne sont pas une septième travée TS44. Affectations par ordre du classeur retirées ; les tiroirs non attribués restent anonymes.",
+    "TS7": "Ts 7.pdf p4-p11 : travées et gaines de mesure distinguées ; quatre tiroirs en haut à gauche, trois en haut de la travée 2, commandes centrales et fenêtre droite. Les positions déduites du classeur sont retirées. Aucun départ aval attribué sans lecture de plaque.",
+    "TS1": "Teinte bleu-gris et grandes poignées inclinées reprises ; identité MCC.TS1.9M05 confirmée sur photo. Module photothèque TS1/TS8 inversé corrigé.",
+    "COFAGIT": "Afficheurs de variateur verticaux repris à la place des écrans tactiles horizontaux génériques.",
+    "PEG": "Afficheurs de variateur verticaux repris à la place des écrans tactiles horizontaux génériques.",
+    "GORGE": "Afficheurs compacts repris ; aucune affectation électrique nouvelle.",
+    "GRADATHYR": "Afficheurs compacts repris ; aucune affectation électrique nouvelle.",
+    "TS42": "Afficheurs compacts repris ; aucune affectation électrique nouvelle.",
+    "COND2A": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+    "COND2B": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+    "COND6B": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+    "COND6A": "Condensateur 6a.pdf p1 : deux portes blanches, régulateur à gauche ; aucune grille visible en façade. Grilles génériques retirées.",
+    "COND4": "Condesanteur tr4b et 4 a.pdf : deux ensembles à deux portes asymétriques. Quatre portes représentées ; pas de liaison ajoutée entre ensembles.",
+    "COND5A": "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées.",
+    "COND5B": "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées.",
+    "COND7": "Ventilation : deux petites grilles basses par porte ; trois grilles intermédiaires génériques retirées.",
+    "COND9": "Ventilation : deux petites grilles basses par porte ; trois grilles intermédiaires génériques retirées.",
+    "OND1": "Bandeau vert Schneider et afficheur compact repris depuis la photographie Galaxy PW.",
+    "OND2": "Bandeau vert Schneider et afficheur compact repris depuis la photographie Galaxy PW.",
+    "VENTIL": "Ventilation FOUR.pdf p1,p2,p4-p6 : armoire principale à deux rangées de cinq groupes de trois organes lumineux, arrêt d’urgence central et poignée. Les deux coffrets muraux de p3 sont distincts et restent visibles en source ; aucune fonction attribuée aux voyants sans plaque.",
+    "DECARBO": "Decarbo.pdf p1 et p2 montrent deux armoires différentes. Vues séparées, sans prétendre deux portes contiguës ni une liaison entre les deux."
+  }
+}

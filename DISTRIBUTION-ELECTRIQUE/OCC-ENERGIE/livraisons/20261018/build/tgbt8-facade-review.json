@@ -1,0 +1,419 @@
+{
+  "style": "armoire_grise",
+  "title": "TGBT8 — Gradathyr N3,1 creuset",
+  "brand": "MERLIN GERIN",
+  "height": 80,
+  "src": "photo.zip / IMG_4400 à IMG_4417 ; Tableau 20kv     SS1.pdf p1-p11 (PDF mixte de 24 pages)",
+  "conf": "Ordre photographique recoupé : 3.1 / 4.1 / 3.2 ; arrivée 1 et contrôle ; arrivée 2 et couplage ; normal-secours Gorge ; 4.2 / 5 / 6. Zones classeur 1 et 2 non localisées. Arrivée 1 repérée TR8B ; arrivée 2 repérée TR8A. Les dimensions restent schématiques.",
+  "cols": [
+    {
+      "n": "3.1",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "GRADATHYR / ZONE N°3.1 - CREUSET",
+          "plate": "black",
+          "x": 0.5,
+          "dep": "D0105"
+        },
+        {
+          "y": 20,
+          "h": 11,
+          "k": "hmi"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 52,
+          "h": 10,
+          "k": "handle"
+        },
+        {
+          "y": 66,
+          "h": 10,
+          "k": "grille"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "4.1",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "GRADATHYR / ZONE N°4.1 - CREUSET",
+          "plate": "black",
+          "x": 0.5,
+          "dep": "D0100"
+        },
+        {
+          "y": 20,
+          "h": 11,
+          "k": "hmi"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 52,
+          "h": 10,
+          "k": "handle"
+        },
+        {
+          "y": 66,
+          "h": 10,
+          "k": "grille"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "3.2",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "GRADATHYR / ZONE N°3.2 - CREUSET",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 20,
+          "h": 11,
+          "k": "hmi"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 52,
+          "h": 10,
+          "k": "handle"
+        },
+        {
+          "y": 66,
+          "h": 10,
+          "k": "grille"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "Arrivée 1",
+      "w": 800,
+      "units": [
+        {
+          "y": 3,
+          "h": 3,
+          "k": "plate",
+          "label": "ARRIVÉE 1",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 7,
+          "h": 6,
+          "k": "arc",
+          "label": "ATTENTION Risque Classe 4 — Tableau JEU DE BARRE TR8B",
+          "x": 0.5
+        },
+        {
+          "y": 14,
+          "h": 14,
+          "k": "nw",
+          "node": "TGBT8_QB",
+          "label": "TRANFO 8B",
+          "plate": "blue"
+        },
+        {
+          "y": 31,
+          "h": 5,
+          "k": "voy"
+        },
+        {
+          "y": 40,
+          "h": 3,
+          "k": "plate",
+          "label": "CONTRÔLE",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 45,
+          "h": 6,
+          "k": "gauge",
+          "label": "TENSION ARR. 1"
+        },
+        {
+          "y": 55,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 63,
+          "h": 6,
+          "k": "imd2",
+          "label": "XL308 arrivée 1 · XL308 arrivée 2"
+        }
+      ],
+      "doors": [
+        [
+          2,
+          38
+        ],
+        [
+          38,
+          77
+        ]
+      ]
+    },
+    {
+      "n": "Arrivée 2",
+      "w": 800,
+      "units": [
+        {
+          "y": 3,
+          "h": 3,
+          "k": "plate",
+          "label": "ARRIVÉE 2",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 7,
+          "h": 6,
+          "k": "arc",
+          "label": "ATTENTION Risque Classe 4",
+          "x": 0.5
+        },
+        {
+          "y": 14,
+          "h": 14,
+          "k": "nw",
+          "node": "TGBT8_QA",
+          "label": "ARRIVÉE 2 (TR 8A)",
+          "plate": "black"
+        },
+        {
+          "y": 31,
+          "h": 5,
+          "k": "voy"
+        },
+        {
+          "y": 40,
+          "h": 3,
+          "k": "plate",
+          "label": "COUPLAGE",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 45,
+          "h": 14,
+          "k": "nw",
+          "node": "TGBT8_QC",
+          "label": "COUPLAGE",
+          "plate": "black"
+        }
+      ],
+      "doors": [
+        [
+          2,
+          38
+        ],
+        [
+          38,
+          77
+        ]
+      ]
+    },
+    {
+      "n": "Normal-secours",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "ARMOIRE PUISSANCE / NORMAL - SECOURS",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 22,
+          "h": 8,
+          "k": "mod2"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        }
+      ],
+      "doors": [
+        [
+          2,
+          77
+        ]
+      ]
+    },
+    {
+      "n": "4.2",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "GRADATHYR / ZONE N°4.2 - CREUSET",
+          "plate": "black",
+          "x": 0.5
+        },
+        {
+          "y": 20,
+          "h": 11,
+          "k": "hmi"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 52,
+          "h": 10,
+          "k": "handle"
+        },
+        {
+          "y": 66,
+          "h": 10,
+          "k": "grille"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "5",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "GRADATHYR / ZONE N°5 - CREUSET",
+          "plate": "black",
+          "x": 0.5,
+          "dep": "D0101"
+        },
+        {
+          "y": 20,
+          "h": 11,
+          "k": "hmi"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 52,
+          "h": 10,
+          "k": "handle"
+        },
+        {
+          "y": 66,
+          "h": 10,
+          "k": "grille"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "6",
+      "w": 800,
+      "units": [
+        {
+          "y": 4,
+          "h": 3,
+          "k": "plate",
+          "label": "GRADATHYR / ZONE N°6 - CREUSET",
+          "plate": "black",
+          "x": 0.5,
+          "dep": "D0102"
+        },
+        {
+          "y": 20,
+          "h": 11,
+          "k": "hmi"
+        },
+        {
+          "y": 34,
+          "h": 6,
+          "k": "voy"
+        },
+        {
+          "y": 42,
+          "h": 4,
+          "k": "sel"
+        },
+        {
+          "y": 52,
+          "h": 10,
+          "k": "handle"
+        },
+        {
+          "y": 66,
+          "h": 10,
+          "k": "grille"
+        }
+      ],
+      "doors": null
+    }
+  ],
+  "note": null
+}

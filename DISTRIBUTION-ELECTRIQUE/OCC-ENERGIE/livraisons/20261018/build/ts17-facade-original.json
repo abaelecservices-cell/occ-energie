@@ -1,0 +1,380 @@
+{
+  "style": "prisma_beige",
+  "title": "TS17A / TS17B — CHAUFFERIE",
+  "brand": "Merlin Gerin — Prisma",
+  "height": 80,
+  "src": "Ts17A.pdf p1-p8, Ts17b.pdf p1-p13",
+  "conf": "Structure (colonnes, arrivées, couplage) relevée sur photos ; étiquettes des tiroirs non lisibles : les départs du classeur sont placés dans l’ordre du classeur (positions estimées, contour pointillé) — à confirmer sur site.",
+  "cols": [
+    {
+      "n": "17A-1",
+      "w": 650,
+      "units": [
+        {
+          "y": 8,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM08 Ppe eau chaude n°2",
+          "plate": "black",
+          "dep": "D0338"
+        },
+        {
+          "y": 13,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7M42 Ppe eau froide n°4",
+          "plate": "black",
+          "dep": "D0340"
+        },
+        {
+          "y": 18,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Tour de refroidissement n°1",
+          "plate": "black",
+          "dep": "D0341"
+        },
+        {
+          "y": 23,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Prise PS chaufferie exterieure Ppes",
+          "plate": "black",
+          "dep": "D0342"
+        },
+        {
+          "y": 28,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Prise PS 63A château d'eau",
+          "plate": "black",
+          "dep": "D0343"
+        },
+        {
+          "y": 33,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Rechauffeur GAZ",
+          "plate": "black",
+          "dep": "D0344"
+        },
+        {
+          "y": 38,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Alim A TS9",
+          "plate": "black",
+          "dep": "D0345"
+        },
+        {
+          "y": 43,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7M06-1 TE 11 Ecl chaufferie",
+          "plate": "black",
+          "dep": "D0347"
+        },
+        {
+          "y": 48,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM05 Ppe eau froide n°1",
+          "plate": "black",
+          "dep": "D0348"
+        },
+        {
+          "y": 53,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM48 Ppe eau chaude n°6",
+          "plate": "black",
+          "dep": "D0349"
+        },
+        {
+          "y": 58,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM46 Ppe eau chaude n°4",
+          "plate": "black",
+          "dep": "D0350"
+        },
+        {
+          "y": 63,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM20 Ppe château d'eau",
+          "plate": "black",
+          "dep": "D0351"
+        },
+        {
+          "y": 68,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM14 Ppe eau décarbonation",
+          "plate": "black",
+          "dep": "D0352"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "17A-2",
+      "w": 650,
+      "units": [
+        {
+          "y": 8,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Vibreur trémie chaux decarbonatation",
+          "plate": "black",
+          "dep": "D0353"
+        },
+        {
+          "y": 13,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Vanne alvéolaire décarbonatation",
+          "plate": "black",
+          "dep": "D0354"
+        },
+        {
+          "y": 18,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7M63 Ppe doseuse phosphate et soude",
+          "plate": "black",
+          "dep": "D0355"
+        },
+        {
+          "y": 23,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7M64 Ppe doseuse amines",
+          "plate": "black",
+          "dep": "D0356"
+        },
+        {
+          "y": 28,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7SM36 Agitateur cuve traitement eau refroidiss",
+          "plate": "black",
+          "dep": "D0357"
+        },
+        {
+          "y": 33,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Ph métre automatique d'eau process",
+          "plate": "black",
+          "dep": "D0358"
+        },
+        {
+          "y": 38,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7M10 Armoire commande decarbonatation",
+          "plate": "black",
+          "dep": "D0359"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "",
+      "w": 300,
+      "units": [
+        {
+          "y": 8,
+          "h": 4,
+          "k": "meter"
+        },
+        {
+          "y": 16,
+          "h": 4,
+          "k": "meter"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "17B-1",
+      "w": 650,
+      "units": [
+        {
+          "y": 8,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM15 Ppe eau decarbo n°2",
+          "plate": "black",
+          "dep": "D0360"
+        },
+        {
+          "y": 13,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM16 Ppe reprise eau de lavage sur filtre eau",
+          "plate": "black",
+          "dep": "D0361"
+        },
+        {
+          "y": 18,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM17 Ppe craie decarbo",
+          "plate": "black",
+          "dep": "D0362"
+        },
+        {
+          "y": 23,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM18 Ppe chlorure ferrique decarbo",
+          "plate": "black",
+          "dep": "D0363"
+        },
+        {
+          "y": 28,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7KM06 Compresseur air detassage filtre decarbo",
+          "plate": "black",
+          "dep": "D0364"
+        },
+        {
+          "y": 33,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM07 Ppe eau chaude n°1",
+          "plate": "black",
+          "dep": "D0365"
+        },
+        {
+          "y": 38,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM44",
+          "plate": "black",
+          "dep": "D0366"
+        },
+        {
+          "y": 43,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM09 Ppe eau chaude n°3",
+          "plate": "black",
+          "dep": "D0367"
+        },
+        {
+          "y": 48,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM06 Ppe eau froide",
+          "plate": "black",
+          "dep": "D0368"
+        },
+        {
+          "y": 53,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Alim B TS9",
+          "plate": "black",
+          "dep": "D0369"
+        },
+        {
+          "y": 58,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7M06-2 TE11 Ecl chaufferie",
+          "plate": "black",
+          "dep": "D0370"
+        },
+        {
+          "y": 63,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM47 Ppe eau chaude n°5",
+          "plate": "black",
+          "dep": "D0371"
+        },
+        {
+          "y": 68,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM41 Ppe eau froide n°3",
+          "plate": "black",
+          "dep": "D0372"
+        }
+      ],
+      "doors": null
+    },
+    {
+      "n": "17B-2",
+      "w": 650,
+      "units": [
+        {
+          "y": 8,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "Tour de refroidissement n°2",
+          "plate": "black",
+          "dep": "D0373"
+        },
+        {
+          "y": 13,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM41 Ppe eau froide n°3",
+          "plate": "black",
+          "dep": "D0374"
+        },
+        {
+          "y": 18,
+          "h": 5,
+          "k": "rot2",
+          "est": true,
+          "label": "7PM06 Ppe eau froide n°2",
+          "plate": "black",
+          "dep": "D0375"
+        }
+      ],
+      "doors": null
+    }
+  ],
+  "note": null
+}

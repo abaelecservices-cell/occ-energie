@@ -1,0 +1,513 @@
+{
+  "board": {
+    "id": "TS17",
+    "photos": [
+      "Ts17A.pdf p1-p8",
+      "Ts17b.pdf p1-p13",
+      "docs/PHOTOS-TS17.html#Ts17A",
+      "docs/PHOTOS-TS17.html#Ts17b"
+    ],
+    "obs": [
+      {
+        "t": "Coffret variateur « ALIM DEPUIS TS17B — Q34 — POMPE EAU FROIDE N°3 - 7PM41 » (Ts17b.pdf p11).",
+        "src": "Ts17b.pdf p11",
+        "kind": "photo",
+        "d": "2026-10-11"
+      },
+      {
+        "t": "Coffret variateur « ALIM DEPUIS TS17B — Q36 — POMPE EP 7PM 06 » (Ts17b.pdf p13).",
+        "src": "Ts17b.pdf p13",
+        "kind": "photo",
+        "d": "2026-10-11"
+      },
+      {
+        "t": "Plaque « ARRIVÉE JEU DE BARRES A DEPUIS TR 9A » sur TS17A, colonne 1. Lecture de plaque ; liaison câblée non vérifiée.",
+        "src": "Ts17A.zip / IMG_4052.heic",
+        "kind": "photo",
+        "d": "2026-10-15"
+      },
+      {
+        "t": "Plaque « ARRIVÉE JEU DE BARRES B DEPUIS TR 9B » sur TS17B, colonne 3. Lecture de plaque ; liaison câblée non vérifiée.",
+        "src": "Ts17b.zip / IMG_4070.heic",
+        "kind": "photo",
+        "d": "2026-10-15"
+      },
+      {
+        "t": "Façade TS17A : colonnes 1 à 4 ; façade TS17B : colonnes 1 à 3. Ancienne répartition suivant le classeur remplacée pour les départs localisables.",
+        "src": "Ts17A.zip / IMG_4052, IMG_4055, IMG_4061, IMG_4059 ; Ts17b.zip / IMG_4079, IMG_4078, IMG_4070",
+        "kind": "photo",
+        "d": "2026-10-15"
+      },
+      {
+        "t": "Coffrets variateurs : « ALIM DEPUIS TS17B — Q34 — POMPE EAU FROIDE N°3 - 7PM41 » et « Q36 — POMPE EP 7PM06 ». Références photographiées ; les doublons du classeur ne sont pas fusionnés.",
+        "src": "Ts17b.zip / IMG_4073.heic, IMG_4074.heic",
+        "kind": "photo",
+        "d": "2026-10-15"
+      },
+      {
+        "t": "Plaque « COUPLAGE JEU DE BARRES » en colonne 4 de TS17A. Présence de la plaque confirmée ; fonction, liaison et règle de manœuvre restent non documentées.",
+        "src": "Ts17A.zip / IMG_4059.heic",
+        "kind": "photo",
+        "d": "2026-10-15"
+      }
+    ]
+  },
+  "facade": {
+    "style": "prisma_beige",
+    "title": "TS17A / TS17B — CHAUFFERIE",
+    "brand": "Merlin Gerin — Prisma",
+    "height": 80,
+    "src": "Ts17A.zip / Ts17b.zip — photos originales HEIC relues le 15/10/2026",
+    "conf": "4 colonnes TS17A et 3 colonnes TS17B relevées sur photos. Positions relatives documentées pour les plaques lisibles ; dimensions schématiques (pointillés). Les départs non localisés restent disponibles dans la liste, sans position inventée.",
+    "cols": [
+      {
+        "n": "17A-1",
+        "w": 650,
+        "units": [
+          {
+            "y": 9,
+            "h": 4,
+            "k": "plate",
+            "label": "ARRIVÉE JEU DE BARRES A — DEPUIS TR 9A",
+            "plate": "black"
+          },
+          {
+            "y": 22,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Arrivée secours n°1",
+            "plate": "black",
+            "dep": "D0339"
+          },
+          {
+            "y": 34,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM08 Ppe eau chaude n°2",
+            "plate": "black",
+            "dep": "D0338"
+          },
+          {
+            "y": 50,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7M42 Ppe eau froide n°4",
+            "plate": "black",
+            "dep": "D0340"
+          }
+        ],
+        "doors": null
+      },
+      {
+        "n": "17A-2",
+        "w": 650,
+        "units": [
+          {
+            "y": 15,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Prise PS chaufferie exterieure Ppes",
+            "plate": "black",
+            "dep": "D0342"
+          },
+          {
+            "y": 25,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Prise PS 63A château d'eau",
+            "plate": "black",
+            "dep": "D0343"
+          },
+          {
+            "y": 35,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Rechauffeur GAZ",
+            "plate": "black",
+            "dep": "D0344"
+          },
+          {
+            "y": 45,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Alim A TS9",
+            "plate": "black",
+            "dep": "D0345"
+          },
+          {
+            "y": 55,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Arrivée 2A Normale",
+            "plate": "black",
+            "dep": "D0346"
+          },
+          {
+            "y": 65,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7M06-1 TE 11 Ecl chaufferie",
+            "plate": "black",
+            "dep": "D0347"
+          }
+        ],
+        "doors": null
+      },
+      {
+        "n": "17A-3",
+        "w": 650,
+        "units": [
+          {
+            "y": 9,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM05 Ppe eau froide n°1",
+            "plate": "black",
+            "dep": "D0348"
+          },
+          {
+            "y": 24,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM48 Ppe eau chaude n°6",
+            "plate": "black",
+            "dep": "D0349"
+          },
+          {
+            "y": 36,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM46 Ppe eau chaude n°4",
+            "plate": "black",
+            "dep": "D0350"
+          },
+          {
+            "y": 48,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM20 Ppe château d'eau",
+            "plate": "black",
+            "dep": "D0351"
+          },
+          {
+            "y": 60,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM14 Ppe eau décarbonation",
+            "plate": "black",
+            "dep": "D0352"
+          }
+        ],
+        "doors": null
+      },
+      {
+        "n": "17A-4",
+        "w": 650,
+        "units": [
+          {
+            "y": 9,
+            "h": 4,
+            "k": "plate",
+            "label": "COUPLAGE JEU DE BARRES — liaison à vérifier",
+            "plate": "black"
+          },
+          {
+            "y": 24,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Vibreur trémie chaux decarbonatation",
+            "plate": "black",
+            "dep": "D0353"
+          },
+          {
+            "y": 36,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Vanne alvéolaire décarbonatation",
+            "plate": "black",
+            "dep": "D0354"
+          },
+          {
+            "y": 57,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Ph métre automatique d'eau process",
+            "plate": "black",
+            "dep": "D0358"
+          },
+          {
+            "y": 67,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7M10 Armoire commande decarbonatation",
+            "plate": "black",
+            "dep": "D0359"
+          }
+        ],
+        "doors": null
+      },
+      {
+        "n": "17B-1",
+        "w": 650,
+        "units": [
+          {
+            "y": 9,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM15 Ppe eau decarbo n°2",
+            "plate": "black",
+            "dep": "D0360"
+          },
+          {
+            "y": 19,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM16 Ppe reprise eau de lavage sur filtre eau decarbo",
+            "plate": "black",
+            "dep": "D0361"
+          },
+          {
+            "y": 29,
+            "h": 4,
+            "k": "plate",
+            "label": "Tiroir — plaque à confirmer",
+            "plate": "black"
+          },
+          {
+            "y": 39,
+            "h": 4,
+            "k": "plate",
+            "label": "Tiroir — plaque à confirmer",
+            "plate": "black"
+          },
+          {
+            "y": 49,
+            "h": 4,
+            "k": "plate",
+            "label": "Tiroir — plaque à confirmer",
+            "plate": "black"
+          },
+          {
+            "y": 59,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM07 Ppe eau chaude n°1",
+            "plate": "black",
+            "dep": "D0365"
+          }
+        ],
+        "doors": null
+      },
+      {
+        "n": "17B-2",
+        "w": 650,
+        "units": [
+          {
+            "y": 9,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM44",
+            "plate": "black",
+            "dep": "D0366"
+          },
+          {
+            "y": 21,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM09 Ppe eau chaude n°3",
+            "plate": "black",
+            "dep": "D0367"
+          },
+          {
+            "y": 33,
+            "h": 4,
+            "k": "plate",
+            "label": "ASSERVISSEMENT",
+            "plate": "black"
+          },
+          {
+            "y": 43,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM06 Ppe eau froide",
+            "plate": "black",
+            "dep": "D0368"
+          },
+          {
+            "y": 53,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "Alim B TS9",
+            "plate": "black",
+            "dep": "D0369"
+          },
+          {
+            "y": 63,
+            "h": 4,
+            "k": "plate",
+            "label": "ARRIVÉE 2B NORMALE",
+            "plate": "black"
+          },
+          {
+            "y": 71,
+            "h": 5,
+            "k": "plate",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7M06-2 TE11 Ecl chaufferie",
+            "plate": "black",
+            "dep": "D0370"
+          }
+        ],
+        "doors": null
+      },
+      {
+        "n": "17B-3",
+        "w": 650,
+        "units": [
+          {
+            "y": 9,
+            "h": 4,
+            "k": "plate",
+            "label": "ARRIVÉE JEU DE BARRES B — DEPUIS TR 9B",
+            "plate": "black"
+          },
+          {
+            "y": 22,
+            "h": 4,
+            "k": "plate",
+            "label": "ARRIVÉE SECOURS 2",
+            "plate": "black"
+          },
+          {
+            "y": 34,
+            "h": 5,
+            "k": "rot2",
+            "est": true,
+            "est_note": "Colonne et ordre relevés sur photo ; dimensions schématiques, à confirmer sur site.",
+            "label": "7PM47 Ppe eau chaude n°5",
+            "plate": "black",
+            "dep": "D0371"
+          },
+          {
+            "y": 51,
+            "h": 4,
+            "k": "plate",
+            "label": "7PM41 — POMPE EAU FROIDE N°3 (doublon classeur à lever)",
+            "plate": "black"
+          }
+        ],
+        "doors": null
+      }
+    ]
+  },
+  "boards": [
+    {
+      "id": "TS15",
+      "photos": [
+        "docs/COMPARAISON-PHOTOS.html#Ts%2015"
+      ],
+      "obs": [
+        {
+          "t": "Photos de façade désormais disponibles, repère TS15 lu sur IMG_4189. Étiquettes visibles : 2M09 armoire contrôle HVAC salle de passage, GM1-13 palan niveau 9,20 m, BP07 volet. Pas de nouveaux départs créés automatiquement.",
+          "src": "Ts 15.zip / IMG_4189.heic ; 25 photos du lot",
+          "kind": "photo",
+          "d": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "TS16",
+      "photos": [
+        "docs/COMPARAISON-PHOTOS.html#Ts%2016"
+      ],
+      "obs": [
+        {
+          "t": "Photos de façade désormais disponibles, repère TS16 lu. Plaques : arrivée, alimentation coffret zone déchets, armoire commande eaux usées. Annotation manuscrite « Départ TGBT n°6 / TR7A » : origine à clarifier, aucune liaison déduite.",
+          "src": "Ts 16.zip / IMG_4149.heic ; 16 photos du lot",
+          "kind": "photo",
+          "d": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "COND6A",
+      "photos": [
+        "Condensateur 6a.pdf p1-p2",
+        "docs/COMPARAISON-PHOTOS.html#Onduleur%206%20a"
+      ],
+      "obs": [
+        {
+          "t": "Correction de classement de source : le lot « Onduleur 6 a » montre la plaque « PROVIENT DE TR 6A — BATTERIE CONDENSATEUR 6A ». À rattacher à la batterie de condensateurs 6A, pas à un onduleur.",
+          "src": "Onduleur 6 a.zip / IMG_4267.heic ; 4 photos du lot",
+          "kind": "photo",
+          "d": "2026-10-15"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-TS16-PHOTO-ORIGINE",
+      "sev": "moyenne",
+      "title": "TS16 : annotation TGBT 6 / TR7A à clarifier",
+      "text": "IMG_4149.heic montre le repère TS16 et une note manuscrite « Départ TGBT n°6 / TR7A ». Cette annotation ne suffit pas à établir le raccordement amont. Les liaisons du modèle restent inchangées.",
+      "refs": [
+        "Ts 16.zip / IMG_4149.heic"
+      ],
+      "ents": [
+        "TS16"
+      ]
+    }
+  ]
+}
