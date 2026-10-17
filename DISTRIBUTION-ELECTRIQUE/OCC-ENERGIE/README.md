@@ -71,6 +71,14 @@ Le croisement des 36 départs de l'index historique 2024 est documenté dans `do
 
 Les façades sont décrites par des données (`F[...]` dans `tools/build_data.py` : colonnes, largeurs en mm, cases, appareils) et dessinées en SVG par l’application. Les salles disposent d’un repère en mm prêt à recevoir les cotes.
 
+
+## Livraison du 17 octobre 2026 — complément SAP (branche de travail)
+
+- **Version autonome testable sans installation :** [OCC_ENERGIE_SAP_20261017_LITE.html](OCC_ENERGIE_SAP_20261017_LITE.html), identique à `OCC_ENERGIE_2024_LITE.html` sur cette branche ; recherche SAP, 28 repères, 17 compléments, 11 façades candidates. Elle conserve 66 tableaux, 730 nœuds, 735 liaisons, 503 départs, les façades et les écrans existants. Les tuiles satellite du niveau 12 ne sont pas embarquées dans le mode léger ; ce n'est **pas** une suppression de données électriques.
+- **Version normale conservée :** `OCC_ENERGIE.html` et les deux autres HTML complets sont encore les binaires précédents, pour éviter toute dégradation involontaire. Les sources `src/`, `tools/build_app.py` et `sources/referentiel_sap_2026.json` permettent de les régénérer avec `py -3 tools/rebuild.py`.
+- **Contrôle réalisé :** syntaxe JavaScript du module complet valide ; parsage des données du HTML léger, 66 tableaux et 735 arêtes intacts, identifiants SAP distincts, navigation `#/complements` présente. Aucun test navigateur complet ou succès GitHub Actions n'est revendiqué.
+- **Blocage de livraison complète :** actions GitHub refusées avant la première étape sur ce dépôt, et limite de transfert de l'API pour le binaire complet de 6,8 Mo. La fusion reste en brouillon jusqu'à régénération et contrôle des quatre HTML sur le dernier commit.
+
 ## Confidentialité
 
 Documents sensibles : ne pas publier ce dossier sur un dépôt public ni sur un service en ligne. Aucune connexion au réseau industriel, aucune commande à distance.
