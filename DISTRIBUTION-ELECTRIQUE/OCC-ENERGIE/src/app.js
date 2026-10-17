@@ -32,7 +32,7 @@ D.edges.forEach(e => {
 const SW = new Set(['cb', 'sw', 'cpl', 'dep']);
 const DEPS_BY_BOARD = {};
 D.nodes.filter(n => n.t === 'dep').forEach(n => (DEPS_BY_BOARD[n.board] = DEPS_BY_BOARD[n.board] || []).push(n));
-const TYPE = { src: 'Source', cb: 'Disjoncteur', sw: 'Interrupteur', cpl: 'Couplage', bus: 'Jeu de barres', tr: 'Transformateur', dep: 'Départ', load: 'Récepteur', board: 'Tableau', issue: 'Incohérence', proc: 'Procédure' };
+const TYPE = { src: 'Source', cb: 'Disjoncteur', sw: 'Interrupteur', cpl: 'Couplage', bus: 'Jeu de barres', tr: 'Transformateur', dep: 'Départ', load: 'Récepteur', board: 'Tableau', issue: 'Incohérence', proc: 'Procédure', sap: 'Référence SAP' };
 const CONF = { confirme: ['g', 'Confirmé'], probable: ['b', 'Probable'], a_verifier: ['a', 'À vérifier'], inconnu: ['', 'Non documenté'] };
 const confPill = c => { const [k, t] = CONF[c] || CONF.inconnu; return `<span class="pill ${k}">${t}</span>`; };
 const ND = '<span class="muted">Non documenté</span>';
@@ -224,7 +224,7 @@ const SYN = {
   frigo: ['chiller', 'froid'], chiller: ['frigo'], substation: ['sous station', 'ss'], heater: ['rechauffeur'], rechauffeur: ['heater'],
   extracteur: ['extraction'], extraction: ['extracteur'], prise: ['pc', 'ps'], lumiere: ['eclairage'],
 };
-const TW = { board: 70, src: 55, tr: 50, bus: 42, cpl: 36, cb: 32, sw: 30, dep: 22, load: 12, proc: 14, issue: 6 };
+const TW = { board: 70, src: 55, tr: 50, bus: 42, cpl: 36, cb: 32, sw: 30, dep: 22, load: 12, proc: 14, issue: 6, sap: 18 };
 const IDX = [];
 function addRec(kind, id, label, extra, t) {
   const text = norm(label + ' ' + (extra || ''));
@@ -239,6 +239,7 @@ D.nodes.forEach(n => {
 });
 D.issues.forEach(i => addRec('issue', i.id, i.title, i.text, 'issue'));
 D.procs.forEach(p => addRec('proc', p.id, p.title, (p.but || []).join(' '), 'proc'));
+(D.referentielSAP?.tableaux || []).forEach(t => addRec('sap', t.sap, t.repere + ' — ' + t.libelle, 'SAP ' + t.sap + ' ' + t.note, 'sap'));
 function tokMatch(rec, t) {
   const alts = [t, ...(SYN[t] || [])];
   let best = 0;
@@ -277,6 +278,7 @@ function hl(label, q) {
 }
 function recContext(r) {
   if (r.kind === 'board') { const b = BOARD[r.id]; const L = locChain(b.loc).slice(1).map(l => l.name).join(' › '); return `${b.kind}${L ? ' · ' + L : ''}`; }
+  if (r.kind === 'sap') return 'Index SAP — identité / liaison à rapprocher';
   if (r.kind === 'issue') return 'Incohérence documentaire';
   if (r.kind === 'proc') return 'Procédure / règle de manœuvre';
   const n = NODE[r.id], b = boardOf(n), bits = [];
@@ -380,6 +382,7 @@ function pick(r) {
     openOnUnifilaire(r.id, $('#search').value.trim());
     return;
   }
+  if (r.kind === 'sap') { closeSheet(); location.hash = '#/complements/' + encodeURIComponent(r.id); return; }
   openEntity(r.kind + ':' + r.id);
 }
 
@@ -1083,8 +1086,8 @@ function route(keep) {
   // Un simple re-rendu (bouton de vue HTA) ne réinitialise pas la préférence.
   if (r === 'reseau' && args[0] && !keep && (NODE[args[0]] || BOARD[args[0]]))
     NETVIEW = 'full';
-  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024 }[r] || vHome;
-  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards' }[r] || 'home');
+  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024, complements: vComplements }[r] || vHome;
+  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards', complements: 'boards' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
   const sn = simNotice(); if (sn && !$('.simnote', VIEW())) { VIEW().insertAdjacentHTML('afterbegin', sn); $('#simreset').onclick = () => { resetSim(); rerender(); toast('Configuration normale rétablie'); }; }
   if (keep) scrollTo(0, y); else scrollTo(0, 0);
@@ -1246,7 +1249,7 @@ function vBoards() {
   const groups = {}; D.boards.forEach(b => { const t = top(b); (groups[t.id] = groups[t.id] || { name: t.name, bs: [] }).bs.push(b); });
   const ordered = ['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].filter(k => groups[k]).concat(Object.keys(groups).filter(k => !['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].includes(k)));
   VIEW().innerHTML = `<h1 style="margin-top:14px">Tableaux</h1>
-  <div class="row" style="margin-bottom:12px"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
+  <div class="row" style="margin-bottom:12px;flex-wrap:wrap"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a><a class="btn ghost" href="#/complements">🧩 SAP et éléments à compléter →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
   ${BVIEW === 'arbre' ? `<div class="row" style="margin-bottom:10px"><input class="f" id="tq" type="search" placeholder="Rechercher dans l’arborescence (TGBT 2, TS 44, étuve…)" style="flex:1;min-width:220px"><button class="btn ghost" id="topen">Tout déplier</button><button class="btn ghost" id="tclose">Replier</button></div>
     <div class="card glass tree" id="tree">${arbreHTML()}</div>
     <p class="small muted">Hiérarchie tirée des liaisons documentées (unifilaire, plans, classeur, photos). ● état simulé · ⚡ remettre le courant. Les tableaux sans chemin amont complet figurent sous « Origine non documentée » : aucun raccordement n’est inventé.</p>`
@@ -1462,7 +1465,7 @@ function vReg() {
     ['Départs listés', nd ? 1 : 0], ['Façade', b.facade ? 1 : 0], ['Couplage', b.coupler.status === 'documente' || b.coupler.status === 'sans_objet' ? 1 : 0],
     ['Localisation', b.loc && b.loc_conf === 'confirme' ? 1 : b.loc ? .5 : 0]]; };
   const ok = v => v === 1 ? '<span class="pill g">✓</span>' : v ? '<span class="pill a">~</span>' : '<span class="pill r">✗</span>';
-  VIEW().innerHTML = `<h1>Registre et contrôle qualité</h1><p class="sub">Traçabilité des sources, état d’avancement mesurable par tableau, incohérences et informations manquantes.</p>
+  VIEW().innerHTML = `<h1>Registre et contrôle qualité</h1><p class="sub">Traçabilité des sources, état d’avancement mesurable par tableau, incohérences et informations manquantes.</p><p><a class="btn ghost" href="#/complements">🧩 Compléments SAP, façades et liaisons à qualifier</a></p>
   <h2>Légende de confiance</h2><div class="row">${Object.values(CONF).map(([k, t]) => `<span class="pill ${k}">${t}</span>`).join('')}<span class="small muted">Toute information porte sa source (document › repère) dans sa fiche.</span></div>
   <h2>Écarts documentaires <span class="pill a">${D.issues.filter(issueActive).length} actifs</span> <span class="pill">${D.issues.length - D.issues.filter(issueActive).length} résolus</span></h2>
   <div class="list card glass">${D.issues.slice().sort((a, b) => issueActive(b) - issueActive(a)).map(i => `<div class="li" data-open="issue:${i.id}"><span class="pill ${!issueActive(i) ? '' : i.sev === 'haute' ? 'r' : i.sev === 'moyenne' ? 'a' : ''}">${issueActive(i) ? esc(i.sev) : 'résolu'}</span><div class="grow"><b>${esc(i.title)}</b><div class="small muted">${esc(i.text.slice(0, 170))}…</div></div></div>`).join('')}</div>
