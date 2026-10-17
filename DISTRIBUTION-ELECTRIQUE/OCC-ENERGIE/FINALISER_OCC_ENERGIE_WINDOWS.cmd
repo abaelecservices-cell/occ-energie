@@ -38,12 +38,27 @@ if errorlevel 1 (
 )
 
 echo.
+echo Creation facultative d'un HTML COMPLET ET AUTONOME (zoom 12 inclus)...
+where py >nul 2>nul
+if not errorlevel 1 (
+  py -3 tools\build_app.py --output OCC_ENERGIE_STANDALONE.html
+) else (
+  python tools\build_app.py --output OCC_ENERGIE_STANDALONE.html
+)
+if errorlevel 1 (
+  echo ECHEC : variante autonome non creee. Versions GitHub conservees.
+  pause
+  exit /b 1
+)
+
+echo.
 echo RECONSTRUCTION ET TESTS DOCUMENTAIRES TERMINES.
-echo - OCC_ENERGIE.html : version complete avec tuiles satellite
+echo - OCC_ENERGIE.html : version complete avec tuiles satellites locales
 echo - OCC_ENERGIE_2024_LITE.html : version autonome legere
 echo - OCC_ENERGIE_SAP_20261017_LITE.html : copie du mode leger
 echo - OCC_ENERGIE_TS8.html : version reconstruite
 echo - OCC_ENERGIE_VECTORIEL_MOBILE.html : version reconstruite
+echo - OCC_ENERGIE_STANDALONE.html : un seul HTML complet, 34 tuiles integrees
 echo.
 echo Ces fichiers sont locaux : la publication GitHub n'est pas automatique.
 echo Verifier les parcours et la coherence documentaire avant la fusion.
