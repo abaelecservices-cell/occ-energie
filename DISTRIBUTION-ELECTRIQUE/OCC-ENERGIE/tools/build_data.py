@@ -896,6 +896,8 @@ exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'terrain_p
 # TS1 Ensimage et deux armoires de commande distinctes : uniquement dessins vectoriels,
 # sans départs ou raccordements inventés.
 exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'ensimage_vector_20261015.py'), encoding='utf-8').read())
+# Traçabilité du contrôle photo : uniquement métadonnées des façades, aucune arête.
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'photo_verification_20261018.py'), encoding='utf-8').read())
 for d in deps.values(): d.pop('_fac', None)
 
 

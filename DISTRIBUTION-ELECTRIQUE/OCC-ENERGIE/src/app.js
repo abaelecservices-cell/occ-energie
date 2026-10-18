@@ -32,7 +32,7 @@ D.edges.forEach(e => {
 const SW = new Set(['cb', 'sw', 'cpl', 'dep']);
 const DEPS_BY_BOARD = {};
 D.nodes.filter(n => n.t === 'dep').forEach(n => (DEPS_BY_BOARD[n.board] = DEPS_BY_BOARD[n.board] || []).push(n));
-const TYPE = { src: 'Source', cb: 'Disjoncteur', sw: 'Interrupteur', cpl: 'Couplage', bus: 'Jeu de barres', tr: 'Transformateur', dep: 'Départ', load: 'Récepteur', board: 'Tableau', issue: 'Incohérence', proc: 'Procédure' };
+const TYPE = { src: 'Source', cb: 'Disjoncteur', sw: 'Interrupteur', cpl: 'Couplage', bus: 'Jeu de barres', tr: 'Transformateur', dep: 'Départ', load: 'Récepteur', board: 'Tableau', issue: 'Incohérence', proc: 'Procédure', sap: 'Référence SAP' };
 const CONF = { confirme: ['g', 'Confirmé'], probable: ['b', 'Probable'], a_verifier: ['a', 'À vérifier'], inconnu: ['', 'Non documenté'] };
 const confPill = c => { const [k, t] = CONF[c] || CONF.inconnu; return `<span class="pill ${k}">${t}</span>`; };
 const ND = '<span class="muted">Non documenté</span>';
@@ -224,7 +224,7 @@ const SYN = {
   frigo: ['chiller', 'froid'], chiller: ['frigo'], substation: ['sous station', 'ss'], heater: ['rechauffeur'], rechauffeur: ['heater'],
   extracteur: ['extraction'], extraction: ['extracteur'], prise: ['pc', 'ps'], lumiere: ['eclairage'],
 };
-const TW = { board: 70, src: 55, tr: 50, bus: 42, cpl: 36, cb: 32, sw: 30, dep: 22, load: 12, proc: 14, issue: 6 };
+const TW = { board: 70, src: 55, tr: 50, bus: 42, cpl: 36, cb: 32, sw: 30, dep: 22, load: 12, proc: 14, issue: 6, sap: 18 };
 const IDX = [];
 function addRec(kind, id, label, extra, t) {
   const text = norm(label + ' ' + (extra || ''));
@@ -239,6 +239,7 @@ D.nodes.forEach(n => {
 });
 D.issues.forEach(i => addRec('issue', i.id, i.title, i.text, 'issue'));
 D.procs.forEach(p => addRec('proc', p.id, p.title, (p.but || []).join(' '), 'proc'));
+(D.referentielSAP?.tableaux || []).forEach(t => addRec('sap', t.sap, t.repere + ' — ' + t.libelle, 'SAP ' + t.sap + ' ' + t.note, 'sap'));
 function tokMatch(rec, t) {
   const alts = [t, ...(SYN[t] || [])];
   let best = 0;
@@ -277,6 +278,7 @@ function hl(label, q) {
 }
 function recContext(r) {
   if (r.kind === 'board') { const b = BOARD[r.id]; const L = locChain(b.loc).slice(1).map(l => l.name).join(' › '); return `${b.kind}${L ? ' · ' + L : ''}`; }
+  if (r.kind === 'sap') return 'Index SAP — identité / liaison à rapprocher';
   if (r.kind === 'issue') return 'Incohérence documentaire';
   if (r.kind === 'proc') return 'Procédure / règle de manœuvre';
   const n = NODE[r.id], b = boardOf(n), bits = [];
@@ -380,6 +382,7 @@ function pick(r) {
     openOnUnifilaire(r.id, $('#search').value.trim());
     return;
   }
+  if (r.kind === 'sap') { closeSheet(); location.hash = '#/complements/' + encodeURIComponent(r.id); return; }
   openEntity(r.kind + ':' + r.id);
 }
 
@@ -593,6 +596,8 @@ const STY = {
   prisma_beige: { panel: '#e4d7a6', shade: '#c9bb86', grille: '#4a4a44', line: '#2f2f2f', ink: '#1e1e1e', brd: '#a59769' },
   enclosure_blanc: { panel: '#f3f3f0', shade: '#cfd0cb', grille: '#3a3b3d', line: '#333', ink: '#1e1e1e', brd: '#a3a5a0', plain: true },
   armoire_grise: { panel: '#dcddd8', shade: '#bfc1bb', grille: '#4a4c4e', line: '#333', ink: '#1e1e1e', brd: '#94968f', plain: true },
+  // TS1 Ensimage : peinture acier bleu-gris observée sur IMG_3978-3992.
+  ensimage_bleu_gris: { panel: '#7e919b', shade: '#677e8a', grille: '#4f616b', line: '#60727d', ink: '#111e26', brd: '#50616a', plain: true },
   okken_blanc_noir: { panel: '#f4f4f2', shade: '#d4d4cf', grille: '#262626', line: '#1c1c1c', ink: '#1e1e1e', brd: '#a7a7a2' },
   okken_blanc_vert: { panel: '#f6f6f4', shade: '#d9d9d5', grille: '#1e1e1e', line: '#4b4b4b', ink: '#1e1e1e', brd: '#a7a7a2', band: '#3dcd58' },
 };
@@ -1083,8 +1088,8 @@ function route(keep) {
   // Un simple re-rendu (bouton de vue HTA) ne réinitialise pas la préférence.
   if (r === 'reseau' && args[0] && !keep && (NODE[args[0]] || BOARD[args[0]]))
     NETVIEW = 'full';
-  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024 }[r] || vHome;
-  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards' }[r] || 'home');
+  const fn = { '': vHome, site: vSite, plans: vPlans, reseau: vNet, tableaux: vBoards, b: vBoard, courant: vCourant, fiche: vCourant, fiches: vCourant, details: vFiche, depannage: vDiag, entretien: vMaint, registre: vReg, historique2024: vHistorique2024, complements: vComplements }[r] || vHome;
+  setTab({ '': 'home', site: 'home', plans: 'plan', reseau: 'net', tableaux: 'boards', b: 'boards', courant: 'diag', fiche: 'diag', fiches: 'diag', details: 'diag', depannage: 'diag', entretien: 'maint', registre: 'reg', historique2024: 'boards', complements: 'boards' }[r] || 'home');
   const y = keep ? scrollY : 0; fn(...args);
   const sn = simNotice(); if (sn && !$('.simnote', VIEW())) { VIEW().insertAdjacentHTML('afterbegin', sn); $('#simreset').onclick = () => { resetSim(); rerender(); toast('Configuration normale rétablie'); }; }
   if (keep) scrollTo(0, y); else scrollTo(0, 0);
@@ -1237,16 +1242,31 @@ function focusTarget(id) {
 }
 
 /* ---------- Tableaux */
+function photoValidationHTML(b) {
+  const q = b.controle_photo;
+  if (!q) return '<div class="banner danger">⚠️<div><b>Façade NON CERTIFIÉE.</b> Aucun contrôle croisé photographique complet n’est documenté pour cette version.</div></div>';
+  const corrected = b.id === 'TS1';
+  const title = corrected ? 'TS1 : dessin corrigé, fidélité fine encore non certifiée' :
+    q.statut === 'source_photo_absente_du_lot_267' ? 'Photographies absentes du lot revu — conformité non certifiée' :
+    q.statut === 'identification_source_non_validee' ? 'Photos mélangées — armoire non identifiée de façon sûre' :
+    'Concordance visuelle partielle — non certifiée';
+  return '<div class="banner ' + (corrected ? 'danger' : 'info') + '" style="margin-bottom:12px">⚠️<div>' +
+    '<b>' + esc(title) + '</b>' +
+    '<div class="small" style="margin-top:5px">Sources : ' + esc(q.archive || 'aucune') +
+    ' · vues référencées : ' + esc(q.photo_count || 0) + '</div>' +
+    '<div class="small" style="margin-top:4px">' + esc(q.constat || 'Aucune correspondance exhaustive') + '</div>' +
+    '<div class="small" style="margin-top:4px"><b>Interdiction de déduire une consignation</b> ou une liaison électrique d’une position graphique.</div></div></div>';
+}
 let BVIEW = 'arbre';
 function vBoards() {
   window.__planCur = null;
-  const fstat = b => b.vector_placeholder ? '<span class="pill a">Gabarit non relevé</span>' : b.facade ? '<span class="pill g">Façade vectorielle</span>' : '<span class="pill r">Façade absente</span>';
+  const fstat = b => b.vector_placeholder ? '<span class="pill a">Gabarit non relevé</span>' : b.facade ? '<span class="pill a">Façade vectorielle — fidélité terrain non certifiée</span>' : '<span class="pill r">Façade absente</span>';
   // regroupement par grand emplacement (poste, sous-station, chaufferie, STEP, site…)
   const top = b => { const l = locChain(b.loc); return l[1] || { id: 'ZZ', name: 'Localisation non documentée' }; };
   const groups = {}; D.boards.forEach(b => { const t = top(b); (groups[t.id] = groups[t.id] || { name: t.name, bs: [] }).bs.push(b); });
   const ordered = ['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].filter(k => groups[k]).concat(Object.keys(groups).filter(k => !['PL', 'SS2', 'SS1', 'CHAUF', 'STEP', 'TERRAIN', 'ZZ'].includes(k)));
   VIEW().innerHTML = `<h1 style="margin-top:14px">Tableaux</h1>
-  <div class="row" style="margin-bottom:12px"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
+  <div class="row" style="margin-bottom:12px;flex-wrap:wrap"><a class="btn ghost" href="#/historique2024">📚 Consulter l’index Excel 2024 et comparer les départs →</a><a class="btn ghost" href="#/complements">🧩 SAP et éléments à compléter →</a></div>\n  <div class="seg glass" style="margin-bottom:12px"><button id="bv1" class="${BVIEW === 'arbre' ? 'on' : ''}">Arborescence : de la source au tableau</button><button id="bv2" class="${BVIEW === 'loc' ? 'on' : ''}">Par localisation</button></div>
   ${BVIEW === 'arbre' ? `<div class="row" style="margin-bottom:10px"><input class="f" id="tq" type="search" placeholder="Rechercher dans l’arborescence (TGBT 2, TS 44, étuve…)" style="flex:1;min-width:220px"><button class="btn ghost" id="topen">Tout déplier</button><button class="btn ghost" id="tclose">Replier</button></div>
     <div class="card glass tree" id="tree">${arbreHTML()}</div>
     <p class="small muted">Hiérarchie tirée des liaisons documentées (unifilaire, plans, classeur, photos). ● état simulé · ⚡ remettre le courant. Les tableaux sans chemin amont complet figurent sous « Origine non documentée » : aucun raccordement n’est inventé.</p>`
@@ -1272,6 +1292,7 @@ function vBoard(id, sub, target) {
   const loc = locChain(b.loc).map(l => `<a data-go="#/">${esc(l.name)}</a>`).join('<i>›</i>') || '<a data-go="#/registre">Localisation non documentée</a>';
   VIEW().innerHTML = `<div class="crumbs" style="margin-top:10px">${loc}<i>›</i><a>${esc(b.name)}</a></div>
   <h1>${esc(b.name)}</h1>
+  ${photoValidationHTML(b)}
   <div class="row" style="margin-bottom:10px"><span class="pill k">${esc(b.kind)}</span>${b.loc && b.loc_conf !== 'confirme' ? confPill(b.loc_conf) : ''}${b.it ? `<span class="pill b">Neutre IT</span>` : ''}</div>
   <div class="row" style="margin:6px 0 10px"><button class="btn" data-go="#/courant/${id}">⚡ Remettre le courant</button>${planFor(id) ? `<button class="btn ghost" data-go="#/plans/${planFor(id)}/${id}${selectedDeparture ? '/' + selectedDeparture.id : ''}">📍 Voir sur le plan</button>` : ''}</div>
   ${selectedDeparture ? `<div id="facade-return" class="card glass" style="padding:12px;margin:8px 0">
@@ -1459,28 +1480,23 @@ function vMaint(pre) {
 function vReg() {
   const crit = b => { const nd = (DEPS_BY_BOARD[b.id] || []).length; return [
     ['Topologie amont', b.kind === 'HTA' || (b.halves || []).some(h => NODE[h.id] && upPaths(h.id, 1).length) ? 1 : 0],
-    ['Départs listés', nd ? 1 : 0], ['Façade', b.facade ? 1 : 0], ['Couplage', b.coupler.status === 'documente' || b.coupler.status === 'sans_objet' ? 1 : 0],
+    ['Départs listés', nd ? 1 : 0], ['Dessin de façade', b.facade ? 1 : 0],
+    ['Conformité aux photos', b.controle_photo && b.controle_photo.statut === 'photographie_exacte_validee' ? 1 :
+       b.controle_photo && b.controle_photo.statut !== 'source_photo_absente_du_lot_267' ? .5 : 0],
+    ['Couplage', b.coupler.status === 'documente' || b.coupler.status === 'sans_objet' ? 1 : 0],
     ['Localisation', b.loc && b.loc_conf === 'confirme' ? 1 : b.loc ? .5 : 0]]; };
   const ok = v => v === 1 ? '<span class="pill g">✓</span>' : v ? '<span class="pill a">~</span>' : '<span class="pill r">✗</span>';
-  VIEW().innerHTML = `<h1>Registre et contrôle qualité</h1><p class="sub">Traçabilité des sources, état d’avancement mesurable par tableau, incohérences et informations manquantes.</p>
+  VIEW().innerHTML = `<h1>Registre et contrôle qualité</h1><p class="sub">Traçabilité des sources, état d’avancement mesurable par tableau, incohérences et informations manquantes.</p><p><a class="btn ghost" href="#/complements">🧩 Compléments SAP, façades et liaisons à qualifier</a></p>
   <h2>Légende de confiance</h2><div class="row">${Object.values(CONF).map(([k, t]) => `<span class="pill ${k}">${t}</span>`).join('')}<span class="small muted">Toute information porte sa source (document › repère) dans sa fiche.</span></div>
   <h2>Écarts documentaires <span class="pill a">${D.issues.filter(issueActive).length} actifs</span> <span class="pill">${D.issues.length - D.issues.filter(issueActive).length} résolus</span></h2>
   <div class="list card glass">${D.issues.slice().sort((a, b) => issueActive(b) - issueActive(a)).map(i => `<div class="li" data-open="issue:${i.id}"><span class="pill ${!issueActive(i) ? '' : i.sev === 'haute' ? 'r' : i.sev === 'moyenne' ? 'a' : ''}">${issueActive(i) ? esc(i.sev) : 'résolu'}</span><div class="grow"><b>${esc(i.title)}</b><div class="small muted">${esc(i.text.slice(0, 170))}…</div></div></div>`).join('')}</div>
-  <h2>Avancement par tableau</h2><p class="small muted">Critères vérifiables, sans pourcentage global : ✓ documenté · ~ partiel/probable · ✗ manquant.</p>
+  <h2>Avancement par tableau</h2><p class="small muted">✓ documenté · ~ photos présentes MAIS concordance fine non certifiée · ✗ preuve absente. Un dessin numérique ne vaut pas validation visuelle ni électrique.</p>
   <div class="card glass tablewrap"><table><tr><th>Tableau</th>${crit(D.boards[0]).map(c => `<th>${c[0]}</th>`).join('')}<th>Départs</th></tr>
   ${D.boards.map(b => `<tr data-go="#/b/${b.id}" style="cursor:pointer"><td><b>${esc(b.name)}</b></td>${crit(b).map(c => `<td>${ok(c[1])}</td>`).join('')}<td>${(DEPS_BY_BOARD[b.id] || []).length}</td></tr>`).join('')}</table></div>
   ${keysSection()}
   <h2>Procédures</h2><div class="list card glass">${D.procs.map(p => `<div class="li" data-open="proc:${p.id}"><span>${p.steps.length || p.but.length ? '📘' : '⏳'}</span><div class="grow">${esc(p.title)}<div class="src">${esc(p.status)}</div></div></div>`).join('')}</div>
   <h2>Classeur Excel</h2><p class="small">Toutes les lignes non vides des onglets TR 1 à TR 9 sont rattachées à un tableau du modèle (${D.xl_left.length} ligne(s) non rattachée(s)). Onglet TR 3 absent du classeur.</p>
-  <h2>Informations à fournir</h2><div class="card glass"><ol class="small" style="padding-left:18px;margin:0">
-    <li>Procédures d’exploitation du site, validées : perte d’une cellule ou d’un transformateur, changement de source, groupe, onduleurs, retour à la normale (identité, conditions préalables, critères d’arrêt, validation).</li>
-    <li>Réponses de l’exploitant : convention de la légende des clés ; retour sur CNR automatique ou manuel ; logique du groupe électrogène.</li>
-    <li>Confirmation sur site du croisement TR 1A / TR 2A ↔ TGBT 1 / TGBT 2 et des serrures Ronis du TGBT 3 (écart I-TGBT3-LOCK).</li>
-    <li>Photos du poste de livraison 20 kV (aucune photo) et dossiers ZIP 13 à 19 et 21 (TGBT 4 à 9).</li>
-    <li>Relevés ciblés : tables « localisation défaut » des TGBT 5, 6, 7 ; cases B2/B3 du TGBT 9 ; plaque de l’onduleur 2 et départ QF4 ; source du 2e coffret ventilation Four ; plaque Spang Gorge ; petits départs Bronzini ; régulateurs des condensateurs ; OM 27 portes ouvertes.</li>
-    <li>Exports PDF des 9 plans DWG « R122618 rev1 SS2 UPS distribution » (01, 02, 05, 10, 12, 13, 14, 15, 16).</li>
-    <li>Charges mesurées datées et limites d’exploitation (une puissance en kVA n’est pas une réserve disponible).</li>
-    <li>Schémas des auxiliaires 110 V CC / 24 V CC (diagnostic « ne s’arme pas / ne commande pas »).</li></ol></div>
+  <h2>Informations restant à qualifier</h2><div class="banner info">📋<div><b>Les photographies déjà envoyées sont recensées.</b> Les 17 points encore à qualifier sont détaillés dans le module SAP et compléments, avec les schémas, repères ou preuves ciblées attendus. Aucune reprise photographique générale n’est demandée.</div></div><p><a class="btn" href="#/complements">Voir les 17 compléments, l’index SAP et les façades à vérifier →</a></p>
   ${footer()}`;
 
 }

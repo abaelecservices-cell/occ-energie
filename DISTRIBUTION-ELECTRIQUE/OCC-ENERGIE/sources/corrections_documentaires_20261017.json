@@ -1,0 +1,63 @@
+{
+  "schema": "occ-energie/documentary-photo-reclassification-2026-10-17",
+  "date": "2026-10-17",
+  "do_not_update_graph": true,
+  "evidence": "Ts1.zip (15 HEIC IMG_3978-3992), Ts8.zip (12 JPEG IMG_3966-3977), manifest 266 JPG; docs/16_REGISTRE_SOURCES_VERIFIEES_20261016.md",
+  "reclassifications": [
+    {
+      "original_label": "TS1",
+      "correct_board": "TS8",
+      "count": 11,
+      "original_group": "TS1 – Ensimage (photos individuelles)"
+    },
+    {
+      "original_label": "TS8",
+      "correct_board": "TS1",
+      "count": 15,
+      "original_group": "TS8 – Groupe frigo (photos individuelles)"
+    }
+  ],
+  "missing_image_recovered_locally": {
+    "filename": "IMG_3966.jpeg",
+    "archive": "Ts8.zip",
+    "group": "TS8",
+    "not_yet_in_git": true
+  },
+  "corrections_excel2024": {
+    "TS2B_case": {
+      "index2024": "TGBT2 B 6-18 (INDEX ligne 23)",
+      "liste_etiquettes": "TS2B 6-28 (ligne 38)",
+      "status": "contradiction_documentaire"
+    },
+    "TS24_double_label": {
+      "index2024": "TS24A TGBT4 cases 2-10 et 7-10 (INDEX lignes 30,38)",
+      "liste_etiquettes": "TS24A 2-10; TS24B 7-10 (lignes 91,109)",
+      "status": "contradiction_documentaire"
+    },
+    "TS2A_cote": {
+      "index2024": "TGBT2 B 2-36",
+      "modele_documentaire": "A 2-36",
+      "status": "cote_incertitude"
+    },
+    "TS42_cote": {
+      "index2024": "TGBT4 A 4-28",
+      "modele_documentaire": "B 4-28",
+      "status": "cote_incertitude"
+    },
+    "TS12_6_36": {
+      "index2024": "TS12",
+      "modele_recent": "Réserve",
+      "status": "contradiction_temporelle"
+    },
+    "TS42_TS43_cases": {
+      "index2024": "TS42 4-28, TS43 5-28",
+      "liste_etiquettes": "mêmes repères et cases",
+      "status": "concordance_documentaire_de_position"
+    }
+  },
+  "warnings": [
+    "Ce fichier ne contient pas de câblage validé.",
+    "La photothèque réparée 267 JPEG et les deux HTML corrigés ont été livrés hors dépôt.",
+    "Ce correctif documentaire ne modifie ni le graphe, ni les règles de couplage, ni une procédure de manœuvre."
+  ]
+}

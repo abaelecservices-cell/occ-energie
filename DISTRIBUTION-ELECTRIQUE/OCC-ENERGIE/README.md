@@ -2,14 +2,14 @@
 
 > **Contrôle des photos déjà transmises (16/10/2026) :** consulter en priorité [le registre de réception vérifié](docs/16_REGISTRE_SOURCES_VERIFIEES_20261016.md) avant toute demande de nouveau relevé. Les anciennes listes de « photos manquantes » décrivent parfois seulement l'absence des originaux dans GitHub, **pas l'absence d'envoi par l'exploitant**. Corriger l'inversion vérifiée des séries TS1 / TS8 dans les livrables de photothèque avant toute qualification visuelle.
 
-Application autonome (un seul fichier) de cartographie, de dépannage, d’entretien et d’aide à la compréhension des manœuvres de la distribution électrique de l’usine.
+Application locale hors ligne de cartographie, de dépannage, d’entretien et d’aide à la compréhension des manœuvres de la distribution électrique de l’usine. La version complète GitHub utilise des fichiers WebP locaux pour son zoom maximal ; la version légère reste un seul fichier HTML autonome.
 Indépendante de l’application OCC Bobinage (aucun code ni donnée partagés). *Designed by Labidi El Fahli.*
 
 ## Utilisation
 
-Ouvrir **`OCC_ENERGIE.html`** (double-clic sur PC ; sur iPhone : app Fichiers → ouvrir). Fonctionne hors ligne.
+Sur PC : télécharger l'ensemble du dépôt (ZIP puis extraire) et ouvrir **`OCC_ENERGIE.html`** par double-clic en conservant le sous-dossier `assets/ts8_site_tiles/12/`. Fonctionne hors ligne, y compris le zoom maximal. Sur téléphone ou pour partager un seul fichier : ouvrir **`OCC_ENERGIE_SAP_20261017_LITE.html`** ; toutes les fonctions métiers sont présentes mais pas le niveau de zoom 12. Pour obtenir le zoom maximal dans un seul fichier HTML, générer localement `OCC_ENERGIE_STANDALONE.html` avec la commande ci-dessous.
 
-**Version légère immédiatement disponible sur la branche de rapprochement** : `OCC_ENERGIE_2024_LITE.html`. Elle embarque le modèle complet (équipements, liaisons, façades, navigation et historique Excel 2024), mais omet les tuiles satellites du plus haut niveau de zoom afin de réduire la taille du fichier. La version normale reste `OCC_ENERGIE.html` et doit être régénérée avant fusion dans `main`.
+**Version légère immédiatement disponible sur la branche de rapprochement** : `OCC_ENERGIE_2024_LITE.html`. Elle embarque le modèle complet (équipements, liaisons, façades, navigation et historique Excel 2024), mais omet les tuiles satellites du plus haut niveau de zoom afin de réduire la taille du fichier. La version complète `OCC_ENERGIE.html` est synchronisée sur la branche d'audit avec `OCC_ENERGIE_TS8.html` et `OCC_ENERGIE_VECTORIEL_MOBILE.html`. Les trois fichiers référencent localement 22 tuiles WebP de niveau 12 qui sont dans le dépôt.
 
 | Onglet | Rôle |
 |---|---|
@@ -20,6 +20,7 @@ Ouvrir **`OCC_ENERGIE.html`** (double-clic sur PC ; sur iPhone : app Fichiers �
 | Réseau | Schéma 20 kV → transfos → TGBT ; mode simulation |
 | Entretien | Gammes indicatives par type d’équipement + journal local exportable (CSV) |
 | Excel 2024 (dans Tableaux) | Référence historisée : 36 départs (TGBT 1/2/4), 68 lignes d'âge des équipements. Recherche, filtre par TGBT et rapprochement visuel des repères de cases avec le modèle actuel. **N'ajoute pas de liaison dans le graphe**. URL interne : `#/historique2024`. |
+| Compléments SAP (dans Tableaux / Registre) | `#/complements` : recherche par identifiant SAP, 28 tableaux secondaires du document transmis, 17 points de liaison à qualifier et 11 façades candidates. Ces entrées ne créent ni tableau physique fictif ni arête électrique. |
 | Registre (icône en haut) | Écarts actifs / résolus, avancement par tableau, clés, procédures, informations à fournir, dossier des photos sur ce poste |
 
 La barre de recherche (raccourci `/`) est toujours visible.
@@ -36,8 +37,8 @@ La simulation est une hypothèse de travail : elle est signalée sur toutes les 
 ## Arborescence
 
 ```
-OCC_ENERGIE.html        application complète (reconstruction en attente sur la PR)
-OCC_ENERGIE_2024_LITE.html  application légère (zoom satellite limité)
+OCC_ENERGIE.html        application complète compilée avec zoom 12 (nécessite le sous-dossier assets)
+OCC_ENERGIE_2024_LITE.html  application autonome mono-fichier (zoom satellite niveau 12 omis)
 docs/                   livrables : inventaire, registre photos, incertitudes, photos à reprendre, avancement, contrôles
 src/                    sources : app.js, manoeuvres.js (fiches), courant.js (parcours), fiche.js, plans.js, plansvg.js, arbre.js, net.js, style.css, index.html
 tools/                  parse_excel.py, parse_pptx.py, aerial.py, ortho.py + recale_ortho.py + site_tiles.py (orthophoto IGN : assets/vue_aerienne, tuiles embarquées) → build_data.py (+ facades_photo.py, unifilaire_detail.py, hta_photo.py, audit_2026_10_11.py) → build_plans.py → build_app.py → build_docs.py
@@ -64,9 +65,29 @@ py -3 -I tools/build_app.py --lite
 py -3 -I tools/build_docs.py
 ```
 
+Le référentiel SAP du 16/10 est dans `sources/referentiel_sap_2026.json`. Il est intégré dans les quatre livrables par `tools/build_app.py`; le code d'affichage est `src/complements.js`. **Après un changement de code, régénérer les HTML avec `tools/rebuild.py` et vérifier leurs tests avant de livrer : les fichiers HTML versionnés ne se mettent pas à jour automatiquement.**
+
 Le croisement des 36 départs de l'index historique 2024 est documenté dans `docs/14_RAPPROCHEMENT_INDEX_EXCEL_2024.md`. Une case concordante n'est pas une validation de la destination alimentée.
 
 Les façades sont décrites par des données (`F[...]` dans `tools/build_data.py` : colonnes, largeurs en mm, cases, appareils) et dessinées en SVG par l’application. Les salles disposent d’un repère en mm prêt à recevoir les cotes.
+
+
+## Livraison du 17 octobre 2026 — complément SAP (branche de travail)
+
+- **Version autonome testable sans installation :** [OCC_ENERGIE_SAP_20261017_LITE.html](OCC_ENERGIE_SAP_20261017_LITE.html), identique à `OCC_ENERGIE_2024_LITE.html` sur cette branche ; recherche SAP, 28 repères, 17 compléments, 11 façades candidates. Elle conserve 66 tableaux, 730 nœuds, 735 liaisons, 503 départs, les façades et les écrans existants. Les tuiles satellite du niveau 12 ne sont pas embarquées dans le mode léger ; ce n'est **pas** une suppression de données électriques.
+- **Version normale actualisée :** `OCC_ENERGIE.html`, `OCC_ENERGIE_TS8.html` et `OCC_ENERGIE_VECTORIEL_MOBILE.html` sont compilés et synchronisés sur cette branche avec le référentiel SAP. Les 22 tuiles de niveau 12 sont des WebP locaux, vérifiés par comparaison aux données de l'ancienne application. Les versions complètes doivent être ouvertes avec le dossier `assets` du dépôt.
+- **Contrôle réalisé :** syntaxe JavaScript du module complet valide ; parsage des données du HTML léger, 66 tableaux et 735 arêtes intacts, identifiants SAP distincts, navigation `#/complements` présente. Aucun test navigateur complet ou succès GitHub Actions n'est revendiqué.
+- **Limite restante :** les GitHub Actions sont refusées avant la première étape sur ce dépôt ; aucun test navigateur ni succès CI sur le dernier commit n'est revendiqué. Les HTML complets ont été publiés sur la branche avec des tuiles locales pour éviter la limite de transfert GitHub des blobs de 6,8 Mo. La fusion reste en brouillon jusqu'à exécution des contrôles nécessaires.
+
+### Variante complète en un seul fichier (PC / téléphone)
+
+En local, depuis le dossier `DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE`, avec Python 3 :
+
+```powershell
+py -3 tools/build_app.py --output OCC_ENERGIE_STANDALONE.html
+```
+
+Le fichier généré (environ 6,9 Mo) embarque **les 34 tuiles**, sans dépendance au dossier `assets`. Le connecteur GitHub ne permet pas actuellement de transférer ce gros fichier de manière fiable ; cette commande reconstruit la variante mono-fichier directement depuis les sources et données du dépôt. La compilation ne valide pas les connexions électriques ni les procédures de manœuvre.
 
 ## Confidentialité
 
@@ -116,7 +137,7 @@ la navigation clavier de recherche et des scénarios conservatoires de simulatio
 
 ### Livraison privée
 
-Ouvrir `OCC_ENERGIE.html` par double-clic ; aucun serveur ni dossier d'assets requis.
+Ouvrir `OCC_ENERGIE.html` par double-clic après extraction du dépôt complet ; aucun serveur ni réseau usine requis, mais le dossier local `assets/ts8_site_tiles/12` est nécessaire au zoom 12. `OCC_ENERGIE_2024_LITE.html` reste un seul fichier utilisable indépendamment.
 Les quatre HTML sont reproductibles depuis les sources. Les workflows reconstruisent
 et vérifient les fichiers versionnés, sans commit automatique ni push concurrent.
 Ne fusionner vers `main` qu'après réussite des contrôles bloquants sur la version finale.
@@ -131,3 +152,10 @@ de manœuvre restent soumises aux sources et validations du site.
 Les livraisons manuelles de `main` à `3b92414` sont conservées exactement dans
 `archives/20261015-main-3b92414/`. Leurs tuiles WebP TS8 sont également conservées.
 Les HTML de référence sont reconstruits à partir des sources et des relevés détaillés.
+
+
+## Reconstruction complète en un clic sous Windows
+
+Dans le dossier `DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE`, ouvrir `FINALISER_OCC_ENERGIE_WINDOWS.cmd` sur un poste équipé de Python 3. Le lanceur exécute `tools/rebuild.py` sans connexion au réseau industriel : régénération des quatre HTML de référence, synchronisation de `OCC_ENERGIE_SAP_20261017_LITE.html` avec le mode léger, puis tests documentaires locaux. Il s'arrête et signale l'erreur si un test échoue. Il ne publie rien sur GitHub et n'effectue aucune manœuvre électrique.
+
+**Statut GitHub du 17/10 :** la version légère SAP et les trois HTML complets actualisés sont versionnés dans la branche de travail. Les 22 tuiles WebP de niveau 12 ont été vérifiées et intégrées au dépôt ; le zoom maximal du mode complet nécessite les images locales. Les Actions GitHub échouent avant allocation du runner ; la validation navigateur et la fusion restent ouvertes. Le mode léger n'intègre pas le zoom 12 mais conserve le graphe complet.

@@ -1,0 +1,472 @@
+{
+  "version": "2026-10-17",
+  "source": "arborescence sap distribtuion elec.docx, pages 4–5 ; docs/17_REFERENTIEL_SAP_20261016.md",
+  "nature": "index_documentaire_sans_preuve_de_liaison",
+  "tableaux": [
+    {
+      "sap": "42947",
+      "repere": "TS02",
+      "libelle": "Tableau électrique Station",
+      "statut": "alias_a_confirmer",
+      "note": "Libellé SAP Station ; OCC TS2 désigné Étuves : identité physique non démontrée",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "42948",
+      "repere": "TS32",
+      "libelle": "Tableau électrique",
+      "statut": "nouveau_repere",
+      "note": "Fonction et localisation à rapprocher",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "43817",
+      "repere": "TS30",
+      "libelle": "Tableau Heat Wheel",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44102",
+      "repere": "TS18",
+      "libelle": "Tableau électrique climatisation Four 1",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44118",
+      "repere": "TS33",
+      "libelle": "Tableau filières Canal 1 extérieur",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44119",
+      "repere": "TS34",
+      "libelle": "Tableau filières Canal 1 intérieur",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44120",
+      "repere": "TS35",
+      "libelle": "Tableau filières Canal 3 extérieur",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44121",
+      "repere": "TS36",
+      "libelle": "Tableau filières Canal 3 intérieur",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44131",
+      "repere": "TS12A/B",
+      "libelle": "Tableau électrique Roving",
+      "statut": "deja_documente",
+      "note": "Dossier documentaire TS12 déjà existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44284",
+      "repere": "TS01",
+      "libelle": "Tableau électrique Ensimage",
+      "statut": "deja_documente",
+      "note": "Photos TS1 reçues ; ne pas les confondre avec TS8",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "44878",
+      "repere": "TS27",
+      "libelle": "Tableau électrique généralités Four 2",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "64628",
+      "repere": "TS31",
+      "libelle": "Tableau électrique atelier électrique",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "91885",
+      "repere": "TS37",
+      "libelle": "Tableau filières Canal 2 extérieur",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "91886",
+      "repere": "TS38",
+      "libelle": "Tableau filières Canal 2 intérieur",
+      "statut": "nouveau_repere",
+      "note": "Référence SAP à rapprocher du matériel existant",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "98333",
+      "repere": "TS07",
+      "libelle": "Tableau électrique Four 1",
+      "statut": "deja_documente",
+      "note": "Photos/documentation déjà transmises",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "98950",
+      "repere": "TS16",
+      "libelle": "Tableau électrique STEP",
+      "statut": "deja_documente",
+      "note": "Photos/documentation déjà transmises",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "98951",
+      "repere": "TS08",
+      "libelle": "Tableau électrique généralités Four 1",
+      "statut": "alias_a_confirmer",
+      "note": "OCC TS8 indiqué Groupe frigo / local frigo ; alias à confirmer",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "98952",
+      "repere": "TS09",
+      "libelle": "Tableau électrique chaufferie",
+      "statut": "deja_documente",
+      "note": "Photos TS9 reçues ; connexions commande/auxiliaires à établir",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "98953",
+      "repere": "TS17",
+      "libelle": "Tableau chaufferie refroidissement",
+      "statut": "deja_documente",
+      "note": "Documentation TS17A/B existante ; tours A1/A2 non certifiées",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "98954",
+      "repere": "TS15",
+      "libelle": "Tableau électrique Batch",
+      "statut": "deja_documente",
+      "note": "Photos TS15 reçues",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "100586",
+      "repere": "TS24",
+      "libelle": "Tableau électrique Four 2",
+      "statut": "facade_a_qualifier",
+      "note": "Façade numérique non établie ; rechercher d'abord les archives existantes",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "101488",
+      "repere": "TS28",
+      "libelle": "Tableau électrique climatisation Four 2",
+      "statut": "facade_a_qualifier",
+      "note": "Façade numérique non établie ; rechercher d'abord les archives existantes",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "101489",
+      "repere": "TS40",
+      "libelle": "Tableau électrique",
+      "statut": "nouveau_repere",
+      "note": "Fonction et localisation à rapprocher",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "101490",
+      "repere": "TS42",
+      "libelle": "Tableau filières Canal 4 extérieur",
+      "statut": "facade_a_qualifier",
+      "note": "Équivalence filières 4A02–4A09 à contrôler ; ne pas déplacer le départ",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "101491",
+      "repere": "TS43",
+      "libelle": "Tableau filières Canal 4 intérieur",
+      "statut": "facade_a_qualifier",
+      "note": "Équivalence filières 4A12–4A19 à contrôler",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "101492",
+      "repere": "TS10",
+      "libelle": "Tableau bureaux administratifs",
+      "statut": "nouveau_repere",
+      "note": "Repère présent parmi les départs historiques, tableau autonome à rapprocher",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "674405",
+      "repere": "TS46B",
+      "libelle": "Tableau électrique Packman",
+      "statut": "deja_documente",
+      "note": "Façade documentaire disponible",
+      "source_page": "SAP captures pages 4–5"
+    },
+    {
+      "sap": "674406",
+      "repere": "TS46A",
+      "libelle": "Tableau électrique Packman",
+      "statut": "deja_documente",
+      "note": "Façade documentaire disponible",
+      "source_page": "SAP captures pages 4–5"
+    }
+  ],
+  "complements": [
+    {
+      "id": "A01",
+      "priorite": "A",
+      "ensemble": "Poste de livraison 20 kV",
+      "objectif": "Arrivées CNR/EDF et départs vers sous-stations",
+      "preuve": "Schéma de livraison actualisé avec repères de cellules/câbles ; à défaut vues extérieures autorisées",
+      "photo": "Schéma prioritaire ; photo extérieure conditionnelle",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A02",
+      "priorite": "A",
+      "ensemble": "Cellules TR1A / TR2A et TGBT1/2",
+      "objectif": "Vérifier la correspondance réelle cellule → transfo → arrivée TGBT",
+      "preuve": "Repères de cellule et de câble, schéma actualisé ; conserver TR1A/B→TGBT1 et TR2A/B→TGBT2 comme règle déclarée",
+      "photo": "Uniquement étiquettes illisibles",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A03",
+      "priorite": "A",
+      "ensemble": "Tours A1/A2 et TS17A/17B",
+      "objectif": "Retrouver la protection et le câble de l'arrivée réelle de chaque tour",
+      "preuve": "TS17A C11 / TS17B P21, arrivées A1/A2, plans ; les étiquettes A1→TS17B et A2→TS17A divergent du classeur",
+      "photo": "Photo ciblée si les originaux ne suffisent pas",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A04",
+      "priorite": "A",
+      "ensemble": "TS9 / armoire de commande C1",
+      "objectif": "Préciser origine normale, secours et protection alimentant C1",
+      "preuve": "Numéro de départ TS9, câble, origine secours, schéma de transfert",
+      "photo": "Aucune photo générale TS9",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A05",
+      "priorite": "A",
+      "ensemble": "Groupes électrogènes 1 et 2",
+      "objectif": "Établir arrivées GE1/GE2, QF5–QF10 et couplage commun",
+      "preuve": "Schéma puissance/transfert, repères de départ QF5 à QF10",
+      "photo": "Photo ciblée des seules étiquettes illisibles",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A06",
+      "priorite": "A",
+      "ensemble": "TS8 Groupe frigo",
+      "objectif": "Identifier circuits pris en amont du disjoncteur général",
+      "preuve": "Schéma puissance, protections des dérivations, tiroirs 1/3/5 travée 1",
+      "photo": "Ne jamais présumer la mise hors tension intégrale après ouverture du général",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A07",
+      "priorite": "A",
+      "ensemble": "TGBT9 / Gorge",
+      "objectif": "Distinguer alimentation normale et secours du froid",
+      "preuve": "Repères A3-72N / A3-72S / B3-18 et 7H216, schéma commutation",
+      "photo": "Photo de repère seulement si illisible",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A08",
+      "priorite": "A",
+      "ensemble": "Onduleur 2 / TGBT5–TGBT6",
+      "objectif": "Qualifier arrivée normale et by-pass total",
+      "preuve": "Schéma UPS actualisé, numéro de case et câble : TGBT5A versus TGBT6 2A-12",
+      "photo": "Pas de nouvelles vues générales des TGBT",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "A09",
+      "priorite": "A",
+      "ensemble": "Ensimage : 2 armoires + coffret agitateurs",
+      "objectif": "Trouver les trois protections/départs amont réels",
+      "preuve": "Numéro de départ/case et schéma pour chaque armoire indépendante et coffret 14–17",
+      "photo": "Photos extérieures déjà reçues",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B01",
+      "priorite": "B",
+      "ensemble": "TGBT3",
+      "objectif": "Qualifier serrures Ronis arrivées et couplage",
+      "preuve": "Relecture dossier Schneider + éventuelle vue des serrures visibles",
+      "photo": "Ne pas déduire une règle de manœuvre",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B02",
+      "priorite": "B",
+      "ensemble": "TGBT8 Boosting",
+      "objectif": "Identifier les deux arrivées et couplage",
+      "preuve": "Schéma BT de boosting, repères arrivée 1/2 et jeu de barres",
+      "photo": "Reprendre les photos déjà reçues",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B03",
+      "priorite": "B",
+      "ensemble": "TGBT4 TS42/TS43",
+      "objectif": "Confirmer les départs des filières et leur alias SAP",
+      "preuve": "Schéma départs cases 4-28 / 5-28, repères terrain",
+      "photo": "Photo spécifique si divergence réelle",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B04",
+      "priorite": "B",
+      "ensemble": "TGBT7 7K121 / 7K122",
+      "objectif": "Vérifier le demi-tableau et les sécheurs homonymes TS9",
+      "preuve": "Case A2/B1/B2 et protection réelle",
+      "photo": "Photos existantes avant nouveau relevé",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B05",
+      "priorite": "B",
+      "ensemble": "Tableau 6 kV Spang",
+      "objectif": "Établir cellules L1–L6, leur ordre réel et arrivées A/B",
+      "preuve": "Schéma actualisé et repères de L1/L2/L3",
+      "photo": "Photo L1–L3 si encore illisibles",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B06",
+      "priorite": "B",
+      "ensemble": "Frigo 7H214",
+      "objectif": "Préciser alimentation actuelle TGBT1A ou TGBT3B",
+      "preuve": "Preuve de départ TGBT3B 6+28 ou schéma de transfert",
+      "photo": "Aucune modification avant preuve",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B07",
+      "priorite": "B",
+      "ensemble": "TGBT2 TS2A / TS2B / TS12",
+      "objectif": "Corriger les cases et côtés contradictoires",
+      "preuve": "TS2A côté A/B case 2-36 ; TS2B 6-18/6-28 ; TS12 6-36/RÉSERVE",
+      "photo": "Photos déjà reçues à comparer",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    },
+    {
+      "id": "B08",
+      "priorite": "B",
+      "ensemble": "TGBT4 TS24A / TS24B",
+      "objectif": "Établir les destinations des cases 2-10 et 7-10",
+      "preuve": "Ancien index mentionne TS24A deux fois ; étiquettes indiquent TS24A puis TS24B",
+      "photo": "Schéma/étiquette de départ ciblés",
+      "statut": "a_qualifier",
+      "source": "Plan de relevés ciblés OCC Énergie du 16/10/2026"
+    }
+  ],
+  "facades_a_qualifier": [
+    {
+      "repere": "TS24",
+      "libelle": "Four 2",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "TS28",
+      "libelle": "Climatisation Four 2",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "TS42",
+      "libelle": "Filières Canal 4 extérieur",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "TS43",
+      "libelle": "Filières Canal 4 intérieur",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "TSO",
+      "libelle": "Laboratoire analyste",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "HVAC Canal 3",
+      "libelle": "Coffret HVAC Canal 3",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "Étuves 7-8-9",
+      "libelle": "Tableau électrique étuves",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "9M04",
+      "libelle": "Éclairage Ensimage labo central",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "Ondulé étuves 1–6",
+      "libelle": "Coffret ondulé",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "Ondulé étuves 7–10",
+      "libelle": "Coffret ondulé",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    },
+    {
+      "repere": "Agitateurs 14–17",
+      "libelle": "Coffret agitateur",
+      "statut": "photos_anterieures_a_rechercher",
+      "note": "Photographie uniquement si la façade et les repères ne peuvent pas être retrouvés dans les archives déjà transmises."
+    }
+  ],
+  "disclaimer": "Le SAP est un inventaire de maintenance et ne prouve aucune liaison réelle. Les états d'appareil et les manœuvres sont exclus."
+}
