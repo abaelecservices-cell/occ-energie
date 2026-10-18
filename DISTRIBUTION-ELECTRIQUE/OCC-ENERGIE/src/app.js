@@ -596,6 +596,8 @@ const STY = {
   prisma_beige: { panel: '#e4d7a6', shade: '#c9bb86', grille: '#4a4a44', line: '#2f2f2f', ink: '#1e1e1e', brd: '#a59769' },
   enclosure_blanc: { panel: '#f3f3f0', shade: '#cfd0cb', grille: '#3a3b3d', line: '#333', ink: '#1e1e1e', brd: '#a3a5a0', plain: true },
   armoire_grise: { panel: '#dcddd8', shade: '#bfc1bb', grille: '#4a4c4e', line: '#333', ink: '#1e1e1e', brd: '#94968f', plain: true },
+  // TS1 Ensimage : peinture acier bleu-gris observée sur IMG_3978-3992.
+  ensimage_bleu_gris: { panel: '#7e919b', shade: '#677e8a', grille: '#4f616b', line: '#60727d', ink: '#111e26', brd: '#50616a', plain: true },
   okken_blanc_noir: { panel: '#f4f4f2', shade: '#d4d4cf', grille: '#262626', line: '#1c1c1c', ink: '#1e1e1e', brd: '#a7a7a2' },
   okken_blanc_vert: { panel: '#f6f6f4', shade: '#d9d9d5', grille: '#1e1e1e', line: '#4b4b4b', ink: '#1e1e1e', brd: '#a7a7a2', band: '#3dcd58' },
 };
@@ -1240,6 +1242,21 @@ function focusTarget(id) {
 }
 
 /* ---------- Tableaux */
+function photoValidationHTML(b) {
+  const q = b.controle_photo;
+  if (!q) return '<div class="banner danger">⚠️<div><b>Façade NON CERTIFIÉE.</b> Aucun contrôle croisé photographique complet n’est documenté pour cette version.</div></div>';
+  const corrected = b.id === 'TS1';
+  const title = corrected ? 'TS1 : dessin corrigé, fidélité fine encore non certifiée' :
+    q.statut === 'source_photo_absente_du_lot_267' ? 'Photographies absentes du lot revu — conformité non certifiée' :
+    q.statut === 'identification_source_non_validee' ? 'Photos mélangées — armoire non identifiée de façon sûre' :
+    'Concordance visuelle partielle — non certifiée';
+  return '<div class="banner ' + (corrected ? 'danger' : 'info') + '" style="margin-bottom:12px">⚠️<div>' +
+    '<b>' + esc(title) + '</b>' +
+    '<div class="small" style="margin-top:5px">Sources : ' + esc(q.archive || 'aucune') +
+    ' · vues référencées : ' + esc(q.photo_count || 0) + '</div>' +
+    '<div class="small" style="margin-top:4px">' + esc(q.constat || 'Aucune correspondance exhaustive') + '</div>' +
+    '<div class="small" style="margin-top:4px"><b>Interdiction de déduire une consignation</b> ou une liaison électrique d’une position graphique.</div></div></div>';
+}
 let BVIEW = 'arbre';
 function vBoards() {
   window.__planCur = null;
@@ -1275,6 +1292,7 @@ function vBoard(id, sub, target) {
   const loc = locChain(b.loc).map(l => `<a data-go="#/">${esc(l.name)}</a>`).join('<i>›</i>') || '<a data-go="#/registre">Localisation non documentée</a>';
   VIEW().innerHTML = `<div class="crumbs" style="margin-top:10px">${loc}<i>›</i><a>${esc(b.name)}</a></div>
   <h1>${esc(b.name)}</h1>
+  ${photoValidationHTML(b)}
   <div class="row" style="margin-bottom:10px"><span class="pill k">${esc(b.kind)}</span>${b.loc && b.loc_conf !== 'confirme' ? confPill(b.loc_conf) : ''}${b.it ? `<span class="pill b">Neutre IT</span>` : ''}</div>
   <div class="row" style="margin:6px 0 10px"><button class="btn" data-go="#/courant/${id}">⚡ Remettre le courant</button>${planFor(id) ? `<button class="btn ghost" data-go="#/plans/${planFor(id)}/${id}${selectedDeparture ? '/' + selectedDeparture.id : ''}">📍 Voir sur le plan</button>` : ''}</div>
   ${selectedDeparture ? `<div id="facade-return" class="card glass" style="padding:12px;margin:8px 0">
@@ -1462,14 +1480,17 @@ function vMaint(pre) {
 function vReg() {
   const crit = b => { const nd = (DEPS_BY_BOARD[b.id] || []).length; return [
     ['Topologie amont', b.kind === 'HTA' || (b.halves || []).some(h => NODE[h.id] && upPaths(h.id, 1).length) ? 1 : 0],
-    ['Départs listés', nd ? 1 : 0], ['Façade', b.facade ? 1 : 0], ['Couplage', b.coupler.status === 'documente' || b.coupler.status === 'sans_objet' ? 1 : 0],
+    ['Départs listés', nd ? 1 : 0], ['Dessin de façade', b.facade ? 1 : 0],
+    ['Conformité aux photos', b.controle_photo && b.controle_photo.statut === 'photographie_exacte_validee' ? 1 :
+       b.controle_photo && b.controle_photo.statut !== 'source_photo_absente_du_lot_267' ? .5 : 0],
+    ['Couplage', b.coupler.status === 'documente' || b.coupler.status === 'sans_objet' ? 1 : 0],
     ['Localisation', b.loc && b.loc_conf === 'confirme' ? 1 : b.loc ? .5 : 0]]; };
   const ok = v => v === 1 ? '<span class="pill g">✓</span>' : v ? '<span class="pill a">~</span>' : '<span class="pill r">✗</span>';
   VIEW().innerHTML = `<h1>Registre et contrôle qualité</h1><p class="sub">Traçabilité des sources, état d’avancement mesurable par tableau, incohérences et informations manquantes.</p><p><a class="btn ghost" href="#/complements">🧩 Compléments SAP, façades et liaisons à qualifier</a></p>
   <h2>Légende de confiance</h2><div class="row">${Object.values(CONF).map(([k, t]) => `<span class="pill ${k}">${t}</span>`).join('')}<span class="small muted">Toute information porte sa source (document › repère) dans sa fiche.</span></div>
   <h2>Écarts documentaires <span class="pill a">${D.issues.filter(issueActive).length} actifs</span> <span class="pill">${D.issues.length - D.issues.filter(issueActive).length} résolus</span></h2>
   <div class="list card glass">${D.issues.slice().sort((a, b) => issueActive(b) - issueActive(a)).map(i => `<div class="li" data-open="issue:${i.id}"><span class="pill ${!issueActive(i) ? '' : i.sev === 'haute' ? 'r' : i.sev === 'moyenne' ? 'a' : ''}">${issueActive(i) ? esc(i.sev) : 'résolu'}</span><div class="grow"><b>${esc(i.title)}</b><div class="small muted">${esc(i.text.slice(0, 170))}…</div></div></div>`).join('')}</div>
-  <h2>Avancement par tableau</h2><p class="small muted">Critères vérifiables, sans pourcentage global : ✓ documenté · ~ partiel/probable · ✗ manquant.</p>
+  <h2>Avancement par tableau</h2><p class="small muted">✓ documenté · ~ photos présentes MAIS concordance fine non certifiée · ✗ preuve absente. Un dessin numérique ne vaut pas validation visuelle ni électrique.</p>
   <div class="card glass tablewrap"><table><tr><th>Tableau</th>${crit(D.boards[0]).map(c => `<th>${c[0]}</th>`).join('')}<th>Départs</th></tr>
   ${D.boards.map(b => `<tr data-go="#/b/${b.id}" style="cursor:pointer"><td><b>${esc(b.name)}</b></td>${crit(b).map(c => `<td>${ok(c[1])}</td>`).join('')}<td>${(DEPS_BY_BOARD[b.id] || []).length}</td></tr>`).join('')}</table></div>
   ${keysSection()}
