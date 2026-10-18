@@ -12,6 +12,7 @@ SOURCE_ENSIM = ("Lot distinct Ensimage 15/10/2026 : ensemble de photographies "
                 "hétérogène contenant aussi des vues de TS8 et de commandes ; "
                 "répartition entre les armoires A/B non validée.")
 
+boards["TS1"]["style"] = "ensimage_bleu_gris"
 boards["TS1"]["note"] = (
     (boards["TS1"].get("note") or "") +
     " Rectification photographique du 18/10/2026 : TS1 est une armoire "
