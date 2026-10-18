@@ -3,13 +3,14 @@
 Ce module ne déduit AUCUN câblage ni ordre de départ d'après la simple disposition.
 Les départs existants du classeur TR 4A & 4B, C8:C27 sont réutilisés via 'm'.
 Les cases non identifiées restent non cliquables (nodep=True).
-Photos fournies dans la conversation (19 clichés) : non incluses dans le dépôt.
+Sources photographiques ORIGINALES corrigées : Ts8.zip / IMG_3966 à IMG_3977 (12 vues).\nLe lot 19 clichés du relevé précédent ne sert plus de preuve de cette façade.
 """
-TS8_PH = 'Relevé photographique TS8 du 15/10/2026 (19 vues extérieures, non archivées dans GitHub)'
+TS8_PH = 'Archive TS8 authentifiée — Ts8.zip, IMG_3966 à IMG_3977 (12 vues) ; vue générale IMG_3974 et vue des 5 tiroirs IMG_3966'
 boards['TS8']['style'] = 'okken_beige'
+boards['TS8']['photo_fidelity'] = 'apparence_generale_recoupee_reperes_non_certifies'
 boards['TS8']['note'] = (
-    'Tableau TS8 à 4 travées numérotées 1 à 4 (lecture gauche vers droite). '
-    'Travée 1 : cinq ensembles extractibles / commandes rotatives ; la correspondance individuelle '
+    'Tableau TS8 BEIGE à 4 travées numérotées 1 à 4 (photo IMG_3974). '
+    'Travée 1 : cinq ensembles extractibles / commandes rotatives confirmés VISUELLEMENT sur IMG_3966 ; la correspondance individuelle '
     'n’est lisible que pour 7PM02 et le surpresseur 4P062. '
     'Travée 4 : disjoncteur principal et afficheur, caractéristiques non lues. '
     'L’alimentation amont TGBT4 case 1-23 est documentaire (source : relevé TGBT4 / classeur), '
@@ -25,8 +26,8 @@ boards['TS8']['safety_warning'] = (
 )
 
 facade('TS8', 'TS8', 'okken_beige', 'TS8 — GROUPE FRIGO', TS8_PH,
-  'Reconstruction de la façade d’après photos du 15/10/2026 : ordre et apparence des quatre travées observés ; '
-  'implantation fine des circuits inconnus et calibres non relevés. Ce schéma est documentaire, sans valeur de consignation.',
+  'Reconstruction schématique d’après IMG_3966-3977 : couleur beige, cinq tiroirs de la travée 1, bandeau de commandes, portes centrales et disjoncteur principal à droite observés ; '
+  'implantation fine des circuits inconnus, proportions non cotées et calibres non relevés. La fidélité tiroir-par-tiroir n’est PAS certifiée ; sans valeur de consignation.',
   brand='MERLIN GERIN / SCHNEIDER ELECTRIC (gamme non confirmée)',
   cols=[
     # Travée 1 : 5 tiroirs alignés verticalement ; seuls les rangs 2 et 4 ont un libellé certain.
