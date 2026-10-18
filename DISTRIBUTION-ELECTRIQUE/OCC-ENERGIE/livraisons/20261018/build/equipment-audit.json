@@ -1,0 +1,1726 @@
+[
+  {
+    "id": "TGBT1",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 1.pdf p1",
+    "facadeSource": "Tgbt 1.pdf p1, p6, p9, p12 + plans TGBT1A Z0100804 / TH11A-TGBT1B 010",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Colonnes et cases selon les plans Schneider ; étiquettes, appareils et centrales relevés sur les photos (2026).",
+    "locations": "5 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Case 1-53 : le classeur 2024 indique GROUPE 7H214 ; la fiche issue des photos indique TS46A. Ne pas assimiler les deux équipements.",
+      "Case 3-72 : EXTENSION ROVING dans le classeur 2024 ; ATELIER AD 502 dans le relevé photo. Case coffret chantier 3-55 dans le classeur, 3-35 sur la fiche photo."
+    ],
+    "unlocatedNodes": [
+      "D0054",
+      "D0059",
+      "D0060",
+      "D0065",
+      "TGBT1_VTR1B"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT2",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 2.pdf p1",
+    "facadeSource": "Tgbt 2.pdf p1, p3, p7, p8 + plan TH112001 rév. F",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Cases et appareils selon le plan Schneider ; étiquettes, centrales et voyants relevés sur les photos.",
+    "locations": "3 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Case partagée dans le modèle : 2-51 (D0007, TGBT2_VTR2A). Vérifier si fonctions communes ou doublon ; aucune fusion automatique.",
+      "Case partagée dans le modèle : 6-51 (D0012, TGBT2_VTR2B). Vérifier si fonctions communes ou doublon ; aucune fusion automatique.",
+      "TS2B : case 6-18 dans le classeur 2024 et dans le plan Bronzini ; ancienne lecture photo 6-28 conservée dans le libellé historique. TS12 Emballage à 6-36 dans le classeur, réserve sur la fiche photo."
+    ],
+    "unlocatedNodes": [
+      "D0018",
+      "TGBT2_VTR2A",
+      "TGBT2_VTR2B"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT3",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 3 (2).pdf p1",
+    "facadeSource": "Tgbt 3.pdf p1 + Tgbt 3 (2).pdf p7, p12 + plan CX781001 (face avant p.22/26)",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Largeurs et cases selon le plan constructeur (colonnes 650 mm, couloirs 250 mm, longueur 4475 mm) ; appareils, centrales et étiquettes relevés sur les photos.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT4",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 4.pdf p1",
+    "facadeSource": "Tgbt 4.pdf p2, p5, p9, p11, p12",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo (étiquettes lisibles) — proportions estimées sur photos non redressées",
+    "locations": "2 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Le scan ancien décale les titres : TGBT n°3 pour TR4A/B (p7), TGBT n°4 pour TR5A/B (p9), TGBT n°5 pour TR6A/B (p10). Identification retenue par repères transformateurs et sources plus détaillées, pas par le titre du scan seul.",
+      "TS42 : la plaque d’arrivée mentionne TR4A ; le départ D0044 est actuellement classé sur le demi-tableau B dans le modèle issu du classeur. Le côté A/B reste à arbitrer ; aucune bascule de raccordement effectuée."
+    ],
+    "unlocatedNodes": [
+      "D0052",
+      "D0053"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT5",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 5.pdf p1",
+    "facadeSource": "Tgbt 5.pdf p2, p5, p7, p9",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : repères de colonnes 2A · 1A · A1 · 00 · A2 · 1B · 2B, étiquettes lisibles ; proportions estimées (photos non redressées), pas de plan constructeur transmis.",
+    "locations": "2 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Case 2A-12 : BY-PASS ONDULEUR 2 dans le classeur 2024 ; LOCAL MOTEUR + REBUILT dans le relevé photo. Affectation non arbitrée.",
+      "Le scan ancien décale les titres : TGBT n°3 pour TR4A/B (p7), TGBT n°4 pour TR5A/B (p9), TGBT n°5 pour TR6A/B (p10). Identification retenue par repères transformateurs et sources plus détaillées, pas par le titre du scan seul."
+    ],
+    "unlocatedNodes": [
+      "D0068",
+      "D0078"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT6",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 6.pdf p1",
+    "facadeSource": "Tgbt 6.pdf p1, p2, p4, p8, p10",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : colonnes 2A · 1A · A1 · 00 · A2 · 1B · 2B, étiquettes lisibles ; proportions estimées, pas de plan constructeur transmis.",
+    "locations": "3 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Case 2A-12 : LOCAL MOTEUR + REBUILT dans le classeur 2024 ; ONDULEUR 2 BY-PASS dans le relevé photo. TS46 à 2B-06 dans le classeur, étiquette effacée dans le relevé photo.",
+      "TS28 : mention UTILITÉS FOUR 1 dans le classeur 2024, FOUR 2 dans les sources existantes. Les textes originaux sont conservés.",
+      "Le scan ancien décale les titres : TGBT n°3 pour TR4A/B (p7), TGBT n°4 pour TR5A/B (p9), TGBT n°5 pour TR6A/B (p10). Identification retenue par repères transformateurs et sources plus détaillées, pas par le titre du scan seul."
+    ],
+    "unlocatedNodes": [
+      "D0080",
+      "D0083",
+      "D0088"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT7",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tr7b .pdf p1",
+    "facadeSource": "Tr7b .pdf p1, p3, p5, p7, p9",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo (forte surexposition) : colonnes A4 · A3 · A2 · A1 · couplage · B0 · B1 · B2 ; départs derrière vitre non lisibles, repérés par les étiquettes des voyants / centrales. À compléter.",
+    "locations": "6 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0091",
+      "D0092",
+      "D0096",
+      "D0097",
+      "D0098",
+      "D0099"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT8",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tableau 20kv     SS1.pdf p1",
+    "facadeSource": "photo.zip / IMG_4400 à IMG_4417 ; Tableau 20kv     SS1.pdf p1-p11 (PDF mixte de 24 pages)",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Ordre photographique recoupé : 3.1 / 4.1 / 3.2 ; arrivée 1 et contrôle ; arrivée 2 et couplage ; normal-secours Gorge ; 4.2 / 5 / 6. Zones classeur 1 et 2 non localisées. Arrivée 1 repérée TR8B ; arrivée 2 repérée TR8A. Les dimensions restent schématiques.",
+    "locations": "2 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Ancienne lecture de plaque associée à D0103 / zone 1 non validée : aucune position physique ni assimilation à la zone 6. Ventilation de toiture schématique, détails à compléter."
+    ],
+    "unlocatedNodes": [
+      "D0103",
+      "D0104"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TGBT9",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tgbt 9.pdf p1",
+    "facadeSource": "Tgbt 9.pdf p16, p18, p20, p23",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : colonnes A3 · A2 · A1 · AB · B1 · B2 · B3 ; étiquettes de départ blanches non lisibles sur les photos (seul « Groupe froid 7H215 » est lisible). Les départs du classeur restent listés dans l’onglet Départs sans position.",
+    "locations": "6 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0106",
+      "D0108",
+      "D0110",
+      "D0111",
+      "D0112",
+      "D0113"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS1",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "work\\ts1\\IMG_3991.jpg",
+    "facadeSource": "Ts1.zip / IMG_3978 à IMG_3992.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Plaque TS1 agrandie : MCC.TS1.9M05 — ENSIMAGE.",
+    "facade": "Huit colonnes physiques, arrivée comprise. Numéros de colonnes 2 à 7 = ordre de lecture gauche-droite, non repères constructeur. Implantation schématique ; seule l’extraction salle manteaux est reliée à un départ existant. Arrivée 1A visible ; origine amont non confirmée par cette plaque.",
+    "locations": "33 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Teinte bleu-gris et grandes poignées inclinées reprises ; identité MCC.TS1.9M05 confirmée sur photo. Module photothèque TS1/TS8 inversé corrigé."
+    ],
+    "unlocatedNodes": [
+      "D0114",
+      "D0115",
+      "D0116",
+      "D0117",
+      "D0119",
+      "D0120",
+      "D0121",
+      "D0122",
+      "D0123",
+      "D0124",
+      "D0125",
+      "D0126",
+      "D0127",
+      "D0128",
+      "D0129",
+      "D0130",
+      "D0131",
+      "D0132",
+      "D0133",
+      "D0134",
+      "D0135",
+      "D0136",
+      "D0137",
+      "D0138",
+      "D0139",
+      "D0140",
+      "D0141",
+      "D0142",
+      "D0143",
+      "D0144",
+      "D0145",
+      "D0146",
+      "D0147"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "ECL9M04",
+    "date": "2026-10-16",
+    "level": "schema",
+    "label": "Schéma documentaire — implantation non vérifiée",
+    "source": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "facadeSource": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Schéma fonctionnel documentaire. Les colonnes sont une mise en page de la liste des appareils, pas des colonnes physiques. Dimensions, positions et commandes non relevées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COFAGIT",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "work\\cross-all\\html-photos\\02.jpg",
+    "facadeSource": "Ensimage .zip / première photo IMG_4033.heic ; identification fournie par l’utilisateur le 15/10/2026",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Identification du coffret confirmée par l’utilisateur. Vue partielle de la colonne repérée 10 : deux commandes variateur visibles. Affectation individuelle aux cuves 14 à 17 non établie ; aucun départ n’est fusionné ni repositionné arbitrairement.",
+    "locations": "4 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Afficheurs de variateur verticaux repris à la place des écrans tactiles horizontaux génériques."
+    ],
+    "unlocatedNodes": [
+      "D0179",
+      "D0180",
+      "D0181",
+      "D0182"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS7",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts 7.pdf p6",
+    "facadeSource": "Ts 7.pdf p4-p11",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Ts 7.pdf p4-p11 : travées et gaines de mesure distinguées ; quatre tiroirs en haut à gauche, trois en haut de la travée 2, commandes centrales et fenêtre droite. Les positions déduites du classeur sont retirées. Aucun départ aval attribué sans lecture de plaque.",
+    "locations": "22 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Ts 7.pdf p4-p11 : travées et gaines de mesure distinguées ; quatre tiroirs en haut à gauche, trois en haut de la travée 2, commandes centrales et fenêtre droite. Les positions déduites du classeur sont retirées. Aucun départ aval attribué sans lecture de plaque.",
+      "Les appareils du classeur ne sont plus placés arbitrairement sur les tiroirs. Les appareils restent consultables dans Départs."
+    ],
+    "unlocatedNodes": [
+      "D0183",
+      "D0184",
+      "D0185",
+      "D0186",
+      "D0187",
+      "D0188",
+      "D0189",
+      "D0190",
+      "D0191",
+      "D0192",
+      "D0193",
+      "D0194",
+      "D0195",
+      "D0196",
+      "D0197",
+      "D0198",
+      "D0199",
+      "D0200",
+      "D0201",
+      "D0202",
+      "D0203",
+      "D0204"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "HVAC3",
+    "date": "2026-10-16",
+    "level": "schema",
+    "label": "Schéma documentaire — implantation non vérifiée",
+    "source": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "facadeSource": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Schéma fonctionnel documentaire. Les colonnes sont une mise en page de la liste des appareils, pas des colonnes physiques. Dimensions, positions et commandes non relevées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS44",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts 44.pdf p3",
+    "facadeSource": "Ts 44.pdf p1, p5, p11",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Ts 44.pdf p1-p12 : six travées principales, fenêtres et trois disjoncteurs centraux. Les coffrets de pompes voisins ne sont pas une septième travée TS44. Affectations par ordre du classeur retirées ; les tiroirs non attribués restent anonymes.",
+    "locations": "35 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Ts 44.pdf p1-p12 : six travées principales, fenêtres et trois disjoncteurs centraux. Les coffrets de pompes voisins ne sont pas une septième travée TS44. Affectations par ordre du classeur retirées ; les tiroirs non attribués restent anonymes.",
+      "Les appareils du classeur ne sont plus placés arbitrairement sur les tiroirs. Les appareils restent consultables dans Départs."
+    ],
+    "unlocatedNodes": [
+      "D0207",
+      "D0208",
+      "D0209",
+      "D0210",
+      "D0211",
+      "D0212",
+      "D0213",
+      "D0214",
+      "D0215",
+      "D0216",
+      "D0217",
+      "D0218",
+      "D0219",
+      "D0220",
+      "D0221",
+      "D0222",
+      "D0223",
+      "D0224",
+      "D0225",
+      "D0226",
+      "D0227",
+      "D0228",
+      "D0229",
+      "D0230",
+      "D0231",
+      "D0232",
+      "D0233",
+      "D0234",
+      "D0235",
+      "D0236",
+      "D0237",
+      "D0238",
+      "D0239",
+      "D0240",
+      "D0241"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS12",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts 12 .pdf p2",
+    "facadeSource": "Ts 12 .pdf p1-p22",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Photos Ts 12.pdf p1-p12 : six travées, gaine de mesure séparée graphiquement, quatre tiroirs en haut des travées 2 et 5, fenêtres basses. Aucune affectation des tiroirs par ordre du classeur. Arrivées et couplage conservés ; détails non lus disponibles en liste.",
+    "locations": "27 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Photos Ts 12.pdf p1-p12 : six travées, gaine de mesure séparée graphiquement, quatre tiroirs en haut des travées 2 et 5, fenêtres basses. Aucune affectation des tiroirs par ordre du classeur. Arrivées et couplage conservés ; détails non lus disponibles en liste.",
+      "Les appareils du classeur ne sont plus placés arbitrairement sur les tiroirs. Les appareils restent consultables dans Départs."
+    ],
+    "unlocatedNodes": [
+      "D0242",
+      "D0243",
+      "D0244",
+      "D0245",
+      "D0246",
+      "D0247",
+      "D0248",
+      "D0249",
+      "D0250",
+      "D0251",
+      "D0252",
+      "D0253",
+      "D0254",
+      "D0255",
+      "D0256",
+      "D0257",
+      "D0258",
+      "D0259",
+      "D0260",
+      "D0261",
+      "D0262",
+      "D0263",
+      "D0264",
+      "D0265",
+      "D0266",
+      "D0267",
+      "D0268"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS2",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts2.pdf p1",
+    "facadeSource": "Ts2.pdf p1, p4, p10",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : colonnes 1 à 6 ; arrivées, couplage et centrales lisibles ; étiquettes de tiroirs partiellement lisibles.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "ETUVE789",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/E╠ütuve 7 8 9 10/IMG_4591.heic",
+    "facadeSource": "photo.zip / IMG_4591 à IMG_4593.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Armoire de distribution identifiée par plaque. Ne représente ni les trois armoires locales des étuves ni le coffret ondulé 7–10. Cheminement et chaîne arrêt d’urgence non vérifiés.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "BRONZINI",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Bronzini .pdf p1",
+    "facadeSource": "Bronzini .pdf p1-p3",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo à pleine résolution : PrismaSeT Schneider (bandeau vert), ComPacT NS / NSX et rangées modulaires ; une partie des petites étiquettes est illisible.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS8",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "work\\ts8\\IMG_3976.jpeg",
+    "facadeSource": "Ts8.zip / IMG_3966, IMG_3969, IMG_3971, IMG_3973.jpeg",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Quatre colonnes photographiées. Seules les plaques attribuables sont reliées aux départs existants ; les autres départs restent dans la liste. La pancarte de la colonne 4 ne permet pas d’identifier le circuit pris en amont.",
+    "locations": "10 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0269",
+      "D0273",
+      "D0274",
+      "D0275",
+      "D0277",
+      "D0278",
+      "D0282",
+      "D0283",
+      "D0287",
+      "D0288"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS24",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Ts 24/IMG_4441.heic",
+    "facadeSource": "photo.zip / IMG_4440 à IMG_4469.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue schématique des cinq colonnes visibles, dont TS24A1 voisin explicitement distingué. Sept ventilateurs attribués aux plaques lisibles. Aucune limite A/B ou liaison secours déduite des portes fermées. Les autres départs restent dans la liste.",
+    "locations": "19 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0289",
+      "D0290",
+      "D0291",
+      "D0292",
+      "D0293",
+      "D0294",
+      "D0295",
+      "D0296",
+      "D0297",
+      "D0298",
+      "D0303",
+      "D0304",
+      "D0305",
+      "D0306",
+      "D0307",
+      "D0308",
+      "D0309",
+      "D0310",
+      "D0314"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS42",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Tableau filie╠Çre/IMG_4576.heic",
+    "facadeSource": "photo.zip / IMG_4576 à IMG_4585.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Quatre colonnes, dont arrivée et huit modules. Identification TS42 lue sur la plaque et repères 4A02 / 4A03 / 4A04 visibles. L’attribution exhaustive des huit positions reste à relever. Aucun nœud ni câble créé pour les autres Spang du lot.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Afficheurs compacts repris ; aucune affectation électrique nouvelle.",
+      "TS42 : la plaque d’arrivée mentionne TR4A ; le départ D0044 est actuellement classé sur le demi-tableau B dans le modèle issu du classeur. Le côté A/B reste à arbitrer ; aucune bascule de raccordement effectuée."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS43",
+    "date": "2026-10-16",
+    "level": "schema",
+    "label": "Schéma documentaire — implantation non vérifiée",
+    "source": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "facadeSource": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Schéma fonctionnel documentaire. Les colonnes sont une mise en page de la liste des appareils, pas des colonnes physiques. Dimensions, positions et commandes non relevées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TSO",
+    "date": "2026-10-16",
+    "level": "schema",
+    "label": "Schéma documentaire — implantation non vérifiée",
+    "source": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "facadeSource": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Schéma fonctionnel documentaire. Les colonnes sont une mise en page de la liste des appareils, pas des colonnes physiques. Dimensions, positions et commandes non relevées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "ECLSST1",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Armoire éclairage .pdf p1",
+    "facadeSource": "Armoire éclairage .pdf p1",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : armoire 2 portes fermées, étiquettes de risque d’arc ; appareillage non visible.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS28",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/E╠üclairage four/Ts 28/dossier sans titre/IMG_4491.heic",
+    "facadeSource": "photo.zip / IMG_4491 à IMG_4500.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Trois colonnes photographiées. Sept départs attribués par libellés. Plaque arrivée TGBT6 TR6A enregistrée comme lecture, sans nouvelle liaison. Chopper 43–44 non assimilé au seul chopper 43 du modèle. TS40 (IMG_4501 à 4505) est distinct et reste en galerie documentaire.",
+    "locations": "8 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0322",
+      "D0323",
+      "D0324",
+      "D0325",
+      "D0326",
+      "D0327",
+      "D0328",
+      "D0329"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS16",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts 16 / Ts 16/IMG_4160.heic",
+    "facadeSource": "Ts 16.zip / IMG_4149, IMG_4150, IMG_4154, IMG_4156.heic (IMG_4164 exclue : elle montre TS15)",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Colonnes et ordre des plaques lisibles relevés sur photos. Proportions indicatives et pointillées ; les départs sans position prouvée restent dans la liste. Les plaques sans correspondance certaine ne créent pas de liaison électrique.",
+    "locations": "2 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0330",
+      "D0332"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS17",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts17A.pdf p1",
+    "facadeSource": "Ts17A.zip / Ts17b.zip — photos originales HEIC relues le 15/10/2026",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "4 colonnes TS17A et 3 colonnes TS17B relevées sur photos. Positions relatives documentées pour les plaques lisibles ; dimensions schématiques (pointillés). Les départs non localisés restent disponibles dans la liste, sans position inventée.",
+    "locations": "11 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0341",
+      "D0355",
+      "D0356",
+      "D0357",
+      "D0362",
+      "D0363",
+      "D0364",
+      "D0372",
+      "D0373",
+      "D0374",
+      "D0375"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS15",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts 15 / Ts 15/IMG_4176.heic",
+    "facadeSource": "Ts 15.zip / IMG_4165, IMG_4167, IMG_4175, IMG_4177, IMG_4179, IMG_4182, IMG_4183, IMG_4184.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Colonnes et ordre des plaques lisibles relevés sur photos. Proportions indicatives et pointillées ; les départs sans position prouvée restent dans la liste. Les plaques sans correspondance certaine ne créent pas de liaison électrique.",
+    "locations": "4 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [
+      "D0380",
+      "D0381",
+      "D0383",
+      "D0391"
+    ],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS9",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts9.pdf p1",
+    "facadeSource": "Ts9.pdf p1, p2, p5, p7",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : étiquettes noires partiellement lisibles, étiquettes bleues illisibles (col. 2). Positions verticales estimées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "Le scan p6 nomme les arrivées TS7A/TS7B ; les sources récentes donnent TS17A/TS17B. Ne pas remplacer les arrivées récentes par cette liste ancienne."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "PEG",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Pompe eau glace 7pm 65 et 7Pm03.pdf p1",
+    "facadeSource": "Pompes-eau-glacee.pdf, pages 1 à 3",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Deux coffrets distincts, sans couplage ajouté. Étiquettes amont lues sur la page 3 ; repère 7PM65 (et non 7PM63). Q2-24 de la plaque 7PM03 diffère de la case 1-24 présente dans le modèle TS44 : écart conservé explicitement, sans substitution ni nouvelle liaison.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Afficheurs de variateur verticaux repris à la place des écrans tactiles horizontaux génériques."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS46A",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts46a .pdf p1",
+    "facadeSource": "Ts46a .pdf p1, p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : 3 colonnes, départs derrière vitre (étiquettes non visibles), voyants et arrêt d’urgence en colonne 2.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS46B",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ts46b.pdf p1",
+    "facadeSource": "Ts46b.pdf p1, p2, p6",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : plaque constructeur lue (Okken, 400 V, IT 3P+N, 50 kA), départs derrière vitre, voyants ouvert / fermé / défaut et arrêt d’urgence.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "OM27",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tableau OM 27 .pdf p1",
+    "facadeSource": "Tableau OM 27 .pdf p1",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : armoire 2 portes fermées sans appareil en façade (photo peu nette) ; appareillage intérieur à photographier porte ouverte (hors tension / par personnel habilité).",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "ARM110",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Armoire 110v instrument ampère mètre .pdf p1",
+    "facadeSource": "Armoire 110v instrument ampère mètre .pdf p1",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : plaque jaune et 4 appareils de mesure analogiques.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "VENTIL",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Ventilation FOUR.pdf p1",
+    "facadeSource": "Ventilation FOUR.pdf p1,p2,p4-p6 ; coffrets distincts p3",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Ventilation FOUR.pdf p1,p2,p4-p6 : armoire principale à deux rangées de cinq groupes de trois organes lumineux, arrêt d’urgence central et poignée. Les deux coffrets muraux de p3 sont distincts et restent visibles en source ; aucune fonction attribuée aux voyants sans plaque.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Ventilation FOUR.pdf p1,p2,p4-p6 : armoire principale à deux rangées de cinq groupes de trois organes lumineux, arrêt d’urgence central et poignée. Les deux coffrets muraux de p3 sont distincts et restent visibles en source ; aucune fonction attribuée aux voyants sans plaque."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "DECARBO",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Decarbo .pdf p2",
+    "facadeSource": "Decarbo .pdf p1, p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Decarbo.pdf p1 et p2 montrent deux armoires différentes. Vues séparées, sans prétendre deux portes contiguës ni une liaison entre les deux.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Decarbo.pdf p1 et p2 montrent deux armoires différentes. Vues séparées, sans prétendre deux portes contiguës ni une liaison entre les deux."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "GORGE",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Gorge .pdf p1",
+    "facadeSource": "Gorge.zip / IMG_4241, IMG_4244.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Éléments visibles uniquement ; proportions schématiques. Aucun circuit intérieur, réglage ou fonctionnement déduit des voyants photographiés.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Afficheurs compacts repris ; aucune affectation électrique nouvelle."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "GRADATHYR",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "GRADATHYR.pdf p1",
+    "facadeSource": "GRADATHYR.pdf p1-p5",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo à pleine résolution : armoires « GRADATHYR ZONE N°1 - GORGE » et « ZONE N°2 - GORGE » lues ; troisième armoire (p5, sombre) non lue.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Afficheurs compacts repris ; aucune affectation électrique nouvelle."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "VARIVOLT",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Varivolt1 et 2 .pdf p1",
+    "facadeSource": "Varivolt.zip / IMG_4221, IMG_4228.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Éléments visibles uniquement ; proportions schématiques. Aucun circuit intérieur, réglage ou fonctionnement déduit des voyants photographiés.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "OND1",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Onduleur 1 .pdf p1",
+    "facadeSource": "Onduleur 1 .pdf",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : armoire Schneider Electric Galaxy PW 2nd Gen (bandeau vert, écran, grilles basses).",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Bandeau vert Schneider et afficheur compact repris depuis la photographie Galaxy PW."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "OND2",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Onduleur 2 .pdf p1",
+    "facadeSource": "Onduleur 2 .pdf",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : armoire Schneider Electric Galaxy PW 2nd Gen (bandeau vert, écran, grilles basses).",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Bandeau vert Schneider et afficheur compact repris depuis la photographie Galaxy PW."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND1",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Batterie condensateur tr1a et 1b .pdf p1",
+    "facadeSource": "Batterie condensateur tr1a et 1b .pdf p1-p3",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo — armoires VarSet Schneider Electric ; Plaques lues à pleine résolution.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND2A",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Batterie condensateur tr2a .pdf p1",
+    "facadeSource": "Batterie condensateur tr2a .pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND2B",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur tr2b .pdf p1",
+    "facadeSource": "Condensateur tr2b .pdf p1",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND3",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur tgbt 3.pdf p1",
+    "facadeSource": "Condensateur tgbt 3.pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo — armoires VarSet Schneider Electric ; Armoires VarSet sans plaque lisible.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND4",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condesanteur tr4b et 4 a .pdf p1",
+    "facadeSource": "Condesanteur tr4b et 4 a .pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Condesanteur tr4b et 4 a.pdf : deux ensembles à deux portes asymétriques. Quatre portes représentées ; pas de liaison ajoutée entre ensembles.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Condesanteur tr4b et 4 a.pdf : deux ensembles à deux portes asymétriques. Quatre portes représentées ; pas de liaison ajoutée entre ensembles."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND5A",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur tr 5a.pdf p1",
+    "facadeSource": "Condensateur tr 5a.pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND5B",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur 5b.pdf p1",
+    "facadeSource": "Condensateur 5b.pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Photo PDF : armoire ancienne à capot grillagé supérieur et grille basse. Fausses grilles intermédiaires et poignée centrale retirées."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND6A",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur 6a.pdf p1",
+    "facadeSource": "Condensateur 6a.pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Condensateur 6a.pdf p1 : deux portes blanches, régulateur à gauche ; aucune grille visible en façade. Grilles génériques retirées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Condensateur 6a.pdf p1 : deux portes blanches, régulateur à gauche ; aucune grille visible en façade. Grilles génériques retirées."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND6B",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur 6b .pdf p1",
+    "facadeSource": "Condensateur 6b .pdf p1",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Photo PDF propre à cette batterie : deux portes asymétriques, régulateur à gauche ; ventilations en partie basse. Référence et équipements intérieurs non déduits des portes."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND7",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Batterie condensateur tgbt7a et 7b.pdf p1",
+    "facadeSource": "Batterie condensateur tgbt7a et 7b.pdf p1-p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo — armoires VarSet Schneider Electric ; Plaques non lisibles.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Ventilation : deux petites grilles basses par porte ; trois grilles intermédiaires génériques retirées."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COND9",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Condensateur tgbt 9a et 9b .pdf p1",
+    "facadeSource": "Condensateur tgbt 9a et 9b .pdf p1-p4",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo — armoires VarSet Schneider Electric ; Plaques blanches non lisibles.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [
+      "Ventilation : deux petites grilles basses par porte ; trois grilles intermédiaires génériques retirées."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "AUX7B",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "24 V et 230 V tr7b.pdf p1",
+    "facadeSource": "24 V et 230 V tr7b.pdf p1",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo : coffret mural blanc, arrêt d’urgence en façade.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "PL20",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "work\\pl-4381.jpg",
+    "facadeSource": "photo.zip / IMG_4334 à IMG_4381",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Façade dédiée relevée sur photos : huit fonctions EDF / CNR, caissons hauts, relais, commandes et coffrets saillants. Proportions indicatives ; dimensions non mesurées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "SS1_20",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tableau 20kv SS1.pdf p1",
+    "facadeSource": "Tableau 20kv edf cnr .pdf p1-p24 + Départ 20kv edf cnr.pdf p1-p21",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Reconstruction cellule par cellule sur photos (18 cellules) : plaques rouges, bandeaux blancs / crème / liseré vert (cellules Schneider récentes TR 1A et TR 2A), relais Easergy, indicateurs de présence tension, voyants, cadenas jaunes, boîtes à clés. Côté A, les plaques donnent TR 2A puis TR 1A contre l’arrivée secours EDF (ordre symétrique du côté B : arrivée CNR, TR 1B, TR 2B…).",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "SS2_20",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tableau 20kv     SS1.pdf p12",
+    "facadeSource": "Tableau 20kv SS1.pdf p1-p16 · Tableau 20kv   SS1.pdf p1-p10 · Tableau 20kv     SS1.pdf p12-p24",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Reconstruction cellule par cellule sur photos (19 cellules), dans l’ordre de l’unifilaire (confirmé par les plaques) : plaques noires gravées, bandeaux blancs / crème / liseré vert (cellules Schneider récentes : hydrogène, Varivolt zones 1 et 2).",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "KV6",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Tableau 6kv.pdf p1",
+    "facadeSource": "Tableau 6kv.pdf p1-p13",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Reconstruction sur photos (cellules Schneider SM6, plaques noires) dans l’ordre vu de face : groupes Spang, arrivée transfo boosting A, « TABLEAU 6 KV », couplage boosting A/B, arrivée transfo boosting B, groupes Spang L6, L5, L4. Plaques des groupes côté A illisibles (L1 à L3 placés selon l’unifilaire, positions estimées).",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "ALIMOND1",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Alim onduleur 1 .pdf p1",
+    "facadeSource": "Alim onduleur 1 .pdf p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo à pleine résolution : plaques vertes lues ; disposition verticale estimée.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "ALIMOND2",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "Alimentation onduleur 2.pdf p1",
+    "facadeSource": "Alimentation onduleur 2.pdf p2",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Relevé photo à pleine résolution : plaques vertes lues ; disposition verticale estimée.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COFOND1",
+    "date": "2026-10-16",
+    "level": "schema",
+    "label": "Schéma documentaire — implantation non vérifiée",
+    "source": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "facadeSource": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Schéma fonctionnel documentaire. Les colonnes sont une mise en page de la liste des appareils, pas des colonnes physiques. Dimensions, positions et commandes non relevées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "COFOND2",
+    "date": "2026-10-16",
+    "level": "schema",
+    "label": "Schéma documentaire — implantation non vérifiée",
+    "source": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "facadeSource": "Modèle existant : classeur / documents référencés dans chaque appareil",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Schéma fonctionnel documentaire. Les colonnes sont une mise en page de la liste des appareils, pas des colonnes physiques. Dimensions, positions et commandes non relevées.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS33",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Tableau filie╠Çre/IMG_4538.heic",
+    "facadeSource": "photo.zip / IMG_4538.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "La plaque photographiée mentionne TGBT4 ; les deux classeurs placent ce départ sur TGBT5 (D0070). Origine contradictoire : aucune nouvelle liaison électrique ajoutée."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS34",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Tableau filie╠Çre/IMG_4544.heic",
+    "facadeSource": "photo.zip / IMG_4544.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Contradictions de sources présentes : alimentation à arbitrer.",
+    "findings": [
+      "La plaque photographiée mentionne TGBT4 ; les deux classeurs placent ce départ sur TGBT5 (D0069). Origine contradictoire : aucune nouvelle liaison électrique ajoutée."
+    ],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS37",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Tableau filie╠Çre/IMG_4555.heic",
+    "facadeSource": "photo.zip / IMG_4555.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS45",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Tableau filie╠Çre/IMG_4572.heic",
+    "facadeSource": "photo.zip / IMG_4572.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS47",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo/Ts28/Tableau filie╠Çre/IMG_4549.heic",
+    "facadeSource": "photo.zip / IMG_4549.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "comparaison du rendu aux vues représentatives"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  },
+  {
+    "id": "TS40",
+    "date": "2026-10-16",
+    "level": "partiel",
+    "label": "Comparaison extérieure partielle — détails non certifiés",
+    "source": "photo.zip / IMG_4501.heic",
+    "facadeSource": "photo.zip / IMG_4501.heic",
+    "checked": [
+      "liens SVG vers appareils du même équipement",
+      "références de nœuds et de tableaux",
+      "présence des sources et limites",
+      "absence de vue physique attribuée dans ce contrôle"
+    ],
+    "identity": "Repère documentaire conservé ; les petites plaques ne sont pas toutes relues.",
+    "facade": "Vue partielle : arrivée et informations de plaque. Les modules aval ne sont pas positionnés sans relevé complet. Aucune connexion ajoutée à la simulation.",
+    "locations": "0 départ(s) sans emplacement physique attribué ; consulter la liste Départs.",
+    "network": "Modèle documentaire conservé ; aucun suivi physique de câble réalisé.",
+    "findings": [],
+    "unlocatedNodes": [],
+    "browser": "Navigation réelle et tactile non vérifiés dans cet environnement."
+  }
+]

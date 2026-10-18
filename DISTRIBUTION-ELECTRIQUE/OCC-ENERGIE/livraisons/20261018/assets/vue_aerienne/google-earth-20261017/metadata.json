@@ -1,0 +1,157 @@
+{
+  "source": "Google Earth web — Airbus",
+  "imageDate": "2026-04-16",
+  "capturedOn": "2026-10-17",
+  "width": 2480,
+  "height": 1420,
+  "method": "Neuf captures détaillées de la vue 2D, assemblage par translation, recadrage rectangulaire. Aucun agrandissement des pixels.",
+  "registration": "Recalage affine indicatif sur neuf repères visuels IGN/Google.",
+  "controlErrorMaxAt1000px": 11.235651645952759,
+  "controlsOld": [
+    [
+      63.0,
+      69.0
+    ],
+    [
+      369.0,
+      614.0
+    ],
+    [
+      128.0,
+      548.0
+    ],
+    [
+      128.0,
+      263.0
+    ],
+    [
+      284.0,
+      275.0
+    ],
+    [
+      888.0,
+      250.0
+    ],
+    [
+      490.0,
+      220.0
+    ],
+    [
+      622.0,
+      35.0
+    ],
+    [
+      841.0,
+      74.0
+    ]
+  ],
+  "controlsGoogle": [
+    [
+      199.0,
+      162.0
+    ],
+    [
+      410.0,
+      544.0
+    ],
+    [
+      244.0,
+      498.0
+    ],
+    [
+      245.0,
+      304.0
+    ],
+    [
+      350.0,
+      312.0
+    ],
+    [
+      751.0,
+      299.0
+    ],
+    [
+      495.0,
+      278.0
+    ],
+    [
+      586.0,
+      156.0
+    ],
+    [
+      736.0,
+      184.0
+    ]
+  ],
+  "affine": [
+    [
+      0.6783577883641916,
+      0.014828052994230576
+    ],
+    [
+      -0.006555687052647308,
+      0.684796544281258
+    ],
+    [
+      160.5349451296614,
+      119.17314977340067
+    ]
+  ],
+  "crop": [
+    260,
+    80,
+    2740,
+    1500
+  ],
+  "earthPro": "Installation signalée terminée par l’utilisateur ; application et export Pro non retrouvés par les outils. Image livrée issue de Google Earth web.",
+  "files": [
+    {
+      "file": "capture-bas.jpg",
+      "sha256": "5d3cb07bfaf950e38d9c8b188d372ca5e48485ce516276a8c05d094b0f415bf7"
+    },
+    {
+      "file": "capture-centre.jpg",
+      "sha256": "2b5c2b57cd543367a900b555cbd5410807db73618c35189cf34f552f1621b074"
+    },
+    {
+      "file": "capture-credits.jpg",
+      "sha256": "8d5f6f9c5fb9aadba13a9c84bf702a7f42c61dee07657ab22e7d6a1076abba5f"
+    },
+    {
+      "file": "capture-droite-bas.jpg",
+      "sha256": "534f4f3eacc6531ee4a406a537618fef962cf2f20f9009b1d36042d68865ba8e"
+    },
+    {
+      "file": "capture-droite-centre.jpg",
+      "sha256": "b60900c954cbdf6633383d5c7a0e92cda1da91bcdbdd65e7db9dc6ebd8526cc9"
+    },
+    {
+      "file": "capture-droite-haut.jpg",
+      "sha256": "87ca76072e5d12a2e30037ff084f76ce6b86045e501a7cc5b431cea26725dacc"
+    },
+    {
+      "file": "capture-gauche-bas.jpg",
+      "sha256": "a6a0483e845400e425e159ccdaa2196fc697206527a8cf2ae1ce983fc76fa480"
+    },
+    {
+      "file": "capture-gauche-centre.jpg",
+      "sha256": "6046f729921d568c6f130db26664a2eedd312b61d3d013e096ca7c23978c36ce"
+    },
+    {
+      "file": "capture-gauche-haut.jpg",
+      "sha256": "5cd1257539099a0dcbff00165329b3581566b888fd9ba9b9d3d5fa00304cfc8b"
+    },
+    {
+      "file": "capture-haut.jpg",
+      "sha256": "c9d9562e34e88e167a837cfb3c7c5c073cdf0ccfdae900a9f891ad22a5ba75e4"
+    },
+    {
+      "file": "usine-google-earth.png",
+      "sha256": "e72dd874e059d73f1570cee27cac021ef21ca62adfa760120057663219d31607"
+    },
+    {
+      "file": "usine-google-earth.webp",
+      "sha256": "c1e5965d027e35a055544cbc43b4e339f18f5284164a36e2000874b3e853987e"
+    }
+  ]
+}

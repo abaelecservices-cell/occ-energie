@@ -1,0 +1,34 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),read=name=>fs.readFileSync(path.join(root,name),'utf8');
+const html=read('OCC_ENERGIE.html');
+const data=JSON.parse(html.match(/window\.OCC_DATA=([\s\S]*?);<\/script>/)[1]);
+const elements={};
+const document={querySelector:selector=>elements[selector]||={innerHTML:''},querySelectorAll:()=>[]};
+const ctx=vm.createContext({window:{OCC_DATA:data},localStorage:{getItem:()=>null},document});
+vm.runInContext(read('src/app.js').split('/* ======================================================================= démarrage */')[0],ctx);
+for(const file of ['project-import.js','document-evidence.js','equipment-audit.js','plans.js','manoeuvres.js','arbre.js','arbre-info.js','fiche.js'])vm.runInContext(read('src/'+file),ctx);
+const run=code=>vm.runInContext(code,ctx);
+const forbidPhotos=markup=>assert.ok(!/(?:href|src)="[^"]*(?:PHOTOS-|PHOTOTHEQUE|COMPARAISON-PHOTOS|photos-module|sources\/documents|\.jpe?g|\.webp|\.png)/i.test(markup));
+const tree=run('arbreHTML()');
+forbidPhotos(tree);assert.ok(!/<img\b|<image\b/i.test(tree));
+for(const id of ['TGBT7','TGBT8'])assert.ok(tree.includes(`data-go="#/b/${id}"`));
+assert.ok(tree.includes('Sous/satation n°2')&&tree.includes('Boosting Four 1 Sous/Station 2'));
+assert.ok(tree.includes('Repères du classeur')&&tree.includes('raccordement à confirmer'));
+assert.ok(read('src/arbre.js').includes('b.crossEvidence, b.projectImport'));
+run('vReg()');forbidPhotos(elements['#view'].innerHTML);
+assert.ok(!elements['#view'].innerHTML.includes('id="phdir"'));
+run('vFiche("TGBT8")');forbidPhotos(elements['#view'].innerHTML);
+assert.ok(elements['#view'].innerHTML.includes('Boosting Four 1 Sous/Station 2'));
+for(const board of data.boards){
+ const links=run(`photoLinks(BOARD[${JSON.stringify(board.id)}].photos)`);forbidPhotos(links);
+ const svg=read('docs/facades-vectors/'+board.id+'.svg');
+ assert.ok(svg.includes('<svg'));assert.ok(!/<image\b|<foreignObject\b|data:image\/(?:png|jpeg|webp)/i.test(svg),board.id);
+}
+const catalog=read('docs/COMPLEMENTS-20261018.html');
+forbidPhotos(catalog);assert.ok(!/<img\b|<image\b/i.test(catalog));
+assert.equal((catalog.match(/type="image\/svg\+xml"/g)||[]).length,68);
+assert.ok(data.projectImport.vectorOnly);
+const before=JSON.parse(read('sources/projects/20261018/OCC_ENERGIE-avant-affichage-vectoriel.html').match(/window\.OCC_DATA=([\s\S]*?);<\/script>/)[1]);
+for(const key of ['site','nodes','edges','facades','procs','validations'])assert.deepEqual(data[key],before[key]);
+const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];new vm.Script(scripts.at(-1)[1]);
+console.log('PASS vectoriel : 68 SVG purs, aucune galerie accessible depuis les vues opérationnelles, repères intégrés à l’arbre et aux fiches, fond usine et réseau préservés.');

@@ -1,0 +1,10 @@
+{
+  "_lisezmoi": "Registre de validation des fiches de dépannage. Une fiche n'apparaît « Validée » dans l'application que si elle est inscrite ici après signature par le chargé d'exploitation, pour CET équipement et CETTE version : clé = référence imprimée sur la fiche (ex. S1:D0107, S2:TGBT6:A, S2R:TGBT6:A), champ « empreinte » = empreinte imprimée sur la fiche signée (8 caractères). Si la fiche change ensuite, elle s'affiche « validation caduque » jusqu'à une nouvelle validation. Exemple : \"S2:TGBT6:A\": {\"par\": \"Nom Prénom\", \"fonction\": \"Chargé d'exploitation\", \"date\": \"2026-10-15\", \"empreinte\": \"dfe74c51\", \"note\": \"\"}. Après modification, relancer : py -3 -I tools/build_app.py",
+  "_exemple_non_actif": {
+    "par": "Nom Prénom",
+    "fonction": "Chargé d'exploitation électrique",
+    "date": "AAAA-MM-JJ",
+    "empreinte": "00000000",
+    "note": ""
+  }
+}

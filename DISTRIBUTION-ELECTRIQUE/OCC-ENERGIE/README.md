@@ -1,5 +1,7 @@
 # OCC ÉNERGIE — Cartographie du réseau électrique
 
+> **Livraison locale publiée — 18/10/2026 :** [ouvrir le dossier de la version vectorielle et de son arborescence](livraisons/20261018/README.md), puis `livraisons/20261018/OCC_ENERGIE.html`. Cette livraison conserve le modèle consolidé ci-dessous dans son intégralité ; son intégration à la racine n’est pas une fusion implicite des deux modèles.
+
 > **Contrôle des photos déjà transmises (16/10/2026) :** consulter en priorité [le registre de réception vérifié](docs/16_REGISTRE_SOURCES_VERIFIEES_20261016.md) avant toute demande de nouveau relevé. Les anciennes listes de « photos manquantes » décrivent parfois seulement l'absence des originaux dans GitHub, **pas l'absence d'envoi par l'exploitant**. Corriger l'inversion vérifiée des séries TS1 / TS8 dans les livrables de photothèque avant toute qualification visuelle.
 
 Application autonome (un seul fichier) de cartographie, de dépannage, d’entretien et d’aide à la compréhension des manœuvres de la distribution électrique de l’usine.

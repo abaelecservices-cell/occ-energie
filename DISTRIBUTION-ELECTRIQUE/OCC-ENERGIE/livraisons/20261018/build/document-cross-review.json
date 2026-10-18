@@ -1,0 +1,2710 @@
+{
+  "date": "2026-10-16",
+  "xlsmReferencesChecked": 371,
+  "xlsmDifferences": 0,
+  "catalog": [
+    {
+      "name": "24 V et 230 V tr7b.pdf",
+      "sha256": "e70beaeecbffa8a99f3493a57417efd662f9433ed62ede9eb6c182f7357e7930",
+      "pages": 1,
+      "bytes": 3155799,
+      "href": "sources/documents/e70beaeecbff.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\24 V et 230 V tr7b.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\24 V et 230 V tr7b.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "AUX7B"
+      ]
+    },
+    {
+      "name": "Alim onduleur 1 .pdf",
+      "sha256": "ccf838e70c8837c0a1a9ed9e777d135227b77ba6dc82d624ccf56c7541b61e0e",
+      "pages": 3,
+      "bytes": 10783905,
+      "href": "sources/documents/ccf838e70c88.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Alim onduleur 1 .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Alim onduleur 1 .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "ALIMOND1"
+      ]
+    },
+    {
+      "name": "Alimentation onduleur 2.pdf",
+      "sha256": "64604b6368e3f216680979319ec7bfe00735c2c1e6a88c72d824f9409a22fce2",
+      "pages": 4,
+      "bytes": 15249328,
+      "href": "sources/documents/64604b6368e3.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Alimentation onduleur 2.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Alimentation onduleur 2.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "ALIMOND2"
+      ]
+    },
+    {
+      "name": "Armoire 110v instrument ampère mètre .pdf",
+      "sha256": "aa9ceed7b7f7f89b94547c13cfa90ca9e6e919a48467032857ee9315046de81b",
+      "pages": 1,
+      "bytes": 2148595,
+      "href": "sources/documents/aa9ceed7b7f7.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Armoire 110v instrument ampère mètre .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Armoire 110v instrument ampère mètre .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "ARM110"
+      ]
+    },
+    {
+      "name": "Armoire éclairage .pdf",
+      "sha256": "38d5a0a0b172d7957076036fc5b33bbf23bd9395a5dcc68c9d19070b1bbd265a",
+      "pages": 1,
+      "bytes": 3296482,
+      "href": "sources/documents/38d5a0a0b172.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Armoire éclairage .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Armoire éclairage .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "ECLSST1"
+      ]
+    },
+    {
+      "name": "Batterie condensateur tgbt7a et 7b.pdf",
+      "sha256": "6f9e7c51ab798e38d7e8ac016e34e11f3ab71b9210b0fd43dffae6391661ec76",
+      "pages": 2,
+      "bytes": 7317512,
+      "href": "sources/documents/6f9e7c51ab79.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Batterie condensateur tgbt7a et 7b.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Batterie condensateur tgbt7a et 7b.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND7"
+      ]
+    },
+    {
+      "name": "Batterie condensateur tr1a et 1b .pdf",
+      "sha256": "90ca367761abaf01d2818da355d253f18da947940158767eadd2dbc66d392699",
+      "pages": 3,
+      "bytes": 4689835,
+      "href": "sources/documents/90ca367761ab.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Batterie condensateur tr1a et 1b .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Batterie condensateur tr1a et 1b .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND1"
+      ]
+    },
+    {
+      "name": "Batterie condensateur tr2a .pdf",
+      "sha256": "11feb5454411eeff182a100e9cc70dd4ce6dd2cad366a41ec5327ee7095f64f4",
+      "pages": 2,
+      "bytes": 3957199,
+      "href": "sources/documents/11feb5454411.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Batterie condensateur tr2a .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Batterie condensateur tr2a .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND2A"
+      ]
+    },
+    {
+      "name": "Bronzini .pdf",
+      "sha256": "c7d9524495decf1f4e328e62b8451ae4b0f8fd4eb536038a00ed0e76ff0c4f18",
+      "pages": 3,
+      "bytes": 10702138,
+      "href": "sources/documents/c7d9524495de.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Bronzini .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Bronzini .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "BRONZINI"
+      ]
+    },
+    {
+      "name": "Condensateur 5b.pdf",
+      "sha256": "1c7c940be37d59569259ad87d3a98166831b8fc86d61a28774f2fef005dd9375",
+      "pages": 2,
+      "bytes": 2462440,
+      "href": "sources/documents/1c7c940be37d.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur 5b.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur 5b.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND5B"
+      ]
+    },
+    {
+      "name": "Condensateur 6a.pdf",
+      "sha256": "46f51ccba4567eb821f30d03195b92a1875fc84b759165c7c8050ef90ef8a88a",
+      "pages": 2,
+      "bytes": 1857536,
+      "href": "sources/documents/46f51ccba456.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur 6a.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur 6a.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND6A"
+      ]
+    },
+    {
+      "name": "Condensateur 6b .pdf",
+      "sha256": "17ece2ddb8cbe4075485a2a342fcbdd3c15c32fa4e83e8a3421ab333311024ab",
+      "pages": 1,
+      "bytes": 1612256,
+      "href": "sources/documents/17ece2ddb8cb.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur 6b .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur 6b .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND6B"
+      ]
+    },
+    {
+      "name": "Condensateur tgbt 3.pdf",
+      "sha256": "2c62586af7fe17f26a3a3320bcb73ec0e09bf3e937d828883f689704219ae509",
+      "pages": 2,
+      "bytes": 6299804,
+      "href": "sources/documents/2c62586af7fe.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur tgbt 3.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur tgbt 3.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND3"
+      ]
+    },
+    {
+      "name": "Condensateur tgbt 9a et 9b .pdf",
+      "sha256": "0b59936b2391c94dcf5393adfa2e4e4e035ff56db9e7c5e6f91cfd45b1faa3a1",
+      "pages": 4,
+      "bytes": 10623687,
+      "href": "sources/documents/0b59936b2391.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur tgbt 9a et 9b .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur tgbt 9a et 9b .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND9"
+      ]
+    },
+    {
+      "name": "Condensateur tr 5a.pdf",
+      "sha256": "685a54ef27546dae34ddc5fbdd47bd9944dbbb53cce2d7d2058452aaf267d2d9",
+      "pages": 2,
+      "bytes": 2614240,
+      "href": "sources/documents/685a54ef2754.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur tr 5a.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur tr 5a.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND5A"
+      ]
+    },
+    {
+      "name": "Condensateur tr2b .pdf",
+      "sha256": "894e85ad27387377de1f2946268b82e6d27b36ef557dcddfb91760c76ae78447",
+      "pages": 1,
+      "bytes": 1236994,
+      "href": "sources/documents/894e85ad2738.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condensateur tr2b .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condensateur tr2b .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND2B"
+      ]
+    },
+    {
+      "name": "Condesanteur tr4b et 4 a .pdf",
+      "sha256": "1f715783dbcdf796929729ef6c56b6a25aa05c17ffad1de6485eb4506edd1979",
+      "pages": 2,
+      "bytes": 4004810,
+      "href": "sources/documents/1f715783dbcd.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Condesanteur tr4b et 4 a .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Condesanteur tr4b et 4 a .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "COND4"
+      ]
+    },
+    {
+      "name": "Decarbo .pdf",
+      "sha256": "d2f82864de3be0052ebc25bcd71f9cf3f21de51b6382a674e980e209d51fc2ab",
+      "pages": 2,
+      "bytes": 4830977,
+      "href": "sources/documents/d2f82864de3b.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Decarbo .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Decarbo .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "DECARBO"
+      ]
+    },
+    {
+      "name": "Départ 20kv edf cnr.pdf",
+      "sha256": "718592d9fc26daee83fa3a64003aef75b6fa69867b4fcf02097eb066053ea95a",
+      "pages": 21,
+      "bytes": 88927158,
+      "href": "sources/documents/718592d9fc26.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Départ 20kv edf cnr.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Départ 20kv edf cnr.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "PL20"
+      ]
+    },
+    {
+      "name": "Gorge .pdf",
+      "sha256": "038d7587f1719ff238473163aa012bb46227c070ef4b82f765ed17f9507ace4a",
+      "pages": 15,
+      "bytes": 51582996,
+      "href": "sources/documents/038d7587f171.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Gorge .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Gorge .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "GORGE"
+      ]
+    },
+    {
+      "name": "GRADATHYR.pdf",
+      "sha256": "a7205b77df6633acc2e9e40ff2c4ea531dd779794e927f014931cddaaa63205e",
+      "pages": 5,
+      "bytes": 23760997,
+      "href": "sources/documents/a7205b77df66.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\GRADATHYR.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\GRADATHYR.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "GRADATHYR"
+      ]
+    },
+    {
+      "name": "Onduleur 1 .pdf",
+      "sha256": "fadbd63f20d345f502d3db318fbc062699b9a4597e9c0658c78d21739eb5afd5",
+      "pages": 2,
+      "bytes": 5761872,
+      "href": "sources/documents/fadbd63f20d3.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Onduleur 1 .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Onduleur 1 .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "OND1"
+      ]
+    },
+    {
+      "name": "Onduleur 2 .pdf",
+      "sha256": "3a4596ef085f05e0c3fd1cf8bb2b16fe914523278cdef2f82e8651e11aff50d3",
+      "pages": 1,
+      "bytes": 1846830,
+      "href": "sources/documents/3a4596ef085f.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Onduleur 2 .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Onduleur 2 .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "OND2"
+      ]
+    },
+    {
+      "name": "Pompe eau glace 7pm 65 et 7Pm03.pdf",
+      "sha256": "73bae551a8dc25adf789abd4ab6e1d40a080a1ee3b3d63af2978669ecc4dbd80",
+      "pages": 3,
+      "bytes": 9126417,
+      "href": "sources/documents/73bae551a8dc.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Pompe eau glace 7pm 65 et 7Pm03.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Pompe eau glace 7pm 65 et 7Pm03.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "PEG",
+        "TS44"
+      ]
+    },
+    {
+      "name": "schema unifilaire 20 KV derniere version.pdf",
+      "sha256": "14ee0f2214dd82b1da2352426dc91e77f826f046cff489aa0c91d74d5182a761",
+      "pages": 1,
+      "bytes": 535058,
+      "href": "sources/documents/14ee0f2214dd.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\schema unifilaire 20 KV derniere version.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\schema unifilaire 20 KV derniere version.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "PL20",
+        "SS1_20",
+        "SS2_20",
+        "KV6"
+      ]
+    },
+    {
+      "name": "Tableau 20kv     SS1.pdf",
+      "sha256": "d9c9e35bd4005b7ca65ccfe8e080d990e2d69044cc4fad73803e594c6eab2a03",
+      "pages": 24,
+      "bytes": 101463318,
+      "href": "sources/documents/d9c9e35bd400.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tableau 20kv     SS1.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tableau 20kv     SS1.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT8",
+        "SS2_20"
+      ]
+    },
+    {
+      "name": "Tableau 20kv   SS1.pdf",
+      "sha256": "0d26772b954e5b61e043887b5c3e6f6370ea340f882362795534d7ac9f64f513",
+      "pages": 10,
+      "bytes": 40773998,
+      "href": "sources/documents/0d26772b954e.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tableau 20kv   SS1.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tableau 20kv   SS1.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "SS1_20"
+      ]
+    },
+    {
+      "name": "Tableau 20kv edf cnr .pdf",
+      "sha256": "907e2878185dd77da4e2291c86d4e3d3d0b04ddb8f83b7e667bd2053a559e8c2",
+      "pages": 24,
+      "bytes": 86418887,
+      "href": "sources/documents/907e2878185d.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tableau 20kv edf cnr .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tableau 20kv edf cnr .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "PL20"
+      ]
+    },
+    {
+      "name": "Tableau 20kv SS1.pdf",
+      "sha256": "d339dfe0faed265ea49d930680435e9a8fbab3b8c14ee9ddfbcff751b95aa933",
+      "pages": 16,
+      "bytes": 56491536,
+      "href": "sources/documents/d339dfe0faed.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tableau 20kv SS1.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tableau 20kv SS1.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "SS1_20"
+      ]
+    },
+    {
+      "name": "Tableau 6kv.pdf",
+      "sha256": "7112b3b451579850d502102d74deb9c60c8075caf8e0610e1255e1377b54dec3",
+      "pages": 13,
+      "bytes": 49224096,
+      "href": "sources/documents/7112b3b45157.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tableau 6kv.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tableau 6kv.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "KV6"
+      ]
+    },
+    {
+      "name": "Tableau OM 27 .pdf",
+      "sha256": "3255b47427d379a9aec94fd3ce24fdc08953d2ffda0090df27deb9be8648d574",
+      "pages": 1,
+      "bytes": 1539720,
+      "href": "sources/documents/3255b47427d3.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tableau OM 27 .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tableau OM 27 .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "OM27"
+      ]
+    },
+    {
+      "name": "Tgbt 1.pdf",
+      "sha256": "4ae33b015a0041d397363a67fe4f17b5df77c67da749b89773c09dcb5a40b1ad",
+      "pages": 13,
+      "bytes": 57923960,
+      "href": "sources/documents/4ae33b015a00.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 1.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 1.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT1"
+      ]
+    },
+    {
+      "name": "Tgbt 2.pdf",
+      "sha256": "ec61e4f21d158ed0230a1b0a7e052a06e2716ffd20873e34192ab3930472cd75",
+      "pages": 11,
+      "bytes": 43909258,
+      "href": "sources/documents/ec61e4f21d15.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 2.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 2.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT2"
+      ]
+    },
+    {
+      "name": "Tgbt 3 (2).pdf",
+      "sha256": "3222c62a2e6230cbaec7aec44feb41d95b1ee6c95b1877767c5264ddb2596c75",
+      "pages": 16,
+      "bytes": 57325723,
+      "href": "sources/documents/3222c62a2e62.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 3 (2).pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 3 (2).pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT3"
+      ]
+    },
+    {
+      "name": "Tgbt 3.pdf",
+      "sha256": "fc120a6ac9d6eda2c520a31a64427645582fd7ac77a03297ad9e5284a5e03594",
+      "pages": 8,
+      "bytes": 28942560,
+      "href": "sources/documents/fc120a6ac9d6.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 3.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 3.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT3"
+      ]
+    },
+    {
+      "name": "Tgbt 4.pdf",
+      "sha256": "288b131e2dfb7ea7f77a405027ea574faf6469d4890caf0b6ed9612894923240",
+      "pages": 12,
+      "bytes": 47845775,
+      "href": "sources/documents/288b131e2dfb.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 4.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 4.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT4"
+      ]
+    },
+    {
+      "name": "Tgbt 5.pdf",
+      "sha256": "c5ee2991b0e9c49476585d4e4b9a718859b420575fadbd99d88fc83a84a39ea0",
+      "pages": 18,
+      "bytes": 61971145,
+      "href": "sources/documents/c5ee2991b0e9.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 5.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 5.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT5"
+      ]
+    },
+    {
+      "name": "Tgbt 6.pdf",
+      "sha256": "add92c7e8248ba666ad40c781a6fb571323532d71be8b774d83a9ea535122f86",
+      "pages": 21,
+      "bytes": 82887287,
+      "href": "sources/documents/add92c7e8248.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 6.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 6.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT6"
+      ]
+    },
+    {
+      "name": "Tgbt 9.pdf",
+      "sha256": "38e0c348a275188336e19bdccd33e49ed5b9f39ca1cced72923dfd8d1b2b791e",
+      "pages": 24,
+      "bytes": 98454251,
+      "href": "sources/documents/38e0c348a275.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tgbt 9.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tgbt 9.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT9"
+      ]
+    },
+    {
+      "name": "Tr7b .pdf",
+      "sha256": "f75dee00567cfef25027c26b5047d9f2cd4b0874fcc412fe72a7b71971c5c771",
+      "pages": 20,
+      "bytes": 71140670,
+      "href": "sources/documents/f75dee00567c.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Tr7b .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Tr7b .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT7"
+      ]
+    },
+    {
+      "name": "Ts 12 .pdf",
+      "sha256": "c05906c49cb6eca65b0c0eb046702bca3ce40802081c3e49a9cd58212ff7eb0f",
+      "pages": 22,
+      "bytes": 72263174,
+      "href": "sources/documents/c05906c49cb6.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts 12 .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts 12 .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS12"
+      ]
+    },
+    {
+      "name": "Ts 44.pdf",
+      "sha256": "2b838d71196805b53f941a5bbd843e88c6cedc3c658da04a30443c8777730593",
+      "pages": 12,
+      "bytes": 46563370,
+      "href": "sources/documents/2b838d711968.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts 44.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts 44.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS44"
+      ]
+    },
+    {
+      "name": "Ts 7.pdf",
+      "sha256": "de6fb53e17f13463595b752b0c9398d20fc9d110726abe468a428ce2d77cd7ef",
+      "pages": 11,
+      "bytes": 35773846,
+      "href": "sources/documents/de6fb53e17f1.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts 7.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts 7.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS7"
+      ]
+    },
+    {
+      "name": "Ts17A.pdf",
+      "sha256": "63f654f703faa084832c280bfa4312d931ffb4c03877646250c1b4c79b752bfd",
+      "pages": 8,
+      "bytes": 28916687,
+      "href": "sources/documents/63f654f703fa.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts17A.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts17A.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS17"
+      ]
+    },
+    {
+      "name": "Ts17b.pdf",
+      "sha256": "3805b2015714fb3aec2fd8e6000a87fb47dd600845c8fe7b24036b2fa98812d7",
+      "pages": 13,
+      "bytes": 52661727,
+      "href": "sources/documents/3805b2015714.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts17b.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts17b.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS17"
+      ]
+    },
+    {
+      "name": "Ts2.pdf",
+      "sha256": "cf1b964136802020d08a8146009aa375de00f6db915851186734e6e438f9ec05",
+      "pages": 11,
+      "bytes": 33185459,
+      "href": "sources/documents/cf1b96413680.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts2.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts2.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS2"
+      ]
+    },
+    {
+      "name": "Ts46a .pdf",
+      "sha256": "78adb3b07884009d7e627395e0dcfb142fef3ba7a92711ec8c218336d654ddae",
+      "pages": 3,
+      "bytes": 8814958,
+      "href": "sources/documents/78adb3b07884.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts46a .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts46a .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS46A"
+      ]
+    },
+    {
+      "name": "Ts46b.pdf",
+      "sha256": "498d8d84f2fa43d9c670e6f8de1a2e8993d7bf50ee94ac133214104f84e89db7",
+      "pages": 6,
+      "bytes": 19577896,
+      "href": "sources/documents/498d8d84f2fa.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts46b.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts46b.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS46B"
+      ]
+    },
+    {
+      "name": "Ts9.pdf",
+      "sha256": "82e5b5b61a8736353cb7d4c069db5c81fecbf39e91f036cc1d2be49127ebeb14",
+      "pages": 7,
+      "bytes": 29946482,
+      "href": "sources/documents/82e5b5b61a87.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ts9.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ts9.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TS9"
+      ]
+    },
+    {
+      "name": "Varivolt1 et 2 .pdf",
+      "sha256": "4b2248685bd29a751da8fd5fb9cffa2fbfe02f47dd58d2dfb5b0989749491e77",
+      "pages": 2,
+      "bytes": 5001367,
+      "href": "sources/documents/4b2248685bd2.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Varivolt1 et 2 .pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Varivolt1 et 2 .pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "VARIVOLT"
+      ]
+    },
+    {
+      "name": "Ventilation FOUR.pdf",
+      "sha256": "3598c4b7b3f6a14485fe9dbcbf1f886ff155e3719d4122ff3b9a84cde91f4e4b",
+      "pages": 6,
+      "bytes": 16290606,
+      "href": "sources/documents/3598c4b7b3f6.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\Ventilation FOUR.pdf",
+        "C:\\Users\\hugo1\\Downloads\\occ energie\\DISTRIBUTION-ELECTRIQUE\\Plan électrique\\Ventilation FOUR.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "VENTIL"
+      ]
+    },
+    {
+      "name": "Document scanné 12.pdf",
+      "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506",
+      "pages": 12,
+      "bytes": 12873731,
+      "href": "sources/documents/8ac4be1d3b95.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\Downloads\\Document scanné 12.pdf"
+      ],
+      "status": "12 pages lues ; listes transcrites sur fiches et rubriques non rattachées ; contradictions conservées",
+      "boards": [
+        "TGBT1",
+        "TGBT2",
+        "TGBT4",
+        "TGBT5",
+        "TGBT6",
+        "TS7",
+        "TS8",
+        "TS17",
+        "TS40",
+        "PL20"
+      ]
+    },
+    {
+      "name": "26013 nameplate.pdf",
+      "sha256": "07e569d0670d78a21c8c1d9f0366d1b94919f391a6acc557167717d53f1f4ccb",
+      "pages": 1,
+      "bytes": 52311,
+      "href": "sources/documents/07e569d0670d.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/20_VARIVOLT/26013 nameplate.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "VARIVOLT"
+      ]
+    },
+    {
+      "name": "schema DM1 départ varivolt zone 1.pdf",
+      "sha256": "0914d07de46692038e4e6aa77a788df1a16ffc7de86574dfd23949eced53b210",
+      "pages": 42,
+      "bytes": 1131523,
+      "href": "sources/documents/0914d07de466.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/20_VARIVOLT/schema DM1 départ varivolt zone 1.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "VARIVOLT"
+      ]
+    },
+    {
+      "name": "schema DM1 départ varivolt zone 2.pdf",
+      "sha256": "3412844b492d530aceaa21ceb07d034f80d3c5cf720f51411db277d120c5ec13",
+      "pages": 42,
+      "bytes": 1130576,
+      "href": "sources/documents/3412844b492d.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/20_VARIVOLT/schema DM1 départ varivolt zone 2.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "VARIVOLT"
+      ]
+    },
+    {
+      "name": "IPSOS - Procédure RAZ RIELLO MULTI DIALOG MDM-MDT.pdf",
+      "sha256": "f7690610082af265c9ca38a42f48b243f1ee7da2d8cc24a5f97fc2aeaf9ae2a2",
+      "pages": 1,
+      "bytes": 224568,
+      "href": "sources/documents/f7690610082a.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/22_Onduleurs/Master UPS/IPSOS - Procédure RAZ RIELLO MULTI DIALOG MDM-MDT.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "990-91407C_FR.pdf",
+      "sha256": "a3bbba0b068970c0108648b2c74a693d01f569495e3bc0c1f1e38c9d7ebd7f18",
+      "pages": 40,
+      "bytes": 3790988,
+      "href": "sources/documents/a3bbba0b0689.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/22_Onduleurs/Onduleur SStation1/990-91407C_FR.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "OWENS CORNING FIBERGLAS-30  1-3WLKKYG.pdf",
+      "sha256": "048b285aa04dc54c431ea5e4028eef203c67a425181e63383c31b300368bf62d",
+      "pages": 2,
+      "bytes": 399129,
+      "href": "sources/documents/048b285aa04d.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/22_Onduleurs/OWENS CORNING FIBERGLAS-30  1-3WLKKYG.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "Coffret ondulée étuve 1.pdf",
+      "sha256": "d96bc4f551a965aea494106bc89784e0d3bd79a8f6f0a695be9a8b36cfc2b21b",
+      "pages": 6,
+      "bytes": 924475,
+      "href": "sources/documents/d96bc4f551a9.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/22_Onduleurs/plan coffret ondulé étuve  , générateur , baie info hall étuve et travaux neuf/Coffret ondulée étuve 1.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "Coffret ondulée étuve 2.pdf",
+      "sha256": "4d61a3add04315e222f8ffd5abb60897687c33113b2fcef66cc0cb2306fba7fb",
+      "pages": 6,
+      "bytes": 924407,
+      "href": "sources/documents/4d61a3add043.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie (2).zip :: p1 - Copie (2)/22_Onduleurs/plan coffret ondulé étuve  , générateur , baie info hall étuve et travaux neuf/Coffret ondulée étuve 2.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "p46268_00B.pdf",
+      "sha256": "d69797476a6a366581b4c2c7b84e5ea4f9a33b6140ac9a3b03bef6b1022e867a",
+      "pages": 1,
+      "bytes": 329244,
+      "href": "sources/documents/d69797476a6a.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/GAINE A BARRES/p46268_00B.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "p46268_01B.pdf",
+      "sha256": "a0a459ce2d63d36d167136f7851a5dbaa1016989aeabd82a58b405c81a8cf789",
+      "pages": 1,
+      "bytes": 199267,
+      "href": "sources/documents/a0a459ce2d63.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/GAINE A BARRES/p46268_01B.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "p46268_02B.pdf",
+      "sha256": "98fc2dbddda1186051ac7e509343ee1d51986e44c9c931a2d5094a503b8586b6",
+      "pages": 1,
+      "bytes": 366593,
+      "href": "sources/documents/98fc2dbddda1.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/GAINE A BARRES/p46268_02B.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "CX7810_C TQC.PDF",
+      "sha256": "985d23c16df3d015474eea07a5f8a31aa660d3c188b77bb2ff9f1cab3f02c910",
+      "pages": 94,
+      "bytes": 5292696,
+      "href": "sources/documents/985d23c16df3.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TGBT/CX7810_C TQC.PDF"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT3"
+      ]
+    },
+    {
+      "name": "149288_1466597_Declaration of conformity_FR.pdf.pdf",
+      "sha256": "d4c38a2c699668ec1355a73bdb350aa2aebacfcd029b3c769f12746d49e2714e",
+      "pages": 1,
+      "bytes": 175821,
+      "href": "sources/documents/d4c38a2c6996.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR2/149288_1466597_Declaration of conformity_FR.pdf.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "149288_1466597_Plan d'ensemble.pdf.pdf",
+      "sha256": "b880d6e09cd0688dabc9338bf1c54e1395482498885ffc3381aa51f9882f3562",
+      "pages": 4,
+      "bytes": 1649714,
+      "href": "sources/documents/b880d6e09cd0.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR2/149288_1466597_Plan d'ensemble.pdf.pdf",
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR3/149288_1466588_Plan d'ensemble.pdf.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "149288_1466597_Routine Test Report_FR.pdf.pdf",
+      "sha256": "985b9f6fe004384c23714c681e48d1fced1656e44bdca154073a50d445f9f05a",
+      "pages": 1,
+      "bytes": 231835,
+      "href": "sources/documents/985b9f6fe004.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR2/149288_1466597_Routine Test Report_FR.pdf.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "149288_1466597_Schémas câblage.pdf.pdf",
+      "sha256": "b620e26053ccbc1a17b78a0e467bb6c9675749fa11b06d6dd0a40a3b7ce5c7af",
+      "pages": 2,
+      "bytes": 105339,
+      "href": "sources/documents/b620e26053cc.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR2/149288_1466597_Schémas câblage.pdf.pdf",
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR3/149288_1466588_Schémas câblage.pdf.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "149288_1466588_Declaration of conformity_FR.pdf.pdf",
+      "sha256": "9a94c2d09048886f8434f73a8bf59dc0f6b66b0a15863eb391b19f27abd334a1",
+      "pages": 1,
+      "bytes": 175824,
+      "href": "sources/documents/9a94c2d09048.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR3/149288_1466588_Declaration of conformity_FR.pdf.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "149288_1466588_Routine Test Report_FR.pdf.pdf",
+      "sha256": "e54600f9f75a25ec6ef2d93f32fc94354f4ecf98e7f343889538f2cbd72f1eab",
+      "pages": 1,
+      "bytes": 231687,
+      "href": "sources/documents/e54600f9f75a.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/1 - Plan de réalisation TQC/TRANSFORMATEUR/TR3/149288_1466588_Routine Test Report_FR.pdf.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "Verrouillage DJ TR3A.pdf",
+      "sha256": "42e459d1c8ccff2ca3faeff03c2d11f7cda008fa022dbf6aa42779bcd9becdaa",
+      "pages": 1,
+      "bytes": 544638,
+      "href": "sources/documents/42e459d1c8cc.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/3 - Exploitation des verrouillages par serrures/Verrouillage DJ TR3A.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "Verrouillage DJ TR3B.pdf",
+      "sha256": "00579dfe9bd7b24f8df81b6c7c0157e77ef6f444a698f6f230b8e35a8f665009",
+      "pages": 1,
+      "bytes": 304993,
+      "href": "sources/documents/00579dfe9bd7.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1 - Copie.zip :: p1 - Copie/12_TGBT N°3/3 - Exploitation des verrouillages par serrures/Verrouillage DJ TR3B.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "OnSite_TechRpt_WO-12101777_241106-103914.pdf",
+      "sha256": "af10f45e3efb4be4357f30b7fe8a53b9258cb9250a976cf1ecb9dbd332ec7e4d",
+      "pages": 8,
+      "bytes": 428863,
+      "href": "sources/documents/af10f45e3efb.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1.zip :: p1/10_TGBT N°1/OnSite_TechRpt_WO-12101777_241106-103914.pdf"
+      ],
+      "status": "inventorie",
+      "boards": []
+    },
+    {
+      "name": "TGBT1A.pdf",
+      "sha256": "0604b466df17020ac777e755c7461a63c9db1046d99f907cbea6fd4642a6605d",
+      "pages": 28,
+      "bytes": 1868588,
+      "href": "sources/documents/0604b466df17.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1.zip :: p1/10_TGBT N°1/TGBT1A/TGBT1A.pdf",
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1.zip :: p1/10_TGBT N°1/TGBT1A.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT1"
+      ]
+    },
+    {
+      "name": "TH11A-TGBT1B.pdf",
+      "sha256": "45ce9b4363c77eff7215f8eb845e32e57d3269123afea3867f2516b4a1abc29a",
+      "pages": 65,
+      "bytes": 2235601,
+      "href": "sources/documents/45ce9b4363c7.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1.zip :: p1/10_TGBT N°1/TH11A-TGBT1B/TH11A-TGBT1B.pdf",
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1.zip :: p1/10_TGBT N°1/TH11A-TGBT1B.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT1"
+      ]
+    },
+    {
+      "name": "plan mise a jour TGBT N° 2 suite au rajout du départ batiment BRONZINI.pdf",
+      "sha256": "29efe214aa2444b4d5deae34f93f65013b594db17ae57af9b54e5860d1de40d5",
+      "pages": 88,
+      "bytes": 4477402,
+      "href": "sources/documents/29efe214aa24.pdf",
+      "aliases": [
+        "C:\\Users\\hugo1\\AppData\\Local\\Temp\\p1.zip :: p1/11_TGBT N°2/plan mise a jour TGBT N° 2 suite au rajout du départ batiment BRONZINI.pdf"
+      ],
+      "status": "inventorie",
+      "boards": [
+        "TGBT2"
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "id": "TGBT1",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 1.pdf",
+          "href": "sources/documents/4ae33b015a00.pdf",
+          "pages": 13,
+          "sha256": "4ae33b015a0041d397363a67fe4f17b5df77c67da749b89773c09dcb5a40b1ad"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        },
+        {
+          "name": "TGBT1A.pdf",
+          "href": "sources/documents/0604b466df17.pdf",
+          "pages": 28,
+          "sha256": "0604b466df17020ac777e755c7461a63c9db1046d99f907cbea6fd4642a6605d"
+        },
+        {
+          "name": "TH11A-TGBT1B.pdf",
+          "href": "sources/documents/45ce9b4363c7.pdf",
+          "pages": 65,
+          "sha256": "45ce9b4363c77eff7215f8eb845e32e57d3269123afea3867f2516b4a1abc29a"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Les libellés des objets du classeur 2024 sont consultables ci-dessous ; ils sont conservés séparément des repères relevés sur photos.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "source"
+        },
+        {
+          "text": "Case 1-53 : le classeur 2024 indique GROUPE 7H214 ; la fiche issue des photos indique TS46A. Ne pas assimiler les deux équipements.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "conflit"
+        },
+        {
+          "text": "Case 3-72 : EXTENSION ROVING dans le classeur 2024 ; ATELIER AD 502 dans le relevé photo. Case coffret chantier 3-55 dans le classeur, 3-35 sur la fiche photo.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "conflit"
+        }
+      ],
+      "labels2024": [
+        "TGBT n°1 SAP : 98922 + 101152",
+        "COUPLAGE TR 1A - TR 1B CASE 4-28",
+        "PROVIENT TR1A ARRIVEE TGBT 1A CASE 2-28",
+        "CONDENS 1A SST1 CASE 1-72",
+        "GROUPE 7H214 Local FRIGO CASE 1-53",
+        "CONDENS 1B SST1 CASE 5-53",
+        "SECOURS END BUSHING F1 FILAGE F2 CASE 4-53",
+        "COFFRET CHANTIER SST1 3-55",
+        "EXTENSION ROVING ZONE MAT 3-72",
+        "TS 10 ADMINISTRATIF CASE 2-55",
+        "TS 7A FOUR 1 CASE 2-63",
+        "TS 1 ENSIMAGE CASE 2-72",
+        "TS 38 FILIERE 2A12 à 2A19 CASE 4-72",
+        "PROVIENT TR1B ARRIVEE TGBT 1B CASE 5-28",
+        "TS 37 FILIERE 2A02 à 2A09 CASE 6-28",
+        "TS 7B FOUR 1 CASE 7-72",
+        "HVAC F2 LOCAL HVAC SUD 3-63"
+      ],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 1A",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 2"
+        },
+        {
+          "label": "TR1A",
+          "commissioned": "2003",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 3"
+        },
+        {
+          "label": "DJ BT 1A",
+          "commissioned": "2014",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 4"
+        },
+        {
+          "label": "Couplage 1",
+          "commissioned": "2014",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 5"
+        },
+        {
+          "label": "DJ HT 1B",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 6"
+        },
+        {
+          "label": "TR1B",
+          "commissioned": "2004",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 7"
+        },
+        {
+          "label": "DJ BT 1B",
+          "commissioned": "2014",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 8"
+        },
+        {
+          "label": "DJ HT 10A",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 58"
+        },
+        {
+          "label": "TR10A",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 59"
+        },
+        {
+          "label": "DJ BT 10A",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 60"
+        },
+        {
+          "label": "Couplage 10",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 61"
+        },
+        {
+          "label": "DJ HT 10B",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 62"
+        },
+        {
+          "label": "TR10B",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 63"
+        },
+        {
+          "label": "DJ BT 10B",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 64"
+        },
+        {
+          "label": "DJ HT 11A",
+          "commissioned": "20023",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 65"
+        },
+        {
+          "label": "TR11A",
+          "commissioned": "2023",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 66"
+        },
+        {
+          "label": "TR11B",
+          "commissioned": "2023",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 68"
+        }
+      ]
+    },
+    {
+      "id": "TGBT2",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 2.pdf",
+          "href": "sources/documents/ec61e4f21d15.pdf",
+          "pages": 11,
+          "sha256": "ec61e4f21d158ed0230a1b0a7e052a06e2716ffd20873e34192ab3930472cd75"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        },
+        {
+          "name": "plan mise a jour TGBT N° 2 suite au rajout du départ batiment BRONZINI.pdf",
+          "href": "sources/documents/29efe214aa24.pdf",
+          "pages": 88,
+          "sha256": "29efe214aa2444b4d5deae34f93f65013b594db17ae57af9b54e5860d1de40d5"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Les libellés des objets du classeur 2024 sont consultables ci-dessous ; ils sont conservés séparément des repères relevés sur photos.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "source"
+        },
+        {
+          "text": "TS2B : case 6-18 dans le classeur 2024 et dans le plan Bronzini ; ancienne lecture photo 6-28 conservée dans le libellé historique. TS12 Emballage à 6-36 dans le classeur, réserve sur la fiche photo.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "conflit"
+        }
+      ],
+      "labels2024": [
+        "TGBT n°2 SAP : 42930 + 42931",
+        "ETUVE 7 8 9 HALL ETUVE CASE 1-53",
+        "SECOURS END BUSHING F2 FILAGE F2 CASE 1-28",
+        "CONDENS 2A SST1 CASE 1-72",
+        "TS 44A FILAGE F1 CASE 2-18",
+        "TS 2A SST1 CASE 2-36",
+        "PROVIENT TR2A ARRIVEE TGBT 2A CASE 3-28",
+        "COUPLAGE TR 2A - TR 2B CASE 4-53",
+        "PROVIENT TR2B ARRIVEE TGBT 2B CASE 5-28",
+        "TS 2B SST1 CASE 6-18",
+        "TS 12 EMBALLAGE CASE 6-36",
+        "COFFRET PC CHANTIER F1 BOBINAGE F1 CASE 6-43",
+        "TS 44B FILAGE F1 CASE 7-28",
+        "CONDENS 2B SST1 CASE 7-72"
+      ],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 2A",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 9"
+        },
+        {
+          "label": "TR2A",
+          "commissioned": "2003",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 10"
+        },
+        {
+          "label": "DJ BT2A",
+          "commissioned": "2014",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 11"
+        },
+        {
+          "label": "Couplage 2",
+          "commissioned": "2014",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 12"
+        },
+        {
+          "label": "DJ HT 2B",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 13"
+        },
+        {
+          "label": "TR2B",
+          "commissioned": "2006",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 14"
+        },
+        {
+          "label": "DJ BT 2B",
+          "commissioned": "2014",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 15"
+        }
+      ]
+    },
+    {
+      "id": "TGBT4",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 4.pdf",
+          "href": "sources/documents/288b131e2dfb.pdf",
+          "pages": 12,
+          "sha256": "288b131e2dfb7ea7f77a405027ea574faf6469d4890caf0b6ed9612894923240"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Les libellés des objets du classeur 2024 sont consultables ci-dessous ; ils sont conservés séparément des repères relevés sur photos.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "source"
+        },
+        {
+          "text": "Le scan ancien décale les titres : TGBT n°3 pour TR4A/B (p7), TGBT n°4 pour TR5A/B (p9), TGBT n°5 pour TR6A/B (p10). Identification retenue par repères transformateurs et sources plus détaillées, pas par le titre du scan seul.",
+          "source": "Document scanné 12.pdf p7, p9, p10",
+          "kind": "conflit"
+        },
+        {
+          "kind": "conflit",
+          "text": "TS42 : la plaque d’arrivée mentionne TR4A ; le départ D0044 est actuellement classé sur le demi-tableau B dans le modèle issu du classeur. Le côté A/B reste à arbitrer ; aucune bascule de raccordement effectuée.",
+          "source": "photo.zip / TS42 et Copie de Distribution.xlsm / TR 4A & 4B / L7"
+        }
+      ],
+      "labels2024": [
+        "TGBT n°4 SAP : 42933 + 42934",
+        "TS 8 LOCAL FRIGO CASE 1-23",
+        "AUXILIAIRE WUCS PREPOSE BBG CASE 1-32",
+        "TS 24A FOUR 2 CASE 2-10",
+        "COFFRET CHANTIER F2 + PC FOUR 2 FILAGE F2 CASE 2-35",
+        "ETUVE 10 HALL ETUVE CASE 2-42",
+        "PROVIENT TR4A ARRIVEE TGBT 4A CASE 3-28",
+        "CONDENS 4A SST1 CASE 3-53",
+        "TS 42 FILIERE 4A02 à 4A09 CASE 4-28",
+        "COUPLAGE TR 4A - TR 4B CASE 4-53",
+        "TS 43 FILIERE 4A12 à 4A19 CASE 5-28",
+        "CONDENS 4B SST1 CASE 5-53",
+        "PROVIENT TR4B ARRIVEE TGBT 4B CASE 6-28",
+        "END BUSHING F1 FILAGE F2 CASE 6-53",
+        "TS 24B FOUR 2 CASE 7-10",
+        "TS O LABO ANALYSTE CASE 7-23",
+        "ECLAIRAGE SST1 SST1 CASE 7-33"
+      ],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 4A",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 16"
+        },
+        {
+          "label": "TR4A",
+          "commissioned": "2002",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 17"
+        },
+        {
+          "label": "DJ BT 4A",
+          "commissioned": "2004",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 18"
+        },
+        {
+          "label": "DJ HT 4B",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 20"
+        },
+        {
+          "label": "TR4B",
+          "commissioned": "2004",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 21"
+        },
+        {
+          "label": "DJ BT 4B",
+          "commissioned": "2004",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 22"
+        }
+      ]
+    },
+    {
+      "id": "TGBT5",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 5.pdf",
+          "href": "sources/documents/c5ee2991b0e9.pdf",
+          "pages": 18,
+          "sha256": "c5ee2991b0e9c49476585d4e4b9a718859b420575fadbd99d88fc83a84a39ea0"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Les libellés des objets du classeur 2024 sont consultables ci-dessous ; ils sont conservés séparément des repères relevés sur photos.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "source"
+        },
+        {
+          "text": "Case 2A-12 : BY-PASS ONDULEUR 2 dans le classeur 2024 ; LOCAL MOTEUR + REBUILT dans le relevé photo. Affectation non arbitrée.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "conflit"
+        },
+        {
+          "text": "Le scan ancien décale les titres : TGBT n°3 pour TR4A/B (p7), TGBT n°4 pour TR5A/B (p9), TGBT n°5 pour TR6A/B (p10). Identification retenue par repères transformateurs et sources plus détaillées, pas par le titre du scan seul.",
+          "source": "Document scanné 12.pdf p7, p9, p10",
+          "kind": "conflit"
+        }
+      ],
+      "labels2024": [
+        "TGBT n°5 SAP : 42978 + 42979",
+        "ONDULEUR 1 - BY PASS SST1 CASE 2A-6",
+        "ONDULEUR 2 - BY PASS SST1 CASE 2A-12",
+        "ONDULEUR 1 - RESEAU 1 SST1 CASE 2A-18",
+        "CONDENS 5A SST1 CASE 2A-44",
+        "TS 34 FILIERE 1A12 à 1A19 CASE 1A-13",
+        "TS 33 FILIERE 1A02 à 1A09 CASE 1A-26",
+        "PROVIENT TR5A ARRIVEE TGBT 5A CASE A1-16",
+        "COUPLAGE TR 5A - TR 5B CASE 00-16",
+        "PROVIENT TR5B ARRIVEE TGBT 5B CASE A2-16",
+        "TS 36 FILIERE 3A12 à 3A19 CASE 1B-13",
+        "TS 35 FILIERE 3A02 à 3A09 CASE 1B-26",
+        "ZONE ENTREPRISE LOCAL SETTI CASE 2B-12",
+        "ONDULEUR 1 - RESEAU 2 SST1 CASE 2B-18",
+        "CONDENS 5B SST1 CASE 2B-44"
+      ],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 5A",
+          "commissioned": "1998",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 23"
+        },
+        {
+          "label": "TR5A",
+          "commissioned": "1998",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 24"
+        },
+        {
+          "label": "DJ BT 5A",
+          "commissioned": "1998",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 25"
+        },
+        {
+          "label": "Couplage 5",
+          "commissioned": "1998",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 26"
+        },
+        {
+          "label": "DJ HT 5B",
+          "commissioned": "",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 27"
+        },
+        {
+          "label": "TR5B",
+          "commissioned": "2009",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 28"
+        },
+        {
+          "label": "DJ BT 5B",
+          "commissioned": "1998",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 29"
+        }
+      ]
+    },
+    {
+      "id": "TGBT6",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 6.pdf",
+          "href": "sources/documents/add92c7e8248.pdf",
+          "pages": 21,
+          "sha256": "add92c7e8248ba666ad40c781a6fb571323532d71be8b774d83a9ea535122f86"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Les libellés des objets du classeur 2024 sont consultables ci-dessous ; ils sont conservés séparément des repères relevés sur photos.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "source"
+        },
+        {
+          "text": "Case 2A-12 : LOCAL MOTEUR + REBUILT dans le classeur 2024 ; ONDULEUR 2 BY-PASS dans le relevé photo. TS46 à 2B-06 dans le classeur, étiquette effacée dans le relevé photo.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "conflit"
+        },
+        {
+          "text": "TS28 : mention UTILITÉS FOUR 1 dans le classeur 2024, FOUR 2 dans les sources existantes. Les textes originaux sont conservés.",
+          "source": "Distribution électrique 2024.xlsx — objets des onglets TGBT",
+          "kind": "conflit"
+        },
+        {
+          "text": "Le scan ancien décale les titres : TGBT n°3 pour TR4A/B (p7), TGBT n°4 pour TR5A/B (p9), TGBT n°5 pour TR6A/B (p10). Identification retenue par repères transformateurs et sources plus détaillées, pas par le titre du scan seul.",
+          "source": "Document scanné 12.pdf p7, p9, p10",
+          "kind": "conflit"
+        }
+      ],
+      "labels2024": [
+        "TGBT n°6 SAP : 82034 + 82035",
+        "TS 28 UTILITES FOUR 1 FILAGE F2 CASE 2A-06",
+        "LOCAL MOTEUR + REBUILT CASE 2A-12",
+        "ONDULEUR 2 - RESEAU 1 SST1 CASE 2A-18",
+        "ETUVE 2 HALL ETUVE CASE 2A-24",
+        "END BUSHING F2 FILAGE F2 CASE 1A-44",
+        "CONDENS 6A SST1 CASE 2A-44",
+        "PROVIENT TR6A ARRIVEE TGBT 6A CASE A1-12",
+        "COUPLAGE TR 6A - TR 6B CASE 00-12",
+        "PROVIENT TR6B ARRIVEE TGBT 6B CASE A2-12",
+        "HVAC F1 LOCAL HVAC NORD CASE 1B-13",
+        "TS 40 FILAGE CASE 1B-26",
+        "TS 46 ZONE MAT CASE 2B-06",
+        "ONDULEUR 2 - RESEAU 2 SST1 CASE 2B-18",
+        "ETUVE 1 HALL ETUVE CASE 2B24",
+        "CONDENS 6B SST1 CASE 2B-44"
+      ],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 6A",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 30"
+        },
+        {
+          "label": "TR6A",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 31"
+        },
+        {
+          "label": "DJ BT 6A",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 32"
+        },
+        {
+          "label": "Couplage 6",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 33"
+        },
+        {
+          "label": "DJ HT 6B",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 34"
+        },
+        {
+          "label": "TR6B",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 35"
+        },
+        {
+          "label": "DJ BT 6B",
+          "commissioned": "2000",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 36"
+        }
+      ]
+    },
+    {
+      "id": "TGBT7",
+      "sourceDocuments": [
+        {
+          "name": "Tr7b .pdf",
+          "href": "sources/documents/f75dee00567c.pdf",
+          "pages": 20,
+          "sha256": "f75dee00567cfef25027c26b5047d9f2cd4b0874fcc412fe72a7b71971c5c771"
+        }
+      ],
+      "crossEvidence": [],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 7A",
+          "commissioned": "2008",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 37"
+        },
+        {
+          "label": "TR7A",
+          "commissioned": "2022",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 38"
+        },
+        {
+          "label": "DJ BT 7A",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 39"
+        },
+        {
+          "label": "Couplage 7",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 40"
+        },
+        {
+          "label": "DJ HT 7B",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 41"
+        },
+        {
+          "label": "TR7B",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 42"
+        },
+        {
+          "label": "DJ BT 7B",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 43"
+        },
+        {
+          "label": "DJ HT 7B",
+          "commissioned": "20023",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 67"
+        },
+        {
+          "label": "DJ BT 7B",
+          "commissioned": "20023",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 69"
+        }
+      ]
+    },
+    {
+      "id": "ALIMOND1",
+      "sourceDocuments": [
+        {
+          "name": "Alim onduleur 1 .pdf",
+          "href": "sources/documents/ccf838e70c88.pdf",
+          "pages": 3,
+          "sha256": "ccf838e70c8837c0a1a9ed9e777d135227b77ba6dc82d624ccf56c7541b61e0e"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "ALIMOND2",
+      "sourceDocuments": [
+        {
+          "name": "Alimentation onduleur 2.pdf",
+          "href": "sources/documents/64604b6368e3.pdf",
+          "pages": 4,
+          "sha256": "64604b6368e3f216680979319ec7bfe00735c2c1e6a88c72d824f9409a22fce2"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "PL20",
+      "sourceDocuments": [
+        {
+          "name": "Départ 20kv edf cnr.pdf",
+          "href": "sources/documents/718592d9fc26.pdf",
+          "pages": 21,
+          "sha256": "718592d9fc26daee83fa3a64003aef75b6fa69867b4fcf02097eb066053ea95a"
+        },
+        {
+          "name": "schema unifilaire 20 KV derniere version.pdf",
+          "href": "sources/documents/14ee0f2214dd.pdf",
+          "pages": 1,
+          "sha256": "14ee0f2214dd82b1da2352426dc91e77f826f046cff489aa0c91d74d5182a761"
+        },
+        {
+          "name": "Tableau 20kv edf cnr .pdf",
+          "href": "sources/documents/907e2878185d.pdf",
+          "pages": 24,
+          "sha256": "907e2878185dd77da4e2291c86d4e3d3d0b04ddb8f83b7e667bd2053a559e8c2"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Scan p12 : EDF = arrivée A secours ; CNR = arrivée B normale. S/station 1 : TR1 à TR6 ; S/station 2 : TR7 et TR8. Les numéros de sous-station du terrain et ceux des schémas restent distingués.",
+          "source": "Document scanné 12.pdf p12",
+          "kind": "recoupe"
+        }
+      ]
+    },
+    {
+      "id": "SS1_20",
+      "sourceDocuments": [
+        {
+          "name": "schema unifilaire 20 KV derniere version.pdf",
+          "href": "sources/documents/14ee0f2214dd.pdf",
+          "pages": 1,
+          "sha256": "14ee0f2214dd82b1da2352426dc91e77f826f046cff489aa0c91d74d5182a761"
+        },
+        {
+          "name": "Tableau 20kv   SS1.pdf",
+          "href": "sources/documents/0d26772b954e.pdf",
+          "pages": 10,
+          "sha256": "0d26772b954e5b61e043887b5c3e6f6370ea340f882362795534d7ac9f64f513"
+        },
+        {
+          "name": "Tableau 20kv SS1.pdf",
+          "href": "sources/documents/d339dfe0faed.pdf",
+          "pages": 16,
+          "sha256": "d339dfe0faed265ea49d930680435e9a8fbab3b8c14ee9ddfbcff751b95aa933"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Scan p12 : EDF = arrivée A secours ; CNR = arrivée B normale. S/station 1 : TR1 à TR6 ; S/station 2 : TR7 et TR8. Les numéros de sous-station du terrain et ceux des schémas restent distingués.",
+          "source": "Document scanné 12.pdf p12",
+          "kind": "recoupe"
+        }
+      ]
+    },
+    {
+      "id": "SS2_20",
+      "sourceDocuments": [
+        {
+          "name": "schema unifilaire 20 KV derniere version.pdf",
+          "href": "sources/documents/14ee0f2214dd.pdf",
+          "pages": 1,
+          "sha256": "14ee0f2214dd82b1da2352426dc91e77f826f046cff489aa0c91d74d5182a761"
+        },
+        {
+          "name": "Tableau 20kv     SS1.pdf",
+          "href": "sources/documents/d9c9e35bd400.pdf",
+          "pages": 24,
+          "sha256": "d9c9e35bd4005b7ca65ccfe8e080d990e2d69044cc4fad73803e594c6eab2a03"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "text": "Scan p12 : EDF = arrivée A secours ; CNR = arrivée B normale. S/station 1 : TR1 à TR6 ; S/station 2 : TR7 et TR8. Les numéros de sous-station du terrain et ceux des schémas restent distingués.",
+          "source": "Document scanné 12.pdf p12",
+          "kind": "recoupe"
+        }
+      ]
+    },
+    {
+      "id": "ECLSST1",
+      "sourceDocuments": [
+        {
+          "name": "Armoire éclairage .pdf",
+          "href": "sources/documents/38d5a0a0b172.pdf",
+          "pages": 1,
+          "sha256": "38d5a0a0b172d7957076036fc5b33bbf23bd9395a5dcc68c9d19070b1bbd265a"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND1",
+      "sourceDocuments": [
+        {
+          "name": "Batterie condensateur tr1a et 1b .pdf",
+          "href": "sources/documents/90ca367761ab.pdf",
+          "pages": 3,
+          "sha256": "90ca367761abaf01d2818da355d253f18da947940158767eadd2dbc66d392699"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND2A",
+      "sourceDocuments": [
+        {
+          "name": "Batterie condensateur tr2a .pdf",
+          "href": "sources/documents/11feb5454411.pdf",
+          "pages": 2,
+          "sha256": "11feb5454411eeff182a100e9cc70dd4ce6dd2cad366a41ec5327ee7095f64f4"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "BRONZINI",
+      "sourceDocuments": [
+        {
+          "name": "Bronzini .pdf",
+          "href": "sources/documents/c7d9524495de.pdf",
+          "pages": 3,
+          "sha256": "c7d9524495decf1f4e328e62b8451ae4b0f8fd4eb536038a00ed0e76ff0c4f18"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND5B",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur 5b.pdf",
+          "href": "sources/documents/1c7c940be37d.pdf",
+          "pages": 2,
+          "sha256": "1c7c940be37d59569259ad87d3a98166831b8fc86d61a28774f2fef005dd9375"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND6A",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur 6a.pdf",
+          "href": "sources/documents/46f51ccba456.pdf",
+          "pages": 2,
+          "sha256": "46f51ccba4567eb821f30d03195b92a1875fc84b759165c7c8050ef90ef8a88a"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND6B",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur 6b .pdf",
+          "href": "sources/documents/17ece2ddb8cb.pdf",
+          "pages": 1,
+          "sha256": "17ece2ddb8cbe4075485a2a342fcbdd3c15c32fa4e83e8a3421ab333311024ab"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND3",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur tgbt 3.pdf",
+          "href": "sources/documents/2c62586af7fe.pdf",
+          "pages": 2,
+          "sha256": "2c62586af7fe17f26a3a3320bcb73ec0e09bf3e937d828883f689704219ae509"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND9",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur tgbt 9a et 9b .pdf",
+          "href": "sources/documents/0b59936b2391.pdf",
+          "pages": 4,
+          "sha256": "0b59936b2391c94dcf5393adfa2e4e4e035ff56db9e7c5e6f91cfd45b1faa3a1"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND5A",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur tr 5a.pdf",
+          "href": "sources/documents/685a54ef2754.pdf",
+          "pages": 2,
+          "sha256": "685a54ef27546dae34ddc5fbdd47bd9944dbbb53cce2d7d2058452aaf267d2d9"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND2B",
+      "sourceDocuments": [
+        {
+          "name": "Condensateur tr2b .pdf",
+          "href": "sources/documents/894e85ad2738.pdf",
+          "pages": 1,
+          "sha256": "894e85ad27387377de1f2946268b82e6d27b36ef557dcddfb91760c76ae78447"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND4",
+      "sourceDocuments": [
+        {
+          "name": "Condesanteur tr4b et 4 a .pdf",
+          "href": "sources/documents/1f715783dbcd.pdf",
+          "pages": 2,
+          "sha256": "1f715783dbcdf796929729ef6c56b6a25aa05c17ffad1de6485eb4506edd1979"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "DECARBO",
+      "sourceDocuments": [
+        {
+          "name": "Decarbo .pdf",
+          "href": "sources/documents/d2f82864de3b.pdf",
+          "pages": 2,
+          "sha256": "d2f82864de3be0052ebc25bcd71f9cf3f21de51b6382a674e980e209d51fc2ab"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "GORGE",
+      "sourceDocuments": [
+        {
+          "name": "Gorge .pdf",
+          "href": "sources/documents/038d7587f171.pdf",
+          "pages": 15,
+          "sha256": "038d7587f1719ff238473163aa012bb46227c070ef4b82f765ed17f9507ace4a"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "GRADATHYR",
+      "sourceDocuments": [
+        {
+          "name": "GRADATHYR.pdf",
+          "href": "sources/documents/a7205b77df66.pdf",
+          "pages": 5,
+          "sha256": "a7205b77df6633acc2e9e40ff2c4ea531dd779794e927f014931cddaaa63205e"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "OND1",
+      "sourceDocuments": [
+        {
+          "name": "Onduleur 1 .pdf",
+          "href": "sources/documents/fadbd63f20d3.pdf",
+          "pages": 2,
+          "sha256": "fadbd63f20d345f502d3db318fbc062699b9a4597e9c0658c78d21739eb5afd5"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "OND2",
+      "sourceDocuments": [
+        {
+          "name": "Onduleur 2 .pdf",
+          "href": "sources/documents/3a4596ef085f.pdf",
+          "pages": 1,
+          "sha256": "3a4596ef085f05e0c3fd1cf8bb2b16fe914523278cdef2f82e8651e11aff50d3"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "PEG",
+      "sourceDocuments": [
+        {
+          "name": "Pompe eau glace 7pm 65 et 7Pm03.pdf",
+          "href": "sources/documents/73bae551a8dc.pdf",
+          "pages": 3,
+          "sha256": "73bae551a8dc25adf789abd4ab6e1d40a080a1ee3b3d63af2978669ecc4dbd80"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TS44",
+      "sourceDocuments": [
+        {
+          "name": "Pompe eau glace 7pm 65 et 7Pm03.pdf",
+          "href": "sources/documents/73bae551a8dc.pdf",
+          "pages": 3,
+          "sha256": "73bae551a8dc25adf789abd4ab6e1d40a080a1ee3b3d63af2978669ecc4dbd80"
+        },
+        {
+          "name": "Ts 44.pdf",
+          "href": "sources/documents/2b838d711968.pdf",
+          "pages": 12,
+          "sha256": "2b838d71196805b53f941a5bbd843e88c6cedc3c658da04a30443c8777730593"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "KV6",
+      "sourceDocuments": [
+        {
+          "name": "schema unifilaire 20 KV derniere version.pdf",
+          "href": "sources/documents/14ee0f2214dd.pdf",
+          "pages": 1,
+          "sha256": "14ee0f2214dd82b1da2352426dc91e77f826f046cff489aa0c91d74d5182a761"
+        },
+        {
+          "name": "Tableau 6kv.pdf",
+          "href": "sources/documents/7112b3b45157.pdf",
+          "pages": 13,
+          "sha256": "7112b3b451579850d502102d74deb9c60c8075caf8e0610e1255e1377b54dec3"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TGBT8",
+      "sourceDocuments": [
+        {
+          "name": "Tableau 20kv     SS1.pdf",
+          "href": "sources/documents/d9c9e35bd400.pdf",
+          "pages": 24,
+          "sha256": "d9c9e35bd4005b7ca65ccfe8e080d990e2d69044cc4fad73803e594c6eab2a03"
+        }
+      ],
+      "crossEvidence": [],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 8A",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 44"
+        },
+        {
+          "label": "TR8A",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 45"
+        },
+        {
+          "label": "DJ BT 8A",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 46"
+        },
+        {
+          "label": "Couplage 8",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 47"
+        },
+        {
+          "label": "DJ HT 8B",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 48"
+        },
+        {
+          "label": "TR8B",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 49"
+        },
+        {
+          "label": "DJ BT 8B",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 50"
+        }
+      ]
+    },
+    {
+      "id": "OM27",
+      "sourceDocuments": [
+        {
+          "name": "Tableau OM 27 .pdf",
+          "href": "sources/documents/3255b47427d3.pdf",
+          "pages": 1,
+          "sha256": "3255b47427d379a9aec94fd3ce24fdc08953d2ffda0090df27deb9be8648d574"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TGBT3",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 3 (2).pdf",
+          "href": "sources/documents/3222c62a2e62.pdf",
+          "pages": 16,
+          "sha256": "3222c62a2e6230cbaec7aec44feb41d95b1ee6c95b1877767c5264ddb2596c75"
+        },
+        {
+          "name": "Tgbt 3.pdf",
+          "href": "sources/documents/fc120a6ac9d6.pdf",
+          "pages": 8,
+          "sha256": "fc120a6ac9d6eda2c520a31a64427645582fd7ac77a03297ad9e5284a5e03594"
+        },
+        {
+          "name": "CX7810_C TQC.PDF",
+          "href": "sources/documents/985d23c16df3.pdf",
+          "pages": 94,
+          "sha256": "985d23c16df3d015474eea07a5f8a31aa660d3c188b77bb2ff9f1cab3f02c910"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TGBT9",
+      "sourceDocuments": [
+        {
+          "name": "Tgbt 9.pdf",
+          "href": "sources/documents/38e0c348a275.pdf",
+          "pages": 24,
+          "sha256": "38e0c348a275188336e19bdccd33e49ed5b9f39ca1cced72923dfd8d1b2b791e"
+        }
+      ],
+      "crossEvidence": [],
+      "equipmentHistory": [
+        {
+          "label": "DJ HT 9A",
+          "commissioned": "2001",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 51"
+        },
+        {
+          "label": "TR9A",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 52"
+        },
+        {
+          "label": "DJ BT 9A",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 53"
+        },
+        {
+          "label": "Couplage 9",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 54"
+        },
+        {
+          "label": "DJ HT 9B",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 55"
+        },
+        {
+          "label": "TR9B",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 56"
+        },
+        {
+          "label": "DJ BT 9B",
+          "commissioned": "2013",
+          "maintenance": "",
+          "source": "Distribution électrique 2024.xlsx / Age equipement / ligne 57"
+        }
+      ]
+    },
+    {
+      "id": "TS12",
+      "sourceDocuments": [
+        {
+          "name": "Ts 12 .pdf",
+          "href": "sources/documents/c05906c49cb6.pdf",
+          "pages": 22,
+          "sha256": "c05906c49cb6eca65b0c0eb046702bca3ce40802081c3e49a9cd58212ff7eb0f"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TS7",
+      "sourceDocuments": [
+        {
+          "name": "Ts 7.pdf",
+          "href": "sources/documents/de6fb53e17f1.pdf",
+          "pages": 11,
+          "sha256": "de6fb53e17f13463595b752b0c9398d20fc9d110726abe468a428ce2d77cd7ef"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [],
+      "scanConsumers": {
+        "source": "Document scanné 12.pdf p2",
+        "items": [
+          "TS7A : ventilateurs air refroidissement n°1 et n°2",
+          "TS7A : registre cheminée n°2",
+          "TS7A : air combustion canaux n°2",
+          "TS7A : compresseur air instrumentation",
+          "TS7A : centrale pulsion salle four",
+          "TS7A : UPS1 réseau 1 secours",
+          "TS7A : UPS2 réseau 2",
+          "TS7A : UPS4 réseau 1 secours",
+          "TS7A : sécheur air",
+          "TS7A : HVAC salle four",
+          "TS7A : alimentation stabilisée",
+          "TS7A : enfourneuse F1",
+          "TS7A : enfourneuse gauche",
+          "TS7A : analyseur oxygène F2",
+          "TS7B : enfourneuse droite",
+          "TS7B : air combustion canaux n°1",
+          "TS7B : registre cheminée n°1",
+          "TS7B : refroidissement n°3 départ variateur",
+          "TS7B : coffret alvéolaire-vibreur",
+          "TS7B : UPS2 réseau 1 normal",
+          "TS7B : UPS3 réseau 2",
+          "TS7B : UPS4 réseau 1 normal"
+        ],
+        "status": "Liste documentaire ancienne : positions, calibres et raccordements non déduits de la liste."
+      }
+    },
+    {
+      "id": "TS17",
+      "sourceDocuments": [
+        {
+          "name": "Ts17A.pdf",
+          "href": "sources/documents/63f654f703fa.pdf",
+          "pages": 8,
+          "sha256": "63f654f703faa084832c280bfa4312d931ffb4c03877646250c1b4c79b752bfd"
+        },
+        {
+          "name": "Ts17b.pdf",
+          "href": "sources/documents/3805b2015714.pdf",
+          "pages": 13,
+          "sha256": "3805b2015714fb3aec2fd8e6000a87fb47dd600845c8fe7b24036b2fa98812d7"
+        },
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [],
+      "scanConsumers": {
+        "source": "Document scanné 12.pdf p4",
+        "items": [
+          "TS17A : eau chaude n°2 7PM08",
+          "TS17A : eau froide n°4 7PM42",
+          "TS17A : tour refroidissement n°1",
+          "TS17A : prise chaufferie extérieur pompes",
+          "TS17A : prise 63 A château eau",
+          "TS17A : réchauffeur gaz",
+          "TS17A : alimentation TS9",
+          "TS17A : éclairage chaufferie",
+          "TS17A : eau froide n°1 7PM05",
+          "TS17A : eau chaude n°6 7PM48",
+          "TS17A : eau chaude n°4 7PM46",
+          "TS17A : château eau 7PM20",
+          "TS17A : eau décarbonatation 7PM14",
+          "TS17A : vibreur trémie chaux",
+          "TS17A : vanne alvéolaire décarbonatation",
+          "TS17A : doseuses phosphate-soude et amines",
+          "TS17A : agitateur cuve eau refroidissement",
+          "TS17A : pH-mètre eau process",
+          "TS17A : armoire commande décarbonatation",
+          "TS17B : eau décarbonatation n°2",
+          "TS17B : reprise eau lavage filtre",
+          "TS17B : craie décarbonatation 7PM17",
+          "TS17B : chlorure ferrique 7PM18",
+          "TS17B : compresseur détassage filtre",
+          "TS17B : eau chaude n°1, repère 7PM44 sur ligne suivante",
+          "TS17B : eau chaude n°3 7PM09",
+          "TS17B : eau froide 7PM06",
+          "TS17B : alimentation TS9",
+          "TS17B : éclairage chaufferie",
+          "TS17B : eau chaude n°5",
+          "TS17B : eau froide n°3",
+          "TS17B : tour refroidissement n°2",
+          "TS17B : eau froide n°2"
+        ],
+        "status": "Liste documentaire ancienne : positions, calibres et raccordements non déduits de la liste."
+      }
+    },
+    {
+      "id": "TS2",
+      "sourceDocuments": [
+        {
+          "name": "Ts2.pdf",
+          "href": "sources/documents/cf1b96413680.pdf",
+          "pages": 11,
+          "sha256": "cf1b964136802020d08a8146009aa375de00f6db915851186734e6e438f9ec05"
+        }
+      ],
+      "crossEvidence": [],
+      "scanConsumers": {
+        "source": "Document scanné 12.pdf p4",
+        "items": [
+          "Armoire éclairage sous-station",
+          "Éclairage extérieur route nord",
+          "Éclairage récupérateur F1-F2",
+          "Éclairage extérieur façade usine",
+          "Centrale pulsion air étuves magasin général",
+          "Extracteurs toiture étuves 8KM03 et 8KM02",
+          "Groupes nord et sud pulsion air sous-station",
+          "Laveur n°5 4A202",
+          "Laveur cave 4A55 forming sud",
+          "HVAC OM47 ? (incertitude dans le document)",
+          "Étuves 3, 4, 5 et 6",
+          "Armoire local incendie OM32",
+          "Circulation air chaud appoint TSO et clim méca",
+          "Portail entrée étuves",
+          "Palan toiture quai MG"
+        ],
+        "status": "Liste documentaire ancienne : positions, calibres et raccordements non déduits de la liste."
+      }
+    },
+    {
+      "id": "TS46A",
+      "sourceDocuments": [
+        {
+          "name": "Ts46a .pdf",
+          "href": "sources/documents/78adb3b07884.pdf",
+          "pages": 3,
+          "sha256": "78adb3b07884009d7e627395e0dcfb142fef3ba7a92711ec8c218336d654ddae"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TS46B",
+      "sourceDocuments": [
+        {
+          "name": "Ts46b.pdf",
+          "href": "sources/documents/498d8d84f2fa.pdf",
+          "pages": 6,
+          "sha256": "498d8d84f2fa43d9c670e6f8de1a2e8993d7bf50ee94ac133214104f84e89db7"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TS9",
+      "sourceDocuments": [
+        {
+          "name": "Ts9.pdf",
+          "href": "sources/documents/82e5b5b61a87.pdf",
+          "pages": 7,
+          "sha256": "82e5b5b61a8736353cb7d4c069db5c81fecbf39e91f036cc1d2be49127ebeb14"
+        }
+      ],
+      "crossEvidence": [
+        {
+          "kind": "conflit",
+          "text": "Le scan p6 nomme les arrivées TS7A/TS7B ; les sources récentes donnent TS17A/TS17B. Ne pas remplacer les arrivées récentes par cette liste ancienne.",
+          "source": "Document scanné 12.pdf p6 et sources TS9 existantes"
+        }
+      ],
+      "scanConsumers": {
+        "source": "Document scanné 12.pdf p6",
+        "items": [
+          "Transfert fuel n°2 7PM26",
+          "Compresseur air instrumentation secours 7KM07",
+          "Arrivées TS7A et TS7B (liste ancienne ; à confronter aux arrivées TS17 des sources récentes)",
+          "Coffret alarme sirènes incendie",
+          "Commande C1 tours refroidissement 1 et 2",
+          "Coffret chaudière 1 et 2",
+          "Commande diesel pompe EF 7M13",
+          "Auxiliaires groupes 1 et 2",
+          "Chauffage diesel process 7PM043",
+          "Couplage jeu de barres",
+          "Prise chaufferie",
+          "Volet chaufferie",
+          "Armoire silo kaolin",
+          "Sécheurs 7K121 et 7K122",
+          "Réchauffeurs 7,5 kW 7K121 et 7K122",
+          "Coffret alimentation butane",
+          "Éclairage secours groupes",
+          "Contrôles diesel eau froide primaire et secondaire transfo",
+          "Éclairage secours chaufferie",
+          "Sécheur air instrumentation chaufferie",
+          "Coffret alarme portail SNCF",
+          "Alimentation Vigilohm",
+          "Alimentation 110 V",
+          "7PM20",
+          "7M15 contrôle diesel",
+          "Alarmes chaufferie"
+        ],
+        "status": "Liste documentaire ancienne : positions, calibres et raccordements non déduits de la liste."
+      }
+    },
+    {
+      "id": "VARIVOLT",
+      "sourceDocuments": [
+        {
+          "name": "Varivolt1 et 2 .pdf",
+          "href": "sources/documents/4b2248685bd2.pdf",
+          "pages": 2,
+          "sha256": "4b2248685bd29a751da8fd5fb9cffa2fbfe02f47dd58d2dfb5b0989749491e77"
+        },
+        {
+          "name": "26013 nameplate.pdf",
+          "href": "sources/documents/07e569d0670d.pdf",
+          "pages": 1,
+          "sha256": "07e569d0670d78a21c8c1d9f0366d1b94919f391a6acc557167717d53f1f4ccb"
+        },
+        {
+          "name": "schema DM1 départ varivolt zone 1.pdf",
+          "href": "sources/documents/0914d07de466.pdf",
+          "pages": 42,
+          "sha256": "0914d07de46692038e4e6aa77a788df1a16ffc7de86574dfd23949eced53b210"
+        },
+        {
+          "name": "schema DM1 départ varivolt zone 2.pdf",
+          "href": "sources/documents/3412844b492d.pdf",
+          "pages": 42,
+          "sha256": "3412844b492d530aceaa21ceb07d034f80d3c5cf720f51411db277d120c5ec13"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "VENTIL",
+      "sourceDocuments": [
+        {
+          "name": "Ventilation FOUR.pdf",
+          "href": "sources/documents/3598c4b7b3f6.pdf",
+          "pages": 6,
+          "sha256": "3598c4b7b3f6a14485fe9dbcbf1f886ff155e3719d4122ff3b9a84cde91f4e4b"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TS8",
+      "sourceDocuments": [
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [],
+      "photos": [
+        "docs/PHOTOS-COMPLEMENTS.html#TS8",
+        "docs/PHOTOTHEQUE-MODULE.html#TS8",
+        "docs/PHOTOTHEQUE-MODULE.html#TS8"
+      ],
+      "scanConsumers": {
+        "source": "Document scanné 12.pdf p8",
+        "items": [
+          "Compresseur décolmatage 7KM20",
+          "Pompe eau glacée n°2 7PM02",
+          "Ventilateur soufflage",
+          "Pompe 7PM13",
+          "Volets ouest et est local machines frigos",
+          "Prise 63 A cave",
+          "Prises 32 A forming",
+          "Prise 63 A four 1",
+          "Armoires ouest pompes-agitateurs canaux 2 et 1",
+          "Sécheur air forming",
+          "Convoyeur liaison forming-roving",
+          "Pompe eau glacée n°1",
+          "Générateur air chaud n°1",
+          "Agitateurs pompes canaux 1 et 2 est",
+          "Générateur air chaud n°3",
+          "Pompe eau déminéralisée",
+          "Éclairages forming ailes B et A",
+          "Traçage électrique gaz 7M07 et 5M06"
+        ],
+        "status": "Liste documentaire ancienne : positions, calibres et raccordements non déduits de la liste."
+      }
+    },
+    {
+      "id": "TS40",
+      "sourceDocuments": [
+        {
+          "name": "Document scanné 12.pdf",
+          "href": "sources/documents/8ac4be1d3b95.pdf",
+          "pages": 12,
+          "sha256": "8ac4be1d3b95ed70b173085cabe02d65dae5c94f909b6d1f38b90b0082424506"
+        }
+      ],
+      "crossEvidence": [],
+      "scanConsumers": {
+        "source": "Document scanné 12.pdf p11",
+        "items": [
+          "HVAC Nord 4A650",
+          "Clim emballage",
+          "CTA Backup",
+          "Alimentation sirène"
+        ],
+        "status": "Liste documentaire ancienne : positions, calibres et raccordements non déduits de la liste."
+      }
+    },
+    {
+      "id": "TS33",
+      "sourceDocuments": [],
+      "crossEvidence": [
+        {
+          "text": "La plaque photographiée mentionne TGBT4 ; les deux classeurs placent ce départ sur TGBT5 (D0070). Origine contradictoire : aucune nouvelle liaison électrique ajoutée.",
+          "source": "photo.zip / plaque + classeurs de distribution",
+          "kind": "conflit"
+        }
+      ],
+      "supplyEvidence": {
+        "board": null,
+        "case": "1A26",
+        "text": "TGBT4 — case 1A26 sur plaque ; TGBT5 dans les classeurs — origine contradictoire",
+        "src": "photo.zip / IMG_4538.heic",
+        "confidence": "contradictoire",
+        "alternatives": [
+          "TGBT4",
+          "TGBT5"
+        ]
+      }
+    },
+    {
+      "id": "TS34",
+      "sourceDocuments": [],
+      "crossEvidence": [
+        {
+          "text": "La plaque photographiée mentionne TGBT4 ; les deux classeurs placent ce départ sur TGBT5 (D0069). Origine contradictoire : aucune nouvelle liaison électrique ajoutée.",
+          "source": "photo.zip / plaque + classeurs de distribution",
+          "kind": "conflit"
+        }
+      ],
+      "supplyEvidence": {
+        "board": null,
+        "case": "1A13",
+        "text": "TGBT4 — case 1A13 sur plaque ; TGBT5 dans les classeurs — origine contradictoire",
+        "src": "photo.zip / IMG_4544.heic",
+        "confidence": "contradictoire",
+        "alternatives": [
+          "TGBT4",
+          "TGBT5"
+        ]
+      }
+    },
+    {
+      "id": "ARM110",
+      "sourceDocuments": [
+        {
+          "name": "Armoire 110v instrument ampère mètre .pdf",
+          "href": "sources/documents/aa9ceed7b7f7.pdf",
+          "pages": 1,
+          "sha256": "aa9ceed7b7f7f89b94547c13cfa90ca9e6e919a48467032857ee9315046de81b"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "AUX7B",
+      "sourceDocuments": [
+        {
+          "name": "24 V et 230 V tr7b.pdf",
+          "href": "sources/documents/e70beaeecbff.pdf",
+          "pages": 1,
+          "sha256": "e70beaeecbffa8a99f3493a57417efd662f9433ed62ede9eb6c182f7357e7930"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "COND7",
+      "sourceDocuments": [
+        {
+          "name": "Batterie condensateur tgbt7a et 7b.pdf",
+          "href": "sources/documents/6f9e7c51ab79.pdf",
+          "pages": 2,
+          "sha256": "6f9e7c51ab798e38d7e8ac016e34e11f3ab71b9210b0fd43dffae6391661ec76"
+        }
+      ],
+      "crossEvidence": []
+    },
+    {
+      "id": "TS42",
+      "sourceDocuments": [],
+      "crossEvidence": [
+        {
+          "kind": "conflit",
+          "text": "TS42 : la plaque d’arrivée mentionne TR4A ; le départ D0044 est actuellement classé sur le demi-tableau B dans le modèle issu du classeur. Le côté A/B reste à arbitrer ; aucune bascule de raccordement effectuée.",
+          "source": "photo.zip / TS42 et Copie de Distribution.xlsm / TR 4A & 4B / L7"
+        }
+      ]
+    }
+  ],
+  "scope": "371 références de cellules XLSM comparées ; objets du classeur 2024 extraits ; 12 pages du scan examinées et listes transcrites ; 76 PDF conservés. Relecture détaillée complète de toutes les photos et des 868 pages non achevée.",
+  "unassignedSources": [
+    {
+      "label": "TS32",
+      "source": "Document scanné 12.pdf p1-p2",
+      "items": [
+        "Labo index",
+        "TS10",
+        "Climatiseur dévidage",
+        "Groupe ABB 4A201",
+        "Coffret TS8/TS32 : éclairage forming 4M04-4M017 et air pal",
+        "TS29",
+        "Auxiliaires groupes frigo 7H210, 7H211, 7H212",
+        "Armoire eau glacée 7P0068-7P0001-7P0002 et pompe boosting",
+        "Bungalow ELYO",
+        "Performax",
+        "Climatisation GM-JFB-RM"
+      ]
+    },
+    {
+      "label": "TS27",
+      "source": "Document scanné 12.pdf p8",
+      "items": [
+        "4PM02",
+        "Nouvelle tour refroidissement",
+        "Armoires est pompes-agitateurs canaux 3 et 4",
+        "Armoires ouest pompes-agitateurs canaux 4 et 3",
+        "Surpresseur nettoyage 4P062",
+        "Pompe eaux usées 7PM27",
+        "Prise ABB 4A201 et PC63 A niveau bobineuses",
+        "Prises63 A niveaux0,0-3,50-3,55"
+      ]
+    },
+    {
+      "label": "TS18",
+      "source": "Document scanné 12.pdf p11",
+      "items": [
+        "Filières drainage3T41,4T41,1T61,1T51,2T61,1T42,2T42,2T51",
+        "Brosse et aspiration",
+        "Volets façade sudF1 et nordF2",
+        "Filtre chambre lavage C1-C2",
+        "Ventilateur4XM01 chambre lavageC1"
+      ]
+    }
+  ]
+}

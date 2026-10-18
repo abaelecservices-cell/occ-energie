@@ -1,0 +1,33 @@
+name: OCC Energie - livraison vectorielle
+on:
+  push:
+    branches: ['codex/livraison-vectorielle-20261018']
+    paths: ['DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/livraisons/20261018/**', '.github/workflows/occ-livraison-vectorielle.yml']
+  pull_request:
+    paths: ['DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/livraisons/20261018/**', '.github/workflows/occ-livraison-vectorielle.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  livraison:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: DISTRIBUTION-ELECTRIQUE/OCC-ENERGIE/livraisons/20261018
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reconstruire le HTML
+        run: python tools/build_app.py
+      - name: Tester les SVG et la navigation documentaire
+        run: |
+          for test in tools/test_*.cjs; do node "$test"; done
+          python tools/test_project_compare.py
+      - name: Verifier la synchronisation du HTML livre
+        run: git diff --exit-code -- OCC_ENERGIE.html
