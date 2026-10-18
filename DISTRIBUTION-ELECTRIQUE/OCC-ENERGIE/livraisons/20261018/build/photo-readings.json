@@ -1,0 +1,878 @@
+{
+  "date": "2026-10-18",
+  "scope": "Lecture individuelle en cours ; les autres photos ne sont pas déclarées vérifiées.",
+  "nodes": [
+    {
+      "id": "PHOTO_TS9_001",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Coffret alimentation butane",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_002",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Éclairage secours groupes",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_003",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Contrôle diesel eau froide — primaire transfo 380/110",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_004",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Secondaire transfo 380/110",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_005",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Éclairage secours chaufferie",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_006",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Départ coffret alarme portail SNCF",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_007",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Sécheur air instrumentation chaufferie",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_008",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Alimentation VIGILHOM",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_009",
+      "t": "dep",
+      "board": "TS9",
+      "label": "7PM20 — fonction non inscrite sur cette étiquette",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_010",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Réserve — étiquette bleue colonne 2",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_011",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Alimentation 110 V",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_012",
+      "t": "dep",
+      "board": "TS9",
+      "label": "7M15 — contrôle diesel",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_013",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Alarme chaufferie",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4091.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS9_014",
+      "t": "dep",
+      "board": "TS9",
+      "label": "Alimentation chargeurs 24 V — poste de livraison",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "src": "Ts9 / IMG_4092.jpeg — lecture visuelle agrandie du 18/10/2026",
+      "note": "Étiquette extérieure lisible ; protection, bornes et jeu de barres non établis par cette vue. Aucune arête ajoutée.",
+      "readingConfidence": "lisible"
+    },
+    {
+      "id": "PHOTO_TS16_001",
+      "t": "dep",
+      "board": "TS16",
+      "label": "Prise PS 63 A eaux usées",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "readingConfidence": "lisible",
+      "src": "IMG_4150, IMG_4156.heic — lecture visuelle 18/10/2026",
+      "note": "Plaque extérieure ; aucun calibre, jeu de barres ou câble attribué par déduction."
+    },
+    {
+      "id": "PHOTO_TS16_002",
+      "t": "dep",
+      "board": "TS16",
+      "label": "OM42.ARM.0 — BT local EDF",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "readingConfidence": "lisible",
+      "src": "IMG_4150, IMG_4156.heic — lecture visuelle 18/10/2026",
+      "note": "Plaque extérieure ; aucun calibre, jeu de barres ou câble attribué par déduction."
+    },
+    {
+      "id": "PHOTO_TS16_003",
+      "t": "dep",
+      "board": "TS16",
+      "label": "Alimentation coffret zone déchets",
+      "conf": "a_verifier",
+      "documentaryOnly": true,
+      "readingConfidence": "lisible",
+      "src": "IMG_4150, IMG_4156.heic — lecture visuelle 18/10/2026",
+      "note": "Plaque extérieure ; aucun calibre, jeu de barres ou câble attribué par déduction."
+    },
+    {
+      "id": "PHOTO_TS40_001",
+      "t": "dep",
+      "board": "TS40",
+      "label": "Alimentation HVAC Nord — 4A650 / 4A750",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "photo.zip / IMG_4501, IMG_4504.heic — lecture visuelle 18/10/2026",
+      "note": "Plaque bleue extérieure ; protection et câblage interne non établis."
+    },
+    {
+      "id": "PHOTO_TS40_002",
+      "t": "dep",
+      "board": "TS40",
+      "label": "Alimentation climatisation emballage",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "photo.zip / IMG_4501, IMG_4504.heic — lecture visuelle 18/10/2026",
+      "note": "Plaque bleue extérieure ; protection et câblage interne non établis."
+    },
+    {
+      "id": "PHOTO_TS40_003",
+      "t": "dep",
+      "board": "TS40",
+      "label": "Alimentation CTA Backup",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "photo.zip / IMG_4501, IMG_4504.heic — lecture visuelle 18/10/2026",
+      "note": "Plaque bleue extérieure ; protection et câblage interne non établis."
+    },
+    {
+      "id": "PHOTO_BRONZINI_001",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Éclairage zone 1",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 1,
+      "rep": "21QF10",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_002",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Éclairage zone 2",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 2,
+      "rep": "22QF10",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_003",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Réserve",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 3,
+      "rep": "22QF18",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_004",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Réserve",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 4,
+      "rep": "23QF10",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_005",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Éclairage extérieur zone déchargement",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 5,
+      "rep": "24QF06",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_006",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Éclairage extérieur bâtiment",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 6,
+      "rep": "25QF06",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_007",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Éclairage broyeur",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 7,
+      "rep": "26QF10",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_008",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Capteur hygrométrie",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 1 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 1,
+      "photoColumn": 8,
+      "visibleMarking": "C6"
+    },
+    {
+      "id": "PHOTO_BRONZINI_009",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Arrêt urgence",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 2 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 2,
+      "photoColumn": 1,
+      "rep": "10QF12",
+      "visibleMarking": "C6"
+    },
+    {
+      "id": "PHOTO_BRONZINI_010",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Commande BAES",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 2 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 2,
+      "photoColumn": 2
+    },
+    {
+      "id": "PHOTO_BRONZINI_011",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Horloge",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 2 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 2,
+      "photoColumn": 3,
+      "rep": "25IC11"
+    },
+    {
+      "id": "PHOTO_BRONZINI_012",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "PC TV Conv D88",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 2 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 2,
+      "photoColumn": 4,
+      "visibleMarking": "C6"
+    },
+    {
+      "id": "PHOTO_BRONZINI_013",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Coffret PC1",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 3 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 3,
+      "photoColumn": 1,
+      "rep": "14QF08"
+    },
+    {
+      "id": "PHOTO_BRONZINI_014",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Coffret PC2",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 3 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 3,
+      "photoColumn": 2,
+      "rep": "14QF10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_015",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Porte 1 Sud",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 3 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 3,
+      "photoColumn": 3,
+      "rep": "14QF14",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_016",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Porte 2 Nord",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 3 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 3,
+      "photoColumn": 4,
+      "rep": "14QF18",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_017",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Porte 3 lève vite Ouest",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 3 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 3,
+      "photoColumn": 5,
+      "rep": "18QF06",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_018",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Caméra Inaudura",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 3 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 3,
+      "photoColumn": 6,
+      "rep": "18QF10",
+      "visibleMarking": "C6"
+    },
+    {
+      "id": "PHOTO_BRONZINI_019",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Palan 1",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 4 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 4,
+      "photoColumn": 1,
+      "rep": "15QF06"
+    },
+    {
+      "id": "PHOTO_BRONZINI_020",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Chargeur batterie transpalette",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 4 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 4,
+      "photoColumn": 2,
+      "rep": "15QF10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_021",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Coffret extraction air",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 4 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 4,
+      "photoColumn": 3
+    },
+    {
+      "id": "PHOTO_BRONZINI_022",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Coffret pompe eau chargée fosse Sud",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 4 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 4,
+      "photoColumn": 4,
+      "rep": "15QF18",
+      "visibleMarking": "C10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_023",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Palan 2",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 4 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 4,
+      "photoColumn": 5,
+      "rep": "15QF07"
+    },
+    {
+      "id": "PHOTO_BRONZINI_024",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "PC salle élec",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 1,
+      "rep": "30QF06"
+    },
+    {
+      "id": "PHOTO_BRONZINI_025",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "PC labo",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 2,
+      "rep": "30QF10"
+    },
+    {
+      "id": "PHOTO_BRONZINI_026",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Clim salle élec",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 3,
+      "rep": "30QF14"
+    },
+    {
+      "id": "PHOTO_BRONZINI_027",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Éclairage salle élec",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 4,
+      "rep": "30QF18"
+    },
+    {
+      "id": "PHOTO_BRONZINI_028",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Alimentation armoire air",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 5,
+      "rep": "32QF06"
+    },
+    {
+      "id": "PHOTO_BRONZINI_029",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Alimentation labo Bronzini",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 6
+    },
+    {
+      "id": "PHOTO_BRONZINI_030",
+      "t": "dep",
+      "board": "BRONZINI",
+      "label": "Centrale informatique",
+      "documentaryOnly": true,
+      "conf": "a_verifier",
+      "readingConfidence": "lisible",
+      "src": "Bronzini / IMG_4322.heic — recadrage natif rangée 5 — 18/10/2026",
+      "note": "Appareil et plaque photographiés ; liaison interne non établie. Le marquage visible ne constitue pas une mesure du réglage.",
+      "photoRow": 5,
+      "photoColumn": 7
+    }
+  ],
+  "boards": [
+    {
+      "id": "TS9",
+      "observations": [
+        {
+          "t": "Quatorze mentions complémentaires lues en colonne 2, dont chargeurs 24 V du poste de livraison et coffret alarme portail SNCF. Ces étiquettes ne prouvent pas le raccordement interne aux jeux de barres.",
+          "src": "Ts9 / IMG_4091, IMG_4092.jpeg",
+          "kind": "photo",
+          "d": "2026-10-18"
+        },
+        {
+          "t": "Plaque « PH05 volet chaufferie » ; le modèle et le classeur portent « PM05 ». Divergence conservée sans fusion automatique des repères.",
+          "src": "IMG_4086, IMG_4090.jpeg",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "TS16",
+      "observations": [
+        {
+          "t": "Note manuscrite « Départ TGBT n°6 / TR7A ». Contradiction avec l’amont TGBT7 enregistré : aucune liaison modifiée avant recoupement.",
+          "src": "IMG_4149, IMG_4159, IMG_4163.heic",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "TS15",
+      "observations": [
+        {
+          "t": "Trois travées et sept tiroirs centraux ; cases 6, 12, 18, 24, 30, 36, 42 lues. Annotation amont « SST2 TGBT9B » sous AR2B arrivée 2B. Plaques ECL + PC Batch et Réserve distinctes des libellés historiques du classeur.",
+          "src": "IMG_4164 à IMG_4189.heic",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "PEG",
+      "observations": [
+        {
+          "t": "Coffret gauche 7PM65 : TS44B Q5-18. Coffret droit 7PM03 : TS44A Q2-24. Le repère Q2-24 est distinct de la case 1-24 enregistrée pour D0207 ; correspondance à recouper sur TS44.",
+          "src": "IMG_4533, IMG_4534.heic",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "TS40",
+      "observations": [
+        {
+          "t": "Trois plaques bleues lisibles : HVAC Nord 4A650/4A750, clim emballage, CTA Backup. Ensemble adjacent : plaque « Alimentation Performax 2 depuis transfo TR6B sous station TGBT n°5 ». Cette plaque ne prouve pas une alimentation de TS40 ; aucune liaison ajoutée.",
+          "src": "IMG_4501 à IMG_4505.heic",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "BRONZINI",
+      "observations": [
+        {
+          "t": "30 mentions d’appareils et départs relevées individuellement dans les cinq rangées modulaires. Les anciens libellés D0454 à D0458 sont des regroupements documentaires ; ils ne correspondent pas à cinq départs uniques. D0451 : distribution utilités atelier ; D0452 : réserve. Protections et connexions à recouper sur schéma.",
+          "src": "IMG_4319 à IMG_4326.heic ; recadrages natifs IMG_4322 / IMG_4326",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "TS28",
+      "observations": [
+        {
+          "t": "Arrivée depuis TGBT6 TR6A lue sur le premier tiroir. Huit tiroirs moteurs suivants : VENT3, VENT4, 4PM03, 4PM04, VS41, VS33, VS42, VS4344. Dernière plaque « Chopper 43-44 », libellé historique limité à 43. Surpresseur 12 Bars et Alim Monte Charge : deux plaques distinctes, protection commune non établie.",
+          "src": "IMG_4492, IMG_4493, IMG_4496.heic",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "TGBT6",
+      "observations": [
+        {
+          "t": "Lecture individuelle des 13 photos et des 21 pages du PDF. Colonne 2A : TS28 2A-06, bypass onduleur2 2A-12, réseau1 2A-18, étuve2 2A-24, condensateur6A 2A-44. Colonne 1B : HVAC F1 1B-13, TS40 1B-26. Colonne 2B : réseau2 onduleur2 2B-18, étuve1 2B-24, condensateur6B 2B-44. Destination haute 2B illisible ; libellés Excel non attribués arbitrairement à ce logement.",
+          "src": "IMG_4306 à IMG_4318.heic ; Tgbt 6.pdf p1-p21",
+          "kind": "photo",
+          "d": "2026-10-18"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "board": "TS9",
+      "target": "Deuxième tiroir, colonne 4",
+      "source": "IMG_4087, IMG_4088, IMG_4089.jpeg",
+      "missing": "Destination du tiroir sans étiquette lisible ; photographie ciblée de l’étiquette accessible à fournir."
+    },
+    {
+      "board": "TGBT6",
+      "target": "Étiquette supérieure de la colonne 2B",
+      "source": "IMG_4316.heic ; Tgbt 6.pdf p9-p11",
+      "missing": "Destination effacée sur la vitre ; rechercher un repère existant lisible, sans attribution depuis un libellé Excel seulement."
+    }
+  ],
+  "nodeReadings": [
+    {
+      "id": "BRONZINI_QA",
+      "label": "INTERRUPTEUR GÉNÉRAL",
+      "rep": "10Q08",
+      "src": "Bronzini / IMG_4326.heic — recadrage natif 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0451",
+      "label": "DISTRIB UTILITÉS ATELIER",
+      "rep": "12QF10",
+      "src": "Bronzini / IMG_4326.heic — recadrage natif 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0452",
+      "label": "RÉSERVE",
+      "rep": "12QF14",
+      "src": "Bronzini / IMG_4326.heic — recadrage natif 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0315",
+      "label": "VENTILATEUR LAVAGE C3",
+      "rep": "AE VENT3",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0316",
+      "label": "VENTILATEUR LAVAGE C4",
+      "rep": "AE VENT4",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0317",
+      "label": "MOTEUR FOSSE CARRIER C3",
+      "rep": "AE 4PM03",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0318",
+      "label": "MOTEUR FOSSE CARRIER C4",
+      "rep": "AE 4PM04",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0319",
+      "label": "SOUFFLAGE CHOPPER 41",
+      "rep": "AE VS41",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0320",
+      "label": "SOUFFLAGE CHOPPER 33",
+      "rep": "AE VS33",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0321",
+      "label": "SOUFFLAGE CHOPPER 42",
+      "rep": "AE VS42",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    },
+    {
+      "id": "D0322",
+      "label": "SOUFFLAGE CHOPPER 43-44",
+      "rep": "AE VS4344",
+      "voltageMarking": "400 V",
+      "src": "IMG_4493.heic — lecture visuelle 18/10/2026",
+      "confidence": "lecture_visuelle"
+    }
+  ],
+  "photographicDependencies": [
+    {
+      "fromBoard": "TGBT6",
+      "departure": "D0079",
+      "target": "TS28",
+      "case": "2A-06",
+      "status": "plaques_amont_aval_recoupees",
+      "sources": [
+        "IMG_4309, IMG_4310.heic",
+        "IMG_4492, IMG_4493.heic"
+      ],
+      "limit": "Repérage documentaire recoupé ; cheminement physique du câble non vérifié."
+    },
+    {
+      "fromBoard": "TGBT6",
+      "departure": "D0086",
+      "target": "TS40",
+      "case": "1B-26",
+      "status": "destination_lue_sur_depart",
+      "sources": [
+        "IMG_4315.heic",
+        "Tgbt 6.pdf p8-p13"
+      ],
+      "limit": "Plaque TS40 identifiée sur la destination ; arrivée interne et cheminement physique du câble non vérifiés. Aucune arête ajoutée."
+    }
+  ]
+}

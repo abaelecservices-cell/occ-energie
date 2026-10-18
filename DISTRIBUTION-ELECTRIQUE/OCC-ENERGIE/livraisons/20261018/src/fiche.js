@@ -75,6 +75,8 @@ function vFiche(id) {
   VIEW().innerHTML = `<div class="fiche">
   <div class="row noprint" style="margin-top:10px"><button class="btn" data-go="#/courant/${id}">⚡ Fiche de dépannage</button><button class="btn ghost" onclick="window.print()">🖨️ Imprimer</button></div>
   <div class="fhead"><div><div class="small muted">FICHE DÉTAILLÉE</div><h1 style="margin:4px 0">${esc(title)}</h1><div class="small">${esc(whereText(n))}</div></div></div>
+  ${n.photoReading?`<section class="card glass"><h3>Lecture photographique détaillée</h3><p>${esc(n.photoReading.label)}${n.photoReading.rep?' · '+esc(n.photoReading.rep):''}</p><p class="src">${esc(n.photoReading.src)}</p><p>Libellé historique conservé pour le recoupement.</p></section>`:''}
+  ${n.rep||n.visibleMarking?`<p>Repère lu : ${esc(n.rep || 'non lisible')}${n.visibleMarking?' · marquage visible '+esc(n.visibleMarking):''}</p>`:''}
   ${typeof projectImportHTML === 'function' ? projectImportHTML(b0 || BOARD[n.board]) : ''}<h2>De quoi dépend-il ? (source → ${esc(title)})</h2><div class="card glass">${chainHTML}</div>
   <h2>Autres chemins présents dans les documents <span class="small muted">(théoriques : disponibilité, charge et conditions non vérifiées)</span></h2><div class="card glass">${altHTML || '<p class="muted small">Aucun autre chemin documenté.</p>'}</div>
   <h2>Ce qui dépend de lui</h2><div class="card glass">${subBoards.length ? `<p class="small">Tableaux en aval : ${subBoards.map(bid => `<a href="#" data-go="#/courant/${bid}">${esc(BOARD[bid].name)}</a>`).join(' · ')}</p>` : ''}<p class="small">${ds.filter(x => x.t === 'dep').length ? ds.filter(x => x.t === 'dep').length + ' départ(s) en aval.' : 'Récepteur final.'}</p></div>

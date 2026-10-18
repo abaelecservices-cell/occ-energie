@@ -1,0 +1,30 @@
+const fs = require('node:fs');
+const vm = require('node:vm');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const read = name => fs.readFileSync(path.join(root, name), 'utf8');
+const data = JSON.parse(read('OCC_ENERGIE.html').match(/window\.OCC_DATA=([\s\S]*?);<\/script>/)[1]);
+const context = vm.createContext({window: {OCC_DATA: data}, localStorage: {getItem: () => null}});
+vm.runInContext(read('src/app.js').split('/* ======================================================================= démarrage */')[0], context);
+vm.runInContext(read('src/tgbt8-facade.js'), context);
+vm.runInContext(read('src/pl20-facade.js'), context);
+vm.runInContext(read('src/facade-details.js'), context);
+vm.runInContext(read('src/facade-functional.js'), context);
+vm.runInContext(read('src/physical-parts.js'), context);
+vm.runInContext(read('src/physical-cabinet.js'), context);
+const target = path.join(root, 'docs/facades-vectors');
+fs.mkdirSync(target, {recursive: true});
+const esc = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cards = [];
+for (const board of data.boards) {
+  const facade = data.facades[board.facade];
+  if (!facade) throw new Error('Représentation absente : ' + board.id);
+  let svg = vm.runInContext(`facadeSVG(${JSON.stringify(board.facade)})`, context);
+  svg = svg.replace(/(<svg[^>]*>)/, '$1<style>.hl{fill:none;stroke:transparent}svg{color:#17201f;background:#eef1ef;--bg:#eef1ef;--glass-strong:#eef1ef}</style>');
+  fs.writeFileSync(path.join(target, board.id + '.svg'), svg, 'utf8');
+  const mode = facade.mode === 'functional' ? 'Schéma fonctionnel — implantation non confirmée' : facade.mode === 'photo-partial' || board.id === 'COFAGIT' ? 'Relevé photographique partiel' : 'Reconstruction depuis les sources';
+  cards.push(`<article><h2>${esc(board.name)}</h2><p>${mode}</p><a href="facades-vectors/${board.id}.svg">Ouvrir le SVG</a> · <a href="../OCC_ENERGIE.html#/b/${board.id}">Fiche interactive</a><p>${esc(facade.conf || '')}</p><p class="source">${esc(facade.src || '')}</p></article>`);
+}
+const style = 'body{font:16px system-ui;line-height:1.6;background:#101416;color:#edf3f4;margin:24px}main{max-width:1280px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}article{padding:24px;border:1px solid #566267;border-radius:16px}a{color:#71d8c1;display:inline-flex;align-items:center;min-height:44px}a:focus-visible{outline:3px solid #71d8c1}h2{font-size:20px}.source{font-size:14px;overflow-wrap:anywhere}@media(prefers-color-scheme:light){body{background:#f6f8f8;color:#152025}a{color:#006654}}';
+fs.writeFileSync(path.join(root, 'docs/VECTORIELLES.html'), `<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Armoires vectorielles OCC Énergie</title><style>${style}</style><main><a href="../OCC_ENERGIE.html#/registre">Retour au Registre</a><h1>68 équipements — 68 représentations vectorielles</h1><p>${data.boards.filter(b => data.facades[b.facade]?.mode !== 'functional').length} vues basées sur sources photographiques, souvent partielles ; ${data.boards.filter(b => data.facades[b.facade]?.mode === 'functional').length} schémas fonctionnels. Consulter le contrôle individuel avant de considérer une façade comme vérifiée. Les SVG sont zoomables et restent accompagnés de leur statut documentaire.</p><div class="grid">${cards.join('')}</div></main></html>`, 'utf8');
+console.log('PASS : ' + cards.length + ' SVG exportés et index documentaire créé.');

@@ -150,6 +150,7 @@ function short(n) {
 function colOf(n) { if (!n.case) return null; const m = String(n.case).match(/^(\d+)[-+](\d+)/); return m ? { col: m[1], pos: m[2] } : null; }
 function facadeHas(fid, id) {
   const f = D.facades[fid]; if (!f) return false;
+  if (f.physical) return f.physical.parts.some(part => part.node === id);
   if (f.cells) return f.cells.some(c => c.node === id);
   return f.cols.some(c => c.units.some(u => u.dep === id || u.node === id));
 }
@@ -719,6 +720,7 @@ function facadeSVG(fid, opts = {}) {
   if (fid === "PL20") return pl20FacadeSVG(D.facades[fid], opts);
   if (fid === "TGBT8") return tgbt8FacadeSVG(D.facades[fid], opts);
   const f = D.facades[fid];
+  if (f.physical) return physicalCabinetSVG(f);
   if (f.mode === 'functional') return functionalFacadeSVG(f);
   if (f.cells) return f.style === 'sm6p' ? sm6pSVG(f, opts) : sm6SVG(f, opts);
   const st = {...(STY[f.style] || STY.okken_blanc), ...(f.appearance || {})};

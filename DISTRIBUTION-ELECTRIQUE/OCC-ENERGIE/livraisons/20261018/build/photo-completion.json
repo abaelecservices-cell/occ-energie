@@ -322,7 +322,532 @@
         }
       ],
       "src": "Ts 16.zip / IMG_4149, IMG_4150, IMG_4154, IMG_4156.heic (IMG_4164 exclue : elle montre TS15)",
-      "conf": "Colonnes et ordre des plaques lisibles relevés sur photos. Proportions indicatives et pointillées ; les départs sans position prouvée restent dans la liste. Les plaques sans correspondance certaine ne créent pas de liaison électrique."
+      "conf": "Façade reprise sur les vues 4149–4163 : deux travées, quatre vantaux principaux, deux tiroirs supérieurs en travée 2, Vigirex, commande reprise égoutture et bande de service droite. Annotation amont contradictoire conservée, sans modification du réseau.",
+      "physical": {
+        "width": 1900,
+        "height": 2200,
+        "panel": "#dfd6ac",
+        "frame": "#747a74",
+        "edge": "#696d64",
+        "leaves": [
+          {
+            "x": 10,
+            "y": 160,
+            "w": 590,
+            "h": 270
+          },
+          {
+            "x": 10,
+            "y": 430,
+            "w": 590,
+            "h": 1660
+          },
+          {
+            "x": 600,
+            "y": 160,
+            "w": 400,
+            "h": 1930
+          },
+          {
+            "x": 1000,
+            "y": 160,
+            "w": 650,
+            "h": 270
+          },
+          {
+            "x": 1000,
+            "y": 690,
+            "w": 650,
+            "h": 1400
+          },
+          {
+            "x": 1650,
+            "y": 160,
+            "w": 240,
+            "h": 1930
+          }
+        ],
+        "locks": [
+          [
+            580,
+            250
+          ],
+          [
+            620,
+            250
+          ],
+          [
+            580,
+            580
+          ],
+          [
+            580,
+            1980
+          ],
+          [
+            620,
+            1980
+          ],
+          [
+            1630,
+            250
+          ],
+          [
+            1670,
+            250
+          ],
+          [
+            1630,
+            1040
+          ],
+          [
+            1630,
+            1990
+          ],
+          [
+            1670,
+            1990
+          ]
+        ],
+        "parts": [
+          {
+            "kind": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 1900,
+            "h": 65,
+            "fill": "#d2c9a6"
+          },
+          {
+            "kind": "grille",
+            "x": 14,
+            "y": 65,
+            "w": 1872,
+            "h": 95
+          },
+          {
+            "kind": "grille",
+            "x": 14,
+            "y": 2090,
+            "w": 1872,
+            "h": 100
+          },
+          {
+            "kind": "plate",
+            "x": 30,
+            "y": 180,
+            "w": 155,
+            "h": 75,
+            "lines": [
+              "MERLIN GERIN",
+              "TS16"
+            ],
+            "font": 25
+          },
+          {
+            "kind": "note",
+            "x": 30,
+            "y": 275,
+            "w": 240,
+            "h": 140,
+            "lines": [
+              "Départ",
+              "TGBT n°6",
+              "TR7 A"
+            ],
+            "font": 24
+          },
+          {
+            "kind": "text",
+            "x": 570,
+            "y": 205,
+            "w": 0,
+            "h": 0,
+            "label": "1",
+            "font": 34
+          },
+          {
+            "kind": "text",
+            "x": 1620,
+            "y": 205,
+            "w": 0,
+            "h": 0,
+            "label": "2",
+            "font": 34
+          },
+          {
+            "kind": "plate",
+            "x": 35,
+            "y": 450,
+            "w": 190,
+            "h": 42,
+            "lines": [
+              "ARRIVEE"
+            ],
+            "node": null,
+            "font": 18
+          },
+          {
+            "kind": "plate",
+            "x": 35,
+            "y": 625,
+            "w": 215,
+            "h": 90,
+            "lines": [
+              "ALIMENTATION",
+              "COFFRET",
+              "ZONE DECHETS"
+            ],
+            "node": null,
+            "font": 18
+          },
+          {
+            "kind": "plate",
+            "x": 35,
+            "y": 845,
+            "w": 215,
+            "h": 95,
+            "lines": [
+              "ARMOIRE",
+              "COMMANDE",
+              "EAUX USEES"
+            ],
+            "node": "D0331",
+            "font": 18
+          },
+          {
+            "kind": "plate",
+            "x": 35,
+            "y": 1450,
+            "w": 185,
+            "h": 55,
+            "lines": [
+              "7M16. POMPE"
+            ],
+            "node": "D0334",
+            "font": 18
+          },
+          {
+            "kind": "plate",
+            "x": 35,
+            "y": 1600,
+            "w": 165,
+            "h": 65,
+            "lines": [
+              "STEP",
+              "ARMOIRE"
+            ],
+            "node": "D0335",
+            "font": 18
+          },
+          {
+            "kind": "monitor",
+            "x": 770,
+            "y": 735,
+            "w": 110,
+            "h": 115,
+            "label": "VIGIREX"
+          },
+          {
+            "kind": "handle",
+            "x": 565,
+            "y": 1450,
+            "w": 32,
+            "h": 80
+          },
+          {
+            "kind": "handle",
+            "x": 610,
+            "y": 1450,
+            "w": 32,
+            "h": 80
+          },
+          {
+            "kind": "handle",
+            "x": 1610,
+            "y": 1550,
+            "w": 32,
+            "h": 80
+          },
+          {
+            "kind": "handle",
+            "x": 1670,
+            "y": 1435,
+            "w": 32,
+            "h": 80
+          },
+          {
+            "kind": "rect",
+            "x": 1010,
+            "y": 430,
+            "w": 625,
+            "h": 115,
+            "fill": "#d0c8a7"
+          },
+          {
+            "kind": "breaker",
+            "x": 1020,
+            "y": 445,
+            "w": 105,
+            "h": 85,
+            "node": "D0336"
+          },
+          {
+            "kind": "isolator",
+            "x": 1160,
+            "y": 448,
+            "w": 70,
+            "h": 75,
+            "node": "D0336"
+          },
+          {
+            "kind": "lamp",
+            "x": 1280,
+            "y": 497,
+            "w": 13,
+            "h": 0,
+            "fill": "#c6cfc8",
+            "node": "D0336"
+          },
+          {
+            "kind": "lamp",
+            "x": 1312,
+            "y": 497,
+            "w": 13,
+            "h": 0,
+            "fill": "#3eb6b6",
+            "node": "D0336"
+          },
+          {
+            "kind": "lamp",
+            "x": 1344,
+            "y": 497,
+            "w": 13,
+            "h": 0,
+            "fill": "#202b2c",
+            "node": "D0336"
+          },
+          {
+            "kind": "meter",
+            "x": 1400,
+            "y": 453,
+            "w": 78,
+            "h": 60,
+            "node": "D0336"
+          },
+          {
+            "kind": "rect",
+            "x": 1485,
+            "y": 453,
+            "w": 75,
+            "h": 60,
+            "fill": "#323a3d"
+          },
+          {
+            "kind": "grille",
+            "x": 1580,
+            "y": 445,
+            "w": 32,
+            "h": 85
+          },
+          {
+            "kind": "note",
+            "x": 1250,
+            "y": 535,
+            "w": 270,
+            "h": 28,
+            "lines": [
+              "PPE ER 7P10"
+            ],
+            "font": 16
+          },
+          {
+            "kind": "rect",
+            "x": 1010,
+            "y": 560,
+            "w": 625,
+            "h": 115,
+            "fill": "#d0c8a7"
+          },
+          {
+            "kind": "breaker",
+            "x": 1020,
+            "y": 575,
+            "w": 105,
+            "h": 85,
+            "node": "D0337"
+          },
+          {
+            "kind": "isolator",
+            "x": 1160,
+            "y": 578,
+            "w": 70,
+            "h": 75,
+            "node": "D0337"
+          },
+          {
+            "kind": "lamp",
+            "x": 1280,
+            "y": 627,
+            "w": 13,
+            "h": 0,
+            "fill": "#c6cfc8",
+            "node": "D0337"
+          },
+          {
+            "kind": "lamp",
+            "x": 1312,
+            "y": 627,
+            "w": 13,
+            "h": 0,
+            "fill": "#3eb6b6",
+            "node": "D0337"
+          },
+          {
+            "kind": "lamp",
+            "x": 1344,
+            "y": 627,
+            "w": 13,
+            "h": 0,
+            "fill": "#202b2c",
+            "node": "D0337"
+          },
+          {
+            "kind": "meter",
+            "x": 1400,
+            "y": 583,
+            "w": 78,
+            "h": 60,
+            "node": "D0337"
+          },
+          {
+            "kind": "rect",
+            "x": 1485,
+            "y": 583,
+            "w": 75,
+            "h": 60,
+            "fill": "#323a3d"
+          },
+          {
+            "kind": "grille",
+            "x": 1580,
+            "y": 575,
+            "w": 32,
+            "h": 85
+          },
+          {
+            "kind": "note",
+            "x": 1250,
+            "y": 665,
+            "w": 270,
+            "h": 28,
+            "lines": [
+              "PPE ER 7P11"
+            ],
+            "font": 16
+          },
+          {
+            "kind": "note",
+            "x": 1020,
+            "y": 735,
+            "w": 350,
+            "h": 180,
+            "lines": [
+              "En fonctionnement",
+              "normal, une seule pompe",
+              "ER doit être en Auto."
+            ],
+            "font": 22
+          },
+          {
+            "kind": "lamp",
+            "x": 1400,
+            "y": 800,
+            "w": 16,
+            "h": 0,
+            "fill": "#40afb4",
+            "node": "D0333"
+          },
+          {
+            "kind": "plate",
+            "x": 1380,
+            "y": 850,
+            "w": 145,
+            "h": 45,
+            "lines": [
+              "REPRISE",
+              "EGOUTTURE"
+            ],
+            "font": 15,
+            "node": "D0333"
+          },
+          {
+            "kind": "plate",
+            "x": 1020,
+            "y": 1190,
+            "w": 175,
+            "h": 85,
+            "lines": [
+              "PRISE PS",
+              "63A",
+              "EAUX USEES"
+            ],
+            "font": 18
+          },
+          {
+            "kind": "plate",
+            "x": 1020,
+            "y": 1375,
+            "w": 190,
+            "h": 90,
+            "lines": [
+              "OM42. ARM.0",
+              "BT LOCAL",
+              "EDF"
+            ],
+            "font": 18
+          },
+          {
+            "kind": "lamp",
+            "x": 1730,
+            "y": 660,
+            "w": 15,
+            "h": 0,
+            "fill": "#3bb5b0"
+          },
+          {
+            "kind": "lamp",
+            "x": 1780,
+            "y": 660,
+            "w": 15,
+            "h": 0,
+            "fill": "#3bb5b0"
+          },
+          {
+            "kind": "meter",
+            "x": 1720,
+            "y": 735,
+            "w": 80,
+            "h": 48
+          },
+          {
+            "kind": "buzzer",
+            "x": 1760,
+            "y": 855,
+            "w": 44,
+            "h": 0
+          },
+          {
+            "kind": "lamp",
+            "x": 1760,
+            "y": 970,
+            "w": 16,
+            "h": 0,
+            "fill": "#c66b7f"
+          }
+        ],
+        "caption": "IMG_4149 à IMG_4163 ; proportions restituées, sans cote mesurée. IMG_4164 = TS15, exclue."
+      }
     },
     "GORGE": {
       "style": "armoire_grise",

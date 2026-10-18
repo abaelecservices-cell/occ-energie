@@ -1,563 +1,13 @@
 [
   {
     "path": "OCC_ENERGIE.html",
-    "sha256": "c399ca6b579afa3bfe21fd9cd179b023363415a0c22589a2496bfa98c364ecea",
-    "bytes": 2458480
+    "sha256": "62d33cc2d4db91fc918b28b38fa66cc7d87f112ec66156918ddc5d947da88514",
+    "bytes": 2719215
   },
   {
     "path": "README.md",
-    "sha256": "887889d37c16104c3c644c3623e3a51538d079582418b95f7749678b5d6d89b2",
-    "bytes": 2492
-  },
-  {
-    "path": "validations.json",
-    "sha256": "a07509c0352cefcd0b038904509e0efe7de9a92c1b112659b050a2fcd86cb4f1",
-    "bytes": 918
-  },
-  {
-    "path": "build/aerial.webp",
-    "sha256": "0155bdc3f6e01ccf761ed69bf6dee9ffb5dceb5f7742f33b92293965e92f7d6f",
-    "bytes": 173016
-  },
-  {
-    "path": "build/aerial_crop.json",
-    "sha256": "3d2c4d3b175aafbfdab985ff3194ce4a380492404e89dc35d89e1228db8e9caf",
-    "bytes": 285
-  },
-  {
-    "path": "build/data.json",
-    "sha256": "15ebedb20b1c41578d609b03eee20cf7cbc1a5e5ffcff072ebe29290a5a75a0f",
-    "bytes": 6482815
-  },
-  {
-    "path": "build/document-catalog.json",
-    "sha256": "dc41de7735066be9ecac9e953159b9e34aa6e9db209329e0bcf1a9d5e958ee46",
-    "bytes": 36865
-  },
-  {
-    "path": "build/document-cross-review.json",
-    "sha256": "fb597f50f8de456515a3657edac315ec9241cdc094e0871e05aa1829aeb4f5bc",
-    "bytes": 94204
-  },
-  {
-    "path": "build/equipment-audit.json",
-    "sha256": "ecc97e0d4a94f763f02bb9d3005251259d0fcf6a403d52e7f7bd1f1824803132",
-    "bytes": 85705
-  },
-  {
-    "path": "build/excel.json",
-    "sha256": "6acdcbfa7a0a5453ae13e628265649a85c1d3bc58b47348cc0217c2cbb3055a9",
-    "bytes": 36663
-  },
-  {
-    "path": "build/facade-audit-corrections.json",
-    "sha256": "345ba60601b22d3d81b9dc490de8cc4a1f8810c44abe78291f30a0ac9bd35785",
-    "bytes": 130717
-  },
-  {
-    "path": "build/implantation.json",
-    "sha256": "691dca3a80b5e435975b5dcda22f292fe7bb836c6baa6ca5d8c0ea3d2a82a8db",
-    "bytes": 26980
-  },
-  {
-    "path": "build/inv_photos.json",
-    "sha256": "b388d1124cbf72bb188c89d5999ffdec3c7e297528c297fb7cda4f734fb002bf",
-    "bytes": 4392
-  },
-  {
-    "path": "build/network-review.json",
-    "sha256": "1668b9b181487ad4442529be8a9a4abe3c2d9475e105bf3fd3fcfc0c92c1f2ee",
-    "bytes": 9835
-  },
-  {
-    "path": "build/ortho.json",
-    "sha256": "2470449f72dabc854de46aeda2c03d84e22677619fdfea7f9b1f47e0107f6f8d",
-    "bytes": 613
-  },
-  {
-    "path": "build/ortho.webp",
-    "sha256": "76656d8bd64eff452284adb14f17bddcf2a19ce4c94d790fdc679feb16eecd65",
-    "bytes": 308172
-  },
-  {
-    "path": "build/ortho_affine.json",
-    "sha256": "f2d0bf071cdb4affc155a2a9b78eae68d3c153f9bed97a672dd0f8817e3bdc73",
-    "bytes": 262
-  },
-  {
-    "path": "build/ortho_full.png",
-    "sha256": "9a016716ebf126b84265674e94fde577cc93706320de6aac69169d14a584a46a",
-    "bytes": 4920196
-  },
-  {
-    "path": "build/photo-completion.json",
-    "sha256": "75ed0bb97bebad5989c7e42566f02d469f657617b2c45ecf7ef9a4b924c9c755",
-    "bytes": 108169
-  },
-  {
-    "path": "build/photo_affine.json",
-    "sha256": "4c57b99feb8596768a19bd9d2d590da3a489c2ca95fa42a1dd20c233854c18a7",
-    "bytes": 314
-  },
-  {
-    "path": "build/project-import-catalog.json",
-    "sha256": "77e58c31ff547dd215ec606fee59021b1eec296e0dcef359e4c1e783cf3c2688",
-    "bytes": 815765
-  },
-  {
-    "path": "build/project-import.json",
-    "sha256": "1e57a58f238dfd40e44c6f8a98cfa49bf938dd155b4817326d5618249ec054cf",
-    "bytes": 311414
-  },
-  {
-    "path": "build/site-pro-registration.json",
-    "sha256": "4f5f3087c4185449e85159818d8f0d20780460cb38468c821e3716d5302ad26f",
-    "bytes": 96
-  },
-  {
-    "path": "build/site-reference-registration.json",
-    "sha256": "c5771a31bc0773e922c285284ec91f5d5ad454f2c4faddd78a193219fa7d8191",
-    "bytes": 142
-  },
-  {
-    "path": "build/site-view.json",
-    "sha256": "99211dd7c844254c6572807c9b144db444ec35e1e01bd7740d2fc61eabf2b088",
-    "bytes": 367491
-  },
-  {
-    "path": "build/site.json",
-    "sha256": "da636919167576a969e599b9acc4a45d1d6c15bf84d6f654de0d639bd884c071",
-    "bytes": 10300
-  },
-  {
-    "path": "build/site_photo.jpg",
-    "sha256": "8af5eb80949281de7f4a2da42a0314294323e786b81fc55cd41c632b4fd441c5",
-    "bytes": 97349
-  },
-  {
-    "path": "build/site_rot.webp",
-    "sha256": "4600dd55bdd1d899acd9fe03dc8523447e53fa5f9bfb9190a0321c7d6e4cf7eb",
-    "bytes": 174376
-  },
-  {
-    "path": "build/site_tiles.json",
-    "sha256": "d973d1ce61431cb43efebaeb492f69fb961c23791791eb3a7376b0b98d3b4be4",
-    "bytes": 5924531
-  },
-  {
-    "path": "build/tgbt8-facade-review.json",
-    "sha256": "6243a22fcc4ac297f5d8d8812005ff0a506703b9ff9e6cf12678a88644a171fe",
-    "bytes": 7661
-  },
-  {
-    "path": "build/ts17-facade-original.json",
-    "sha256": "058b08307fae73b78348a5796f2d7ceb98da60ca431b2e14c5ced8cc53e252e0",
-    "bytes": 8536
-  },
-  {
-    "path": "build/ts17-photo-review.json",
-    "sha256": "86542f8372a0c33cde50d811472fa374e757761aac684c95d82f461847cbc323",
-    "bytes": 16387
-  },
-  {
-    "path": "docs/10_APPORT_PHOTO_2026-10-16.md",
-    "sha256": "1c80d640e374575b9173a3309c5c8e0d4e8d863877d65df09651ba78f1f95b2d",
-    "bytes": 1854
-  },
-  {
-    "path": "docs/11_VECTORIEL_ET_ARBORESCENCE.md",
-    "sha256": "3972b0c31d6facad73a1d8f2f66dab26c414fc2a405ed019d1b649c0dc180d0e",
-    "bytes": 1939
-  },
-  {
-    "path": "docs/12_CORRECTION_MAPPING_SS1.md",
-    "sha256": "770596cb3ec08d09fbb0d5b6f9d38c92ec0119005d53a963a477d331a4f1e575",
-    "bytes": 1776
-  },
-  {
-    "path": "docs/13_FACADE_TGBT8.md",
-    "sha256": "86f824839e37b5777101122d25213c4de83b5ffdffc9e8670b21777b5d578d89",
-    "bytes": 834
-  },
-  {
-    "path": "docs/14_RELECTURE_TGBT8.md",
-    "sha256": "c26e93d5327562f1540d2bb4eee1fe932ac6d1114f3de61dcb403532caaf6036",
-    "bytes": 1489
-  },
-  {
-    "path": "docs/15_CROISEMENT_DOCUMENTAIRE_20261016.md",
-    "sha256": "cfa81412a56250717265531a70dfc1f90016110cba09a4c304d52720effaf78d",
-    "bytes": 3009
-  },
-  {
-    "path": "docs/16_FACADE_POSTE_LIVRAISON.md",
-    "sha256": "522c873b32070c18889e77ce20ea9d6744d684eb1f8d75d54fbd5d3dd37c64ac",
-    "bytes": 1308
-  },
-  {
-    "path": "docs/17_CONTROLE_ARMOIRES_20261016.md",
-    "sha256": "ce401e08c16c0d667c730408d141b86d97a8a8e1b50e786af361f762a61522b9",
-    "bytes": 1749
-  },
-  {
-    "path": "docs/18_VUE_USINE_20261017.md",
-    "sha256": "ce62235696e91df5c32cef214632ce5faea0da6d2822fcb54dfbe608e200702e",
-    "bytes": 1392
-  },
-  {
-    "path": "docs/20_IMPORT_PROJET_20261018.md",
-    "sha256": "1754d28b841e81a068cfc37ce0f0634d9e9c2db840dd5bd6bb9aea6cf5657f1f",
-    "bytes": 5095
-  },
-  {
-    "path": "docs/21_ACCES_COMPLEMENTS_20261018.md",
-    "sha256": "f75784a8664b3f587f6c193185c2e366e13de715cdf5d05693a62fb93dd6bc28",
-    "bytes": 871
-  },
-  {
-    "path": "docs/3_INCERTITUDES_ET_MANQUES.md",
-    "sha256": "daf1d85c00ac9d621eecede7743ead284e8a007beefc59fc0235cd72809197c1",
-    "bytes": 17244
-  },
-  {
-    "path": "docs/4_PHOTOS_A_REPRENDRE.md",
-    "sha256": "3bd5dd67b1feafb8146ccab32c68bc926c77e1659594f687782c3902750621ae",
-    "bytes": 2017
-  },
-  {
-    "path": "docs/5_AVANCEMENT.md",
-    "sha256": "e6192abeaed0a0bf5552c450dcec688d31147025e50a500d5e186bbe12cfabff",
-    "bytes": 6816
-  },
-  {
-    "path": "docs/6_RAPPORT_CONTROLES.md",
-    "sha256": "dcac241db8c980a7d8dc4e8d2b9f496b83b9ecb1cd9575e27f694d0a1a420b1a",
-    "bytes": 27625
-  },
-  {
-    "path": "docs/8_COMPARAISON_2026-10-15.md",
-    "sha256": "3080a082785d0eb4ce931ffabc9259ad7ea105bf335aeed1ccc2b3ef0e6446f1",
-    "bytes": 5721
-  },
-  {
-    "path": "docs/9_INFORMATIONS_RESTANTES.md",
-    "sha256": "ba53748b122b3d77059a397f39624093c0f8343ed66e9e8e59fe0648c69ca237",
-    "bytes": 5221
-  },
-  {
-    "path": "docs/COMPLEMENTS-20261018.html",
-    "sha256": "1492f617b494e7ed265b5ccefc13a2d0a477d54adb161fc9d8c32ae87682cbba",
-    "bytes": 93117
-  },
-  {
-    "path": "docs/MAPPING-SS1.svg",
-    "sha256": "ccd740a82d0519e7db7fa20cf8dc08af6af8bf27fc3a9eb179c75e33434180c8",
-    "bytes": 37541
-  },
-  {
-    "path": "docs/PHOTOTHEQUE-MODULE.html",
-    "sha256": "6dba3c6d7b3186aea479886d0fc17726b446bf841a0865b67f82c841620507f4",
-    "bytes": 67124
-  },
-  {
-    "path": "docs/project-catalog.css",
-    "sha256": "e4b128b194ee2be969ecd641945f11a41924f3bfbf04275af9e872c3053541d8",
-    "bytes": 1335
-  },
-  {
-    "path": "docs/project-catalog.js",
-    "sha256": "788aadb7c281608a1f7c5a3d041b5a367208c4759fdf27fa89ef33b637e96260",
-    "bytes": 935
-  },
-  {
-    "path": "docs/RESEAU-HTA.svg",
-    "sha256": "7081118e1e5262ac0882650cb20d2e36a22e733feb8d914f34b38199a7d400b9",
-    "bytes": 95820
-  },
-  {
-    "path": "docs/VECTORIELLES.html",
-    "sha256": "3a13f48b36f5fb9fa1bb970609ebbc77d6eaa477d34b82e184d872550725ead6",
-    "bytes": 32303
-  },
-  {
-    "path": "docs/VUE-USINE.html",
-    "sha256": "93489f6b31b9e950b29eb563530957f1031cf06c69f69823be4f50edb7187447",
-    "bytes": 1893
-  },
-  {
-    "path": "src/app.js",
-    "sha256": "ffac0c90ec3a4034d9b3d28dbbf2bbf866beb66c3ca280b2cb779b8c5554220f",
-    "bytes": 148710
-  },
-  {
-    "path": "src/arbre-info.js",
-    "sha256": "c02ff9befede90fed71b4f0fe5ae470d9078f3d5ae8288a466bda29aa22add1d",
-    "bytes": 2839
-  },
-  {
-    "path": "src/arbre.js",
-    "sha256": "8997fed5f97f7a7e63ef3cf662d0160c158056c296b5f45c5f58c1741541433b",
-    "bytes": 8553
-  },
-  {
-    "path": "src/courant.js",
-    "sha256": "b2055474d7f12d1019d8159f1514d1e5d78e9577f7092c088b3f20f2b315c28f",
-    "bytes": 8422
-  },
-  {
-    "path": "src/document-evidence.js",
-    "sha256": "43dc2bb3cf182353d6ab6d562ea4a0e79bdddc56c3ea84240315c358cbed6044",
-    "bytes": 2987
-  },
-  {
-    "path": "src/equipment-audit.js",
-    "sha256": "e4b0b1d665163c8e64ec7968d98583c8b994d026257fd429181abc167367f357",
-    "bytes": 873
-  },
-  {
-    "path": "src/facade-details.js",
-    "sha256": "0eba905c37b0d6a81c3f62279af37d385be74d6fc4aa6cf35d9b14238b8e6d4f",
-    "bytes": 2505
-  },
-  {
-    "path": "src/facade-functional.js",
-    "sha256": "dfe907f0c2d14112ca2993cc0ce2e22a54eb1e395b1e8e9a69079c0e9449dda5",
-    "bytes": 1571
-  },
-  {
-    "path": "src/fiche.js",
-    "sha256": "e416f72fd180ccb8d9ee33f45c664c227f5b5cd1fd26ae9355744a450e8380a9",
-    "bytes": 9213
-  },
-  {
-    "path": "src/index.html",
-    "sha256": "84bab78d620366b2a9771fe8fc97f54d66c4b3b4ccd426d2a413ded01fb8b507",
-    "bytes": 872
-  },
-  {
-    "path": "src/manoeuvres.js",
-    "sha256": "d933264b350445e58eb8af7787c5dbbf66361044795446170e7e28323deab454",
-    "bytes": 33125
-  },
-  {
-    "path": "src/net.js",
-    "sha256": "c9605cc5889b884a4107d12e89876d7b1298ec172702cdfebd8cae1e5e6ca284",
-    "bytes": 10993
-  },
-  {
-    "path": "src/network-secondary.js",
-    "sha256": "b170889ffc54faa2927d7c0c6b4218acebbc26e7e14ba1b6fc9e5d4b577e0a28",
-    "bytes": 1259
-  },
-  {
-    "path": "src/pl20-facade.js",
-    "sha256": "2691d41f73b727d097a5c9eb95d32dc7eb2add47b7b1bbceae084025d6fb106f",
-    "bytes": 4884
-  },
-  {
-    "path": "src/plans.js",
-    "sha256": "550110dd39447fdb596ce02dc3e1af7aa9dc2d98abd20e15c9a5fd13728311f9",
-    "bytes": 11535
-  },
-  {
-    "path": "src/plansvg.js",
-    "sha256": "e0a8e39aa59444047ae95edd6c28ac1686e524cda49170e2e4fb5b01ba4d23a5",
-    "bytes": 22146
-  },
-  {
-    "path": "src/project-import.js",
-    "sha256": "77d64141b93cf3fc556111f0b3914a94a81032b6a30ba121a077824047dfd775",
-    "bytes": 1758
-  },
-  {
-    "path": "src/site-frame.js",
-    "sha256": "bdbe7260cb918d0a5c1c1aa8e0ee3c1ab02a3ccabd08d5597274a25d49b4d622",
-    "bytes": 2366
-  },
-  {
-    "path": "src/style.css",
-    "sha256": "138015885839daa4616409dee276cce54994d3bf646679f9bf8e22f760341912",
-    "bytes": 22353
-  },
-  {
-    "path": "src/tgbt8-facade.js",
-    "sha256": "a0afdfb5419266b1d04349b04fa6ad53203c246ec4a24c630c1e24eb2a89ee41",
-    "bytes": 5006
-  },
-  {
-    "path": "tools/aerial.py",
-    "sha256": "3b7b3e6d2e9202ef728302ccf687df2b9cbc018b56fe0c0a39047653d59ad5e6",
-    "bytes": 1668
-  },
-  {
-    "path": "tools/apply_document_cross_review.py",
-    "sha256": "33c062309aaa9c89df63ee3864713fccb78ef23305a13e39e008a8f945d6eb05",
-    "bytes": 1405
-  },
-  {
-    "path": "tools/apply_equipment_audit.py",
-    "sha256": "12115b21c4841b4b71aa8723a6967e20a29f7305b4c841b8002263d80725cd68",
-    "bytes": 866
-  },
-  {
-    "path": "tools/apply_network_review.py",
-    "sha256": "a68f1ea6698931be6f9cdfa1a45893cd072af6a89a76c0f6f7ad960bfb669761",
-    "bytes": 1207
-  },
-  {
-    "path": "tools/apply_photo_completion.py",
-    "sha256": "24a4973eed784bc25ae0dac19718e47f6bf6161d92be84f739decb5dcf84264e",
-    "bytes": 1148
-  },
-  {
-    "path": "tools/apply_photo_review.py",
-    "sha256": "b536cbc087607a7943b5d1fefa3e6de3c0c1a5ebf9a1cb8b4081ffb8dac5bbfd",
-    "bytes": 982
-  },
-  {
-    "path": "tools/apply_project_import.py",
-    "sha256": "20d218e3c27a17caef835543aa5b16c3ac0901cda4314583efef4245085930ba",
-    "bytes": 860
-  },
-  {
-    "path": "tools/apply_site_view.py",
-    "sha256": "c1c2f8cf2e45e94e414c09ec5a4c01e2bc49bcf2315d262c267625ebc68abb24",
-    "bytes": 520
-  },
-  {
-    "path": "tools/audit_2026_10_11.py",
-    "sha256": "f1d9c95476ce31f1c9731448a819fb0dbe7a815dd73e28c2af4426d4ec5759a3",
-    "bytes": 18276
-  },
-  {
-    "path": "tools/audit_photos.py",
-    "sha256": "cc79f2d7e56c2520c8f835cbc11355e1c1e09ce19fc7ab2fc0805053479d7118",
-    "bytes": 2231
-  },
-  {
-    "path": "tools/build_app.py",
-    "sha256": "ebe9e82204312d89e850cbcb90f792f4fe6559c6db21da65092e608e3989692d",
-    "bytes": 2335
-  },
-  {
-    "path": "tools/build_data.py",
-    "sha256": "6552b9a3d4ebb76bb21cc9aecdbb42f9d7fbfc73fd16a4cece8ccc28dc5ec3e0",
-    "bytes": 81762
-  },
-  {
-    "path": "tools/build_docs.py",
-    "sha256": "54cee099e59214e080f3229b2684e791d89656b179c02d5d4221fd3e2a5928cb",
-    "bytes": 9460
-  },
-  {
-    "path": "tools/build_plans.py",
-    "sha256": "73303c845a6d8741faef78cdcafe812069e8f57431785a6cd2d3f0d4c66893af",
-    "bytes": 23363
-  },
-  {
-    "path": "tools/build_site_pro.py",
-    "sha256": "0cdb8c017656e0e9b18fa34e3feaa5bc582ab7afcb1bb082f29ca7486814b5df",
-    "bytes": 4198
-  },
-  {
-    "path": "tools/facades_photo.py",
-    "sha256": "3de266053d3ad89eb2b7c82567d49c5e16f94177af3723e3ea320ac5d59c3822",
-    "bytes": 70414
-  },
-  {
-    "path": "tools/hta_photo.py",
-    "sha256": "a1ccd28d3727f95b68a0a7c330ae979d3e60d4ec204b8ede8b1289cb429645f9",
-    "bytes": 24264
-  },
-  {
-    "path": "tools/import_project.py",
-    "sha256": "e2cd0536a6b6b72ce1df792c82f48e10c23f4eee0d0742713f8559f479856e27",
-    "bytes": 4297
-  },
-  {
-    "path": "tools/ortho.py",
-    "sha256": "b94cbe54941b0c67ff1e3a5f97d1b0a1d6c0b931fc97a222c5ed3f4f9b4ac219",
-    "bytes": 2142
-  },
-  {
-    "path": "tools/parse_excel.py",
-    "sha256": "ceb9604716ff61b278b19b3612138ce9ecb53bb295759852005a326388c91dad",
-    "bytes": 2342
-  },
-  {
-    "path": "tools/parse_pptx.py",
-    "sha256": "59a5012e3ab17ac33fde3f23a4aebe9bcaa90264fde065acdd4a28512ba8cf34",
-    "bytes": 4646
-  },
-  {
-    "path": "tools/project_assets.py",
-    "sha256": "79b113d9de7cfbd75b81d7db81eb622b4efacd92c23493ee86879f107d13243b",
-    "bytes": 2184
-  },
-  {
-    "path": "tools/project_compare.py",
-    "sha256": "bcc435459307b7e18d3a9df325c4c2c94366e2dbee0bec9e400f5c826407b9d7",
-    "bytes": 1677
-  },
-  {
-    "path": "tools/project_pages.py",
-    "sha256": "6a0b9dc41eebccc80e1141e4ac9e73f02a6f38deb28988eb2e383e0d30135bb4",
-    "bytes": 3479
-  },
-  {
-    "path": "tools/recale_ortho.py",
-    "sha256": "e7d68b96b10c8edba313f5f63f92d85cd8e24d0791d8c83402c0e696baaecf99",
-    "bytes": 3546
-  },
-  {
-    "path": "tools/recale_photo.py",
-    "sha256": "c39869a0e55ed0f9c229d3d3ad234ac7973512c008aefd9dc201727e8ef3dfad",
-    "bytes": 3043
-  },
-  {
-    "path": "tools/site_tiles.py",
-    "sha256": "f4eb2e3578d6b62702bddcd66c75bcbea4dbbd2ca0f6a2e68c981cd4f8338d60",
-    "bytes": 2045
-  },
-  {
-    "path": "tools/test_arbre_complet.cjs",
-    "sha256": "3c1725317b31ad8d7c771d12a32617892a8daec2e3d96453ca68a3db391e6f4b",
-    "bytes": 1576
-  },
-  {
-    "path": "tools/test_network_mapping.cjs",
-    "sha256": "70fcfb49744dfe683d50e16c9076b711fbea7a73c46268295b266754dfc6f103",
-    "bytes": 2393
-  },
-  {
-    "path": "tools/test_pl20_facade.cjs",
-    "sha256": "8ac5c086f795bfc2ed20c27da19219e95bd1ae390dfb8129f4d5f95dd4df06a5",
-    "bytes": 1543
-  },
-  {
-    "path": "tools/test_project_compare.py",
-    "sha256": "83bd635276d9ec83d0ee713c66991ce630b661daa15379467447950b9a20d64f",
-    "bytes": 2363
-  },
-  {
-    "path": "tools/test_site_frame.cjs",
-    "sha256": "34523eead42fe8b2f0a4f6a9f7b98b0583967f7c44a87ea136948133b71fc313",
-    "bytes": 3333
-  },
-  {
-    "path": "tools/test_tgbt8_facade.cjs",
-    "sha256": "552f1d4a69e4194f8ec4830c6276bf261a6d4ebaf5055066408bcc3b1fdefebe",
-    "bytes": 1697
-  },
-  {
-    "path": "tools/test_vector_only.cjs",
-    "sha256": "d191fc8be94ec65988a4eb72ae2c82dbfd5183af87ece28e15a5af36776cd9cf",
-    "bytes": 2911
-  },
-  {
-    "path": "tools/unifilaire_detail.py",
-    "sha256": "10dba64f9807c269cba99922742d169ea46d4f57abd98472b8e8fde2da4b0ba7",
-    "bytes": 27506
+    "sha256": "1aa4c84862ac1796359ed1e522860ca9f49017c29eeef99cb3a2fd09e19f1ab0",
+    "bytes": 2296
   },
   {
     "path": "assets/vue_aerienne/01_CONSIGNES_POUR_CLAUDE.md",
@@ -565,24 +15,9 @@
     "bytes": 2247
   },
   {
-    "path": "assets/vue_aerienne/emprise.geojson",
-    "sha256": "63e5b4a8001f3a85ce6b522cf1c8aee8a5e25392373ca75a065acc5e42d7f5f1",
-    "bytes": 2696
-  },
-  {
     "path": "assets/vue_aerienne/LISEZ_MOI.md",
     "sha256": "7c2eedaddc77f9c089e43d78ea4d9ec6e32132802a6c6bd1a0cd52f233b1556d",
     "bytes": 3207
-  },
-  {
-    "path": "assets/vue_aerienne/metadata.json",
-    "sha256": "ed14a7422f33322013913b0c25ca97272542d4e500fe7bbc617ed31835e2f7ac",
-    "bytes": 1781
-  },
-  {
-    "path": "assets/vue_aerienne/occ.dzi",
-    "sha256": "74b2a50fd4299518574ba39485b455d83dc6580e51c50c22e3ec9bf0796bc98b",
-    "bytes": 180
   },
   {
     "path": "assets/vue_aerienne/OCC_usine_IGN_2024_20cm.pgw",
@@ -603,6 +38,11 @@
     "path": "assets/vue_aerienne/OCC_usine_IGN_2024_20cm.webp",
     "sha256": "f8f0de12a618e42f1674d6765cd1ade787e588bf0b914858716246192a87444a",
     "bytes": 2991828
+  },
+  {
+    "path": "assets/vue_aerienne/emprise.geojson",
+    "sha256": "63e5b4a8001f3a85ce6b522cf1c8aee8a5e25392373ca75a065acc5e42d7f5f1",
+    "bytes": 2696
   },
   {
     "path": "assets/vue_aerienne/google-earth-20261017/capture-bas.jpg",
@@ -1475,9 +915,14 @@
     "bytes": 4955688
   },
   {
-    "path": "assets/vue_aerienne/references/contour_fourni.png",
-    "sha256": "42f3f856d81e02bac7bf215801765d35b5cdf3c59394b5d5d410618a42e9ec14",
-    "bytes": 957157
+    "path": "assets/vue_aerienne/metadata.json",
+    "sha256": "ed14a7422f33322013913b0c25ca97272542d4e500fe7bbc617ed31835e2f7ac",
+    "bytes": 1781
+  },
+  {
+    "path": "assets/vue_aerienne/occ.dzi",
+    "sha256": "74b2a50fd4299518574ba39485b455d83dc6580e51c50c22e3ec9bf0796bc98b",
+    "bytes": 180
   },
   {
     "path": "assets/vue_aerienne/occ_files/0/0_0.png",
@@ -1690,6 +1135,291 @@
     "bytes": 148659
   },
   {
+    "path": "assets/vue_aerienne/references/contour_fourni.png",
+    "sha256": "42f3f856d81e02bac7bf215801765d35b5cdf3c59394b5d5d410618a42e9ec14",
+    "bytes": 957157
+  },
+  {
+    "path": "build/aerial.webp",
+    "sha256": "0155bdc3f6e01ccf761ed69bf6dee9ffb5dceb5f7742f33b92293965e92f7d6f",
+    "bytes": 173016
+  },
+  {
+    "path": "build/aerial_crop.json",
+    "sha256": "3d2c4d3b175aafbfdab985ff3194ce4a380492404e89dc35d89e1228db8e9caf",
+    "bytes": 285
+  },
+  {
+    "path": "build/data.json",
+    "sha256": "15ebedb20b1c41578d609b03eee20cf7cbc1a5e5ffcff072ebe29290a5a75a0f",
+    "bytes": 6482815
+  },
+  {
+    "path": "build/document-catalog.json",
+    "sha256": "dc41de7735066be9ecac9e953159b9e34aa6e9db209329e0bcf1a9d5e958ee46",
+    "bytes": 36865
+  },
+  {
+    "path": "build/document-cross-review.json",
+    "sha256": "fb597f50f8de456515a3657edac315ec9241cdc094e0871e05aa1829aeb4f5bc",
+    "bytes": 94204
+  },
+  {
+    "path": "build/equipment-audit.json",
+    "sha256": "ecc97e0d4a94f763f02bb9d3005251259d0fcf6a403d52e7f7bd1f1824803132",
+    "bytes": 85705
+  },
+  {
+    "path": "build/excel.json",
+    "sha256": "6acdcbfa7a0a5453ae13e628265649a85c1d3bc58b47348cc0217c2cbb3055a9",
+    "bytes": 36663
+  },
+  {
+    "path": "build/facade-audit-corrections.json",
+    "sha256": "345ba60601b22d3d81b9dc490de8cc4a1f8810c44abe78291f30a0ac9bd35785",
+    "bytes": 130717
+  },
+  {
+    "path": "build/implantation.json",
+    "sha256": "691dca3a80b5e435975b5dcda22f292fe7bb836c6baa6ca5d8c0ea3d2a82a8db",
+    "bytes": 26980
+  },
+  {
+    "path": "build/inv_photos.json",
+    "sha256": "b388d1124cbf72bb188c89d5999ffdec3c7e297528c297fb7cda4f734fb002bf",
+    "bytes": 4392
+  },
+  {
+    "path": "build/network-review.json",
+    "sha256": "1668b9b181487ad4442529be8a9a4abe3c2d9475e105bf3fd3fcfc0c92c1f2ee",
+    "bytes": 9835
+  },
+  {
+    "path": "build/ortho.json",
+    "sha256": "2470449f72dabc854de46aeda2c03d84e22677619fdfea7f9b1f47e0107f6f8d",
+    "bytes": 613
+  },
+  {
+    "path": "build/ortho.webp",
+    "sha256": "76656d8bd64eff452284adb14f17bddcf2a19ce4c94d790fdc679feb16eecd65",
+    "bytes": 308172
+  },
+  {
+    "path": "build/ortho_affine.json",
+    "sha256": "f2d0bf071cdb4affc155a2a9b78eae68d3c153f9bed97a672dd0f8817e3bdc73",
+    "bytes": 262
+  },
+  {
+    "path": "build/ortho_full.png",
+    "sha256": "9a016716ebf126b84265674e94fde577cc93706320de6aac69169d14a584a46a",
+    "bytes": 4920196
+  },
+  {
+    "path": "build/photo-completion.json",
+    "sha256": "2aebfe8e7653e0d7b19ec3d78d5659cca74b4b5840567ce1e9b7539687b9bbdd",
+    "bytes": 119099
+  },
+  {
+    "path": "build/photo-readings.json",
+    "sha256": "7eed9e1eb32e8d4ddbdc14a638a63325c0e3dccc3d956066e61948e54eb89558",
+    "bytes": 32762
+  },
+  {
+    "path": "build/photo_affine.json",
+    "sha256": "4c57b99feb8596768a19bd9d2d590da3a489c2ca95fa42a1dd20c233854c18a7",
+    "bytes": 314
+  },
+  {
+    "path": "build/physical-facades.json",
+    "sha256": "265bc58ee901802eb3818fea79041d937f5be231d6dbb6b096629d813a342941",
+    "bytes": 144480
+  },
+  {
+    "path": "build/project-import-catalog.json",
+    "sha256": "77e58c31ff547dd215ec606fee59021b1eec296e0dcef359e4c1e783cf3c2688",
+    "bytes": 815765
+  },
+  {
+    "path": "build/project-import.json",
+    "sha256": "1e57a58f238dfd40e44c6f8a98cfa49bf938dd155b4817326d5618249ec054cf",
+    "bytes": 311414
+  },
+  {
+    "path": "build/relecture-pdf-pages.json",
+    "sha256": "ea3a5e73120f17998c0e95071d0488ecc6cc80011320c5fad8232dd9e05dcc76",
+    "bytes": 278324
+  },
+  {
+    "path": "build/relecture-photos.json",
+    "sha256": "500a95d01eb7d7e1874a585ffef3fa4bafaf0779cb90a757b8e40752d29c645c",
+    "bytes": 332799
+  },
+  {
+    "path": "build/site-pro-registration.json",
+    "sha256": "4f5f3087c4185449e85159818d8f0d20780460cb38468c821e3716d5302ad26f",
+    "bytes": 96
+  },
+  {
+    "path": "build/site-reference-registration.json",
+    "sha256": "c5771a31bc0773e922c285284ec91f5d5ad454f2c4faddd78a193219fa7d8191",
+    "bytes": 142
+  },
+  {
+    "path": "build/site-view.json",
+    "sha256": "99211dd7c844254c6572807c9b144db444ec35e1e01bd7740d2fc61eabf2b088",
+    "bytes": 367491
+  },
+  {
+    "path": "build/site.json",
+    "sha256": "da636919167576a969e599b9acc4a45d1d6c15bf84d6f654de0d639bd884c071",
+    "bytes": 10300
+  },
+  {
+    "path": "build/site_photo.jpg",
+    "sha256": "8af5eb80949281de7f4a2da42a0314294323e786b81fc55cd41c632b4fd441c5",
+    "bytes": 97349
+  },
+  {
+    "path": "build/site_rot.webp",
+    "sha256": "4600dd55bdd1d899acd9fe03dc8523447e53fa5f9bfb9190a0321c7d6e4cf7eb",
+    "bytes": 174376
+  },
+  {
+    "path": "build/site_tiles.json",
+    "sha256": "d973d1ce61431cb43efebaeb492f69fb961c23791791eb3a7376b0b98d3b4be4",
+    "bytes": 5924531
+  },
+  {
+    "path": "build/tgbt8-facade-review.json",
+    "sha256": "6243a22fcc4ac297f5d8d8812005ff0a506703b9ff9e6cf12678a88644a171fe",
+    "bytes": 7661
+  },
+  {
+    "path": "build/ts17-facade-original.json",
+    "sha256": "058b08307fae73b78348a5796f2d7ceb98da60ca431b2e14c5ced8cc53e252e0",
+    "bytes": 8536
+  },
+  {
+    "path": "build/ts17-photo-review.json",
+    "sha256": "86542f8372a0c33cde50d811472fa374e757761aac684c95d82f461847cbc323",
+    "bytes": 16387
+  },
+  {
+    "path": "docs/10_APPORT_PHOTO_2026-10-16.md",
+    "sha256": "1c80d640e374575b9173a3309c5c8e0d4e8d863877d65df09651ba78f1f95b2d",
+    "bytes": 1854
+  },
+  {
+    "path": "docs/11_VECTORIEL_ET_ARBORESCENCE.md",
+    "sha256": "3972b0c31d6facad73a1d8f2f66dab26c414fc2a405ed019d1b649c0dc180d0e",
+    "bytes": 1939
+  },
+  {
+    "path": "docs/12_CORRECTION_MAPPING_SS1.md",
+    "sha256": "770596cb3ec08d09fbb0d5b6f9d38c92ec0119005d53a963a477d331a4f1e575",
+    "bytes": 1776
+  },
+  {
+    "path": "docs/13_FACADE_TGBT8.md",
+    "sha256": "86f824839e37b5777101122d25213c4de83b5ffdffc9e8670b21777b5d578d89",
+    "bytes": 834
+  },
+  {
+    "path": "docs/14_RELECTURE_TGBT8.md",
+    "sha256": "c26e93d5327562f1540d2bb4eee1fe932ac6d1114f3de61dcb403532caaf6036",
+    "bytes": 1489
+  },
+  {
+    "path": "docs/15_CROISEMENT_DOCUMENTAIRE_20261016.md",
+    "sha256": "cfa81412a56250717265531a70dfc1f90016110cba09a4c304d52720effaf78d",
+    "bytes": 3009
+  },
+  {
+    "path": "docs/16_FACADE_POSTE_LIVRAISON.md",
+    "sha256": "522c873b32070c18889e77ce20ea9d6744d684eb1f8d75d54fbd5d3dd37c64ac",
+    "bytes": 1308
+  },
+  {
+    "path": "docs/17_CONTROLE_ARMOIRES_20261016.md",
+    "sha256": "ce401e08c16c0d667c730408d141b86d97a8a8e1b50e786af361f762a61522b9",
+    "bytes": 1749
+  },
+  {
+    "path": "docs/18_VUE_USINE_20261017.md",
+    "sha256": "ce62235696e91df5c32cef214632ce5faea0da6d2822fcb54dfbe608e200702e",
+    "bytes": 1392
+  },
+  {
+    "path": "docs/20_IMPORT_PROJET_20261018.md",
+    "sha256": "1754d28b841e81a068cfc37ce0f0634d9e9c2db840dd5bd6bb9aea6cf5657f1f",
+    "bytes": 5095
+  },
+  {
+    "path": "docs/21_ACCES_COMPLEMENTS_20261018.md",
+    "sha256": "f75784a8664b3f587f6c193185c2e366e13de715cdf5d05693a62fb93dd6bc28",
+    "bytes": 871
+  },
+  {
+    "path": "docs/3_INCERTITUDES_ET_MANQUES.md",
+    "sha256": "daf1d85c00ac9d621eecede7743ead284e8a007beefc59fc0235cd72809197c1",
+    "bytes": 17244
+  },
+  {
+    "path": "docs/4_PHOTOS_A_REPRENDRE.md",
+    "sha256": "3bd5dd67b1feafb8146ccab32c68bc926c77e1659594f687782c3902750621ae",
+    "bytes": 2017
+  },
+  {
+    "path": "docs/5_AVANCEMENT.md",
+    "sha256": "e6192abeaed0a0bf5552c450dcec688d31147025e50a500d5e186bbe12cfabff",
+    "bytes": 6816
+  },
+  {
+    "path": "docs/6_RAPPORT_CONTROLES.md",
+    "sha256": "dcac241db8c980a7d8dc4e8d2b9f496b83b9ecb1cd9575e27f694d0a1a420b1a",
+    "bytes": 27625
+  },
+  {
+    "path": "docs/8_COMPARAISON_2026-10-15.md",
+    "sha256": "3080a082785d0eb4ce931ffabc9259ad7ea105bf335aeed1ccc2b3ef0e6446f1",
+    "bytes": 5721
+  },
+  {
+    "path": "docs/9_INFORMATIONS_RESTANTES.md",
+    "sha256": "ba53748b122b3d77059a397f39624093c0f8343ed66e9e8e59fe0648c69ca237",
+    "bytes": 5221
+  },
+  {
+    "path": "docs/COMPLEMENTS-20261018.html",
+    "sha256": "1492f617b494e7ed265b5ccefc13a2d0a477d54adb161fc9d8c32ae87682cbba",
+    "bytes": 93117
+  },
+  {
+    "path": "docs/MAPPING-SS1.svg",
+    "sha256": "ccd740a82d0519e7db7fa20cf8dc08af6af8bf27fc3a9eb179c75e33434180c8",
+    "bytes": 37541
+  },
+  {
+    "path": "docs/PHOTOTHEQUE-MODULE.html",
+    "sha256": "6dba3c6d7b3186aea479886d0fc17726b446bf841a0865b67f82c841620507f4",
+    "bytes": 67124
+  },
+  {
+    "path": "docs/RESEAU-HTA.svg",
+    "sha256": "7081118e1e5262ac0882650cb20d2e36a22e733feb8d914f34b38199a7d400b9",
+    "bytes": 95820
+  },
+  {
+    "path": "docs/VECTORIELLES.html",
+    "sha256": "d8c8c925f095bc30d5549d999ead41d8f1613f9aa4016e49a03566047c8eb6ea",
+    "bytes": 30675
+  },
+  {
+    "path": "docs/VUE-USINE.html",
+    "sha256": "93489f6b31b9e950b29eb563530957f1031cf06c69f69823be4f50edb7187447",
+    "bytes": 1893
+  },
+  {
     "path": "docs/facades-vectors/ALIMOND1.svg",
     "sha256": "3ff8cc3493c4575a3e0b76f7eff45bad9eda7447ec4d11c055514abf54f9e02d",
     "bytes": 17818
@@ -1711,8 +1441,8 @@
   },
   {
     "path": "docs/facades-vectors/BRONZINI.svg",
-    "sha256": "bd12fb4560561b6aab6ca10462711a69ae0f4ef59d7d57a972ab9a97286751f1",
-    "bytes": 29556
+    "sha256": "335325a725954631cc873830552c2541726ddb1e0493839b8871458151f7f35d",
+    "bytes": 38331
   },
   {
     "path": "docs/facades-vectors/COFAGIT.svg",
@@ -1841,8 +1571,8 @@
   },
   {
     "path": "docs/facades-vectors/PEG.svg",
-    "sha256": "5357308e75cf6d418c5c2886dd1c29b4a73530f10cca53d0abf4c4583859588d",
-    "bytes": 10891
+    "sha256": "f67f6cc81104acbd14e01aed25cc71e14c5c4d794272bca0eedcd56101f44087",
+    "bytes": 13162
   },
   {
     "path": "docs/facades-vectors/PL20.svg",
@@ -1886,8 +1616,8 @@
   },
   {
     "path": "docs/facades-vectors/TGBT6.svg",
-    "sha256": "d98b14207bf28ac116075bc536b48814bddf0f6ded3e39eeb938cfa26e84c328",
-    "bytes": 72535
+    "sha256": "66e734cff5fa987d99f1ad8f720f6348688f05777f2560099e7b692c0979f587",
+    "bytes": 41921
   },
   {
     "path": "docs/facades-vectors/TGBT7.svg",
@@ -1916,13 +1646,13 @@
   },
   {
     "path": "docs/facades-vectors/TS15.svg",
-    "sha256": "9ba193d7a42509ec9017df0a0df7b929b1cea03eb284f6f638dfe7fffea5590d",
-    "bytes": 30901
+    "sha256": "cdeff2f1ac41725f85f336f217feb566d9b95e638e70593732751b0866c6c258",
+    "bytes": 62987
   },
   {
     "path": "docs/facades-vectors/TS16.svg",
-    "sha256": "417b26e264ad3e95a607bfb9b5ed32e1896422c2e0f9247604135cc1c171bea4",
-    "bytes": 15255
+    "sha256": "827aa1ff77a8fa6969a12234c6b2b77af43bedfe58178392ccbe69c5bac49ad1",
+    "bytes": 38517
   },
   {
     "path": "docs/facades-vectors/TS17.svg",
@@ -1941,8 +1671,8 @@
   },
   {
     "path": "docs/facades-vectors/TS28.svg",
-    "sha256": "68b688852c8de81b365205e920c2a15f9608c6067829ebae7b62a3391b457cf4",
-    "bytes": 23785
+    "sha256": "63be358fe2f78f5acc0f8092baf48b6f085b5c78f1354c976ac9a06f539c7417",
+    "bytes": 70642
   },
   {
     "path": "docs/facades-vectors/TS33.svg",
@@ -1961,8 +1691,8 @@
   },
   {
     "path": "docs/facades-vectors/TS40.svg",
-    "sha256": "62c59e0511e28bfd89df128a774f3fd06a410b91a2c560464543d7260e9f7106",
-    "bytes": 6577
+    "sha256": "378af0b9ae3d3c3dda3a9c9579bdaef13944d2eb6a35ff2c9aeb68b59442e197",
+    "bytes": 3041
   },
   {
     "path": "docs/facades-vectors/TS42.svg",
@@ -2011,8 +1741,8 @@
   },
   {
     "path": "docs/facades-vectors/TS9.svg",
-    "sha256": "1321c8ce956eddb1244c43b8ba9165a5c2f07f8312a475b5357e8724256e38d9",
-    "bytes": 36496
+    "sha256": "d83d7d3a968127fdec415360166931120e437d2d404edcd0db2a462e6cca0fa1",
+    "bytes": 76997
   },
   {
     "path": "docs/facades-vectors/TSO.svg",
@@ -2030,6 +1760,16 @@
     "bytes": 4218
   },
   {
+    "path": "docs/project-catalog.css",
+    "sha256": "e4b128b194ee2be969ecd641945f11a41924f3bfbf04275af9e872c3053541d8",
+    "bytes": 1335
+  },
+  {
+    "path": "docs/project-catalog.js",
+    "sha256": "788aadb7c281608a1f7c5a3d041b5a367208c4759fdf27fa89ef33b637e96260",
+    "bytes": 935
+  },
+  {
     "path": "sources/projects/20261018/OCC_ENERGIE-avant-affichage-vectoriel.html",
     "sha256": "318f4ea7392040c3e2f818f06a87b5ed5473bafdafed67ab85e0278c11c95e39",
     "bytes": 2543427
@@ -2038,5 +1778,350 @@
     "path": "sources/projects/20261018/OCC_ENERGIE-avant-import.html",
     "sha256": "abd932a11233962f6d7b84a8cc01ffd4aedb10d68fff96a6f3935f523db7fe91",
     "bytes": 2329644
+  },
+  {
+    "path": "src/app.js",
+    "sha256": "dac230c6633a1eccefa53b062271eef963e5ebeca663da500aef6697c39a1c1d",
+    "bytes": 148832
+  },
+  {
+    "path": "src/arbre-info.js",
+    "sha256": "c02ff9befede90fed71b4f0fe5ae470d9078f3d5ae8288a466bda29aa22add1d",
+    "bytes": 2839
+  },
+  {
+    "path": "src/arbre.js",
+    "sha256": "8997fed5f97f7a7e63ef3cf662d0160c158056c296b5f45c5f58c1741541433b",
+    "bytes": 8553
+  },
+  {
+    "path": "src/courant.js",
+    "sha256": "b2055474d7f12d1019d8159f1514d1e5d78e9577f7092c088b3f20f2b315c28f",
+    "bytes": 8422
+  },
+  {
+    "path": "src/dependency-review.js",
+    "sha256": "d5c4819f809d92fdcc737b27723e58a7bb19cc0f64d585d838326adfd1073a4f",
+    "bytes": 2439
+  },
+  {
+    "path": "src/document-evidence.js",
+    "sha256": "48537dc12c536dc17c5aa4ba796cf0b6738863cc30d2b489f3c28b1ec1c2a17d",
+    "bytes": 3073
+  },
+  {
+    "path": "src/equipment-audit.js",
+    "sha256": "e4b0b1d665163c8e64ec7968d98583c8b994d026257fd429181abc167367f357",
+    "bytes": 873
+  },
+  {
+    "path": "src/facade-details.js",
+    "sha256": "0eba905c37b0d6a81c3f62279af37d385be74d6fc4aa6cf35d9b14238b8e6d4f",
+    "bytes": 2505
+  },
+  {
+    "path": "src/facade-functional.js",
+    "sha256": "dfe907f0c2d14112ca2993cc0ce2e22a54eb1e395b1e8e9a69079c0e9449dda5",
+    "bytes": 1571
+  },
+  {
+    "path": "src/fiche.js",
+    "sha256": "2c6e9751d9f2135fb3f0636aff9a9ba4c67be6b71066db9cbf9c227d01012baf",
+    "bytes": 9665
+  },
+  {
+    "path": "src/index.html",
+    "sha256": "84bab78d620366b2a9771fe8fc97f54d66c4b3b4ccd426d2a413ded01fb8b507",
+    "bytes": 872
+  },
+  {
+    "path": "src/manoeuvres.js",
+    "sha256": "d933264b350445e58eb8af7787c5dbbf66361044795446170e7e28323deab454",
+    "bytes": 33125
+  },
+  {
+    "path": "src/net.js",
+    "sha256": "c9605cc5889b884a4107d12e89876d7b1298ec172702cdfebd8cae1e5e6ca284",
+    "bytes": 10993
+  },
+  {
+    "path": "src/network-secondary.js",
+    "sha256": "b170889ffc54faa2927d7c0c6b4218acebbc26e7e14ba1b6fc9e5d4b577e0a28",
+    "bytes": 1259
+  },
+  {
+    "path": "src/physical-cabinet.js",
+    "sha256": "fa98aa717319e39b73d58074e3050b0a87eb3448104a829208262bff644fab47",
+    "bytes": 1312
+  },
+  {
+    "path": "src/physical-parts.js",
+    "sha256": "fe251bd58b3690f693def63a1719ef823e74211a6289cf9979d566353c6e5c82",
+    "bytes": 3720
+  },
+  {
+    "path": "src/pl20-facade.js",
+    "sha256": "2691d41f73b727d097a5c9eb95d32dc7eb2add47b7b1bbceae084025d6fb106f",
+    "bytes": 4884
+  },
+  {
+    "path": "src/plans.js",
+    "sha256": "550110dd39447fdb596ce02dc3e1af7aa9dc2d98abd20e15c9a5fd13728311f9",
+    "bytes": 11535
+  },
+  {
+    "path": "src/plansvg.js",
+    "sha256": "e0a8e39aa59444047ae95edd6c28ac1686e524cda49170e2e4fb5b01ba4d23a5",
+    "bytes": 22146
+  },
+  {
+    "path": "src/project-import.js",
+    "sha256": "77d64141b93cf3fc556111f0b3914a94a81032b6a30ba121a077824047dfd775",
+    "bytes": 1758
+  },
+  {
+    "path": "src/site-frame.js",
+    "sha256": "bdbe7260cb918d0a5c1c1aa8e0ee3c1ab02a3ccabd08d5597274a25d49b4d622",
+    "bytes": 2366
+  },
+  {
+    "path": "src/style.css",
+    "sha256": "138015885839daa4616409dee276cce54994d3bf646679f9bf8e22f760341912",
+    "bytes": 22353
+  },
+  {
+    "path": "src/tgbt8-facade.js",
+    "sha256": "a0afdfb5419266b1d04349b04fa6ad53203c246ec4a24c630c1e24eb2a89ee41",
+    "bytes": 5006
+  },
+  {
+    "path": "tools/aerial.py",
+    "sha256": "3b7b3e6d2e9202ef728302ccf687df2b9cbc018b56fe0c0a39047653d59ad5e6",
+    "bytes": 1668
+  },
+  {
+    "path": "tools/apply_document_cross_review.py",
+    "sha256": "33c062309aaa9c89df63ee3864713fccb78ef23305a13e39e008a8f945d6eb05",
+    "bytes": 1405
+  },
+  {
+    "path": "tools/apply_equipment_audit.py",
+    "sha256": "12115b21c4841b4b71aa8723a6967e20a29f7305b4c841b8002263d80725cd68",
+    "bytes": 866
+  },
+  {
+    "path": "tools/apply_network_review.py",
+    "sha256": "a68f1ea6698931be6f9cdfa1a45893cd072af6a89a76c0f6f7ad960bfb669761",
+    "bytes": 1207
+  },
+  {
+    "path": "tools/apply_photo_completion.py",
+    "sha256": "24a4973eed784bc25ae0dac19718e47f6bf6161d92be84f739decb5dcf84264e",
+    "bytes": 1148
+  },
+  {
+    "path": "tools/apply_photo_readings.py",
+    "sha256": "7e616e00f4224bed2dc58b1a4ce60360b45e54f6382495dde2aa8c1cf74a4dc3",
+    "bytes": 1015
+  },
+  {
+    "path": "tools/apply_photo_review.py",
+    "sha256": "b536cbc087607a7943b5d1fefa3e6de3c0c1a5ebf9a1cb8b4081ffb8dac5bbfd",
+    "bytes": 982
+  },
+  {
+    "path": "tools/apply_project_import.py",
+    "sha256": "20d218e3c27a17caef835543aa5b16c3ac0901cda4314583efef4245085930ba",
+    "bytes": 860
+  },
+  {
+    "path": "tools/apply_site_view.py",
+    "sha256": "c1c2f8cf2e45e94e414c09ec5a4c01e2bc49bcf2315d262c267625ebc68abb24",
+    "bytes": 520
+  },
+  {
+    "path": "tools/audit_2026_10_11.py",
+    "sha256": "f1d9c95476ce31f1c9731448a819fb0dbe7a815dd73e28c2af4426d4ec5759a3",
+    "bytes": 18276
+  },
+  {
+    "path": "tools/audit_photos.py",
+    "sha256": "cc79f2d7e56c2520c8f835cbc11355e1c1e09ce19fc7ab2fc0805053479d7118",
+    "bytes": 2231
+  },
+  {
+    "path": "tools/build_app.py",
+    "sha256": "fd7f652c0cdf8744dbec71c5372c4623f02f4b38247cc49ea480fd5d2b5acdbe",
+    "bytes": 2888
+  },
+  {
+    "path": "tools/build_data.py",
+    "sha256": "6552b9a3d4ebb76bb21cc9aecdbb42f9d7fbfc73fd16a4cece8ccc28dc5ec3e0",
+    "bytes": 81762
+  },
+  {
+    "path": "tools/build_docs.py",
+    "sha256": "54cee099e59214e080f3229b2684e791d89656b179c02d5d4221fd3e2a5928cb",
+    "bytes": 9460
+  },
+  {
+    "path": "tools/build_plans.py",
+    "sha256": "73303c845a6d8741faef78cdcafe812069e8f57431785a6cd2d3f0d4c66893af",
+    "bytes": 23363
+  },
+  {
+    "path": "tools/build_site_pro.py",
+    "sha256": "0cdb8c017656e0e9b18fa34e3feaa5bc582ab7afcb1bb082f29ca7486814b5df",
+    "bytes": 4198
+  },
+  {
+    "path": "tools/dependency_index.py",
+    "sha256": "a95d043ed40cbf716a0b3ada0d973b85635eb2f22026adda3fc2cab82a2ac089",
+    "bytes": 3074
+  },
+  {
+    "path": "tools/export_facades.cjs",
+    "sha256": "1ef688c05dd731c754c38822af08e1cda7748df68b40d6ad949ea3b1eb47b21e",
+    "bytes": 3641
+  },
+  {
+    "path": "tools/facades_photo.py",
+    "sha256": "3de266053d3ad89eb2b7c82567d49c5e16f94177af3723e3ea320ac5d59c3822",
+    "bytes": 70414
+  },
+  {
+    "path": "tools/hta_photo.py",
+    "sha256": "a1ccd28d3727f95b68a0a7c330ae979d3e60d4ec204b8ede8b1289cb429645f9",
+    "bytes": 24264
+  },
+  {
+    "path": "tools/import_project.py",
+    "sha256": "e2cd0536a6b6b72ce1df792c82f48e10c23f4eee0d0742713f8559f479856e27",
+    "bytes": 4297
+  },
+  {
+    "path": "tools/ortho.py",
+    "sha256": "b94cbe54941b0c67ff1e3a5f97d1b0a1d6c0b931fc97a222c5ed3f4f9b4ac219",
+    "bytes": 2142
+  },
+  {
+    "path": "tools/parse_excel.py",
+    "sha256": "ceb9604716ff61b278b19b3612138ce9ecb53bb295759852005a326388c91dad",
+    "bytes": 2342
+  },
+  {
+    "path": "tools/parse_pptx.py",
+    "sha256": "59a5012e3ab17ac33fde3f23a4aebe9bcaa90264fde065acdd4a28512ba8cf34",
+    "bytes": 4646
+  },
+  {
+    "path": "tools/project_assets.py",
+    "sha256": "79b113d9de7cfbd75b81d7db81eb622b4efacd92c23493ee86879f107d13243b",
+    "bytes": 2184
+  },
+  {
+    "path": "tools/project_compare.py",
+    "sha256": "bcc435459307b7e18d3a9df325c4c2c94366e2dbee0bec9e400f5c826407b9d7",
+    "bytes": 1677
+  },
+  {
+    "path": "tools/project_pages.py",
+    "sha256": "6a0b9dc41eebccc80e1141e4ac9e73f02a6f38deb28988eb2e383e0d30135bb4",
+    "bytes": 3479
+  },
+  {
+    "path": "tools/recale_ortho.py",
+    "sha256": "e7d68b96b10c8edba313f5f63f92d85cd8e24d0791d8c83402c0e696baaecf99",
+    "bytes": 3546
+  },
+  {
+    "path": "tools/recale_photo.py",
+    "sha256": "c39869a0e55ed0f9c229d3d3ad234ac7973512c008aefd9dc201727e8ef3dfad",
+    "bytes": 3043
+  },
+  {
+    "path": "tools/site_tiles.py",
+    "sha256": "f4eb2e3578d6b62702bddcd66c75bcbea4dbbd2ca0f6a2e68c981cd4f8338d60",
+    "bytes": 2045
+  },
+  {
+    "path": "tools/test_arbre_complet.cjs",
+    "sha256": "3c1725317b31ad8d7c771d12a32617892a8daec2e3d96453ca68a3db391e6f4b",
+    "bytes": 1576
+  },
+  {
+    "path": "tools/test_document_cross_review.cjs",
+    "sha256": "b339333102cffcaeffa4be6ef3d6a2e3301974c163b02673567b86e5b3375b4c",
+    "bytes": 2727
+  },
+  {
+    "path": "tools/test_equipment_audit.cjs",
+    "sha256": "8e5b23747a025e3d3edfbb1bf6acd220480f3835b1279c0809f28024f8546640",
+    "bytes": 2423
+  },
+  {
+    "path": "tools/test_network_mapping.cjs",
+    "sha256": "70fcfb49744dfe683d50e16c9076b711fbea7a73c46268295b266754dfc6f103",
+    "bytes": 2393
+  },
+  {
+    "path": "tools/test_photo2.cjs",
+    "sha256": "5da66564c153943bfb6e838a04e5b9c6c041b48a68165bcd367a351a4cfc10b8",
+    "bytes": 1674
+  },
+  {
+    "path": "tools/test_photo_consumers.cjs",
+    "sha256": "46da6ed9fb51827362ca525a6e3bac90607aba05fe12660f605ae6ff3f086039",
+    "bytes": 2941
+  },
+  {
+    "path": "tools/test_photo_review.cjs",
+    "sha256": "c5594f0af9e50825396234537907fda00bf7d48846c63ad81bdd92ec1c0be16a",
+    "bytes": 4139
+  },
+  {
+    "path": "tools/test_physical_readings.cjs",
+    "sha256": "ac43f1d49955a46ecf30f15f784247ec4f293502c59ceae96ee322a01ff076ef",
+    "bytes": 2137
+  },
+  {
+    "path": "tools/test_pl20_facade.cjs",
+    "sha256": "8ac5c086f795bfc2ed20c27da19219e95bd1ae390dfb8129f4d5f95dd4df06a5",
+    "bytes": 1543
+  },
+  {
+    "path": "tools/test_project_compare.py",
+    "sha256": "83bd635276d9ec83d0ee713c66991ce630b661daa15379467447950b9a20d64f",
+    "bytes": 2363
+  },
+  {
+    "path": "tools/test_project_import.cjs",
+    "sha256": "16c1e9ac8aa6735342c21fa92eee8a1bd7125349645fccf5cb19d98db907a577",
+    "bytes": 3515
+  },
+  {
+    "path": "tools/test_site_frame.cjs",
+    "sha256": "34523eead42fe8b2f0a4f6a9f7b98b0583967f7c44a87ea136948133b71fc313",
+    "bytes": 3333
+  },
+  {
+    "path": "tools/test_tgbt8_facade.cjs",
+    "sha256": "552f1d4a69e4194f8ec4830c6276bf261a6d4ebaf5055066408bcc3b1fdefebe",
+    "bytes": 1697
+  },
+  {
+    "path": "tools/test_vector_only.cjs",
+    "sha256": "d191fc8be94ec65988a4eb72ae2c82dbfd5183af87ece28e15a5af36776cd9cf",
+    "bytes": 2911
+  },
+  {
+    "path": "tools/unifilaire_detail.py",
+    "sha256": "10dba64f9807c269cba99922742d169ea46d4f57abd98472b8e8fde2da4b0ba7",
+    "bytes": 27506
+  },
+  {
+    "path": "validations.json",
+    "sha256": "a07509c0352cefcd0b038904509e0efe7de9a92c1b112659b050a2fcd86cb4f1",
+    "bytes": 918
   }
 ]

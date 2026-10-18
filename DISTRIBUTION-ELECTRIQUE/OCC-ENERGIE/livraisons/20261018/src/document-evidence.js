@@ -5,7 +5,7 @@ function documentEvidenceHTML(board) {
   const labels = board.labels2024 || [];
   const consumers = board.scanConsumers;
   const history = board.equipmentHistory || [];
-  const imported = typeof projectImportHTML === 'function' ? projectImportHTML(board) : '';
+  const imported = (typeof dependencyInformation === 'function' ? dependencyInformation(board) : '') + (typeof projectImportHTML === 'function' ? projectImportHTML(board) : '');
   if (!evidence.length && !documents.length && !labels.length) return imported;
   return `${imported}<details class="card glass" style="margin:12px 0"><summary><b>Documents croisés et écarts (${documents.length} PDF)</b></summary>
     ${evidence.map(item => `<p><b>${item.kind === 'conflit' ? 'Écart documentaire' : 'Recoupement'} :</b> ${esc(item.text)}<br><span class="src">${esc(item.source)}</span></p>`).join('')}
