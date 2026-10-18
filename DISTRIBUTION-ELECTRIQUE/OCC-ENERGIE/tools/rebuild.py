@@ -17,6 +17,7 @@ def main():
     run('tools/build_app.py')
     run('tools/build_app.py', '--lite')
     run('tools/build_app.py', '--compact')
+    run('tools/build_app.py', '--mobile-review')
     # Conserver l'alias de diffusion SAP strictement identique au mode léger.
     copyfile(ROOT / 'OCC_ENERGIE_2024_LITE.html', ROOT / 'OCC_ENERGIE_SAP_20261017_LITE.html')
     for name in ('OCC_ENERGIE_TS8.html', 'OCC_ENERGIE_VECTORIEL_MOBILE.html'):
