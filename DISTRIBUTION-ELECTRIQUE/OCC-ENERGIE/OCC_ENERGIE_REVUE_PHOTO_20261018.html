@@ -311,7 +311,7 @@ input.f.big{font-size:17px;padding:14px 16px;border-radius:16px}
    Application consultative hors ligne : aucune commande, aucune connexion au réseau industriel. */
 const D = window.OCC_DATA;
 const $ = (s, r = document) => r.querySelector(s);
-const $ = (s, r = document) => [...r.querySelectorAll(s)];
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 /* Photos utilisées uniquement hors application comme références de reconstruction. */
 
@@ -579,7 +579,7 @@ function hl(label, q) {
   let h = esc(label);
   const plain = norm(label);
   toks.forEach(t => {
-    const re = new RegExp('(' + t.split('').map(ch => ch.replace(/[.*+?^${}()|[\]\\]/g, '\\/*JS*/') + '[\\u0300-\\u036f]?').join('') + ')', 'gi');
+    const re = new RegExp('(' + t.split('').map(ch => ch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '[\\u0300-\\u036f]?').join('') + ')', 'gi');
     if (plain.includes(t)) h = h.replace(re, '<mark>$1</mark>');
   });
   return h;
@@ -664,7 +664,7 @@ function bindSearch() {
     if (e.key === 'ArrowDown') { SEL = Math.min(RES.length - 1, SEL + 1); e.preventDefault(); }
     else if (e.key === 'ArrowUp') { SEL = Math.max(0, SEL - 1); e.preventDefault(); }
     else if (e.key === 'Enter') { pick(RES[SEL]); e.preventDefault(); return; } else return;
-    $('.res', box).forEach((el, i) => el.classList.toggle('sel', i === SEL));
+    $$('.res', box).forEach((el, i) => el.classList.toggle('sel', i === SEL));
     const s = $('.res.sel', box); if (s) s.scrollIntoView({ block: 'nearest' });
   });
   box.addEventListener('click', e => { const el = e.target.closest('.res'); if (el) pick(RES[+el.dataset.i]); });
@@ -870,11 +870,11 @@ function mountViewer(host, svg, { onClick, focus, legend, native } = {}) {
     if (e.type === 'pointerup' && moved < 6 && onClick) { const t = document.elementFromPoint(e.clientX, e.clientY); const g = t && t.closest('[data-id]'); if (g) onClick(g.dataset.id, g); } };
   el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
   el.addEventListener('wheel', e => { e.preventDefault(); zoomAt(e.deltaY < 0 ? 1.18 : 1 / 1.18, e.clientX, e.clientY); }, { passive: false });
-  $('.vtools button', wrap).forEach(b => b.onclick = () => { const r = el.getBoundingClientRect();
+  $$('.vtools button', wrap).forEach(b => b.onclick = () => { const r = el.getBoundingClientRect();
     if (b.dataset.z === 'fit') { v = { ...init }; apply(); }
     else if (b.dataset.z === 'native') { const cx = v.x + v.w / 2, cy = v.y + v.h / 2, w = r.width * native, h = r.height * native; v = { x: cx - w / 2, y: cy - h / 2, w, h }; apply(); }
     else zoomAt(b.dataset.z === 'in' ? 1.4 : 1 / 1.4, r.left + r.width / 2, r.top + r.height / 2); });
-  const focusOn = id => { const g = el.querySelector(`[data-id="${CSS.escape(id)}"]`); if (!g) return false; $('.flash', el).forEach(x => x.classList.remove('flash')); g.classList.add('flash');
+  const focusOn = id => { const g = el.querySelector(`[data-id="${CSS.escape(id)}"]`); if (!g) return false; $$('.flash', el).forEach(x => x.classList.remove('flash')); g.classList.add('flash');
     const bb = g.getBBox(); const w = Math.max(bb.width * 3.2, init.w / 6), h = Math.max(bb.height * 3.2, init.h / 6); v = { x: bb.x + bb.width / 2 - w / 2, y: bb.y + bb.height / 2 - h / 2, w, h }; apply(); return true; };
   // Cadrage de tous les segments deja representes et surlignes, sans inventer de cables.
   const focusOnTrace = () => {
@@ -1386,7 +1386,7 @@ function swSymH(id, cx, cy) {
 const VIEW = () => $('#view');
 let CUR = { route: '', args: [] };
 let LAST_ROUTED_HASH = null;
-function setTab(k) { $('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === k)); }
+function setTab(k) { $$('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === k)); }
 function rerender() { route(true); }
 function route(keep) {
   LAST_ROUTED_HASH = location.hash;
@@ -1500,7 +1500,7 @@ function vHome() {
   ${footer()}`;
   mountViewer($('#aerial'), siteSVG(), { onClick: id => openZone(id.slice(1)), native: D.site.tiles ? 1000 / D.site.w : null });
   if (D.site.tiles) orthoTiles($('#aerial svg'), D.site);
-  $('.tile[data-zone]').forEach(b => b.onclick = () => openZone(b.dataset.zone));
+  $$('.tile[data-zone]').forEach(b => b.onclick = () => openZone(b.dataset.zone));
 }
 
 /* ---------- Plans d'implantation */
@@ -1705,7 +1705,7 @@ function vPlans(pid, focus, selected) {
     VIEW().innerHTML = `<h1 style="margin-top:14px">Plans d’implantation</h1>
     <div class="seg glass" style="margin-bottom:10px">${PLAN_TABS.map(([id, t]) => `<button data-p="${id}" class="${id === 'PLAN_PDL' ? 'on' : ''}">${esc(t)}</button>`).join('')}</div>
     <div id="pv"></div>${footer()}`;
-    $('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
+    $$('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
     window.__planCur = 'PLAN_PDL';
     mountViewer($('#pv'), pdlSVG(), { focus, legend: '<span style="color:#12b76a">━ sous tension</span><span style="color:#e5484d">┅ ouvert / hors tension (simulation)</span><span>Touchez une cellule ou une sous-station</span>',
       onClick: id => { if (id.startsWith('PLAN_')) location.hash = '#/plans/' + id; else openEntity(id); } });
@@ -1726,7 +1726,7 @@ function vPlans(pid, focus, selected) {
     ${p.note ? `<p class="small">${esc(p.note)}</p>` : ''}${loc && loc.note ? `<p class="small">⚠️ ${esc(loc.note)}</p>` : ''}
     <div class="list">${p.items.filter(i => i.k === 'box').sort((a, b) => (b.ref ? 1 : 0) - (a.ref ? 1 : 0)).map(planItemHTML).join('')}</div>
     <p class="src">Source : ${esc(p.src)} — redessiné en vectoriel, proportions du document, non coté. Les liaisons sont électriques, pas le tracé des câbles.</p></details>${footer()}`;
-  $('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
+  $$('[data-p]').forEach(b => b.onclick = () => location.hash = '#/plans/' + b.dataset.p);
   $('#lk1').onclick = () => { PLAN_LINKS = 'all'; vPlans(p.id); }; $('#lk0').onclick = () => { PLAN_LINKS = false; vPlans(p.id); };
   mountViewer($('#pv'), planSVG(p), {
     focus, legend: '<span>TGBT 1A ▢ TGBT 1B : demi-tableaux et couplage (▢ ouvert · ■ fermé)</span><span style="color:#e5484d">■ coupé (simulation)</span><span>┅ emplacement probable</span>',
@@ -2283,7 +2283,7 @@ function vCourant(id, sit) {
   VIEW().innerHTML = `<div class="crumbs noprint" style="margin-top:12px"><a data-go="#/courant">⚡ Dépannage</a><i>›</i><a data-go="#/courant/${id}">${esc(name)}</a><i>›</i><a>${esc(chosen.t)}</a></div>
     ${moSheetHTML(mo)}
     ${courantDetails(mo.at ? mo.at.id : id)}${footer()}`;
-  $('[data-mosim]').forEach(x => x.onclick = () => moSim(mo));
+  $$('[data-mosim]').forEach(x => x.onclick = () => moSim(mo));
 }
 /* ce qu'alimente un équipement ou un tableau (aval documenté) */
 function courantAval(id) {
@@ -2436,16 +2436,16 @@ function arbreHTML() {
 function bindArbre(host) {
   const q = $('#tq'); if (!q) return;
   q.oninput = () => {
-    const v = norm(q.value), nodes = $('.tnode', host);
+    const v = norm(q.value), nodes = $$('.tnode', host);
     nodes.forEach(n => { n.style.display = ''; });
     if (!v) return;
     // un nœud reste visible s'il correspond ou si un descendant correspond ; les ancêtres d'une correspondance sont dépliés
     const match = n => (n.dataset.n || '').includes(v);
-    [...nodes].reverse().forEach(n => { const sub = $('.tnode', n).some(c => c.style.display !== 'none'); n.style.display = match(n) || sub ? '' : 'none'; if (sub && n.tagName === 'DETAILS') n.open = true; });
-    nodes.forEach(n => { if (match(n)) $('.tnode', n).forEach(c => { c.style.display = ''; }); });
+    [...nodes].reverse().forEach(n => { const sub = $$('.tnode', n).some(c => c.style.display !== 'none'); n.style.display = match(n) || sub ? '' : 'none'; if (sub && n.tagName === 'DETAILS') n.open = true; });
+    nodes.forEach(n => { if (match(n)) $$('.tnode', n).forEach(c => { c.style.display = ''; }); });
   };
-  $('#topen').onclick = () => $('details.tnode', host).forEach(d => d.open = true);
-  $('#tclose').onclick = () => $('details.tnode', host).forEach((d, i) => d.open = d.classList.contains('troot') || d.classList.contains('tss'));
+  $('#topen').onclick = () => $$('details.tnode', host).forEach(d => d.open = true);
+  $('#tclose').onclick = () => $$('details.tnode', host).forEach((d, i) => d.open = d.classList.contains('troot') || d.classList.contains('tss'));
 }
 
 /* Parcours documentaire continu : depart -> reseau -> zone -> plan -> facade.
@@ -2717,7 +2717,7 @@ function vHistorique2024() {
     '<p class="small muted">Sources : Distribution électrique 2024.xlsx › INDEX (lignes 5–40) et Age equipement (lignes 2–69). Les anomalies de saisie sont préservées. Le rapprochement de case est informatique ; les liaisons du graphe restent indépendantes.</p>';
   const filter = () => {
     const q = norm(HX24_QUERY);
-    $('.hx24entry', $('#hx24-list')).forEach(el => {
+    $$('.hx24entry', $('#hx24-list')).forEach(el => {
       const right = HX24_MODE !== 'departs' || HX24_BOARD === 'tous' ||
         el.dataset.hxBoard === HX24_BOARD;
       el.style.display = right && (!q || el.dataset.hxQ.includes(q)) ? '' : 'none';
@@ -2794,10 +2794,10 @@ function vComplements(selection) {
       '<a class="btn ghost" href="#/registre">Registre des écarts</a></div>' + footer();
   const apply = () => {
     const q = norm(OC_QUERY);
-    $('.oc-row', VIEW()).forEach(el => { el.style.display = !q || el.dataset.oc.includes(q) ? '' : 'none'; });
+    $$('.oc-row', VIEW()).forEach(el => { el.style.display = !q || el.dataset.oc.includes(q) ? '' : 'none'; });
   };
   $('#oc-query').oninput = e => { OC_QUERY = e.target.value; apply(); };
-  $('[data-oc-tab]', VIEW()).forEach(b => b.onclick = () => {
+  $$('[data-oc-tab]', VIEW()).forEach(b => b.onclick = () => {
     OC_SECTION = b.dataset.ocTab;
     OC_QUERY = '';
     vComplements();
@@ -3087,7 +3087,7 @@ function vDiag(pre) {
   };
   $('#dq').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
   $('#dq').addEventListener('input', () => { clearTimeout(window.__dq); window.__dq = setTimeout(run, 250); });
-  $('[data-x]').forEach(b => b.onclick = () => { $('#dq').value = b.dataset.x; run(); });
+  $$('[data-x]').forEach(b => b.onclick = () => { $('#dq').value = b.dataset.x; run(); });
   if (pre) run();
 }
 /* correspondance exacte : nom court, libellé, repère ou case identiques à la saisie */
@@ -3178,7 +3178,7 @@ function vMaint(pre) {
   <h2>Gammes par type d’équipement</h2><div class="grid">${GUIDES.map(g => `<div class="card glass"><h3 style="margin-top:0">${esc(g.t)}</h3><ul class="small" style="padding-left:18px;margin:0">${g.items.map(i => `<li style="margin:5px 0">${esc(i)}</li>`).join('')}</ul></div>`).join('')}</div>
   ${footer()}`;
   $('#ladd').onclick = () => { const e = $('#le').value.trim(); if (!e) { toast('Indiquez un équipement'); return; } const l = getLog(); l.unshift({ e, d: $('#ld').value, t: $('#lt').value, i: $('#li').value, o: $('#lo').value }); if (setLog(l)) { toast('Intervention enregistrée'); vMaint(); } else toast('Stockage indisponible sur ce navigateur'); };
-  $('[data-del]').forEach(b => b.onclick = () => { const l = getLog(); l.splice(+b.dataset.del, 1); setLog(l); vMaint(); });
+  $$('[data-del]').forEach(b => b.onclick = () => { const l = getLog(); l.splice(+b.dataset.del, 1); setLog(l); vMaint(); });
   $('#lexp').onclick = () => { const l = getLog(); const csv = 'Date;Équipement;Type;Intervenant;Observations\n' + l.map(x => [x.d, x.e, x.t, x.i, x.o].map(v => '"' + String(v || '').replace(/"/g, '""') + '"').join(';')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + csv], { type: 'text/csv' })); a.download = 'journal_occ_energie.csv'; a.click(); };
 }
