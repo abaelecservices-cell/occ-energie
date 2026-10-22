@@ -53,31 +53,59 @@ function parcoursSummary(id) {
     '<b>Chaîne d’alimentation documentaire</b> ' +
     (path && path.alternatives > 1 ? '<span class="pill a">Plusieurs parcours théoriques</span>' : '') +
     (doubtful ? '<span class="pill a">Certaines liaisons à confirmer</span>' : '') +
-    '<div class="trace-steps">' + chain + '</div>' +
-    '<div class="row" style="margin-top:10px">' + siteButton + facadeButton + '</div>' +
-    '<p class="small muted" style="margin:8px 0 0">Trajet déduit des documents et du régime normal décrit, jamais de la position réelle des appareils. Les liaisons incertaines sont indiquées en pointillé orange.</p></section>';
+    '<div id="net-trace-visibility" role="status" class="trace-feedback">Vérification du tracé SVG…</div>' +
+    '<div class="row trace-actions"><button type="button" class="btn" id="net-fit-path">⚡ Voir tout le conducteur en halo</button>' +
+    siteButton + facadeButton + (ctx.board ? '<button type="button" class="btn ghost" data-go="#/b/' +
+    esc(ctx.board.id) + '">Voir le tableau</button>' : '') + '</div>' +
+    '<details class="trace-chain"><summary>Parcours électrique et repères documentaires</summary>' +
+    '<div class="trace-steps">' + chain + '</div></details>' +
+    '<p class="small muted" style="margin:8px 0 0">Le halo suit les conducteurs réellement dessinés sur le synoptique et le parcours normal décrit par les documents ; aucun câble supplémentaire n’est inventé. Jaune : tracé documenté ; orange pointillé : liaison incertaine. La façade ne s’ouvre que sur votre clic.</p></section>';
 }
 
 function parcoursHighlight(id) {
   const svg = $('#hta svg');
   if (!svg) return;
-  svg.querySelectorAll('.trace-node,.trace-wire,.trace-doubt').forEach(el => {
-    el.classList.remove('trace-node', 'trace-wire', 'trace-doubt');
+  svg.querySelectorAll('.trace-node,.trace-wire,.trace-doubt,.trace-target').forEach(el => {
+    el.classList.remove('trace-node', 'trace-wire', 'trace-doubt', 'trace-target');
   });
+  const feedback = $('#net-trace-visibility');
   const path = parcoursPath(id);
-  if (!path) return;
-  path.chain.forEach(key => {
-    svg.querySelectorAll('[data-id]').forEach(el => {
-      if (el.dataset.id !== key) return;
-      el.classList.add('trace-node');
-      if (path.uncertain[key]) el.classList.add('trace-doubt');
-    });
-    svg.querySelectorAll('[data-wire-id]').forEach(el => {
-      if (el.dataset.wireId !== key) return;
-      el.classList.add('trace-wire');
-      if (path.uncertain[key]) el.classList.add('trace-doubt');
-    });
+  if (!path) {
+    if (feedback) feedback.textContent = 'Le modèle ne fournit pas de chaîne complète jusqu’à une source. Aucun trajet lumineux n’est inventé.';
+    return;
+  }
+  const keys = new Set(path.chain);
+  const edges = new Set();
+  for (let i = 1; i < path.chain.length; i++) {
+    edges.add(path.chain[i - 1] + '|' + path.chain[i]);
+    edges.add(path.chain[i] + '|' + path.chain[i - 1]);
+  }
+  const matchedNodes = new Set();
+  const matchedWires = new Set();
+  svg.querySelectorAll('[data-id]').forEach(el => {
+    if (!keys.has(el.dataset.id)) return;
+    el.classList.add('trace-node');
+    if (path.uncertain[el.dataset.id]) el.classList.add('trace-doubt');
+    if (el.dataset.id === id) el.classList.add('trace-target');
+    matchedNodes.add(el.dataset.id);
   });
+  svg.querySelectorAll('[data-wire-id]').forEach(el => {
+    const key = el.dataset.wireId;
+    if (!keys.has(key)) return;
+    // Liaisons bifurquées du poste de livraison : uniquement la branche du chemin retenu.
+    if (el.dataset.wireEdge && !edges.has(el.dataset.wireEdge)) return;
+    el.classList.add('trace-wire');
+    if (path.uncertain[key]) el.classList.add('trace-doubt');
+    matchedWires.add(key);
+  });
+  if (feedback) {
+    const suffix = !matchedNodes.has(id)
+      ? 'Le départ exact n’est pas dessiné sur ce synoptique : son alimentation amont est surlignée, sa case reste accessible par le bouton Façade.'
+      : 'Le repère sélectionné est identifié sur le schéma.';
+    feedback.textContent = matchedWires.size
+      ? matchedWires.size + ' section(s) de conducteurs du parcours documenté éclairées. ' + suffix
+      : 'Aucun segment de conducteur individualisé n’est dessiné pour ce parcours. ' + suffix;
+  }
 }
 
 /* Vue aérienne ciblée. Seules les zones dotées d'un repère bat
